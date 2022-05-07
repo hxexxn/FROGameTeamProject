@@ -1,0 +1,247 @@
+body {
+    margin: 0 auto;
+    background-color: #f6f5f5;
+    overflow-x: hidden;
+}
+
+/* 최상단 배너 */
+
+.topBanner {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.bannerText:link, .bannerText:visited, .bannerText:focus {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.bannerText:hover {
+    color: #CED46A;
+    text-decoration: none;
+}
+
+/* 상단 타이틀 */
+
+#wrapper {
+    width: 100%;
+    height: 80px;
+    border: 1px solid lightgray;
+    display: flex;
+}
+
+#titleLogo {
+    width: 15%;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+}
+
+.iTag:hover {
+    color: #07553B;
+}
+
+.mainTitle {
+    border: 1px solid lightgray;
+    width: 70%;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.froGame:visited, .froGame:link, .froGame:focus{
+    color: black;
+    text-decoration: none;
+}
+
+.froGame:hover {
+    color: #07553B;
+    text-decoration: none;
+}
+
+/* 로고 밑줄 왼쪽에서 오른쪽으로 이동하는 애니메이션 */
+
+.froGame{
+    position: relative;
+}
+
+.froGame:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #07553B;
+    
+}
+
+.froGame:hover:after{
+    width: 100%;
+    opacity: 1;
+}
+
+.userBox {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 13px;
+}
+
+/* 메인 메뉴 */
+
+#mainMenu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.menuBox {
+    display: flex;
+}
+
+.menuBox span{
+    margin: 100px;
+    font-size: 13px;
+}
+
+/* 드랍 다운 */
+.gameDropDownMenu {
+    display: flex;
+}
+
+/* 회원 가입 01 */
+
+#joinFrame {
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid lightgray;
+    padding-bottom: 70px;
+}
+
+.joinTitle {
+    width: 30%;
+    margin: 0 auto;
+    padding: 15px 0px;
+    border: 1px solid lightgray;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-top: 17px;
+}
+
+.joinForm {
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid lightgray;
+    border-top: none;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinTableForm {
+    width: 500px;
+    border-spacing: 10px;
+}
+
+
+#user_id, #user_pw, #user_rePw, 
+#user_nick, #user_email {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding-left: 10px;
+    outline: none;
+}
+
+#idDupBtn,
+#nickDupBtn {
+    width: 70px;
+    height: 30px;
+    color: #07553B;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: none;
+    border-radius: 2px;
+}
+
+.joinBtnBox {
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#joinBtn {
+    width: 214px;
+    height: 30px;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+/* 
+.user_id > input,
+.user_pw > input,
+.user_RePw > input,
+.user_nick > input,
+.user_email > input {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+} */
+
+/* 푸터 */
+#footer {
+    height: 200px;
+}
+
+.copyRight > .frogGameCopyRight {
+    margin: 0 auto;
+    padding: 60px 0;
+    /* border: 1px solid red; */
+    width: 75%;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}

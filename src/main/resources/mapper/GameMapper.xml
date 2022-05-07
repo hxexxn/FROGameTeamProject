@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+                  
+<mapper namespace="com.frogame.www.mapper.GameMapper">
+	
+	<!--  게임 등록  -->
+	<insert id="newInsert">
+		INSERT INTO gameTBL(game_title, file, game_price, game_genre_no) 
+		VALUES(#{game_title}, #{file}, #{game_price}, #{game_genre_no})
+	</insert>
+	
+	<!-- 게임 검 -->
+	<select id="gameSearch" resultType="com.frogame.www.model.GameDTO">
+	<![CDATA[
+		SELECT * from gameTBL where game_title like concat('%',#{search},'%')
+		]]>
+	</select>
+
+	<select id="jjinList" resultType="com.frogame.www.model.GameDTO">
+		SELECT * from gameTBL
+	</select>
+
+	<select id="gameRead" resultType="com.frogame.www.model.GameDTO">
+		SELECT * from gameTBL where game_no = #{game_no}
+	</select>
+	
+	
+	<!-- 페이징  -->
+	<select id="getListPaging"
+		resultType="com.frogame.www.model.GameDTO">
+		select * from gameTBL order by game_no desc limit #{skip},#{amount}
+	</select>
+	
+	
+	<select id="getTotal" resultType="int">
+        select count(*) from gameTBL
+    </select>
+    
+</mapper>
