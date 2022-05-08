@@ -1,6 +1,7 @@
 package com.frogame.www.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
@@ -17,5 +18,5 @@ public interface GameService {
 
 	List<GameDTO> gameSearch(String search);
 	
-
+	void saveImage(Map<String, Object> hmap);
 }
