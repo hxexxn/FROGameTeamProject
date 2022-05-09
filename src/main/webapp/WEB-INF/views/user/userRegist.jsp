@@ -57,6 +57,36 @@
                 </div>
             </div>
         </div>
+        
+                <!-- 이용 약관 -->
+        <div id="siteGuide">
+            <div class="personalInfo">
+                <div class="guideTitle">
+                    <span>개인정보 수집 및 이용 (필수)</span>
+                </div>
+                
+                <table class="guideTable">
+                    <tr>
+                        <th>목적</th>
+                        <th>항목</th>
+                        <th>보유기간</th>
+                    </tr>
+                    <tr>
+                        <td>이용자 식별</td>
+                        <td>아이디(이메일), 닉네임, 출생연도(선택)</td>
+                        <td>회원 탈퇴 후 5일까지</td>
+                    </tr>
+                    <tr>
+                        <td>서비스 이용 및 문의 상담</td>
+                        <td>아이디(이메일)</td>
+                        <td>회원 탈퇴 후 5일까지</td>
+                    </tr>
+                </table>
+                <span><input type="checkbox" name="user_info_check" id="user_info_check"></span>
+                <span><label for="user_info_check" class="user_info_check">개인정보 수집 및 이용에 동의합니다.</label></span>
+            </div>
+
+        </div>
 
         <!-- 회원가입 창 -->
 
