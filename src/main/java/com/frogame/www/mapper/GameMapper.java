@@ -1,6 +1,7 @@
 package com.frogame.www.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -20,4 +21,5 @@ public interface GameMapper {
 
 	List<GameDTO> gameSearch(String search);
 
+	void saveImage(Map<String, Object> hmap);
 }

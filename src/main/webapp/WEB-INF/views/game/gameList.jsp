@@ -6,8 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="${path}/resources/css/style.css">
-<link rel="stylesheet" href="${path}/resources/css/gameList.css">
 <meta charset="UTF-8">
 <title>GameList</title>
 
@@ -162,7 +160,7 @@
 	</div>
 	<a class="insertBtn" href="gameInsert">게임등록</a>
 
-<script type="text/javascript" src="${path}/resources/js/gameList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
 
 </body>
 </html>
