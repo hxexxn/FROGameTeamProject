@@ -40,7 +40,7 @@
 			<span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
 		</div>
 		<div class="mainTitle">
-			<a href="#" class="froGame">FROGame</a>
+			<a href="/" class="froGame">FROGame</a>
 		</div>
 		<div class="userBox">
 			<span><i class="fa-solid fa-user-check"></i></span> <span><i
@@ -117,7 +117,7 @@
 							<a href="gameRead?game_no=${jjin[status.index].game_no}"><img
 								src="${img}" width="200px"></a>
 						</div>
-						<div class="game-content">
+						<div class="game-content title">
 							<a href="gameRead">${jjin[status.index].game_title}</a>
 						</div>
 						<div class="game-content">
