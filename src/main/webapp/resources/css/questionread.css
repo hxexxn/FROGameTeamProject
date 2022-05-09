@@ -1,0 +1,260 @@
+body {
+    margin: 0 auto;
+    background-color: #f6f5f5;
+}
+
+a{
+	text-decoration-line: none;
+	text-decoration : none;
+}
+
+/* 최상단 배너 */
+
+.topBanner {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.bannerText:link, .bannerText:visited, .bannerText:focus {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.bannerText:hover {
+    color: #CED46A;
+    text-decoration: none;
+}
+
+/* 상단 타이틀 */
+
+#wrapper {
+    width: 100%;
+    height: 80px;
+    border: 1px solid lightgray;
+    display: flex;
+}
+
+#titleLogo {
+    width: 15%;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+}
+
+.iTag:hover {
+    color: #07553B;
+}
+
+.mainTitle {
+    border: 1px solid lightgray;
+    width: 70%;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.froGame:visited, .froGame:link, .froGame:focus{
+    color: black;
+    text-decoration: none;
+}
+
+.froGame:hover {
+    color: #07553B;
+    text-decoration: none;
+}
+
+/* 로고 밑줄 왼쪽에서 오른쪽으로 이동하는 애니메이션 */
+
+.froGame{
+    position: relative;
+}
+
+.froGame:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #07553B;
+    
+}
+
+.froGame:hover:after{
+    width: 100%;
+    opacity: 1;
+}
+
+.userBox {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 13px;
+}
+
+/* 메인 메뉴 */
+
+#mainMenu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.menuBox {
+    display: flex;
+}
+
+.menuBox span{
+    margin: 100px;
+    font-size: 13px;
+}
+
+/* 드랍 다운 */
+.gameDropDownMenu {
+    display: flex;
+}
+
+.content{
+   
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_box{
+    width: 80%;
+   
+}
+
+.side_banner{
+    width: 20%;
+    height: 500px;
+    
+    margin-left: 50px;
+
+    background-image: url(img/Star-Wars-video-games-portrait-display-sky-poster-Star-Wars-Battlefront-786011-wallhere.com.jpg);
+   background-size: contain;
+   background-size:100% 100%;
+}
+
+.read_header{
+  
+   
+    height: 130px;
+    font-weight: bolder;
+    font-size: 34px;
+    border-bottom: 1px solid black;
+    position: relative;
+
+}
+
+.read_header_box{
+    
+   position : absolute;
+   margin-top:30px;
+}
+
+/* 목록 버튼 */
+.noticeListBtn{
+    
+    position: relative;
+	display: inline-block;
+  	border-radius: 0;
+	color: #252221;
+  	margin-top:2rem;
+  	font-weight: bold;
+  	font-size: 20px;
+  	letter-spacing: 2px;
+  	text-decoration: none;
+    padding-right: 2.5em;	
+    
+}
+
+.Btn{
+    width : 80% ;
+    text-align: left;    
+    margin-left: auto;
+    margin-right: auto; 
+  
+}
+
+
+.read_header_title{
+   
+    font-size: 24px;
+   
+    
+    height: 100px;
+    
+    position: relative;
+   
+   
+}
+
+.read_header_title1{
+    margin-left: 40px;    
+    width: 80%;
+    position : absolute;
+    margin-top:30px;
+    
+
+
+}
+
+.read_header_count_regdate{
+   
+    font-size: 11px;
+    color: #7e7e7e;
+    border-top:solid 0.1mm #7e7e7e6c;
+    border-bottom:solid 0.1mm #7e7e7e6c;
+    height: 50px;   
+  
+    position: relative;
+   
+}
+
+.read_header_count_regdate_box1{
+    display: flex;
+    margin-top : 15px;
+    text-align: right;   
+    justify-content: end;
+}
+
+.read_header_count_regdate_box2{
+    margin-left: 20px;
+}
+
+.read_header_content_box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;   
+    margin-top: 40px;
+    font-size: 16px;
+  
+}
+
