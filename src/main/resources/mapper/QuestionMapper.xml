@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
                   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">                  
-<mapper namespace="org.study.home.mapper.QuestionMapper">
+<mapper namespace="com.frogame.www.mapper.QuestionMapper">
 
 <insert id="questionInsert">
 INSERT INTO questionBoardTBL(question_title, question_content, question_tag, question_writer) 
 VALUES(#{question_title}, #{question_content}, #{question_tag}, #{question_writer})
 </insert>
 
-<select id="questionList" resultType="org.study.home.model.QuestionDTO">
+<select id="questionList" resultType="com.frogame.www.model.QuestionDTO">
 select * from questionBoardTBL order by question_no DESC
 </select>
 
-<select id="questionRead" resultType="org.study.home.model.QuestionDTO">
+<select id="questionRead" resultType="com.frogame.www.model.QuestionDTO">
 select * from questionBoardTBL where question_no = #{question_no}
 </select>
 
 	<select id="getListPaging"
-		resultType="org.study.home.model.QuestionDTO">
+		resultType="com.frogame.www.model.QuestionDTO">
 		select *	from questionBoardTBL order by question_no DESC	limit #{skip},#{amount}
 	</select>
 	
@@ -29,7 +29,7 @@ select * from questionBoardTBL where question_no = #{question_no}
 		UPDATE questionBoardTBL set question_count =	question_count+1 WHERE question_no = #{question_no};
 	</update>
 	
-	<select id="questionByCount"	resultType="org.study.home.model.QuestionDTO">
+	<select id="questionByCount"	resultType="com.frogame.www.model.QuestionDTO">
 		select * from questionBoardTBL order by question_count DESC
 	</select>
 

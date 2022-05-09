@@ -141,7 +141,7 @@
                             <li><a href="#">신작게임</a></li>
                             <li><a href="#">신작게임</a></li>
                         </ul></li>
-                    <li><a href="#">공지사항</a>
+                    <li><a href="noticeList">공지사항</a>
                         <ul id="subMenu">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">1 : 1 문의</a></li>
