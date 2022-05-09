@@ -57,7 +57,6 @@
                 </div>
             </div>
         </div>
-        <!-- 깃 테스1 -->
         
                 <!-- 이용 약관 -->
         <div id="siteGuide">
