@@ -258,6 +258,17 @@ body {
     outline: none;
 }
 
+#old_user_pw, #new_user_pw, #new_user_rePw, 
+#new_user_nick, #new_user_email {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding-left: 10px;
+    outline: none;
+}
+
+
 #idDupBtn,
 #nickDupBtn {
     width: 70px;
@@ -276,6 +287,17 @@ body {
 }
 
 #joinBtn {
+    width: 214px;
+    height: 30px;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+#updateBtn {
     width: 214px;
     height: 30px;
     font-size: 13px;

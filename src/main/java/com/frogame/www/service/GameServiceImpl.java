@@ -51,6 +51,11 @@ public class GameServiceImpl implements GameService{
 		gameMapper.saveImage(hmap);
 
 	}
+
+	@Override
+	public int getSearchTotal(String search) {
+		return gameMapper.getSearchTotal(search);
+	}
 	
 
 }
