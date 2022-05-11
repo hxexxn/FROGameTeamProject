@@ -135,6 +135,16 @@ body {
 
 /* 로그인 02 */
 
+#contentFrame {
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
 #loginFrame {
     padding-top: 50px;
     width: 100%;
@@ -215,4 +225,58 @@ body {
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: 1px;
+}
+
+
+
+
+/* 드랍 다운 */
+
+#mainMenu > ul {
+    list-style: none;
+}
+
+#mainMenu > ul > li {
+    margin: 0;
+    float: left;
+    margin-right: 50px;
+    list-style: none;
+}
+
+#menuTitle > li > a {
+    display: block;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: black;
+}
+
+#menuTitle > li:hover #subMenu {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s;
+    z-index: 1;
+    list-style: none;
+}
+
+#subMenu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#subMenu > li {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: rgba(206, 206, 206, 0.807);
+    width: 100px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+#subMenu > li > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }

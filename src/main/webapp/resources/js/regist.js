@@ -1,3 +1,6 @@
+var nick_check = false;
+var id_check = false;
+
 $(function(){
 	
 	// 아이디 중복 체크
@@ -12,6 +15,7 @@ $(function(){
 			success : function(cnt) {
 				if (cnt != 1) {
 					alert ('사용 가능한 아이디입니다.');
+					id_check = true;
 				} else {
 					alert ('사용 불가능한 아이디입니다.');
 				}
@@ -32,6 +36,7 @@ $(function(){
 			success :function(nickCnt) {
 				if (nickCnt != 1) {
 					alert ('사용 가능한 닉네임입니다.');
+					nick_check = true;
 				} else {
 					alert ('사용 불가능한 닉네임입니다.');
 				}
@@ -58,6 +63,17 @@ $(function(){
 		var check_nick = RegExp(/^([a-zA-Z0-9ㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{2,10}$/); // 닉네임 유효성 검사 (영문/한글/숫자 2-10글)
 		var check_email = RegExp(/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i); // 이메일 유효성 검사
 		
+		// 닉네임 중복 체크 여부
+		if(nick_check == false) {
+			alert('닉네임 중복여부를 확인해주세요.');
+			return false;
+		}
+		
+		// 아이디 중복 체크 여부
+		if(id_check == false) {
+			alert('아이디 중복여부를 확인해주세요.');
+			return false;
+		}
 		
 		// 아이디 공백 확인 
 		if(user_id == "" || user_id == null) {
@@ -77,7 +93,7 @@ $(function(){
 		// 비밀번호 공백 확인 
 		if (user_pw == "" || user_pw == null) {
 			alert ('비밀번호를 입력해주세요.');
-			$('#user.pw').focus();
+			$('#user_pw').focus();
 			return false;
 		}
 		

@@ -40,7 +40,7 @@
 			<span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
 		</div>
 		<div class="mainTitle">
-			<a href="#" class="froGame">FROGame</a>
+			<a href="/" class="froGame">FROGame</a>
 		</div>
 		<div class="userBox">
 			<span><i class="fa-solid fa-user-check"></i></span> <span><i
@@ -114,11 +114,11 @@
 				<c:forEach var="img" items="${img}" varStatus="status">
 					<div class="board-content flex">
 						<div class="game-content">
-							<a href="gameRead?game_no=${jjin[status.index].game_no}"><img
+							<a href="gameReadTest?game_no=${jjin[status.index].game_no}"><img
 								src="${img}" width="200px"></a>
 						</div>
-						<div class="game-content">
-							<a href="gameRead">${jjin[status.index].game_title}</a>
+						<div class="game-content title">
+							<a href="gameReadTest?game_no=${jjin[status.index].game_no}">${jjin[status.index].game_title}</a>
 						</div>
 						<div class="game-content">
 							<a href="gameRead">₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${jjin[status.index].game_price}" /></a>

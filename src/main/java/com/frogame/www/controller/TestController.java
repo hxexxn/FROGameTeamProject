@@ -20,5 +20,10 @@ public class TestController {
 	public String indexTest() {
 		return "test/indexTest";
 	}
-
+	
+	
+	@GetMapping("/cartTest")
+	public String cartTest() {
+		return "cart/cartTest";
+	}
 }

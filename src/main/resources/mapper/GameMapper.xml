@@ -10,7 +10,7 @@
 		VALUES(#{game_title}, #{file}, #{game_price}, #{game_genre_no})
 	</insert>
 	
-	<!-- 게임 검 -->
+	<!-- 게임 검색 -->
 	<select id="gameSearch" resultType="com.frogame.www.model.GameDTO">
 	<![CDATA[
 		SELECT * from gameTBL where game_title like concat('%',#{search},'%')
@@ -32,9 +32,14 @@
 		select * from gameTBL order by game_no desc limit #{skip},#{amount}
 	</select>
 	
-	
 	<select id="getTotal" resultType="int">
         select count(*) from gameTBL
     </select>
+    
+    <select id="getSearchTotal" resultType="int">
+	<![CDATA[
+		SELECT count(*) from gameTBL where game_title like concat('%',#{search},'%')
+		]]>
+	</select>
     
 </mapper>

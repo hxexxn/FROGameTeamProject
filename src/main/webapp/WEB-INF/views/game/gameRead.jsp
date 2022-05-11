@@ -14,6 +14,9 @@
 </head>
 <body>
 
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container px-5">
 			<a class="navbar-brand" href="/">FROGame</a>
@@ -140,5 +143,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="${path}/resources/js/scripts.js"></script>
+	<script type="text/javascript" src="${path}/resources/js/cartList.js"></script>
 </body>
 </html>
