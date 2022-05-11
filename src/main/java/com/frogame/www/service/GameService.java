@@ -19,4 +19,6 @@ public interface GameService {
 	List<GameDTO> gameSearch(String search);
 	
 	void saveImage(Map<String, Object> hmap);
+
+	int getSearchTotal(String search);
 }
