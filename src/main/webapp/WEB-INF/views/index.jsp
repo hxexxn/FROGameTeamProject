@@ -104,12 +104,9 @@
               <c:set var="sess" value="${sessionScope.user_id}"></c:set>
                 <div class="userBox">
 
-                    <span> <c:out value="${sess}"/></span>
+
+					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
                     <span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
-
-                    <span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
-                    <span><a href="/cartList">장바구니</a></span>
-
                     <span><a href="/userLogout">로그아웃</a></span>
                 </div>
               </c:if>
