@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,23 +25,24 @@
 	<div id="contentFrame">
 		
 		<div id="wrap">
-	
 	<c:set var="totalPrice" value="${0}"/>
-	<c:forEach var="cList" items="${cList}" varStatus="status">
+						
+	<c:forEach var="img" items="${img}" varStatus="status">
 		<form action="cartDelete" method="post">
 				
 			
 			 <div id="cartGameList">
-			        
+			 <img src="${img}" width="200px">
 			       <div class="gameTitle"> 
 			       <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
-			           <p> * 품명 : ${cList.gameDto.game_title}</p>
-			           <input type="hidden" value="${cList.cart_no}" id="cart_no" name="cart_no">
-			           <p> * 카트 번호 : ${cList.cart_no} </p>
+			       
+			           <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
+			           <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
+			          <%--  <p> * 카트 번호 : ${cList[status.index].cart_no} </p> --%>
 			       </div>
 			
 			       <div class="gamePrice"> 
-			           <p> * 가격 : ${cList.gameDto.game_price}</p>
+			           <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
 			       </div>
 			
 			       <div class="delBtn">
@@ -53,7 +55,7 @@
 			
 			</form>
 
-			 <c:set var="totalPrice" value="${totalPrice + cList.gameDto.game_price}"/>
+			 <c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
 		</c:forEach>
 		
 			<div class="totalPrice">
@@ -64,14 +66,8 @@
 		</div>
 	  	</div>
 
-
-
-
-
 	</div>
 
-
-	
 
 <jsp:include page="indexBottom.jsp" flush="false"/>
 <script type="text/javascript" src="${path}/resources/js/cartList.js"></script>
