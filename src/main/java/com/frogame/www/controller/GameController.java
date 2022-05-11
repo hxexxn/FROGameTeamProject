@@ -67,17 +67,26 @@ public class GameController {
 		model.addAttribute("img", imgList);
 
 		return "game/gameList";
-		
 	}
 	
-	// 게임 상세 정보 
-	@GetMapping("/gameRead")
-	public String gameRead(@RequestParam("game_no") String game_no, Model model) {
+//	// 게임 상세 정보 
+//	@GetMapping("/gameRead")
+//	public String gameRead(@RequestParam("game_no") String game_no, Model model) {
+//		GameDTO dto = gameService.gameRead(game_no);
+//		model.addAttribute("dto", dto);
+//		dto.getGame_regdate();
+//		dto.getFile();
+//		return "game/gameRead";
+//	}
+	
+	// 테스트 게임 상세 정보 
+	@GetMapping("/gameReadTest")
+	public String gameReadTest(@RequestParam("game_no") String game_no, Model model) {
 		GameDTO dto = gameService.gameRead(game_no);
 		model.addAttribute("dto", dto);
 		dto.getGame_regdate();
 		dto.getFile();
-		return "game/gameRead";
+		return "game/gameReadTest";
 	}
 	
 	// 게임 검색 

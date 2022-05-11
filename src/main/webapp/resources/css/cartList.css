@@ -1,0 +1,45 @@
+body {
+    margin: 0 auto;
+    background-color: #f6f5f5;
+    overflow-x: hidden;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#cartGameList {
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 50%;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+#cartGameList div {
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+
+.gameTitle {
+    font-weight: bold;
+}
+
+.delBtn {
+    margin: 0 auto;
+}
+
+.totalPrice {
+	margin: 0 auto;
+	width: 50%;
+	border: 1px solid lightgray;
+}
