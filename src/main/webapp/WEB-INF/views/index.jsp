@@ -189,7 +189,7 @@
                             <span>Watch Dogs : LEGION</span>
                         </div>
                         <div class="bestGame-info">
-                            <span>₩ 54,8000</span>
+                            <span>₩ 54,800</span>
                         </div>
                     </div>
                 </div>
