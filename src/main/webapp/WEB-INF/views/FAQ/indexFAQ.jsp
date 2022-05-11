@@ -55,7 +55,7 @@
 
 
 <div  class="headFQA">
-    <div class="headFQA_box1">FroGame 고객센터</div>
+    <div class="headFQA_box1"><a href="/indexFAQ">FroGame 고객센터</a></div>
 
     
     <div class="search_bar">
