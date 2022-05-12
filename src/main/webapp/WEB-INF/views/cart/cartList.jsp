@@ -52,7 +52,7 @@ crossorigin="anonymous"></script>
 
 <c:set var="totalPrice" value="${0}"/>
 
-<c:forEach var="cList" items="${cList}" varStatus="status">
+<c:forEach var="img" items="${img}" varStatus="status">
 
 <form action="cartDelete" method="post">
 
@@ -67,12 +67,14 @@ crossorigin="anonymous"></script>
       <div class="gameTitle"> 
 
       <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
+      
+      		<img src="${img}">
 
-          <p> * 품명 : ${cList.gameDto.game_title}</p>
+          <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
 
-          <input type="hidden" value="${cList.cart_no}" id="cart_no" name="cart_no">
+          <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
 
-          <p> * 카트 번호 : ${cList.cart_no} </p>
+          <p> * 카트 번호 : ${cList[status.index].cart_no} </p>
 
       </div>
 
@@ -80,7 +82,7 @@ crossorigin="anonymous"></script>
 
       <div class="gamePrice"> 
 
-          <p> * 가격 : ${cList.gameDto.game_price}</p>
+          <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
 
       </div>
 
@@ -106,7 +108,7 @@ crossorigin="anonymous"></script>
 
  
 
-<c:set var="totalPrice" value="${totalPrice + cList.gameDto.game_price}"/>
+<c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
 
 </c:forEach>
 
