@@ -184,6 +184,10 @@ body {
     visibility: hidden;
 }
 
+ul {
+	padding-inline-start: 0px;
+}
+
 #subMenu > li {
     text-align: center;
     padding: 10px 10px;
