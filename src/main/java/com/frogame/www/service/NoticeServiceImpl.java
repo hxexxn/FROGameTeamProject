@@ -51,5 +51,26 @@ public class NoticeServiceImpl implements NoticeService{
 	public int getTotal() {
 		  return mapper.getTotal();
 	}
+
+@Override
+public void noticeDelete(String notice_no) {
+	mapper.noticeDelete(notice_no);
+	
+}
+
+@Override
+public void noticeUpdate(NoticeDTO dto) {
+	mapper.noticeUpdate(dto);
+	
+}
+
+@Override
+public List<NoticeDTO> noticeSearch(String search) {
+	return mapper.noticeSearch(search);
+}
+
+
+
+
 	
 }

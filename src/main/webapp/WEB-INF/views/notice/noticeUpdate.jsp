@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문의하기</title>
-    <link rel="stylesheet" href="${path}/resources/css/questionInsert.css"> 
+    <link rel="stylesheet" href="${path}/resources/css/noticeInsert.css"> 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -59,32 +59,34 @@
             </div>
         </div>
 
-	<form action="/questionInsert" method="post" id="contentInsertForm" name="contentInsertForm" autocomplete="off">
+	
+	
+	<form action="/noticeUpdate" method="post" id="contentInsertForm" name="contentInsertForm" autocomplete="off">
+	<input type="hidden" name="notice_no" value="${dto.notice_no}">	
         <div class="contentFrame">         
 
             <div class="contentInsertBox">                
                     
                 <div class="contentInsertBox01">
-                    <input type="text" name="question_title" id="question_title" placeholder="제목을 입력해주세요." class="title_input" maxlength="200">  
-                    <input type="hidden" name="question_writer" id="question_writer" value="${sessionScope.user_id}"> 
+                    <input type="text" name="notice_title" id="notice_title" value="${dto.notice_title}" class="title_input">  
                 </div>
 
                 <div class="contentInsertBox02">
-                <textarea rows="30" cols="100" name="question_content" id="question_content" class="content_input"> </textarea>
-                    
+                 <textarea rows="30" cols="100" name="notice_content" id="notice_content" 
+                 	class="content_input"> ${dto.notice_content}</textarea>
                 </div>                              
                            
                 <div class="contentSubmitBtnBox">
-                    <input type="submit" value="글쓰기" id="contentSubmitBtnBox">
-                    <input type="button" value="목록" id="ListBtnBox" onclick="location.href='/questionList'">
+                    <input type="submit" value="수정하기" id="contentSubmitBtnBox">
+                    <input type="button" value="목록" id="ListBtnBox" onclick="location.href='/noticeList'">
                 </div>
                 
             </div>
         </div>
 	</form>
 	 </div>
-	
-${dto.question_comment_regdate}
+
+
 
 
 

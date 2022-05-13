@@ -1,4 +1,4 @@
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ page</title>
-<link rel="stylesheet" href="/resources/css/indexFAQ.css">
+<link rel="stylesheet" href="/resources/css/FAQ01.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -32,7 +32,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="/" class="froGame">FROGame</a>
+            <a href="#" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -71,59 +71,27 @@
         
     </div>
 </div>
+
+
+
+<div class="layout_content_head">버그 제보</div>
+
 <div class="layout_content">
 
-    <div class="titleFQA">
-        <h3>자주 찾는 도움말</h3>
-    </div>
+    <div class="layout_content_box">
 
-    <div class="titleFQA_wrap">
-        <div class="titleFQA_wrap1">
-            
-                <div class="nav_item"><a href="/FAQ_01">
-                   <div class="card_count">01</div>
-                   <div class="nav_item_text"> 게임 이용 문의</div>
-                </a></div> 
-               <div class="nav_item"> <a href="/FAQ_02">
-                   <div class="card_count">02</div>
-                   <div class="nav_item_text"> 구매</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_03">
-                   <div class="card_count">03</div>
-                   <div class="nav_item_text"> 나의 계정</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_04">
-                   <div class="card_count">04</div>
-                   <div class="nav_item_text"> 설치/실행</div></a>
-                </div>
-               
-          
+        <details> 
+            <summary><span class="QQ">Q. </span>게임에서 버그를 발견한 것 같아요.</summary><br><br>
+            <div class="details_content">
+                게임 이용 중 버그로 의심 가는 현상을 확인하셨다면,
+문의를 통해 현상을 제보해주시기 바랍니다.<br><br>
 
-        </div>
-    
-        <div class="titleFQA_wrap2">            
-            <div class="nav_item"><a href="/FAQ_05">
-                <div class="card_count">05</div>
-                <div class="nav_item_text">버그 제보</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_06">
-                <div class="card_count">06</div>
-                <div class="nav_item_text">결제/환불</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_07">
-                <div class="card_count">07</div>
-                <div class="nav_item_text">건의 제안</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_08">
-                <div class="card_count">08</div>
-                <div class="nav_item_text">보안</div></a>
-            </div>              
-        </div>
-
-    </div>
-
+버그 해당 현상에 대한 기재와 스크린샷을 첨부하시어 접수를 부탁드립니다.<br><br>
 </div>
+        </details>
 
+    </div>
+ </div>
 
 </body>
 </html>

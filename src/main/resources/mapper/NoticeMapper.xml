@@ -5,7 +5,7 @@
 
 
 <insert id="noticeInsert">
-INSERT INTO noticeBoardTBL(notice_title, notice_content) VALUES(#{notice_title}, #{notice_content})
+INSERT INTO noticeBoardTBL(notice_title, notice_content, notice_writer) VALUES(#{notice_title}, #{notice_content}, #{notice_writer})
 </insert>
 
 <select id="noticeList" resultType="com.frogame.www.model.NoticeDTO">
@@ -37,6 +37,18 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
 	<select id="getTotal" resultType="int">
         select count(*) from noticeBoardTBL
     </select>
+    
+    <delete id="noticeDelete"> 
+    DELETE FROM noticeBoardTBL WHERE notice_no = #{notice_no} 
+    </delete>
+    
+    <update id="noticeUpdate">
+    UPDATE noticeBoardTBL SET notice_title = #{notice_title}, notice_content = #{notice_content} WHERE notice_no = #{notice_no}
+    </update>
+    
+    <select id="noticeSearch" resultType="com.frogame.www.model.NoticeDTO">	
+		<![CDATA[	SELECT * from noticeBoardTBL where notice_title like concat('%',#{search},'%')]]>
+	</select>
     
     
 

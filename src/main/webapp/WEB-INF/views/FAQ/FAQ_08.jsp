@@ -1,4 +1,4 @@
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ page</title>
-<link rel="stylesheet" href="/resources/css/indexFAQ.css">
+<link rel="stylesheet" href="/resources/css/FAQ01.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -32,7 +32,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="/" class="froGame">FROGame</a>
+            <a href="#" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -71,58 +71,42 @@
         
     </div>
 </div>
+
+<div class="layout_content_head">보안</div>
+
 <div class="layout_content">
 
-    <div class="titleFQA">
-        <h3>자주 찾는 도움말</h3>
-    </div>
+    <div class="layout_content_box">
 
-    <div class="titleFQA_wrap">
-        <div class="titleFQA_wrap1">
-            
-                <div class="nav_item"><a href="/FAQ_01">
-                   <div class="card_count">01</div>
-                   <div class="nav_item_text"> 게임 이용 문의</div>
-                </a></div> 
-               <div class="nav_item"> <a href="/FAQ_02">
-                   <div class="card_count">02</div>
-                   <div class="nav_item_text"> 구매</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_03">
-                   <div class="card_count">03</div>
-                   <div class="nav_item_text"> 나의 계정</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_04">
-                   <div class="card_count">04</div>
-                   <div class="nav_item_text"> 설치/실행</div></a>
-                </div>
+        <details> 
+            <summary><span class="QQ">Q. </span>제 최근 로그인 기록을 확인할 수 없나요?</summary><br><br>
+            <div class="details_content">
+                로그인 기록은 확인하실 수 없습니다!<br><br>
                
-          
+            </div>
 
-        </div>
-    
-        <div class="titleFQA_wrap2">            
-            <div class="nav_item"><a href="/FAQ_05">
-                <div class="card_count">05</div>
-                <div class="nav_item_text">버그 제보</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_06">
-                <div class="card_count">06</div>
-                <div class="nav_item_text">결제/환불</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_07">
-                <div class="card_count">07</div>
-                <div class="nav_item_text">건의 제안</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_08">
-                <div class="card_count">08</div>
-                <div class="nav_item_text">보안</div></a>
-            </div>              
-        </div>
+        </details>
 
     </div>
 
-</div>
+    <div class="layout_content_box">
+
+        <details> 
+            <summary><span class="QQ">Q. </span>접속한 ID로 잠시 동안 이용할 수 없다는 메세지가 나와요</summary><br><br>
+            <div class="details_content">
+                ‘접속하신 ID로 잠시 동안 이용할 수 없습니다.’라는 메시지가 나타났나요?<br><br>
+ 
+                이용하시는 ID 내에서 확인이 필요한 부분이 있어<br>
+                임시적으로 차단이 된 상황입니다.<br><br>
+                 
+                번거로우시더라도 고객센터로 문의해주실 경우 <br>
+                어떤 이유로 임시차단 되었는지 빠르게 안내해드리겠습니다.<br><br>
+               
+            </div>
+
+        </details>
+
+    </div>   </div>
 
 
 </body>

@@ -236,3 +236,52 @@ td{
     margin-left: 10%;
 
 }
+
+.noticeDeleteBtn{
+    
+    position: relative;
+	display: inline-block;
+  	border-radius: 0;
+	color: #252221;
+  	margin-top:2rem;
+  	font-weight: bold;
+  	font-size: 20px;
+  	letter-spacing: 2px;
+  	text-decoration: none;
+    padding-right: 2.5em;	
+   
+    
+}
+
+
+ /* 검색창 */
+
+
+.searchBar {
+    margin-right: 65px;
+}
+
+#search {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    
+    background-color: rgb(238, 238, 238);
+}
+
+#search::placeholder {
+    color: white;
+    text-align: right;
+}
+
+.icon{
+	cursor: pointer;
+}
+
+
+
+
+

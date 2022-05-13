@@ -83,18 +83,40 @@
         <tr>
             <td class="td1">${list.notice_no}</td>
             <td class="td2"><a href="/noticeRead?notice_no=${list.notice_no}">${list.notice_title}</a> </td>
-            <td class="td3">관리자</td>
+            <td class="td3">${list.notice_writer}</td>
             <td class="td4"><fmt:formatDate value="${list.notice_regdate}" pattern="yyyy-MM-dd"/></td>
             <td class="td5">${list.notice_count}</td>
         </tr>
         </c:forEach>
       </tbody>
     </table>
-    <div class="Btn"> <a href="/noticeInsert" class="noticeInsertBtn">글쓰기</a> 
-    	
-		</div>
+    
+    
+    
+    
+    <div class="Btn"> 
+   
+    
+      <form action="noticeSearch" autocomplete="off">
+      <%--  <c:if test="${sessionScope.user_id == 관리자id }"> --%>
+    <input type="hidden" name="notice_writer" id="notice_writer" value="${sessionScope.user_id}"> 
+    	<a href="/noticeInsert" class="noticeInsertBtn" id="contentSubmitBtnBox">글쓰기</a> 
+    <%-- </c:if> --%>
+    <span class="searchBar">  
+   <input class="basic-input" type="text" name="search" id="search"> 
+   <input type="submit" value="검색" class="basic-btn">
+    </span>
+    </form>
+     
+    </div>
+  
 </div>
+
+
 </div>
+
+   
+
 
 
 

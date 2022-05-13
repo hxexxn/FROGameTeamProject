@@ -4,8 +4,8 @@
 <mapper namespace="com.frogame.www.mapper.QuestionMapper">
 
 <insert id="questionInsert">
-INSERT INTO questionBoardTBL(question_title, question_content, question_tag, question_writer) 
-VALUES(#{question_title}, #{question_content}, #{question_tag}, #{question_writer})
+INSERT INTO questionBoardTBL(question_title, question_content, question_writer) 
+VALUES(#{question_title}, #{question_content},  #{question_writer})
 </insert>
 
 <select id="questionList" resultType="com.frogame.www.model.QuestionDTO">
@@ -32,6 +32,14 @@ select * from questionBoardTBL where question_no = #{question_no}
 	<select id="questionByCount"	resultType="com.frogame.www.model.QuestionDTO">
 		select * from questionBoardTBL order by question_count DESC
 	</select>
+	
+	<delete id="questionDelete">
+	    DELETE FROM questionBoardTBL WHERE question_no = #{question_no} 	
+	</delete>
+	
+	 <update id="questionUpdate">
+    UPDATE questionBoardTBL SET question_title = #{question_title}, question_content = #{question_content} WHERE question_no = #{question_no}
+    </update>
 
 
 

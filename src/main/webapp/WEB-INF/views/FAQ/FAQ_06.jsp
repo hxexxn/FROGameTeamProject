@@ -1,4 +1,4 @@
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ page</title>
-<link rel="stylesheet" href="/resources/css/indexFAQ.css">
+<link rel="stylesheet" href="/resources/css/FAQ01.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -32,7 +32,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="/" class="froGame">FROGame</a>
+            <a href="#" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -71,57 +71,55 @@
         
     </div>
 </div>
+
+
+<div class="layout_content_head">결제 환불</div>
+
 <div class="layout_content">
 
-    <div class="titleFQA">
-        <h3>자주 찾는 도움말</h3>
-    </div>
+    <div class="layout_content_box">
 
-    <div class="titleFQA_wrap">
-        <div class="titleFQA_wrap1">
-            
-                <div class="nav_item"><a href="/FAQ_01">
-                   <div class="card_count">01</div>
-                   <div class="nav_item_text"> 게임 이용 문의</div>
-                </a></div> 
-               <div class="nav_item"> <a href="/FAQ_02">
-                   <div class="card_count">02</div>
-                   <div class="nav_item_text"> 구매</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_03">
-                   <div class="card_count">03</div>
-                   <div class="nav_item_text"> 나의 계정</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_04">
-                   <div class="card_count">04</div>
-                   <div class="nav_item_text"> 설치/실행</div></a>
-                </div>
-               
-          
+        <details> 
+            <summary><span class="QQ">Q. </span>결제내역을 확인하고 싶어요.</summary><br><br>
+            <div class="details_content">
+                결제 사용내역은 5년(60개월)동안 보관되며,
+로그인 시 마이페이지에서 직접 확인할 수 있습니다.  : )<br><br>
+            </div>
 
-        </div>
-    
-        <div class="titleFQA_wrap2">            
-            <div class="nav_item"><a href="/FAQ_05">
-                <div class="card_count">05</div>
-                <div class="nav_item_text">버그 제보</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_06">
-                <div class="card_count">06</div>
-                <div class="nav_item_text">결제/환불</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_07">
-                <div class="card_count">07</div>
-                <div class="nav_item_text">건의 제안</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_08">
-                <div class="card_count">08</div>
-                <div class="nav_item_text">보안</div></a>
-            </div>              
-        </div>
+        </details>
 
     </div>
 
+    <div  class="layout_content_box">
+
+        <details> 
+            <summary><span class="QQ">Q. </span>구매를 취소하고싶어요.</summary><br><br>
+            <div class="details_content">
+               구매내역의 [결제취소] 버튼을 눌러서 원하지 않는 구매 건의 취소를 진행하실 수 있습니다.<br><br>
+ 
+
+            </div>
+
+        </details>
+        
+    </div>
+
+    <div  class="layout_content_box">
+
+        <details> 
+            <summary><span class="QQ">Q. </span>환불 하고 싶어요.</summary><br><br>
+            <div class="details_content">
+                
+                환불 페이지에서 환불을 클릭하여 환불하실 수 있습니다.
+
+<br><br>
+ 
+
+            </div>
+
+        </details>  
+        
+    </div>
 </div>
 
 

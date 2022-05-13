@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항 게시판 목록</title>
+<title>문의 게시판 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/noticeList.css">
 <link rel="stylesheet" href="${path}/resources/css/boardList.css">
 <style>
@@ -82,7 +82,9 @@
         </c:forEach>
       </tbody>
     </table>
-    <div class="Btn"> <a href="/questionInsert" class="noticeInsertBtn">글쓰기</a> </div>
+     <input type="hidden" name="question_writer" id="question_writer" value="${sessionScope.user_id}"> 
+    <div class="Btn"> <a href="/questionInsert" class="noticeInsertBtn" id="questionInsertBtn">글쓰기</a> </div>
+    
 </div>
 </div>
 

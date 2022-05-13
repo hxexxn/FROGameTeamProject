@@ -52,6 +52,18 @@ public class QuestionServiceImpl implements QuestionService{
 		mapper.questionViewCount(question_no);
 		
 	}
+
+	@Override
+	public void questionDelete(String question_no) {
+		mapper.questionDelete(question_no);
+		
+	}
+
+	@Override
+	public void questionUpdate(QuestionDTO dto) {
+		mapper.questionUpdate(dto);
+		
+	}
 	
 	
 	

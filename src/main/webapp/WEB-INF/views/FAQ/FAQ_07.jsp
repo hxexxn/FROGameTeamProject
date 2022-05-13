@@ -1,4 +1,4 @@
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ page</title>
-<link rel="stylesheet" href="/resources/css/indexFAQ.css">
+<link rel="stylesheet" href="/resources/css/FAQ01.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -32,7 +32,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="/" class="froGame">FROGame</a>
+            <a href="#" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -71,59 +71,28 @@
         
     </div>
 </div>
+
+
+
+<div class="layout_content_head">건의 제안</div>
+
 <div class="layout_content">
 
-    <div class="titleFQA">
-        <h3>자주 찾는 도움말</h3>
-    </div>
+    <div class="layout_content_box">
 
-    <div class="titleFQA_wrap">
-        <div class="titleFQA_wrap1">
-            
-                <div class="nav_item"><a href="/FAQ_01">
-                   <div class="card_count">01</div>
-                   <div class="nav_item_text"> 게임 이용 문의</div>
-                </a></div> 
-               <div class="nav_item"> <a href="/FAQ_02">
-                   <div class="card_count">02</div>
-                   <div class="nav_item_text"> 구매</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_03">
-                   <div class="card_count">03</div>
-                   <div class="nav_item_text"> 나의 계정</div></a>
-                </div>
-               <div class="nav_item"><a href="/FAQ_04">
-                   <div class="card_count">04</div>
-                   <div class="nav_item_text"> 설치/실행</div></a>
-                </div>
-               
-          
+        <details> 
+            <summary><span class="QQ">Q. </span>건의 사항이 있는데 문의하는 방법을 알려주세요.</summary><br><br>
+            <div class="details_content">
+                FroGame을 이용하시면서 불편사항이나 개선이 필요하다고 생각되는 부분이 있으시다면 <br>
 
-        </div>
-    
-        <div class="titleFQA_wrap2">            
-            <div class="nav_item"><a href="/FAQ_05">
-                <div class="card_count">05</div>
-                <div class="nav_item_text">버그 제보</div></a>
+1:1문의를 통해 요청주시는 내용을 상세히 기재하여 문의 접수 부탁드립니다.<br><br>
+
+
             </div>
-            <div class="nav_item"><a href="/FAQ_06">
-                <div class="card_count">06</div>
-                <div class="nav_item_text">결제/환불</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_07">
-                <div class="card_count">07</div>
-                <div class="nav_item_text">건의 제안</div></a>
-            </div>
-            <div class="nav_item"><a href="/FAQ_08">
-                <div class="card_count">08</div>
-                <div class="nav_item_text">보안</div></a>
-            </div>              
-        </div>
 
-    </div>
+        </details>
 
-</div>
-
+    </div>  </div>
 
 </body>
 </html>

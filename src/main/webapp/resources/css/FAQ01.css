@@ -3,8 +3,6 @@ body {
     background-color: #f6f5f5;
 }
 
-/* 최상단 배너 */
-
 .headFQA_box1 a {
     color: white;
 }
@@ -14,6 +12,8 @@ a {
     text-decoration-line: none;
     color: black;
 }
+
+/* 최상단 배너 */
 
 .topBanner {
     width: 100%;
@@ -162,9 +162,8 @@ a {
     margin: 0 auto;
     
     letter-spacing: 2px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-decoration-line: none;    
+    color: #fff;
+
 }
 
 .search1{
@@ -244,12 +243,13 @@ a {
     margin-left: auto;
     margin-right: auto;
    
+   
 
 }
 
 .titleFQA{
     font-size: 24px;
-    color: #333;
+    color: rgba(233, 233, 233, 0.265);
     line-height: 28px;
     font-weight: 700;
     margin-left: 38px;
@@ -272,51 +272,65 @@ a {
     justify-content: space-around;
  }
 
-.nav_item{
-    
-    border: solid 1px #d8d8d8;
-    background-color: #ffffff;
-    height: 161px;
-    width: 20%;
-    color: #333;
-    vertical-align: middle;
-    
-   
-}
+
 
 /* border: solid 1px navy; */
 
-.nav_item_text{
-    width: 100%;    
-    font-size: 23px;
-    
-    line-height: 24px;
-    font-weight: 600;
-    margin-top: 13%;
-    
-    text-align: center;
 
+
+.layout_content_box{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    margin-top: 100px;
+    background-color:  rgba(233, 233, 233, 0.265);
+    border-radius: 0.6em;
 }
 
-.nav_item:hover{
-    background: #f36519;
-    color: #fff;
-    cursor: pointer;
-
-}
-
-
-
-.card_count{
-    display: block;
-    height: 31px;
-    padding: 0 24px 0 24px;
-    font-size: 20px;
-    color: #ccc;
+summary{
+    font-weight:bold;    
+    font-size: 24px;
     line-height: normal;
-    font-weight: bold;
-  
-
+    font-weight: 700;      
+    letter-spacing: 2px;
+    cursor:pointer;
+    
 }
 
+details summary::marker{font-size:0;}
 
+
+.QQ{ 
+    color: #ff5100;
+    font-size: 40px;
+    font-weight:bold; 
+    line-height: normal;
+    font-weight: 700;      
+    letter-spacing: 2px;
+ }
+
+ .details_content{
+
+      
+    font-size: 16px;
+    line-height: normal;    
+    letter-spacing: 1px;
+    margin-left: 40px;
+
+ }
+
+ .layout_content_head{
+
+    text-align: center;color: #1a0e0e;
+    font-size: 48px;
+    font-weight:bold; 
+    line-height: normal;
+    font-weight: 700;      
+    
+    border-bottom: solid 2px #c5bdbd;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+ }

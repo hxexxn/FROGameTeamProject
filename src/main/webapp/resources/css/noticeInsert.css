@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     background-color: #f6f5f5;
+    overflow-x: hidden;
 }
 
 a{
@@ -62,7 +63,7 @@ a{
     border-bottom: none;
     text-align: center;
     line-height: 80px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Fredoka One', cursive;
 }
 
@@ -137,154 +138,116 @@ a{
     display: flex;
 }
 
-.content{
-   
-    width: 80%;
-    margin-left: auto;
+
+.contentFrame{
+    background-color: rgb(255, 255, 255);
     margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.content_box{
-    width: 80%;
-   
-}
-
-.side_banner{
-    width: 20%;
-    height: 500px;
-    
-    margin-left: 50px;
-
-    background-image: url(img/Star-Wars-video-games-portrait-display-sky-poster-Star-Wars-Battlefront-786011-wallhere.com.jpg);
-   background-size: contain;
-   background-size:100% 100%;
-}
-
-.read_header{
-  
-   
-    height: 130px;
-    font-weight: bolder;
-    font-size: 34px;
-    border-bottom: 1px solid black;
-    position: relative;
-
-}
-
-.read_header_box{
-    
-   position : absolute;
-   margin-top:30px;
-}
-
-/* 목록 버튼 */
-.noticeListBtn{
-    
-    position: relative;
-	display: inline-block;
-  	border-radius: 0;
-	color: #252221;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 20px;
-  	letter-spacing: 2px;
-  	text-decoration: none;
-    padding-right: 2.5em;	
-    
-}
-
-.noticeDeleteBtn{
-    
-    position: relative;
-	display: inline-block;
-  	border-radius: 0;
-	color: #252221;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 20px;
-  	letter-spacing: 2px;
-  	text-decoration: none;
-    padding-right: 2.5em;	
-    
-}
-
-.noticeUpdateBtn{
-    
-    position: relative;
-	display: inline-block;
-  	border-radius: 0;
-	color: #252221;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 20px;
-  	letter-spacing: 2px;
-  	text-decoration: none;
-    padding-right: 2.5em;	
-    
-}
-
-.Btn{
-    width : 80% ;
-    text-align: left;    
     margin-left: auto;
-    margin-right: auto; 
-  
-}
-
-
-.read_header_title{
-   
-    font-size: 24px;
-   
+    width: 70%;
+    border: 1px solid lightgray;
+    height: 80%;
     
-    height: 100px;
-    
-    position: relative;
-   
-   
 }
 
-.read_header_title1{
-    margin-left: 40px;    
-    width: 80%;
-    position : absolute;
-    margin-top:30px;
-    
 
 
-}
-
-.read_header_count_regdate{
-   
-    font-size: 11px;
-    color: #7e7e7e;
-    border-top:solid 0.1mm #7e7e7e6c;
-    border-bottom:solid 0.1mm #7e7e7e6c;
-    height: 50px;   
-  
-    position: relative;
-   
-}
-
-.read_header_count_regdate_box1{
-    display: flex;
-    margin-top : 15px;
-    text-align: right;   
-    justify-content: end;
-}
-
-.read_header_count_regdate_box2{
-    margin-left: 20px;
-}
-
-.read_header_content_box{
-    margin-left: auto;
+.content_title_input{
     margin-right: auto;
-    width: 80%;   
-    margin-top: 40px;
+    margin-left: auto;
+    text-align: center;
+   
+
+}
+
+.title_input{
+    width: 80%;
+    height: 50px;
+    border: 0;
+    background-color: rgba(233, 233, 233, 0.265);
+    border-radius: 15px;
     font-size: 16px;
-  
+    padding-left: 30px;
+    margin-top: 50px;
 }
+
+.content_input{
+    width: 80%;
+    height: 600px;
+    border: 0;
+    background-color: rgba(233, 233, 233, 0.265);
+    border-radius: 15px;
+    font-size: 16px;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+
+
+
+.contentInsertBox01{
+  
+    display: flex;
+    justify-content: center;
+
+}
+
+.contentInsertBox02{
+  
+    display: flex;
+    justify-content: center;
+    text-align: left;
+
+}
+
+
+#footer {
+    height: 200px;
+}
+
+.copyRight > .frogGameCopyRight {
+    margin: 0 auto;
+    padding: 60px 0;
+    /* border: 1px solid red; */
+    width: 75%;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.contentSubmitBtnBox {
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#contentSubmitBtnBox {
+    width: 214px;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+}
+
+#ListBtnBox{
+	width: 214px;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+     cursor: pointer;
+}
+
 

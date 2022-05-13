@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.frogame.www.model.Criteria;
+import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.model.QuestionDTO;
 import com.frogame.www.service.QuestionService;
@@ -58,6 +59,27 @@ public class QuestionController {
 		List<QuestionDTO> list = questionService.questionByCount();
 		model.addAttribute("list", list);
 		return "question/questionList";
+	}
+	
+	@GetMapping("/questionDelete")
+	public String questionDelete(@RequestParam("question_no")String question_no) {
+		questionService.questionDelete(question_no);
+		return "redirect:/questionList";
+	}
+	
+	@GetMapping("/questionUpdate")
+	public String questionUpdate(@RequestParam("question_no")String question_no, Model model) {
+		QuestionDTO dto = questionService.questionRead(question_no);
+		model.addAttribute("dto",dto);
+		return "question/questionUpdate";
+	}
+	
+	@PostMapping("/questionUpdate")
+	public String questionUpdateProcess(QuestionDTO dto) {
+		
+		questionService.questionUpdate(dto);
+		
+		return "redirect:/questionRead?question_no="+dto.getQuestion_no();
 	}
 	
 	
