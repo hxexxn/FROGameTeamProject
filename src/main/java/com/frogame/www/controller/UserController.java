@@ -19,6 +19,12 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+//	
+//	// 관리자 화면 이동 
+//	@GetMapping("/admin")
+//	public String admin() {
+//		return "admin/admin";
+//	}
 	
 	// 메인화면 이동 
 	@GetMapping("/")
@@ -30,7 +36,7 @@ public class UserController {
 	@GetMapping("/userRegist")
 	public String userRegist() {
 		return "user/userRegist";
-	} 
+	}
 	
 	// 유저 회원가입 
 	@PostMapping ("/userInsert")
@@ -68,10 +74,11 @@ public class UserController {
 	public String userLogin (UserDTO dto, HttpServletRequest request, RedirectAttributes rttr) {
 		String resultDTO = userService.userLogin(dto);
 		System.out.println("resultDTO 값 : " + resultDTO);
-		
+
 		if (resultDTO.equals("LoginSuccess")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user_id", dto.getUser_id());
+			session.setAttribute("user_level", dto.getUser_level());
 			System.out.println("로그인 성공 / 세션 등록 완료.");
 			return "redirect:/";
 		} else {
@@ -81,6 +88,7 @@ public class UserController {
 		}
 	}
 	
+	
 	// 유저 로그아웃 
 	@GetMapping("/userLogout")
 	public String userLogout (HttpServletRequest request) {
@@ -89,12 +97,4 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	
-	
-	// test cont
-	@GetMapping("/test")
-	public String test() {
-		return "test/testmain";
-	}
-
 }

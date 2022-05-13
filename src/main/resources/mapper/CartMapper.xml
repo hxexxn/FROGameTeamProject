@@ -13,6 +13,7 @@
 		<result column="game_regdate" property="game_regdate"/>
 		<result column="game_sellcount" property="game_sellcount"/>
 		<result column="game_adultcheck" property="game_adultcheck"/>
+		<result column="file" property="file"/>
 	</resultMap>
 	
 	<!-- 유저 테이블 -->
@@ -70,7 +71,7 @@
 	
 	<!-- 장바구니 목록 출력 -->
 	<select id="cartList" parameterType="com.frogame.www.model.CartDTO" resultMap="CartDTO">
-		SELECT ct.cart_no, ct.cart_game_no, ct.cart_user_id, gt.game_title, gt.game_price
+		SELECT ct.cart_no, ct.cart_game_no, ct.cart_user_id, gt.game_title, gt.game_price, gt.file
 	from cartTBL ct 
 	inner join gameTBL gt 
 		on ct.cart_game_no =  gt.game_no 

@@ -5,14 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-    <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
+    <link rel="stylesheet" href="${path}/resources/css/page_bottom.css">
 </head>
 <body>
     <!-- 폰트 어썸 -->
     <script src="https://kit.fontawesome.com/3636334fb2.js" 
     crossorigin="anonymous"></script>
 
- <div id="footer">
+ 	<div id="footer">
             <div class="copyRight">
                 <div class="frogGameCopyRight">
                     <i class="fa-solid fa-frog fa-bounce fa-lg"></i>

@@ -119,15 +119,6 @@ body {
     margin-bottom: 20px;
 }
 
-.menuBox {
-    display: flex;
-}
-
-.menuBox span{
-    margin: 100px;
-    font-size: 13px;
-}
-
 /* 드랍 다운 */
 .gameDropDownMenu {
     display: flex;
@@ -142,8 +133,11 @@ body {
 #mainMenu > ul > li {
     margin: 0;
     float: left;
-    margin-right: 50px;
     list-style: none;
+}
+
+#mainMenu > ul > li:nth-child(-n+3) {
+	margin-right: 100px;
 }
 
 #menuTitle > li > a {
@@ -168,6 +162,10 @@ body {
     position: absolute;
     opacity: 0;
     visibility: hidden;
+}
+
+ul {
+	padding-inline-start: 0px;
 }
 
 #subMenu > li {

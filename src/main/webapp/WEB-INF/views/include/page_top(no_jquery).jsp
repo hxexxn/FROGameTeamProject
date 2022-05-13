@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${path}/resources/css/indexTop.css">
+<link rel="stylesheet" href="${path}/resources/css/page_top.css">
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap')
@@ -19,9 +19,7 @@
 </style>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.6.0.js"
-		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-		crossorigin="anonymous"></script>
+
 	<script src="https://kit.fontawesome.com/3636334fb2.js"
 		crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/3636334fb2.js"

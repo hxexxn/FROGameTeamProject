@@ -1,5 +1,7 @@
 package com.frogame.www.controller;
 
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +46,12 @@ public class CartController {
 	public String cartList(@RequestParam("cart_user_id")String cart_user_id, Model model) {
 		System.out.println("cart_user_id 값 : " + cart_user_id);
 		List<CartDTO> cList = cartService.cartList(cart_user_id);
+		List<String> imgList = new ArrayList<String>();
+		for (int i = 0; i < cList.size(); i++) {
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(cList.get(i).getGameDto().getFile()));
+		}
 		model.addAttribute("cList", cList);
+		model.addAttribute("img",imgList);
 		return "cart/cartList";
 	}
 	

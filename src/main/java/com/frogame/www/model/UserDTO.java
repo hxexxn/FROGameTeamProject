@@ -14,6 +14,7 @@ public class UserDTO {
 	private String user_email;
 	private Timestamp user_regdate;
 	private boolean user_adultcheck;
-	private boolean user_level;
+	private int user_level;
+
 	
 }

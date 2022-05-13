@@ -12,7 +12,7 @@ public class Criteria {
     /* 스킵 할 게시물 수( (pageNum-1) * amount ) */
     private int skip;
     
-    /* 기본 생성자 -> 기본 세팅 : pageNum = 1, amount = 10 */
+    /* 기본 생성자 -> 기본 세팅 : pageNum = 1, amount = 4 */
     public Criteria() {
         this(1,4);
         this.skip = 0;
