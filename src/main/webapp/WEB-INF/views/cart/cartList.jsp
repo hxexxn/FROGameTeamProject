@@ -68,6 +68,7 @@ crossorigin="anonymous"></script>
 
       <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
       
+
       		<img src="${img}" width="300px">
 
           <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
