@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,16 +102,24 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
-              <c:set var="sess" value="${sessionScope.user_id}"></c:set>
+              <c:set var="sess" value="${sessionScope.user_id}"/>
                 <div class="userBox">
-
-
 					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
-                    <span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+					
+						<c:if test="${sessionScope.user_id eq 'admin'}">
+							<span><a href="/admin">관리</a></span>
+						</c:if>
+						<c:if test="${sessionScope.user_id ne 'admin'}">
+							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+						</c:if>
+						
+						
+                    
                     <span><a href="/userLogout">로그아웃</a></span>
                 </div>
               </c:if>
               
+             
               
             </div>
         </div>

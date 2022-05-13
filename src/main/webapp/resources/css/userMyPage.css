@@ -1,0 +1,113 @@
+body {
+    margin: 0 auto;
+    background-color: #f6f5f5;
+    overflow-x: hidden;
+}
+
+/* 회원 가입 01 */
+
+#modifyFrame {
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.modifyTitle {
+    width: 30%;
+    margin: 0 auto;
+    padding: 15px 0px;
+    border: 1px solid lightgray;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-top: 17px;
+}
+
+.modifyForm {
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid lightgray;
+    border-top: none;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modifyTableForm {
+    width: 500px;
+    border-spacing: 10px;
+}
+
+
+#user_id, #user_pw, #user_rePw, 
+#user_nick, #user_email {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding-left: 10px;
+    outline: none;
+}
+
+#old_user_pw, #new_user_pw, #new_user_rePw, 
+#new_user_nick, #new_user_email {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding-left: 10px;
+    outline: none;
+}
+
+
+#idDupBtn,
+#nickDupBtn {
+    width: 70px;
+    height: 30px;
+    color: #07553B;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: none;
+    border-radius: 2px;
+}
+
+.modifyBtnBox {
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#updateBtn {
+    width: 214px;
+    height: 30px;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+/* 
+.user_id > input,
+.user_pw > input,
+.user_RePw > input,
+.user_nick > input,
+.user_email > input {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+} */
