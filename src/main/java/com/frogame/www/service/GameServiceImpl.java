@@ -24,26 +24,19 @@ public class GameServiceImpl implements GameService{
 	// 寃뚯떆�뙋 紐⑸줉 (�럹�씠吏� �쟻�슜) 
 	@Override
 	public List<GameDTO> getListPaging(Criteria cri) {
-		
 		return gameMapper.getListPaging(cri);
 	}
 
 	// 寃뚯떆臾� 珥� 媛��닔 
 	@Override
-	public int getTotal() {
-		return gameMapper.getTotal();
+	public int getTotal(Criteria cri) {
+		return gameMapper.getTotal(cri);
 	}
 	
 	// 寃뚯엫 �긽�꽭 �젙蹂� 
 	@Override
 	public GameDTO gameRead(String game_no) {
 		return gameMapper.gameRead(game_no);
-	}
-	
-	// 寃뚯엫 寃��깋 
-	@Override
-	public List<GameDTO> gameSearch(String search) {
-		return gameMapper.gameSearch(search);
 	}
 
 	@Override
@@ -53,9 +46,9 @@ public class GameServiceImpl implements GameService{
 	}
 
 	@Override
-	public int getSearchTotal(String search) {
-		return gameMapper.getSearchTotal(search);
+	public void gameDelete(String game_no) {
+		gameMapper.gameDelete(game_no);
 	}
-	
+
 
 }

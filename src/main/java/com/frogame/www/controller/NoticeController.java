@@ -58,7 +58,7 @@ public class NoticeController {
 		noticeService.noticeViewCount(notice_no);
 		NoticeDTO dto = noticeService.noticeRead(notice_no);
 		model.addAttribute("dto", dto);
-		return "notice/noticeRead" ; 		
+		return "notice/noticeRead" ; 
 	}
 	
 	
@@ -106,6 +106,7 @@ public class NoticeController {
 	
 	
 	}
+
 	
 	
 	
