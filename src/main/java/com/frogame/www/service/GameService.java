@@ -12,13 +12,12 @@ public interface GameService {
 
 	List<GameDTO> getListPaging(Criteria cri);
 
-	int getTotal();
+	int getTotal(Criteria cri);
 
 	GameDTO gameRead(String game_no);
-
-	List<GameDTO> gameSearch(String search);
 	
 	void saveImage(Map<String, Object> hmap);
 
-	int getSearchTotal(String search);
+	void gameDelete(String game_no);
+
 }
