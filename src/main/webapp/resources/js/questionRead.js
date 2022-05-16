@@ -26,6 +26,12 @@ $('#questionCommentRegistBtn').click(function(){
 	
 	
 	//유효성검사
+	
+	if (question_comment_writer == null || question_comment_writer.trim() == "" ) {
+			alert('회원이아닙니다.');
+			return false;
+		}	
+		
 	if(question_comment_content == ""){
 		alert('내용을 작성해 주세요');
 		return;
@@ -119,6 +125,37 @@ function questionCommentDelete(question_comment_no){
       });
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -44,6 +44,17 @@ public class FAQController {
 		return "FAQ/FAQ_08";
 	}	
 	
+	
+//	검색기능
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 	
 	

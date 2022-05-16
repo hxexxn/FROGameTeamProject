@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ page</title>
-<link rel="stylesheet" href="${path}/resources/css/FAQ01.css">
+<link rel="stylesheet" href="/resources/css/FAQ01.css">
 
 <style>
     @import
@@ -43,15 +43,12 @@
             <div> <button type="submit" class="icon" ><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>   </div>
         </div>
     </form>
-
-     
-
+    
     </div>
 </div>
 
 
-
-<div class="layout_content_head">게임 이용 문의</div>
+<div class="layout_content_head">찾으시는 질문이 있으신가요?</div>
 
 <div class="layout_content">
 

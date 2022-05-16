@@ -257,28 +257,28 @@ td{
  /* 검색창 */
 
 
-.searchBar {
-    margin-right: 65px;
-}
+/* .searchBar {
+   
+} */
 
 #search {
     width: 250px;
     height: 30px;
     border-radius: 5px;
-    border: none;
+    border: solid 1px #44444457;
     outline: none;
     padding-left: 10px;
     
-    background-color: rgb(238, 238, 238);
+    background-color: white;
 }
 
-#search::placeholder {
-    color: white;
-    text-align: right;
-}
 
 .icon{
 	cursor: pointer;
+	border: none;
+	 background-color: #f6f5f5;
+	width: 50px;
+    height: 30px;
 }
 
 

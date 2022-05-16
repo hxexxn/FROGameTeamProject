@@ -58,11 +58,13 @@
 
 <div class="noticeList">
     <div class="notice_head"> <div>공지사항</div>  
-    <!-- <div> 
-    		<form action="noticeSearch">
-			<input type="text" name="noticeSearch" id="noticeSearch">
-			</form>  
-	</div> -->
+    
+    <form action="noticeSearch" autocomplete="off">
+    	<span class="searchBar">  
+   			<input class="basic-input" type="text" name="search" id="search"> 
+   			<button type="submit" class="icon"><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>   
+    	</span>
+    </form>
     
     </div>
     
@@ -97,16 +99,14 @@
     <div class="Btn"> 
    
     
-      <form action="noticeSearch" autocomplete="off">
+     
       <%--  <c:if test="${sessionScope.user_id == 관리자id }"> --%>
     <input type="hidden" name="notice_writer" id="notice_writer" value="${sessionScope.user_id}"> 
     	<a href="/noticeInsert" class="noticeInsertBtn" id="contentSubmitBtnBox">글쓰기</a> 
     <%-- </c:if> --%>
-    <span class="searchBar">  
-   <input class="basic-input" type="text" name="search" id="search"> 
-   <input type="submit" value="검색" class="basic-btn">
-    </span>
-    </form>
+     
+ 
+    
      
     </div>
   
