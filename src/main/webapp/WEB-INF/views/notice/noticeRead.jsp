@@ -33,7 +33,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="#" class="froGame">FROGame</a>
+            <a href="/" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -93,7 +93,16 @@
     </div>
 
 </div>
-<div class="Btn"> <a href="/noticeList" class="noticeListBtn">목록</a></div>
+
+
+<div class="Btn"> 
+	<a href="/noticeList" class="noticeListBtn">목록</a>
+	<c:if test="${sessionScope.user_id == dto.notice_writer}">		
+ 		<a href="/noticeDelete?notice_no=${dto.notice_no}" class="noticeDeleteBtn">삭제</a> 
+ 	<a href="/noticeUpdate?notice_no=${dto.notice_no}" class="noticeUpdateBtn">수정</a> 
+	</c:if>
+ 	
+</div>	
 
 
 

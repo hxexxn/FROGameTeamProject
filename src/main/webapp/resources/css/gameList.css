@@ -1,124 +1,161 @@
 @charset "UTF-8";
 
-#boarderblack{
+#boarderblack {
 	padding: 5px;
 }
-#b_title{
+
+#b_title {
 	width: 60%
 }
 
-a{
+a {
 	text-decoration: none;
 	color: black;
 }
 
-.board-main{
+.board-main {
 	width: 70%;
 	height: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.board-body{
+.board-body {
 	width: 100%;
 	height: 100%;
-	
 }
 
-.board-content{
+.board-content {
 	width: 100%;
 	height: 20%;
 	border-radius: 20px 20px 20px 20px;
 	padding: 10px;
 	margin: 10px;
-	box-shadow: 0 10px 20px 0 rgb(150 153 159 / 50%);
+	box-shadow: 0 10px 20px 0 rgb(150 153 159/ 50%);
 }
 
-.flex{
+.flex {
 	display: flex;
 	justify-content: space-around;
 }
 
-.game-content{
+.center-flex{
+	display: flex;
+	justify-content: center;
+}
+
+.game-content {
 	display: flex;
 	align-items: center;
 	width: 20%;
 	padding-left: 5%;
 }
 
-.title{
+.title {
 	width: 40%;
 }
 
-.basic{
+.margin-left {
+	margin-left: 5%;
+}
+
+.basic {
 	width: 200px;
 	height: 100px;
 }
 
-.tag-bar{
+.tag-bar {
 	width: 100px;
 	height: 500px;
 	margin-left: 7%;
 }
 
-.tag-box{
+.tag-box {
 	width: 100%;
 	height: 20%;
 	text-align: center;
 }
 
-.head{
+.head {
 	width: 60%;
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.head-main{
+.head-main {
 	width: 60%;
 	height: 100%;
 	background-image: url("../img/subpicture3.png");
 	background-size: 100% 100%;
 }
 
-.head-sub{
+.head-sub {
 	width: 40%;
 	height: 100%;
 	background-image: url("../img/picture3.png");
 	background-size: 100% 100%;
 }
 
-.basic-input{
+.basic-input {
 	padding-left: 10px;
 }
 
-.padding-top{
+.padding-top {
 	padding-top: 20px;
 }
 
-.basic-btn{
+.basic-btn {
 	border: none;
 	background-color: #02343F;
 	color: #F0EDCC;
 	border-radius: 2px;
 }
 
+.pageInfo {
+	list-style: none;
+	display: inline-block;
+	margin: 50px 0 0 100px;
+}
 
-  .pageInfo{
-      list-style : none;
-      display: inline-block;
-    margin: 50px 0 0 100px;      
-  }
-  .pageInfo li{
-      float: left;
-    font-size: 20px;
-    margin-left: 18px;
-    padding: 7px;
-    font-weight: 500;
-  }
- a:link {color:black; text-decoration: none;}
- a:visited {color:black; text-decoration: none;}
- a:hover {color:black; text-decoration: underline;}
- 
- 
+.pageInfo li {
+	float: left;
+	font-size: 20px;
+	margin-left: 18px;
+	padding: 7px;
+	font-weight: 500;
+}
 
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.search_area {
+	display: inline-block;
+	margin-top: 30px;
+	margin-left: 260px;
+}
+
+.search_area input {
+	height: 30px;
+	width: 250px;
+}
+
+.search_area button {
+	border: none;
+	background-color: #02343F;
+	color: #F0EDCC;
+	width: 100px;
+	height: 36px;
+}

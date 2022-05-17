@@ -24,6 +24,10 @@ public interface QuestionService {
 
 	void questionViewCount(String question_no);
 
+	void questionDelete(String question_no);
+
+	void questionUpdate(QuestionDTO dto);
+
 	
 
 	

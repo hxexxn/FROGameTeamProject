@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     background-color: #f6f5f5;
+    overflow-x: hidden;
 }
 
 a{
@@ -62,7 +63,7 @@ a{
     border-bottom: none;
     text-align: center;
     line-height: 80px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Fredoka One', cursive;
 }
 
@@ -138,150 +139,115 @@ a{
 }
 
 
-/* 게시판 div */
-
-.noticeList{
-  
-    justify-content: center;
-    width: 90%;
-    margin-left: auto; 
+.contentFrame{
+    background-color: rgb(255, 255, 255);
     margin-right: auto;
-
-    
-}
-
-.notice_head{
-    
-    margin-left: 10%;
-    font-size: 50px;
-    font-weight: bold;
-    height: 100px;
-    text-align: left;
-    letter-spacing: 2px;
-    display : flex ; 
-    justify-content: space-between;
-    width : 80%
-    
-
-}
-
-
-
-
-/* table class */
-.notice_table{
-    width: 80%;
-    
-    border-collapse: collapse;
-    justify-content: center;
-    margin-left: auto; 
-    margin-right: auto;
-    
-}
-
-th, td {
-    border-bottom: 1px solid #44444457;
-    padding: 10px;
-    text-align: center;
-  }
-
-
-td{
-    height: 50px;
-}
-
-.td1{
-    width: 50px;
-  
-}
-
-.td2{
+    margin-left: auto;
     width: 70%;
+    border: 1px solid lightgray;
+    height: 80%;
+    
+}
+
+
+
+.content_title_input{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+   
+
+}
+
+.title_input{
+    width: 80%;
+    height: 50px;
+    border: 0;
+    background-color: rgba(233, 233, 233, 0.265);
+    border-radius: 15px;
+    font-size: 16px;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+
+.content_input{
+    width: 80%;
+    height: 600px;
+    border: 0;
+    background-color: rgba(233, 233, 233, 0.265);
+    border-radius: 15px;
+    font-size: 16px;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+
+
+
+.contentInsertBox01{
+  
+    display: flex;
+    justify-content: center;
+
+}
+
+.contentInsertBox02{
+  
+    display: flex;
+    justify-content: center;
     text-align: left;
-}
-
-.td3{
-    width: 100px;
-    
-}
-.td4{
-    width: 100px;
-   
-}
-.td5{
-    width: 50px;
-    
-}
-
-
-
-/* 글쓰기 버튼 */
-
-.noticeInsertBtn{
-    
-    position: relative;
-	display: inline-block;
-  	border-radius: 0;
-	color: #252221;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 20px;
-  	letter-spacing: 2px;
-  	text-decoration: none;
-    padding-right: 2.5em;	
-    
-}
-
-.Btn{
-    margin-left: 10%;
 
 }
 
-.noticeDeleteBtn{
-    
-    position: relative;
-	display: inline-block;
-  	border-radius: 0;
-	color: #252221;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 20px;
-  	letter-spacing: 2px;
-  	text-decoration: none;
-    padding-right: 2.5em;	
-   
-    
+
+#footer {
+    height: 200px;
+}
+
+.copyRight > .frogGameCopyRight {
+    margin: 0 auto;
+    padding: 60px 0;
+    /* border: 1px solid red; */
+    width: 75%;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
 }
 
 
- /* 검색창 */
+.contentSubmitBtnBox {
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
 
-
-/* .searchBar {
-   
-} */
-
-#search {
-    width: 250px;
+#contentSubmitBtnBox {
+    width: 214px;
     height: 30px;
-    border-radius: 5px;
-    border: solid 1px #44444457;
-    outline: none;
-    padding-left: 10px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+    cursor: pointer;
     
-    background-color: white;
 }
 
-
-.icon{
-	cursor: pointer;
-	border: none;
-	 background-color: #f6f5f5;
-	width: 50px;
+#ListBtnBox{
+	width: 214px;
     height: 30px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+     cursor: pointer;
 }
-
-
-
 
 

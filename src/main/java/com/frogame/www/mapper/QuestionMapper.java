@@ -24,6 +24,10 @@ public interface QuestionMapper {
 
 	List<QuestionDTO> questionByCount();
 
+	void questionDelete(String question_no);
+
+	void questionUpdate(QuestionDTO dto);
+
 	
 
 	

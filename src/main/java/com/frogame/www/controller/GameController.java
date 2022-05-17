@@ -50,12 +50,13 @@ public class GameController {
 		return "redirect:/gameList";
 	}
 	
-
+	
+	
 	// 게임 목록 
 	@GetMapping("/gameList")
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> jjin = gameService.getListPaging(cri);
-		int total = gameService.getTotal();
+		int total = gameService.getTotal(cri);
 		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i < jjin.size(); i++) {
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(jjin.get(i).getFile()));
@@ -89,20 +90,28 @@ public class GameController {
 	}
 	
 	// 게임 검색 
-	@GetMapping("gameSearch")
-	public String gameSearch(@RequestParam("search") String search, Model model, Criteria cri) {
-		List<GameDTO> jjin = gameService.gameSearch(search);
-		int total = gameService.getSearchTotal(search);
-		List<String> imgList = new ArrayList<String>();
-		for (int i = 0; i < jjin.size(); i++) {
-			imgList.add("data:image/jpeg;base64," + Base64.getEncoder().encodeToString(jjin.get(i).getFile()));
-		}
-		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
-		model.addAttribute("pageMaker", pageMake);
-		model.addAttribute("jjin", jjin);
-		model.addAttribute("img", imgList);
-
-		return "game/gameList";
+	/*
+	 * @GetMapping("gameSearch") public String gameSearch(@RequestParam("search")
+	 * String search, @RequestParam("orderBy") String orderBy, Model model, Criteria
+	 * cri) { System.out.println(orderBy); List<GameDTO> jjin =
+	 * gameService.gameSearch(search, orderBy, cri); int total =
+	 * gameService.getSearchTotal(search); List<String> imgList = new
+	 * ArrayList<String>(); for (int i = 0; i < jjin.size(); i++) {
+	 * imgList.add("data:image/jpeg;base64," +
+	 * Base64.getEncoder().encodeToString(jjin.get(i).getFile())); } PageMakerDTO
+	 * pageMake = new PageMakerDTO(cri, total); model.addAttribute("pageMaker",
+	 * pageMake); model.addAttribute("jjin", jjin); model.addAttribute("img",
+	 * imgList);
+	 * 
+	 * return "game/gameList"; }
+	 */
+	
+	@GetMapping("gameDelete")
+	public String gameDelete(@RequestParam("game_no") String game_no) {
+		gameService.gameDelete(game_no);
+		return "redirect:/gameList";
 	}
-
+	
+	
+	
 }

@@ -24,15 +24,13 @@ public interface NoticeMapper {
 
 	List<NoticeDTO> noticeByCount();
 
+	void noticeDelete(String notice_no);
+
+	void noticeUpdate(NoticeDTO dto);
+
+	List<NoticeDTO> noticeSearch(String search);
 
 	
 
-	
-	
-
-	
-
-	
-	
 
 }

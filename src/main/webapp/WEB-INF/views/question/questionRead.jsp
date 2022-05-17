@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>문의 게시판 </title>
-<link rel="stylesheet" href="/resources/css/read.css">
+<link rel="stylesheet" href="/resources/css/questionread.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -33,7 +33,7 @@
             <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
         </div>
         <div class="mainTitle">
-            <a href="#" class="froGame">FROGame</a>
+            <a href="/" class="froGame">FROGame</a>
         </div>
         <div class="userBox">
             <span><i class="fa-solid fa-user-check"></i></span>
@@ -68,7 +68,7 @@
         </div>
         <div class="read_header_count_regdate">
          	<div class ="read_header_count_regdate_box1">
-         		<div class ="read_header_count_regdate_box2">view :</div>
+         		<div class ="read_header_count_regdate_box2">view : ${dto.question_count}</div>
                <div class ="read_header_count_regdate_box2">date : <fmt:formatDate value="${dto.question_regdate}" pattern="yyyy-MM-dd"/></div>
                <div class ="read_header_count_regdate_box2">writer : ${dto.question_writer}</div>
         	</div>
@@ -91,14 +91,59 @@
     </div>
 
 </div>
-	 <div class="Btn"> <a href="/questionList" class="noticeListBtn">목록</a></div>
+	     <c:set var="admin_sess" value="${sessionScope.user_id}"/>
+     <div class="reply_head"><span class="reply_head">댓글</span>
+    
+   
+     </div>
+ <div id="questionCommentZone" class="questionCommentZone">
+
+ 
+</div>  
+
+	 <div class="commentDD">
+        <input type="hidden" name="question_board_no" id="question_board_no" value="${dto.question_no}">
+        <input type="hidden" name="question_comment_writer" id="question_comment_writer" value="${admin_sess}" readonly="readonly">
+         <textarea name="question_comment_content" id="question_comment_content" cols="30" rows="10" class="commentBox" maxlength = "3000"
+         placeholder="댓글을 입력해주세요."></textarea>	 
+	 </div>
+
+     <div class="replyBtn">
+     <input type="button" name="" id="questionCommentRegistBtn" value="등록하기" class="replyRegistBtn">
+	 </div>
 	 
+	 <div class="reply_head">
+	 <span class="Btn"> <a href="/questionList" class="noticeListBtn">목록</a></span>	  
 	 
+	 <c:if test="${sessionScope.user_id == dto.question_writer}">
+		<span class="Btn"><a href="/questionUpdate?question_no=${dto.question_no}" class="noticeListBtn">수정</a> </span>
+ 		<span class="Btn"><a href="/questionDelete?question_no=${dto.question_no}" class="noticeListBtn">삭제</a> </span>
+	</c:if>
+ 	
+ 	</div>
+	 
+	 <div class="footer_head"></div>
+	 
+	  <div id="footer">
+            <div class="copyRight">
+                <div class="frogGameCopyRight">
+                    <i class="fa-solid fa-frog fa-bounce fa-lg"></i>
+                    <p>© 2022. FROGAME Inc. All rights reserved.</p>
+                    <p>FROGame 로고의 모든 저작권은 FROGame의 소유이며, 기타 브랜드 또는 제품 이름은 해당 소유자의
+						상표입니다.</p>
+                </div>
+            </div>
+        </div>
+		
+	
+       
+   
+	
 	
 
 
 
-
 <script type="text/javascript" src="${path}/resources/js/questionRead.js"></script>
+
 </body>
 </html>

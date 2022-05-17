@@ -154,9 +154,9 @@
                         </ul></li>
                     <li><a href="noticeList">공지사항</a>
                         <ul id="subMenu">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">1 : 1 문의</a></li>
-                            <li><a href="#">문의내역</a></li>
+                            <li><a href="noticeList">공지사항</a></li>
+                            <li><a href="questionList">1 : 1 문의</a></li>
+                            <li><a href="indexFAQ">문의내역</a></li>
                         </ul></li>
                 </ul>
 

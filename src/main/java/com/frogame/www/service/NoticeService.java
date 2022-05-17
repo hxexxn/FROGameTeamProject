@@ -26,6 +26,15 @@ public interface NoticeService {
 	public List<NoticeDTO> getListPaging(Criteria cri);
 
 	List<NoticeDTO> noticeByCount();
+
+	void noticeDelete(String notice_no);
+
+	void noticeUpdate(NoticeDTO dto);
+
+	List<NoticeDTO> noticeSearch(String search);
+
+	
+
 	
 	
 	

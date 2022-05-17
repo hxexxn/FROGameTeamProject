@@ -1,49 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
                   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-                  
+
 <mapper namespace="com.frogame.www.mapper.GameMapper">
-	
-	<!--  게임 등록  -->
+
+	<!-- 검색 조건문 -->
+	<sql id="criteria">
+		<trim prefix="order by" suffix="desc" prefixOverrides="OR">
+			<foreach collection="typeArr" item="type">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+                        game_no 
+						</when>
+						<when test="type == 'C'.toString()">
+                        game_sellcount
+						</when>
+						<when test="type == 'W'.toString()">
+                        game_price
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+
+	</sql>
+
+	<!-- 게임 등록 -->
 	<insert id="newInsert">
-		INSERT INTO gameTBL(game_title, file, game_price, game_genre_no) 
-		VALUES(#{game_title}, #{file}, #{game_price}, #{game_genre_no})
+		INSERT INTO gameTBL(game_title, file, game_price,
+		game_genre_no)
+		VALUES(#{game_title}, #{file}, #{game_price},
+		#{game_genre_no})
 	</insert>
-	
+
 	<!-- 게임 검색 -->
-	<select id="gameSearch" resultType="com.frogame.www.model.GameDTO">
-	<![CDATA[
-		SELECT * from gameTBL where game_title like concat('%',#{search},'%')
-		]]>
-	</select>
+	<!-- <select id="gameSearch" resultType="com.frogame.www.model.GameDTO"> 
+		<![CDATA[ SELECT * from gameTBL where game_title like concat('%',#{search},'%') 
+		]]> <trim prefix="ORDER BY" suffix="DESC"> <if test="orderBy == 'concern'"> 
+		game_no <include refid="criteria"></include> </if> <if test="orderBy == 'popular'">game_sellcount</if> 
+		<if test="orderBy == 'views'">game_count</if> </trim> limit #{skip},#{amount} 
+		</select> -->
 
 	<select id="jjinList" resultType="com.frogame.www.model.GameDTO">
 		SELECT * from gameTBL
 	</select>
 
 	<select id="gameRead" resultType="com.frogame.www.model.GameDTO">
-		SELECT * from gameTBL where game_no = #{game_no}
+		SELECT * from gameTBL where
+		game_no = #{game_no}
 	</select>
-	
-	
-	<!-- 페이징  -->
+
+
+	<!-- 페이징 -->
 	<select id="getListPaging"
 		resultType="com.frogame.www.model.GameDTO">
-		select * from gameTBL order by game_no desc limit #{skip},#{amount}
+		select * from gameTBL
+		<if test="keyword != null">
+		<![CDATA[
+			where game_title like concat('%',#{keyword},'%')
+			]]>
+			<include refid="criteria"></include>
+		</if>
+		limit #{skip},#{amount}
 	</select>
-	
+
 	<select id="getTotal" resultType="int">
-        select count(*) from gameTBL
-    </select>
-    
-    <select id="getSearchTotal" resultType="int">
-	<![CDATA[
-		SELECT count(*) from gameTBL where game_title like concat('%',#{search},'%')
+		select count(*) from gameTBL
+		<if test="keyword != null">
+		<![CDATA[
+		where game_title like concat('%',#{keyword},'%')
 		]]>
+		</if>
 	</select>
+
 	
 	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
 		Select * from gameTBL
 	</select>
     
+
+	<delete id="gameDelete">
+		DELETE FROM gameTBL WHERE game_no = #{game_no};
+	</delete>
+
 </mapper>

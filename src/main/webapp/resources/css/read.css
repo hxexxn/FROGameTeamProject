@@ -195,6 +195,36 @@ a{
     
 }
 
+.noticeDeleteBtn{
+    
+    position: relative;
+	display: inline-block;
+  	border-radius: 0;
+	color: #252221;
+  	margin-top:2rem;
+  	font-weight: bold;
+  	font-size: 20px;
+  	letter-spacing: 2px;
+  	text-decoration: none;
+    padding-right: 2.5em;	
+    
+}
+
+.noticeUpdateBtn{
+    
+    position: relative;
+	display: inline-block;
+  	border-radius: 0;
+	color: #252221;
+  	margin-top:2rem;
+  	font-weight: bold;
+  	font-size: 20px;
+  	letter-spacing: 2px;
+  	text-decoration: none;
+    padding-right: 2.5em;	
+    
+}
+
 .Btn{
     width : 80% ;
     text-align: left;    

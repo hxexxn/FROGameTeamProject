@@ -1,0 +1,306 @@
+body {
+    margin: 0 auto;
+    background-color: #f6f5f5;
+}
+
+.headFQA_box1 a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: black;
+}
+
+/* 최상단 배너 */
+
+.topBanner {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.bannerText:link, .bannerText:visited, .bannerText:focus {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.bannerText:hover {
+    color: #CED46A;
+    text-decoration: none;
+}
+
+/* 상단 타이틀 */
+
+#wrapper {
+    width: 100%;
+    height: 80px;
+    border: 1px solid lightgray;
+    display: flex;
+}
+
+#titleLogo {
+    width: 15%;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+}
+
+.iTag:hover {
+    color: #07553B;
+}
+
+.mainTitle {
+    border: 1px solid lightgray;
+    width: 70%;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.froGame:visited, .froGame:link, .froGame:focus{
+    color: black;
+    text-decoration: none;
+}
+
+.froGame:hover {
+    color: #07553B;
+    text-decoration: none;
+}
+
+/* 로고 밑줄 왼쪽에서 오른쪽으로 이동하는 애니메이션 */
+
+.froGame{
+    position: relative;
+}
+
+.froGame:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #07553B;
+    
+}
+
+.froGame:hover:after{
+    width: 100%;
+    opacity: 1;
+}
+
+.userBox {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 13px;
+}
+
+/* 메인 메뉴 */
+
+#mainMenu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.menuBox {
+    display: flex;
+}
+
+.menuBox span{
+    margin: 100px;
+    font-size: 13px;
+}
+
+/* 드랍 다운 */
+.gameDropDownMenu {
+    display: flex;
+}
+
+
+.headFQA{
+    width: 100%;
+    
+    
+    background-color: #353231;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.headFQA_box1{
+    font-weight:bold;
+    text-align: center;
+    
+    font-size: 40px;
+    line-height: normal;
+    font-weight: 700;
+    margin: 0 auto;
+    
+    letter-spacing: 2px;
+    color: #fff;
+
+}
+
+/* 검색바 */
+
+.searchBar {
+     margin-left: auto;
+    margin-right: auto;
+    display: flex ;
+    justify-content: center;
+	align-items: center;
+}
+
+
+#search {
+	margin-left : 100px;
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+    border: solid 1px #44444457;
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+}
+
+
+.icon {
+	cursor: pointer;
+	border: none;
+	 background-color: #353231;
+	width: 50px;
+    height: 50px;
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+
+/* 내용 */
+
+
+
+
+.layout_content{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+
+}
+
+.titleFQA{
+    font-size: 24px;
+    color: rgba(233, 233, 233, 0.265);
+    line-height: 28px;
+    font-weight: 700;
+    margin-left: 38px;
+    
+    
+    
+}
+
+.titleFQA_wrap1{
+    margin-top: 50px;
+   display: flex;
+ 
+   justify-content: space-around;
+}
+
+.titleFQA_wrap2{
+    margin-top: 50px;
+    display: flex;
+  
+    justify-content: space-around;
+ }
+
+
+
+/* border: solid 1px navy; */
+
+
+
+.layout_content_box{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    margin-top: 100px;
+    background-color:  rgba(233, 233, 233, 0.265);
+    border-radius: 0.6em;
+}
+
+summary{
+    font-weight:bold;    
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 700;      
+    letter-spacing: 2px;
+    cursor:pointer;
+    
+}
+
+details summary::marker{font-size:0;}
+
+
+.QQ{ 
+    color: #07553B;
+    font-size: 40px;
+    font-weight:bold; 
+    line-height: normal;
+    font-weight: 700;      
+    letter-spacing: 2px;
+ }
+
+ .details_content{
+
+      
+    font-size: 16px;
+    line-height: normal;    
+    letter-spacing: 1px;
+    margin-left: 40px;
+
+ }
+
+ .layout_content_head{
+
+    text-align: center;color: #1a0e0e;
+    font-size: 48px;
+    font-weight:bold; 
+    line-height: normal;
+    font-weight: 700;      
+    
+    border-bottom: solid 2px #c5bdbd;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+ }

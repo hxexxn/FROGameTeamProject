@@ -12,6 +12,6 @@ public class NoticeDTO {
 	private String notice_content ;
 	private Timestamp notice_regdate ;
 	private int notice_count ;		
-	
+	private String notice_writer ; 
 	
 }

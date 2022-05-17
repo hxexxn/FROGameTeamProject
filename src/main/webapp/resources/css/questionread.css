@@ -203,6 +203,20 @@ a{
   
 }
 
+.reply_head{
+    width : 80% ;
+    text-align: left;    
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 20px;
+  	letter-spacing: 2px;
+      color: #252221;
+  	margin-top:2rem;
+  	font-weight: bold;
+}
+
+
+
 
 .read_header_title{
    
@@ -255,6 +269,126 @@ a{
     width: 80%;   
     margin-top: 40px;
     font-size: 16px;
+    height: 500px;
   
 }
+
+/* 댓글 */
+
+.commentDD{
+	width: 80%; 
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.commentBox{
+	width: 80%;  
+	margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+     border: solid 0.1mm #7e7e7e6c;
+     height: 200px ;
+     text-align: start;
+    
+    
+}
+
+.questionCommentDeleteBtn{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    font-weight: 200px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.adminReplyDelete{
+    float: right;
+}
+
+input:focus {
+    outline: none;
+}
+
+.replyBtn{
+    width : 48% ;
+    text-align: right;    
+    margin-left: auto;
+    margin-right: auto; 
+   
+    padding-top: 20px;
+
+   
+}
+
+.replyRegistBtn{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #07553B;
+    color: white;
+    font-weight: 200px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    
+
+}
+
+.questionCommentZone{
+    width : 63%;
+    text-align: left;    
+    margin-left: 185px;   
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.adminReplybox{
+    height: 30px;
+    padding: 50px;
+    text-align: left; 
+    margin-top: 10px;
+    border-top: solid 0.1mm #7e7e7e6c;
+  
+    
+
+}
+
+.adminReply{
+    padding-right: 50px;
+    font-weight: bold;
+
+}
+
+
+
+/* 푸터 */
+
+.footer_head{
+	height: 200px;
+}
+
+#footer {
+    height: 200px;
+    border-top: 1px solid lightgray;
+  
+}
+
+.copyRight > .frogGameCopyRight {
+    margin: 0 auto;
+    padding: 60px 0;
+    /* border: 1px solid red; */
+    width: 75%;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
 
