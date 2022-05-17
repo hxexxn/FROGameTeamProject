@@ -1,10 +1,13 @@
 package com.frogame.www.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -96,5 +99,24 @@ public class UserController {
 		session.invalidate();
 		return "redirect:/";
 	}
+	
+	// 유저 목록 출력
+	@GetMapping("/userList")
+	public String userList (Model model) {
+		System.out.println("타니?");
+		List<UserDTO> userList = userService.userList();
+		model.addAttribute("userList", userList);
+		return "include/admin_userList";
+	}
+	
+	// 유저 삭제 
+	@GetMapping("/userDelete")
+	public String userDelete(@RequestParam("user_no")String user_no) {
+		System.out.println("user_no 값 : " + user_no);
+		userService.userDelete(user_no);
+		System.out.println("유저 삭제 완료.");
+		return "redirect:/admin";
+	}
+	
 	
 }

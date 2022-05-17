@@ -23,6 +23,8 @@ public interface GameMapper {
 
 	void saveImage(Map<String, Object> hmap);
 
+	List<GameDTO> admin_gameList();
+
 	void gameDelete(String game_no);
 
 	void imgInsert(@Param("game_no") int i, @Param("file") byte[] img);

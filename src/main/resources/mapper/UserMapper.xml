@@ -24,4 +24,13 @@
 		Select user_pw from userTBL where user_id = #{user_id}
 	</select>
 	
+	<!-- 유저 목록 -->
+	<select id="userList" resultType="com.frogame.www.model.UserDTO">
+		Select * from userTBL
+	</select>
+	
+	<!-- 유저 삭제 -->
+	<delete id="userDelete">
+		DELETE FROM userTBL WHERE user_no= #{user_no}
+	</delete>
 </mapper>

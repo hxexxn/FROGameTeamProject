@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#game_list {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.bbs_title {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid rgb(255, 20, 20); */
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.bbs_title > span {
+    padding-left: 20px;
+}
+
+#wrap2 {
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 50px;
+}
+
+.list_title,
+.list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.list_title {
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: #07553B;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.user_number {
+    width: 10%;
+}
+
+.user_id {
+    width: 10%;
+}
+
+.user_nick {
+    width: 10%;
+}
+
+.user_regdate {
+    width: 30%;
+}
+
+.user_adult {
+    width: 10%;
+}
+
+.user_delete {
+    width: 10%;
+}
+
+.list {
+    height: 50px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid lightgray;
+    transition: 0.2s;
+}
+
+.list:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+.list:hover {
+    background-color: #f8f8f8;
+}

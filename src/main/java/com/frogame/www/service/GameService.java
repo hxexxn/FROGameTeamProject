@@ -19,6 +19,8 @@ public interface GameService {
 	
 	void saveImage(Map<String, Object> hmap);
 
+	List<GameDTO> admin_gameList();
+
 	void gameDelete(String game_no);
 
 	void imgInsert(int i, byte[] img);

@@ -61,6 +61,11 @@ public class GameServiceImpl implements GameService{
 	public ImgDTO imgRead(String game_no) {
 		return gameMapper.getImage(game_no);
 	}
+	// 게임 목록 출력
+	@Override
+	public List<GameDTO> admin_gameList() {
+		return gameMapper.admin_gameList();
+	}
 
 
 }

@@ -74,6 +74,11 @@
 		</if>
 	</select>
 
+	
+	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+		Select * from gameTBL
+	</select>
+    
 
 	<delete id="gameDelete">
 		DELETE FROM gameTBL WHERE game_no = #{game_no};

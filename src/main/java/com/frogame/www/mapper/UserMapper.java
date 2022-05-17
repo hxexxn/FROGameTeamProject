@@ -1,5 +1,7 @@
 package com.frogame.www.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.frogame.www.model.UserDTO;
@@ -18,5 +20,10 @@ public interface UserMapper {
 	
 	// 유저 로그인 비밀번호 매치
 	String userRealPassword(String user_id);
+	
+	// 유저 목록 출력
+	List<UserDTO> userList();
+
+	void userDelete(String user_no);
 
 }
