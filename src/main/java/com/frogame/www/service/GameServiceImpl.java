@@ -56,6 +56,12 @@ public class GameServiceImpl implements GameService{
 	public int getSearchTotal(String search) {
 		return gameMapper.getSearchTotal(search);
 	}
+
+	// 게임 목록 출력
+	@Override
+	public List<GameDTO> admin_gameList() {
+		return gameMapper.admin_gameList();
+	}
 	
 
 }

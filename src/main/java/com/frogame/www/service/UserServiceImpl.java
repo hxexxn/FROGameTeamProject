@@ -1,5 +1,7 @@
 package com.frogame.www.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -54,6 +56,19 @@ public class UserServiceImpl implements UserService {
 		} else {
 			return "LoginFail";
 		}
+	}
+	
+	// 유저 목록 출력
+	@Override
+	public List<UserDTO> userList() {
+		return userMapper.userList();
+	}
+	
+	// 유저 삭제 
+	@Override
+	public void userDelete(String user_no) {
+		userMapper.userDelete(user_no);
+		
 	}
 
 

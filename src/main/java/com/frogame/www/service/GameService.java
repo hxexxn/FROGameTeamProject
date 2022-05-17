@@ -21,4 +21,6 @@ public interface GameService {
 	void saveImage(Map<String, Object> hmap);
 
 	int getSearchTotal(String search);
+
+	List<GameDTO> admin_gameList();
 }

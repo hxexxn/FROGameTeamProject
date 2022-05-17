@@ -68,6 +68,10 @@ public class GameController {
 		return "game/gameList";
 	}
 	
+	
+	
+
+	
 
 	@GetMapping("/gameRead")
 	public String gameRead() {

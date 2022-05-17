@@ -1,5 +1,7 @@
 package com.frogame.www.service;
 
+import java.util.List;
+
 import com.frogame.www.model.UserDTO;
 
 public interface UserService {
@@ -11,6 +13,10 @@ public interface UserService {
 	int userNickCheck(String user_nick);
 
 	String userLogin(UserDTO dto);
+
+	List<UserDTO> userList();
+
+	void userDelete(String user_no);
 
 
 }

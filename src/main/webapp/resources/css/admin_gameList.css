@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#game_list {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.bbs_title {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid rgb(255, 20, 20); */
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.bbs_title > span {
+    padding-left: 20px;
+}
+
+#game_list th {
+    height: 50px;
+    background-color: #07553B;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+#game_list td {
+    background-color: rgb(127, 127, 127);
+    height: 50px;
+    color: white;
+}
+
+
+#wrap2 {
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 50px;
+}
+
+.list_title,
+.list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.list_title {
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: #07553B;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.game_number {
+    width: 5%;
+}
+
+.game_title {
+    width: 15%;
+}
+
+.game_price {
+    width: 10%;
+}
+
+.game_genre_no {
+    width: 20%;
+}
+
+.game_regdate {
+    width: 30%;
+}
+
+.game_adult {
+    width: 10%;
+}
+
+.game_delete {
+    width: 10%;
+}
+
+.list {
+    height: 50px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid lightgray;
+    transition: 0.2s;
+}
+
+.list:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+.list:hover {
+    background-color: #f8f8f8;
+}

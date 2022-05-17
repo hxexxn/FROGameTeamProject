@@ -41,5 +41,9 @@
 		SELECT count(*) from gameTBL where game_title like concat('%',#{search},'%')
 		]]>
 	</select>
+	
+	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+		Select * from gameTBL
+	</select>
     
 </mapper>
