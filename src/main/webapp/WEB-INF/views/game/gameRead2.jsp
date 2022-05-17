@@ -8,44 +8,55 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>GameInfo - Elden Ring</title>
+<title>GameInfo - Civilization</title>
 <link href="${path}/resources/css/gameRead.css" rel="stylesheet" />
-   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300&display=swap');
-        </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300&display=swap')
+	;
+</style>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <!-- 이미지 슬라이드 -->
-    <script>
-        $(document).ready(function(){
-            $('.sildeGameImg').bxSlider({
-            auto: true,
-            speed: 500,
-            captions: true,
-            });
-        });
-    </script>
+<!-- 이미지 슬라이드 -->
+<script>
+	$(document).ready(function() {
+		$('.sildeGameImg').bxSlider({
+			auto : true,
+			speed : 500,
+			captions : true,
+		});
+	});
+</script>
 </head>
 <body>
 
-<jsp:include page="../include/page_top(no_jquery).jsp" flush="false" />
+	<jsp:include page="../include/page_top(no_jquery).jsp" flush="false" />
 
 	<div class="container">
 		<!-- Heading Row-->
 		<div class="justify-content-center">
-			
+
 			<div class="sildeGameImg">
-				<div><img class="imgfull" src="${path}/resources/img/EldenRIngImg1.jpg" /> </div>
-				<div><img class="imgfull" src="${path}/resources/img/EldenRIngImg2.jpg"/></div>
-				<div><img class="imgfull" src="${path}/resources/img/EldenRIngImg3.jpg"/></div>
+				<div>
+					<img class="imgfull" src="${path}/resources/img/civilization/CivilizationImg8.jpg" />
+				</div>
+				<div>
+					<img class="imgfull" src="${path}/resources/img/civilization/CivilizationImg7.jpg" />
+				</div>
+				<div>
+					<img class="imgfull" src="${path}/resources/img/civilization/CivilizationImg6.jpg" />
+				</div>
 			</div>
 			<div class="margin-left">
-				<h1 class="">Elden Ring</h1>
-				<p>본 게임은 본격적인 다크 판타지 세계를 무대로 한 액션 RPG입니다. 드넓은 필드와 던전 탐험을 통해 미지의
-					것들을 발견해 보세요. 앞길을 막아서는 난관과 그것을 극복했을 때의 달성감, 그리고 등장인물들의 의도가 교착하는 군상극도
-					즐기실 수 있습니다.</p>
+				<h1 class="">Civilization</h1>
+				<p>문명 VI 에서는 새로운 방식으로 세상과 소통하고, 제국의 영토를 확장시키며, 문화를 발전시키고, 역사속
+					위대한 지도자들에 맞서 오래도록 지속될 나만의 문명을 건설해볼 수 있습니다. 클레오파트라를 비롯한 20명의 역사 속
+					지도자들 중 한명으로 플레이 해보세요.</p>
 				<a class="btn btn-primary" href="#!">장바구니 담기</a>
 			</div>
 		</div>
@@ -54,15 +65,15 @@
 			<p class="text-center">- 시스템 요구사항 -</p>
 			<div class="justify-content-center card-body">
 
-				<span class="card-span"> 최소:<br> 운영체제: Windows 10 <br>
-					프로세서: INTEL CORE I5-8400 or AMD RYZEN 3 3300X<br> 메모리: 12 GB
-					RAM<br> 그래픽: NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580
-					4 GB<br> DirectX: 버전 12<br> 저장공간: 60 GB 사용 가능 공간<br>
+				<span class="card-span"> 최소:<br> 운영체제: Windows 7x64 / Windows 8.1x64 / Windows 10x64 <br>
+					프로세서: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater<br> 메모리: 4 GB RAM
+					<br>그래픽: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530
+					<br> DirectX: 버전 11<br> 저장공간: 12 GB 사용 가능 공간<br>
 					사운드카드: Windows Compatible Audio Device<br>
-				</span> <span class="card-span">권장:<br> 운영체제: Windows 10/11<br>
-					프로세서: INTEL CORE I7-8700K or AMD RYZEN 5 3600X<br> 메모리: 16 GB
-					RAM<br> 그래픽: NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX
-					VEGA 56 8 GB<br> DirectX: 버전 12<br> 저장공간: 60 GB 사용 가능 공간<br>
+				</span> <span class="card-span">권장:<br> 운영체제: Windows 7x64 / Windows 8.1x64 / Windows 10x64<br>
+					프로세서: Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater<br> 메모리: 8 GB
+					RAM<br> 그래픽: 2GB & AMD 7970 or nVidia 770 or greater
+					<br> DirectX: 버전 11<br> 저장공간: 12 GB 사용 가능 공간<br>
 					사운드카드: Windows Compatible Audio Device<br>
 				</span>
 			</div>
@@ -118,6 +129,6 @@
 		</div>
 	</div>
 
-<jsp:include page="../include/page_bottom.jsp" flush="false" /> 
+	<jsp:include page="../include/page_bottom.jsp" flush="false" />
 </body>
 </html>

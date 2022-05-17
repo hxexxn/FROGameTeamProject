@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.ImgDTO;
 
 public interface GameService {
 
@@ -19,5 +20,10 @@ public interface GameService {
 	void saveImage(Map<String, Object> hmap);
 
 	void gameDelete(String game_no);
+
+	void imgInsert(int i, byte[] img);
+
+	ImgDTO imgRead(String game_no);
+
 
 }

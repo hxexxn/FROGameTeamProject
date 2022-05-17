@@ -86,7 +86,7 @@ a {
 .head-main {
 	width: 60%;
 	height: 100%;
-	background-image: url("../img/subpicture3.png");
+	background-image: url("../img/civilization/CivilizationImg1.png");
 	background-size: 100% 100%;
 }
 
@@ -159,3 +159,17 @@ a:hover {
 	width: 100px;
 	height: 36px;
 }
+
+select{
+	border: 1px solid lightgrey;
+	background-color: white;
+	color: black;
+	width: 100px;
+	height: 36px;
+}
+
+.pageInfo_area {
+	display: flex;
+	justify-content: center;
+	
+} 

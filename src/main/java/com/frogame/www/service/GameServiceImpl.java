@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.ImgDTO;
 
 @Service
 public class GameServiceImpl implements GameService{
@@ -48,6 +49,17 @@ public class GameServiceImpl implements GameService{
 	@Override
 	public void gameDelete(String game_no) {
 		gameMapper.gameDelete(game_no);
+	}
+
+
+	@Override
+	public void imgInsert(int i, byte[] img) {
+		gameMapper.imgInsert(i, img);		
+	}
+
+	@Override
+	public ImgDTO imgRead(String game_no) {
+		return gameMapper.getImage(game_no);
 	}
 
 

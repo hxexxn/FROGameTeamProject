@@ -37,25 +37,23 @@
 	</div>
 	<div class="flex">
 		<div class="board-main">
-
 			<div class="search_wrap padding-top center">
+				<div class="search_area">
+					<select name="type" id="test">
+						<option value="T"
+							<c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>최신순</option>
+						<option value="C"
+							<c:out value="${pageMaker.cri.type eq 'C'?'selected':'' }"/>>인기순</option>
+						<option value="W"
+							<c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>가격순</option>
+					</select>
+				</div>
 				<div class="search_area">
 					<input type="text" placeholder="검색" name="keyword" id="keyword"
 						value="${pageMaker.cri.keyword }">
 					<button>Search</button>
 				</div>
-				<div class="search_area">
-					<select name="type" id="test">
-						<option value="T"
-							<c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>연관성</option>
-						<option value="C"
-							<c:out value="${pageMaker.cri.type eq 'C'?'selected':'' }"/>>인기순</option>
-						<option value="W"
-							<c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>가격순</option>
 
-					</select>
-
-				</div>
 			</div>
 
 			<div class="board-body padding-top">
@@ -63,23 +61,23 @@
 				<c:forEach var="img" items="${img}" varStatus="status">
 					<div class="board-content flex">
 						<div class="game-content">
-							<a href="gameReadTest?game_no=${jjin[status.index].game_no}"><img
+							<a href="gameReadTest?game_no=${list[status.index].game_no}"><img
 								src="${img}" width="200px"></a>
 						</div>
 						<div class="game-content title">
-							<a href="gameReadTest?game_no=${jjin[status.index].game_no}">${jjin[status.index].game_title}</a>
+							<a href="gameReadTest?game_no=${list[status.index].game_no}">${list[status.index].game_title}</a>
 						</div>
 						<div class="game-content">
 							<a href="gameRead">₩ <fmt:formatNumber type="number"
-									maxFractionDigits="3" value="${jjin[status.index].game_price}" /></a>
+									maxFractionDigits="3" value="${list[status.index].game_price}" /></a>
 						</div>
 						<div class="game-content">
 							<a href="gameRead"><fmt:formatDate
-									value="${jjin[status.index].game_regdate}" pattern="yyyy-MM-dd" /></a>
+									value="${list[status.index].game_regdate}" pattern="yyyy-MM-dd" /></a>
 						</div>
-						<div class="game-content">
+					<%-- 	<div class="game-content">
 							<a href="gameDelete?game_no=${jjin[status.index].game_no}">삭제하기</a>
-						</div>
+						</div> --%>
 					</div>
 				</c:forEach>
 				<div class="pageInfo_wrap">
@@ -104,15 +102,15 @@
 					</div>
 				</div>
 				<form id="moveForm" method="get">
-					<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }"> 
-					<input type="hidden" name="amount" value="${pageMaker.cri.amount }"> 
-					<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
+					<input type="hidden" name="pageNum"
+						value="${pageMaker.cri.pageNum }"> <input type="hidden"
+						name="amount" value="${pageMaker.cri.amount }"> <input
+						type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
 					<input type="hidden" name="type" value="${pageMaker.cri.type }">
 				</form>
 			</div>
 		</div>
 	</div>
-	<a class="insertBtn" href="gameInsert">게임등록</a>
 
 	<script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
 
