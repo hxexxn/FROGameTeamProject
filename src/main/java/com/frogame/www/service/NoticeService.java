@@ -33,6 +33,8 @@ public interface NoticeService {
 
 	List<NoticeDTO> noticeSearch(String search);
 
+	List<NoticeDTO> admin_noticeList();
+
 	
 
 	

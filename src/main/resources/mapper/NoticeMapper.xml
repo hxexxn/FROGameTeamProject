@@ -51,6 +51,11 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
 	</select>
     
     
+	<select id="admin_noticeList"
+		resultType="com.frogame.www.model.NoticeDTO">
+		Select * from noticeBoardTBL
+	</select>
+    
 
 
 
