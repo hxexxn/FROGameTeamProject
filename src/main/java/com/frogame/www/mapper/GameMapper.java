@@ -31,6 +31,6 @@ public interface GameMapper {
 
 	ImgDTO getImage1(int game_no);
 
-	ImgDTO getImage(String game_no);
+	List<ImgDTO> getImages(String game_no);
 
 }

@@ -69,50 +69,24 @@ public class GameController {
 
 		return "game/gameList";
 	}
-	
-	
-	
+
+
 
 	
-
-	@GetMapping("/gameRead")
-	public String gameRead() {
-		return "game/gameRead";
-	}
-	@GetMapping("/gameRead2")
-	public String gameRead2() {
-		return "game/gameRead2";
-	}
-	@GetMapping("/gameRead3")
-	public String gameRead3() {
-		return "game/gameRead3";
-	}
-	@GetMapping("/gameRead4")
-	public String gameRead4() {
-		return "game/gameRead4";
-	}
-	@GetMapping("/gameRead5")
-	public String gameRead5() {
-		return "game/gameRead5";
-	}
-	@GetMapping("/gameRead6")
-	public String gameRead6() {
-		return "game/gameRead6";
-	}
-	
-	// 테스트 게임 상세 정보 
+	// 테스트 게임 상세 정보 페이지
 	@GetMapping("/gameReadTest")
 	public String gameReadTest(@RequestParam("game_no") String game_no, Model model) {
+		model.addAttribute("game_no", game_no);
+		
+		return "game/gameReadTest";
+	}
+	// 게임 정보 (ajax로 가져오기용)
+	@PostMapping("/gameRead")
+	public String gameRead(@RequestParam("game_no") String game_no, Model model) {
 		GameDTO dto = gameService.gameRead(game_no);
 		model.addAttribute("dto", dto);
-		dto.getGame_regdate();
-		List<String> imgList = new ArrayList<String>(); 
-		for (int i = 0; i <imgList.size(); i++) { 
-			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage(game_no).getFile())); 
-			}
-		System.out.println(game_no);
-		model.addAttribute("img", imgList);
-		return "game/gameReadTest";
+		model.addAttribute("imgList", gameMapper.getImages(game_no));
+		return "game/gameRead";
 	}
 	
 	// 게임 검색 

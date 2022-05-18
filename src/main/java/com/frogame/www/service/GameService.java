@@ -25,7 +25,4 @@ public interface GameService {
 
 	void imgInsert(int i, byte[] img);
 
-	ImgDTO imgRead(String game_no);
-
-
 }

@@ -56,11 +56,6 @@ public class GameServiceImpl implements GameService{
 	public void imgInsert(int i, byte[] img) {
 		gameMapper.imgInsert(i, img);		
 	}
-
-	@Override
-	public ImgDTO imgRead(String game_no) {
-		return gameMapper.getImage(game_no);
-	}
 	// 게임 목록 출력
 	@Override
 	public List<GameDTO> admin_gameList() {

@@ -4,6 +4,24 @@
 
 <mapper namespace="com.frogame.www.mapper.GameMapper">
 
+		<!-- 이미지 테이블 -->
+	<resultMap type="com.frogame.www.model.ImgDTO" id="ImgDTO">
+		<id column="game_no" property="game_no" />
+		<result column="file" property="file" />
+	</resultMap>
+	
+	<!-- 게임 테이블 -->
+	<resultMap type="com.frogame.www.model.GameDTO" id="GameDTO">
+		<id column="game_no" property="game_no" />
+		<result column="game_title" property="game_title" />
+		<result column="game_price" property="game_price" />
+		<result column="game_genre_no" property="game_genre_no" />
+		<result column="game_regdate" property="game_regdate" />
+		<result column="game_sellcount" property="game_sellcount" />
+		<result column="game_adultcheck" property="game_adultcheck" />
+		<collection property="imgDto" resultMap="ImgDTO"></collection>
+	</resultMap>
+
 	<!-- 검색 조건문 -->
 	<sql id="criteria">
 		<trim prefix="order by" suffix="desc" prefixOverrides="OR">
@@ -11,13 +29,13 @@
 				<trim prefix="OR">
 					<choose>
 						<when test="type == 'T'.toString()">
-                        game_regdate
+							game_regdate
 						</when>
 						<when test="type == 'C'.toString()">
-                        game_sellcount
+							game_sellcount
 						</when>
 						<when test="type == 'W'.toString()">
-                        game_price
+							game_price
 						</when>
 					</choose>
 				</trim>
@@ -27,7 +45,8 @@
 	</sql>
 
 	<!-- 게임 등록 -->
-	<insert id="newInsert" useGeneratedKeys="true" keyProperty="game_no">
+	<insert id="newInsert" useGeneratedKeys="true"
+		keyProperty="game_no">
 		INSERT INTO gameTBL(game_title, game_price,
 		game_genre_no)
 		VALUES(#{game_title}, #{game_price},
@@ -47,8 +66,8 @@
 	</select>
 
 	<select id="gameRead" resultType="com.frogame.www.model.GameDTO">
-		SELECT * from gameTBL where
-		game_no = #{game_no}
+		SELECT * from gameTBL 
+		where game_no = #{game_no}
 	</select>
 
 
@@ -74,11 +93,12 @@
 		</if>
 	</select>
 
-	
-	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+
+	<select id="admin_gameList"
+		resultType="com.frogame.www.model.GameDTO">
 		Select * from gameTBL
 	</select>
-    
+
 
 	<delete id="gameDelete">
 		DELETE FROM gameTBL WHERE game_no = #{game_no};
@@ -86,15 +106,18 @@
 
 	<insert id="imgInsert">
 		INSERT INTO imgTBL(game_no, file)
-		VALUES(#{game_no}, #{file})
+		VALUES(#{game_no},
+		#{file})
 	</insert>
-	
+
 	<select id="getImage1" resultType="com.frogame.www.model.ImgDTO">
-		select * from imgTBL WHERE game_no = #{game_no} limit 1
+		select * from imgTBL WHERE
+		game_no = #{game_no} limit 1
 	</select>
-	
-	<select id="getImage" resultType="com.frogame.www.model.ImgDTO">
-		select * from imgTBL WHERE game_no = #{game_no}
+
+	<select id="getImages" resultType="com.frogame.www.model.ImgDTO">
+		select * from imgTBL WHERE
+		game_no = #{game_no}
 	</select>
 
 </mapper>
