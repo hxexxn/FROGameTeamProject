@@ -15,10 +15,26 @@
 		<id column="game_no" property="game_no" />
 		<result column="game_title" property="game_title" />
 		<result column="game_price" property="game_price" />
-		<result column="game_genre_no" property="game_genre_no" />
-		<result column="game_regdate" property="game_regdate" />
+		<result column="game_genre" property="game_genre" />
+		<result column="game_release" property="game_release" />
 		<result column="game_sellcount" property="game_sellcount" />
 		<result column="game_adultcheck" property="game_adultcheck" />
+		<result column="game_min_os" property="game_min_os" />
+		<result column="game_min_cpu" property="game_min_cpu" />
+		<result column="game_min_ram" property="game_min_ram" />
+		<result column="game_min_vga" property="game_min_vga" />
+		<result column="game_min_dirX" property="game_min_dirX" />
+		<result column="game_min_ssd" property="game_min_ssd" />
+		<result column="game_std_os" property="game_std_os" />
+		<result column="game_std_cpu" property="game_std_cpu" />
+		<result column="game_std_ram" property="game_std_ram" />
+		<result column="game_std_vga" property="game_std_vga" />
+		<result column="game_std_dirX" property="game_std_dirX" />
+		<result column="game_std_ssd" property="game_std_ssd" />
+		<result column="game_info" property="game_info" />
+		<result column="game_platform" property="game_platform" />
+		<result column="game_production" property="game_production" />
+		<result column="game_release" property="game_release" />
 		<collection property="imgDto" resultMap="ImgDTO"></collection>
 	</resultMap>
 
@@ -29,7 +45,7 @@
 				<trim prefix="OR">
 					<choose>
 						<when test="type == 'T'.toString()">
-							game_regdate
+							game_release
 						</when>
 						<when test="type == 'C'.toString()">
 							game_sellcount
@@ -47,23 +63,14 @@
 	<!-- 게임 등록 -->
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
-		INSERT INTO gameTBL(game_title, game_price,
-		game_genre_no)
-		VALUES(#{game_title}, #{game_price},
-		#{game_genre_no})
+		INSERT INTO gameTBL (game_title, game_price, game_genre, game_sellcount, game_adultcheck, game_min_os, game_min_cpu, 
+		game_min_ram, game_min_vga, game_min_dirX, game_min_ssd, game_std_os, game_std_cpu, game_std_ram, game_std_vga, game_std_dirX, 
+		game_std_ssd, game_info, game_platform, game_release)
+		VALUES (#{game_title}, #{game_price}, #{game_genre}, #{game_sellcount}, #{game_adultcheck}, #{game_min_os}, #{game_min_cpu}, #{game_min_ram}, 
+		#{game_min_vga}, #{game_min_dirX}, #{game_min_ssd}, #{game_std_os}, #{game_std_cpu}, #{game_std_ram}, #{game_std_vga}, #{game_std_dirX}, #{game_std_ssd},
+		#{game_info}, #{game_platform}, #{game_release});
 	</insert>
 
-	<!-- 게임 검색 -->
-	<!-- <select id="gameSearch" resultType="com.frogame.www.model.GameDTO"> 
-		<![CDATA[ SELECT * from gameTBL where game_title like concat('%',#{search},'%') 
-		]]> <trim prefix="ORDER BY" suffix="DESC"> <if test="orderBy == 'concern'"> 
-		game_no <include refid="criteria"></include> </if> <if test="orderBy == 'popular'">game_sellcount</if> 
-		<if test="orderBy == 'views'">game_count</if> </trim> limit #{skip},#{amount} 
-		</select> -->
-
-	<select id="jjinList" resultType="com.frogame.www.model.GameDTO">
-		SELECT * from gameTBL
-	</select>
 
 	<select id="gameRead" resultType="com.frogame.www.model.GameDTO">
 		SELECT * from gameTBL 
@@ -93,12 +100,9 @@
 		</if>
 	</select>
 
-
-	<select id="admin_gameList"
-		resultType="com.frogame.www.model.GameDTO">
-		Select * from gameTBL
+	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+		Select * from gameTBL order by game_no DESC;
 	</select>
-
 
 	<delete id="gameDelete">
 		DELETE FROM gameTBL WHERE game_no = #{game_no};

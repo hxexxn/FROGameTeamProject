@@ -18,7 +18,7 @@ public interface NoticeMapper {
 
 	void noticeViewCount(String notice_no);
 
-	public int getTotal();
+	public int getTotal(Criteria cri);
 
 	public List<NoticeDTO> getListPaging(Criteria cri);
 
@@ -29,6 +29,10 @@ public interface NoticeMapper {
 	void noticeUpdate(NoticeDTO dto);
 
 	List<NoticeDTO> noticeSearch(String search);
+
+	List<NoticeDTO> admin_noticeList();
+
+	
 
 	
 

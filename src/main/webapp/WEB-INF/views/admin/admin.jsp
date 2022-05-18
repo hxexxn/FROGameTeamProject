@@ -43,23 +43,18 @@
             <div class="menuIcon">
                 <div class="one">
                     <i class="fa-solid fa-user-check"></i>
-                    <span>Account</span>
                 </div>
                 <div class="two">
                     <i class="fa-solid fa-list-ul"></i>
-                    <span>Game</span>
                 </div>
                 <div class="three">
                     <i class="fa-solid fa-bullhorn"></i>
-                    <span>Notice</span>
                 </div>
                 <div class="four">
                     <i class="fas fa-question"></i>
-                    <span>Q%A</span>
                 </div>
                 <div class="five">
                     <i class="fas fa-comment"></i>
-                    <span>1:1</span>
                 </div>
             </div>
 
@@ -159,7 +154,7 @@
 					            <div class="game_number">${gameList.game_no}</div>
 					            <div class="game_title">${gameList.game_title}</div>
 					            <div class="game_price">${gameList.game_price}</div>
-					            <div class="game_genre_no">${gameList.game_genre_no}</div>
+					            <div class="game_genre_no">${gameList.game_genre}</div>
 					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${gameList.game_regdate}"/></div>
 					            <div class="game_sellcount">${gameList.game_sellcount}</div>
 					            <div class="game_adult">${gameList.game_adultcheck}</div>
@@ -180,6 +175,35 @@
 
                 <div class="threeBox">
                     <h1>세번째 페이지</h1>
+                    
+                    	    <div id="wrap2">
+
+					        <div class="bbs_title">
+					            <span>현재 등록된 유저 목록</span>
+					        </div>
+					
+					        <div class="list_title">
+					            <div class="notice_no">번호</div>
+					            <div class="notice_title">제목</div>
+					            
+					            <div class="notice_regdate">등록일</div>
+					           
+					            <div class="notice_delete"></div>
+					        </div>
+					        
+					   <c:forEach var="noticeList" items="${noticeList}">
+					
+					        <div class="list">
+					            <div class="notice_no">${noticeList.notice_no}</div>
+					            <div class="notice_title">${noticeList.notice_title}</div>
+					            
+					            <div class="notice_regdate"><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${noticeList.notice_regdate}"/></div>
+					          
+					            <div class="notice_delete"><a href="/noticeDelete?notice_no=${noticeList.notice_no}">Delete</a></div>
+					        </div>
+					        
+					    </c:forEach>
+					    </div>
                 </div>
 
                 <div class="fourBox">

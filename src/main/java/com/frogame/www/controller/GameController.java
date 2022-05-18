@@ -15,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
-import com.frogame.www.model.ImgDTO;
 import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.service.GameService;
 
@@ -39,6 +38,7 @@ public class GameController {
 	public String saveImage(@RequestParam("file") MultipartFile[] file, GameDTO dto) {
 		try {
 
+			System.out.println("dto 값 확인 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
 			System.out.println(dto.getGame_no());
 			
@@ -50,7 +50,7 @@ public class GameController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/gameList";
+		return "redirect:/";
 	}
 
 	// 게임 목록 
@@ -58,7 +58,7 @@ public class GameController {
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
 		int total = gameService.getTotal(cri);
-		List<String> imgList = new ArrayList<String>(); 
+		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
 			}
@@ -70,7 +70,10 @@ public class GameController {
 		return "game/gameList";
 	}
 
-
+	@GetMapping("/gameRead")
+	public String gameRead() {
+		return "game/gameRead";
+	}
 
 	
 	// 테스트 게임 상세 정보 페이지
@@ -89,27 +92,10 @@ public class GameController {
 		return "game/gameRead";
 	}
 	
-	// 게임 검색 
-	/*
-	 * @GetMapping("gameSearch") public String gameSearch(@RequestParam("search")
-	 * String search, @RequestParam("orderBy") String orderBy, Model model, Criteria
-	 * cri) { System.out.println(orderBy); List<GameDTO> jjin =
-	 * gameService.gameSearch(search, orderBy, cri); int total =
-	 * gameService.getSearchTotal(search); List<String> imgList = new
-	 * ArrayList<String>(); for (int i = 0; i < jjin.size(); i++) {
-	 * imgList.add("data:image/jpeg;base64," +
-	 * Base64.getEncoder().encodeToString(jjin.get(i).getFile())); } PageMakerDTO
-	 * pageMake = new PageMakerDTO(cri, total); model.addAttribute("pageMaker",
-	 * pageMake); model.addAttribute("jjin", jjin); model.addAttribute("img",
-	 * imgList);
-	 * 
-	 * return "game/gameList"; }
-	 */
-	
 	@GetMapping("gameDelete")
 	public String gameDelete(@RequestParam("game_no") String game_no) {
 		gameService.gameDelete(game_no);
-		return "redirect:/gameList";
+		return "redirect:/admin";
 	}
 	
 	@GetMapping("/discountGame")

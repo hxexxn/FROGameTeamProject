@@ -14,9 +14,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.frogame.www.model.AdminDTO;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.UserDTO;
 import com.frogame.www.service.AdminService;
 import com.frogame.www.service.GameService;
+import com.frogame.www.service.NoticeService;
 import com.frogame.www.service.UserService;
 
 @Controller
@@ -31,6 +33,10 @@ public class AdminController {
 	@Autowired
 	private GameService gameService;
 	
+	@Autowired
+	private NoticeService noticeService;
+	
+	
 	// 관리자 페이지 이동 
 	@GetMapping("/admin")
 	public String admin(Model model) {
@@ -42,6 +48,10 @@ public class AdminController {
 		// 게임 목록
 		List<GameDTO> gameList = gameService.admin_gameList();
 		model.addAttribute("gameList", gameList);
+		
+		// 공지 목록 
+		List<NoticeDTO> noticeList = noticeService.admin_noticeList();
+		model.addAttribute("noticeList", noticeList);
 		
 		
 		return "admin/admin";

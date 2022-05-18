@@ -48,8 +48,8 @@ public class NoticeServiceImpl implements NoticeService{
 	}
 	
 @Override
-	public int getTotal() {
-		  return mapper.getTotal();
+	public int getTotal(Criteria cri) {
+		  return mapper.getTotal(cri);
 	}
 
 @Override
@@ -67,6 +67,11 @@ public void noticeUpdate(NoticeDTO dto) {
 @Override
 public List<NoticeDTO> noticeSearch(String search) {
 	return mapper.noticeSearch(search);
+}
+
+@Override
+public List<NoticeDTO> admin_noticeList() {
+	return mapper.admin_noticeList();
 }
 
 
