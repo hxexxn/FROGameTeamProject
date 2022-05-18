@@ -38,6 +38,7 @@ public class GameController {
 	public String saveImage(@RequestParam("file") MultipartFile[] file, GameDTO dto) {
 		try {
 
+			System.out.println("dto 값 확인 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
 			System.out.println(dto.getGame_no());
 			
@@ -49,7 +50,7 @@ public class GameController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/gameList";
+		return "redirect:/";
 	}
 
 	// 게임 목록 
@@ -57,10 +58,17 @@ public class GameController {
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
 		int total = gameService.getTotal(cri);
+		
+		System.out.println("게임 넘버 확인" + list.get(0).getGame_no());
+		
 		List<String> imgList = new ArrayList<String>(); 
 		for (int i = 0; i <list.size(); i++) { 
+			System.out.println("111111");
+			System.out.println(">>>>> " + list.size());
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
+			System.out.println("22222222");
 			}
+		System.out.println("33333333333");
 		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
 		model.addAttribute("pageMaker", pageMake);
 		model.addAttribute("list", list);

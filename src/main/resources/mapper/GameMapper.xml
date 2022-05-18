@@ -19,6 +19,22 @@
 		<result column="game_release" property="game_release" />
 		<result column="game_sellcount" property="game_sellcount" />
 		<result column="game_adultcheck" property="game_adultcheck" />
+		<result column="game_min_os" property="game_min_os" />
+		<result column="game_min_cpu" property="game_min_cpu" />
+		<result column="game_min_ram" property="game_min_ram" />
+		<result column="game_min_vga" property="game_min_vga" />
+		<result column="game_min_dirX" property="game_min_dirX" />
+		<result column="game_min_ssd" property="game_min_ssd" />
+		<result column="game_std_os" property="game_std_os" />
+		<result column="game_std_cpu" property="game_std_cpu" />
+		<result column="game_std_ram" property="game_std_ram" />
+		<result column="game_std_vga" property="game_std_vga" />
+		<result column="game_std_dirX" property="game_std_dirX" />
+		<result column="game_std_ssd" property="game_std_ssd" />
+		<result column="game_info" property="game_info" />
+		<result column="game_platform" property="game_platform" />
+		<result column="game_production" property="game_production" />
+		<result column="game_release" property="game_release" />
 		<collection property="imgDto" resultMap="ImgDTO"></collection>
 	</resultMap>
 
@@ -47,10 +63,12 @@
 	<!-- 게임 등록 -->
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
-		INSERT INTO gameTBL(game_title, game_price,
-		game_genre)
-		VALUES(#{game_title}, #{game_price},
-		#{game_genre})
+		INSERT INTO gameTBL (game_title, game_price, game_genre, game_sellcount, game_adultcheck, game_min_os, game_min_cpu, 
+		game_min_ram, game_min_vga, game_min_dirX, game_min_ssd, game_std_os, game_std_cpu, game_std_ram, game_std_vga, game_std_dirX, 
+		game_std_ssd, game_info, game_platform, game_release)
+		VALUES (#{game_title}, #{game_price}, #{game_genre}, #{game_sellcount}, #{game_adultcheck}, #{game_min_os}, #{game_min_cpu}, #{game_min_ram}, 
+		#{game_min_vga}, #{game_min_dirX}, #{game_min_ssd}, #{game_std_os}, #{game_std_cpu}, #{game_std_ram}, #{game_std_vga}, #{game_std_dirX}, #{game_std_ssd},
+		#{game_info}, #{game_platform}, #{game_release});
 	</insert>
 
 
