@@ -57,7 +57,7 @@ public class GameController {
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
 		int total = gameService.getTotal(cri);
-		List<String> imgList = new ArrayList<String>(); 
+		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
 			}

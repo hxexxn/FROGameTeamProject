@@ -16,8 +16,6 @@
 		}
 
 		document.querySelector('.file-list').innerHTML = htmlData;
-
-
 	}
 
 	/* 첨부파일 삭제 */
