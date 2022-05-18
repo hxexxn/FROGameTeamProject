@@ -15,11 +15,13 @@
     border: 1px solid #989898;
     padding: 10px;
 }
+
 .insert .file-list .filebox div {
     font-size: 14px;
     display: inline-block;
     margin-top: 10px;
 }
+
 .insert .file-list .filebox .delete i{
     color: #ff5353;
     margin-left: 5px;

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 전체 감싸는 영역 */
+#game_insert {
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+#game_insert > div > div {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+/* 가격 및 출시일 박스 */
+
+.price_date {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.price, .realeaseDate {
+    width: 45%;
+}
+
+.gp_title {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.title, .img, .genre, .platfrom,
+.information {
+    width: 100%;
+}
+
+.game_subject, .game_img, .game_genre, 
+.game_platfrom, .game_information {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 20px 0 20px;
+}
+
+/* 인풋 창 */
+.information .textarea_box,
+.subject_input {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+input    {
+    outline: none;
+}
+.subject_input > input {
+    width: 99%;
+    border: 1px solid lightgray;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+/* 게임 장르 라디오 버튼 */
+.radio_box {
+    text-align: center;
+}
+
+.radio_box > label {
+    margin-right: 15px;
+}
+
+.radio_box > input {
+    vertical-align: -2.5px;
+}
+
+/* 게임정보 입력 인풋 */
+textarea {
+    width: 99%;
+    height: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.price_input > input,
+.input_date > input {
+    width: 98%;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.input_date > input {
+    text-align: center;
+}
+
+/* 게임 사양 입력 전체 박스 */
+
+.game_play_os {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section_line {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid lightgray;
+}
+
+/* 최소 사양 및 권장 사양 */
+
+.os_middle_line {
+    height: 650px;
+    border-right: 1px dotted lightgray;
+}
+
+.os_title {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.game_play_os  div {
+    margin: 20px 0px 10px 0px;
+}
+
+.game_play_os input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid lightgray;
+    padding-left: 5px;
+}
+
+/* 등록 버튼 */
+
+.regist {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#registBtn {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    background-color: #f5f5f5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#registBtn:hover {
+    background-color: #07553B;
+    color: white;
+}
+
+/* 이미지 업로드 */
+
+
+.file_div {
+    display: flex;
+    justify-content: center;
+}
+
+/*이미지 등록 버튼*/
+.file_upload {
+    padding: 8px 7px 8px 7px;
+    color: #f5f5f5;
+    background-color: rgb(31, 87, 9);
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    transition: 0.1s;
+}
+
+.file_upload:hover {
+    background-color: #f5f5f5;
+    color: black;
+}
+#file_upload {
+    display: none;
+}
+.file .file-list {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.file .file-list .filebox div {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.file .file-list .filebox .delete i{
+    color: #ff5353;
+    margin-left: 5px;
+}

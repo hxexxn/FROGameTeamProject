@@ -38,6 +38,7 @@ public class GameController {
 	public String saveImage(@RequestParam("file") MultipartFile[] file, GameDTO dto) {
 		try {
 
+			System.out.println("dto 값 확인 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
 			System.out.println(dto.getGame_no());
 			
@@ -49,7 +50,7 @@ public class GameController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/gameList";
+		return "redirect:/";
 	}
 
 	// 게임 목록 
