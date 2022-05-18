@@ -142,11 +142,12 @@ a {
     display: flex;
 }
 
+/* head */
+
 
 .headFQA{
-    width: 100%;
-    
-    
+    width: 100%;    
+ 
     background-color: #353231;
     padding-top: 70px;
     padding-bottom: 40px;
@@ -163,11 +164,11 @@ a {
     
     letter-spacing: 2px;
     color: #fff;
+     height: 30% ;
 
 }
 
 /* 검색바 */
-
 .searchBar {
      margin-left: auto;
     margin-right: auto;
@@ -200,6 +201,17 @@ a {
 }
 
 
+
+.search_bar{
+    text-align: center;
+    margin-top: 40px;
+    margin-right: 5%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+
 /* 내용 */
 
 
@@ -211,38 +223,9 @@ a {
     display: block;
     width: 80%;
     margin-left: auto;
-    margin-right: auto;
-   
-   
+    margin-right: auto;  
 
 }
-
-.titleFQA{
-    font-size: 24px;
-    color: rgba(233, 233, 233, 0.265);
-    line-height: 28px;
-    font-weight: 700;
-    margin-left: 38px;
-    
-    
-    
-}
-
-.titleFQA_wrap1{
-    margin-top: 50px;
-   display: flex;
- 
-   justify-content: space-around;
-}
-
-.titleFQA_wrap2{
-    margin-top: 50px;
-    display: flex;
-  
-    justify-content: space-around;
- }
-
-
 
 /* border: solid 1px navy; */
 

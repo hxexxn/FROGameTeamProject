@@ -1,10 +1,21 @@
 package com.frogame.www.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.frogame.www.model.FAQDTO;
+import com.frogame.www.service.FAQService;
 
 @Controller
 public class FAQController {		
+	
+	@Autowired
+	private FAQService faqService;
 		
 	@GetMapping("/indexFAQ")
 	public String indexFAQ() {
@@ -44,8 +55,25 @@ public class FAQController {
 		return "FAQ/FAQ_08";
 	}	
 	
+	// FAQ 목록
+		@GetMapping("/FAQ_list")
+		public String FAQ_list(Model model) {
+		List<FAQDTO> list = faqService.FAQ_list();
+		model.addAttribute("list", list);		     
+	       
+			return "FAQ/FAQ_list";
+		}	
+	
 	
 //	검색기능
+	
+	@GetMapping("FAQSearch")
+	public String FAQSearch(@RequestParam("search") String search, Model model) {
+		List<FAQDTO> list = faqService.FAQSearch(search);	
+		System.out.println(search);
+		model.addAttribute("list", list);		
+		return "FAQ/FAQ_list";
+	}
 	
 	
 	

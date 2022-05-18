@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">                  
+<mapper namespace="com.frogame.www.mapper.FAQMapper">
+
+
+
+<select id="FAQ_list" resultType="com.frogame.www.model.FAQDTO">
+select * from FAQTBL order by FAQ_no DESC
+</select>
+
+<select id="FAQSearch" resultType="com.frogame.www.model.FAQDTO">	
+	<![CDATA[	SELECT * from FAQTBL where FAQ_content like concat('%',#{search},'%')]]>
+</select>
+
+
+</mapper>
