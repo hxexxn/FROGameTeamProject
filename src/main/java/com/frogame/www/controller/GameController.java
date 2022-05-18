@@ -112,6 +112,9 @@ public class GameController {
 		return "redirect:/gameList";
 	}
 	
-	
+	@GetMapping("/discountGame")
+	public String discountGame() {
+		return "hotGame/discountGame";
+	}
 	
 }
