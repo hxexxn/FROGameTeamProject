@@ -70,10 +70,10 @@ public class GameController {
 		return "game/gameList";
 	}
 
-@GetMapping("/gameRead2")
-public String  gameRead2() {
-	return "game/gameRead2";
-}
+	@GetMapping("/gameRead")
+	public String gameRead() {
+		return "game/gameRead";
+	}
 
 	
 	// 테스트 게임 상세 정보 페이지
@@ -112,7 +112,7 @@ public String  gameRead2() {
 	@GetMapping("gameDelete")
 	public String gameDelete(@RequestParam("game_no") String game_no) {
 		gameService.gameDelete(game_no);
-		return "redirect:/gameList";
+		return "redirect:/admin";
 	}
 	
 	

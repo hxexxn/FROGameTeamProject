@@ -93,6 +93,9 @@
 		</if>
 	</select>
 
+	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+		Select * from gameTBL order by game_no DESC;
+	</select>
 
 	<select id="admin_gameList"
 		resultType="com.frogame.www.model.GameDTO">

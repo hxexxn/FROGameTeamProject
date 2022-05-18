@@ -1,33 +1,172 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>FAQ page</title>
-<link rel="stylesheet" href="/resources/css/FAQ01.css">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-<style>
-    @import
-        url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap')
-        ;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
+    <link rel="stylesheet" href="${path}/resources/css/FAQ01.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300&display=swap');
+        </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- 이미지 슬라이드 -->
+    <script>
+        $(document).ready(function(){
+            $('.sildeGameImg').bxSlider({
+            auto: true,
+            speed: 500,
+            captions: true,
+            });
+        });
+    </script>
+    <!-- 이미지 슬라이드 CSS (오버라이딩)-->
+    <style>
+        /* 슬라이드 박스 */
+        .bx-wrapper {
+        border: 0;
+        background: #fbfbfb;
+        box-shadow: none;
+        }
+        /* 캡션 디자인 */
+        .bx-wrapper .bx-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgb(178, 178, 178);
+        background: rgba(80, 80, 80, 0.532);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 30px;
+        }
+        .bx-wrapper .bx-caption:hover {
+            background-color: #07553b72;
+        }
+        .bx-wrapper .bx-caption span {
+        color: #fff;
+        font-family: Arial;
+        display: block;
+        font-size: .85em;
+        padding: 10px;
+        }
     </style>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    </head>
-    
-    <body>
+    <!-- 폰트 어썸 5.0 -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+</head>
+    <!-- 폰트 어썸 -->
+    <script src="https://kit.fontawesome.com/3636334fb2.js" 
+    crossorigin="anonymous"></script>
+
+    <!-- 전체 감싸주는 태그 -->
+    <div id="wrap">
+
+        <!-- 헤드 -->
+        <div id="header">
+
+
+            <!-- 최상단 배너 -->
+            <div class="topBanner">
+                <span><a href="#" class="bannerText"> 🌏 지구의 날 기념! 최대 90% 할인! 🌏 </a></span>
+            </div>
+
+
+            <!-- 타이틀 및 유저박스 -->
+            <div id="titleBox">
+                <div id="titleLogo">
+                    <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
+                </div>
+                <div class="mainTitle">
+                    <a href="/" class="froGame">FROGame</a>
+                </div>
+                
+              <!-- 비회원 -->
+              <c:if test="${empty sessionScope.user_id}">
+                <div class="userBox">
+                    <span><a href="/userLogin">로그인</a></span>
+                    <span><a href="/userRegist">회원가입</a></span>
+                    <span>장바구니</span>
+                </div>
+              </c:if>
+              
+              <!-- 회원 로그인 -->
+              <c:if test="${not empty sessionScope.user_id}">
+              <c:set var="sess" value="${sessionScope.user_id}"/>
+                <div class="userBox">
+					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
+					
+						<c:if test="${sessionScope.user_id eq 'admin'}">
+							<span><a href="/admin">관리</a></span>
+						</c:if>
+						<c:if test="${sessionScope.user_id ne 'admin'}">
+							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+						</c:if>
+						
+						
+                    
+                    <span><a href="/userLogout">로그아웃</a></span>
+                </div>
+              </c:if>
+              
+             
+              
+            </div>
+        </div>
         
-        <c:set var="sess" value="${sessionScope.user_id}"/>
-    
-        <jsp:include page="../include/page_top.jsp" flush="false"/>
+        <!-- 네비게이션 및 이미지 슬라이드 -->
+        <div id="navBar">
+            <!-- 메인 메뉴 -->
+            <div id="mainMenu">
+                
+                <ul id="menuTitle">
+
+                    <li><a href="#">인기 게임</a>
+                        <ul id="subMenu">
+                            <li><a href="#">게임</a></li>
+                            <li><a href="#">게임</a></li>
+                            <li><a href="#">게임</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">신작 게임</a>
+                        <ul id="subMenu">
+                            <li><a href="#">신작게임</a></li>
+                            <li><a href="#">신작게임</a></li>
+                            <li><a href="#">신작게임</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gameList">게임</a>
+                        <ul id="subMenu">
+                            <li><a href="#">신작게임</a></li>
+                            <li><a href="#">신작게임</a></li>
+                            <li><a href="#">신작게임</a></li>
+                        </ul></li>
+                    <li><a href="noticeList">공지사항</a>
+                        <ul id="subMenu">
+                            <li><a href="noticeList">공지사항</a></li>
+                            <li><a href="questionList">1 : 1 문의</a></li>
+                            <li><a href="indexFAQ">문의내역</a></li>
+                        </ul></li>
+                </ul>
+
+            
+
+            </div>
+
+        </div>
         
-     
 
 
 <div  class="headFQA">
@@ -42,122 +181,33 @@
             <div> <input class="basic-input" type="text" name="search" id="search" placeholder="검색어를 입력하세요" > </div>
             <div> <button type="submit" class="icon" ><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>   </div>
         </div>
-    </form>
-    
+    </form>    
+
     </div>
 </div>
 
 
-<div class="layout_content_head">찾으시는 질문이 있으신가요?</div>
 
-<div class="layout_content">
+	
+		
+	<div class="layout_content_head">찾으시는 질문이 있으신가요?</div>
+
+	<c:forEach var="list" items="${list}">
 
     <div class="layout_content_box">
 
-        <details> 
-            <summary><span class="QQ">Q. </span>게임에서 사기를 당했습니다.</summary><br><br>
-            <div class="details_content">
-                사기로 인한 피해는 계정 당 연 1회 도움을 드리고 있으며,
-게임 내 기록을 통해 의도성이 명확히 확인된 경우에 한하여 피해 아이템을 회수 지급합니다. <br><br>
+      <details>   
+            <summary><span class="QQ">Q. </span>${list.FAQ_title}</summary><br><br>
+           <div class="details_content"> 
+               ${list.FAQ_content}
+ </div>
+        </details>   
 
-※ 사기 피해 신고 시 유의 사항 <br>
-- 피해 아이템이 교환/판매/변환된 경우 최종 변환된 결과물을 회수하여 지급합니다. <br><br>
-
-- 대상 아이템 삭제 등으로 소멸한 경우 회수 불가 <br>
-- 일방적인 피해가 아닌 운영정책에 위배되는 행동(ex:현금거래 및 아이템 분배 사기) 등으로 피해를 입으신 경우
-[운영정책]에 따라 도움이 제한될 수 있습니다<br><br>
-            </div>
-
-        </details>
-
-    </div>
-
-    <div  class="layout_content_box">
-
-        <details>
-            <summary><span class="QQ">Q. </span>불량 이용자를 신고하고 싶습니다.(게임, 홈페이지)</summary><br><br>
-            <div class="details_content">
-                누군가가 게임 또는 홈페이지 게시판 등에서 사기 행위 및 운영진을 사칭하는 행위, 게임 진행 방해,
-상업적 광고/사행 행위, 욕설, 불법 프로그램 사용 등 공공질서 또는 미풍양속을 해치는 행위를 하였다면
-아래의 양식대로 신고해주시기 바랍니다.<br><br>
-
-1. 대상 캐릭터명<br>
-2. 발생 시간 :<br>
-3. 발생 위치 :<br>
-4. 신고 내용 :<br><br>
+		</div>
+</c:forEach>
 
 
-추가로 신고 접수 방법은 다음과 같습니다. <br><br>
-
-
-1. 게임 내 우측 하단의 설정 창을 누르신 후 고객센터를 통해 불량 이용자 신고<br>
-2. 홈페이지 접속 후 고객센터를 통해 신고 내용 작성<br>
-3. 신고 대상 캐릭터나, 채팅 중인 캐릭터의 캐릭터명에 우클릭을 하신 이후 [신고] 버튼 <br><br>
-
-
-
-※ 신고 시 스크린샷이 있으면 더욱 빠른 처리가 가능합니다.<br><br>
-
-※ 일방적 욕설이 아닌 쌍방 욕설 또는 고의로 상대방의 잘못을 유도한 경우 [운영정책]에 따라 쌍방 모두 이용이 제한될 수 있습니다.<br><br>
-            </div>
-
-        </details>
-        
-    </div>
-
-    <div  class="layout_content_box">
-
-        <details>
-            <summary><span class="QQ">Q. </span>신고센터는 무슨 일을 하나요?</summary><br><br>
-                <div class="details_content">
-            신고센터는 계정 도용(해킹)으로 발생한 문제에 대해 도움을 드리기 위해 운영되고 있는 서비스 센터입니다.<br><br>
-
-            신고센터에서는 계정 도용(해킹)으로 인해 피해를 받으신 분들이 피해 내용에 대한 상담을 받으실 수 있으며,<br>
-            일방적인 신고에 의한 부당한 제재가 이루어지지 않도록 이의 신청을 통해 소명의 기회를 제공합니다.<br><br>
-            
-            신고센터에서는 계정 도용 관련 신고 및 이의신청을 진행하는 곳이기에<br>
-            다른 사유의 문의 및 신고 접수를 하시는 경우에는 [고객센터 → 문의하기] 를 이용해 주시기 바랍니다.<br><br>
-                </div>
-        </details>
-        
-    </div>
-
-    <div  class="layout_content_box">
-
-        <details>
-            <summary><span class="QQ">Q. </span>제재 받았습니다. 어떻게 해야 하죠?</summary><br><br>
-                <div class="details_content">
-                    서비스 이용 중 제재와 관련되어 불편을 겪으신 경우에는<br>
-                    [홈페이지 → 고객센터 → 문의하기]를 통해 재고를 요청하실 수 있습니다.<br><br>
-                    
-                    계정 도용으로 인한 제재의 경우<br>
-                    [홈페이지 → 신고센터 → 이의제기]를 통해 재고를 요청할 수 있습니다.<br><br>
-                    
-                    접수된 이의 내역이 합리적이라 판단될 경우 제재를 해제해드립니다.<br><br>
-                </div>
-        </details>
-        
-    </div>
-
-    <div  class="layout_content_box">
-
-        <details>
-            <summary><span class="QQ">Q. </span>불법 프로그램은 어디에 신고하나요?</summary><br><br>
-                <div class="details_content">
-                    게임 이용 중 불법 프로그램으로 의심되는 캐릭터가 있다면 아래 세 가지 방법으로 제보해주세요<br><br>
-
-                    1. 게임 내 우측 하단의 설정 창()을 누르신 후 고객센터()를 통해 신고서 작성<br><br>
-
-                    2. 홈페이지 접속 후 고객센터를 통해 신고 내용 작성<br><br>
-
-                    3. 신고 대상 캐릭터나, 채팅 중인 캐릭터의 캐릭터명에 우클릭을 하신 이후 [신고] 버튼 클릭<br><br>
-                    보내주신 내용을 확인하여 [운영정책]에 의거하여 조치하도록 하겠습니다.<br><br>
-                </div>
-        </details>
-        
-    </div>
-</div>
-
+<br><br>
 
 </body>
 </html>

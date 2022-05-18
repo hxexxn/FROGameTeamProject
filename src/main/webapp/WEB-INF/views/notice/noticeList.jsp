@@ -100,10 +100,10 @@
    
     
      
-      <%--  <c:if test="${sessionScope.user_id == 관리자id }"> --%>
+       <c:if test="${sessionScope.user_id == admin }"> 
     <input type="hidden" name="notice_writer" id="notice_writer" value="${sessionScope.user_id}"> 
     	<a href="/noticeInsert" class="noticeInsertBtn" id="contentSubmitBtnBox">글쓰기</a> 
-    <%-- </c:if> --%>
+     </c:if> 
      
  
     
