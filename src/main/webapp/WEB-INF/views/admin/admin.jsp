@@ -43,23 +43,18 @@
             <div class="menuIcon">
                 <div class="one">
                     <i class="fa-solid fa-user-check"></i>
-                    <span>Account</span>
                 </div>
                 <div class="two">
                     <i class="fa-solid fa-list-ul"></i>
-                    <span>Game</span>
                 </div>
                 <div class="three">
                     <i class="fa-solid fa-bullhorn"></i>
-                    <span>Notice</span>
                 </div>
                 <div class="four">
                     <i class="fas fa-question"></i>
-                    <span>Q%A</span>
                 </div>
                 <div class="five">
                     <i class="fas fa-comment"></i>
-                    <span>1:1</span>
                 </div>
             </div>
 
@@ -159,7 +154,7 @@
 					            <div class="game_number">${gameList.game_no}</div>
 					            <div class="game_title">${gameList.game_title}</div>
 					            <div class="game_price">${gameList.game_price}</div>
-					            <div class="game_genre_no">${gameList.game_genre_no}</div>
+					            <div class="game_genre_no">${gameList.game_genre}</div>
 					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${gameList.game_regdate}"/></div>
 					            <div class="game_sellcount">${gameList.game_sellcount}</div>
 					            <div class="game_adult">${gameList.game_adultcheck}</div>

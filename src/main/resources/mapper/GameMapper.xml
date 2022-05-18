@@ -15,8 +15,8 @@
 		<id column="game_no" property="game_no" />
 		<result column="game_title" property="game_title" />
 		<result column="game_price" property="game_price" />
-		<result column="game_genre_no" property="game_genre_no" />
-		<result column="game_regdate" property="game_regdate" />
+		<result column="game_genre" property="game_genre" />
+		<result column="game_release" property="game_release" />
 		<result column="game_sellcount" property="game_sellcount" />
 		<result column="game_adultcheck" property="game_adultcheck" />
 		<collection property="imgDto" resultMap="ImgDTO"></collection>
@@ -29,7 +29,7 @@
 				<trim prefix="OR">
 					<choose>
 						<when test="type == 'T'.toString()">
-							game_regdate
+							game_release
 						</when>
 						<when test="type == 'C'.toString()">
 							game_sellcount
@@ -48,22 +48,11 @@
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
 		INSERT INTO gameTBL(game_title, game_price,
-		game_genre_no)
+		game_genre)
 		VALUES(#{game_title}, #{game_price},
-		#{game_genre_no})
+		#{game_genre})
 	</insert>
 
-	<!-- 게임 검색 -->
-	<!-- <select id="gameSearch" resultType="com.frogame.www.model.GameDTO"> 
-		<![CDATA[ SELECT * from gameTBL where game_title like concat('%',#{search},'%') 
-		]]> <trim prefix="ORDER BY" suffix="DESC"> <if test="orderBy == 'concern'"> 
-		game_no <include refid="criteria"></include> </if> <if test="orderBy == 'popular'">game_sellcount</if> 
-		<if test="orderBy == 'views'">game_count</if> </trim> limit #{skip},#{amount} 
-		</select> -->
-
-	<select id="jjinList" resultType="com.frogame.www.model.GameDTO">
-		SELECT * from gameTBL
-	</select>
 
 	<select id="gameRead" resultType="com.frogame.www.model.GameDTO">
 		SELECT * from gameTBL 
@@ -93,12 +82,9 @@
 		</if>
 	</select>
 
-
-	<select id="admin_gameList"
-		resultType="com.frogame.www.model.GameDTO">
-		Select * from gameTBL
+	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
+		Select * from gameTBL order by game_no DESC;
 	</select>
-
 
 	<delete id="gameDelete">
 		DELETE FROM gameTBL WHERE game_no = #{game_no};
