@@ -68,11 +68,6 @@ public class GameController {
 
 		return "game/gameList";
 	}
-	
-	
-	
-
-	
 
 	@GetMapping("/gameRead")
 	public String gameRead() {
@@ -109,7 +104,7 @@ public class GameController {
 	@GetMapping("gameDelete")
 	public String gameDelete(@RequestParam("game_no") String game_no) {
 		gameService.gameDelete(game_no);
-		return "redirect:/gameList";
+		return "redirect:/admin";
 	}
 	
 	

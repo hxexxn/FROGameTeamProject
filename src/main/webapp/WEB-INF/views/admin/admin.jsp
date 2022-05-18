@@ -43,23 +43,18 @@
             <div class="menuIcon">
                 <div class="one">
                     <i class="fa-solid fa-user-check"></i>
-                    <span>Account</span>
                 </div>
                 <div class="two">
                     <i class="fa-solid fa-list-ul"></i>
-                    <span>Game</span>
                 </div>
                 <div class="three">
                     <i class="fa-solid fa-bullhorn"></i>
-                    <span>Notice</span>
                 </div>
                 <div class="four">
                     <i class="fas fa-question"></i>
-                    <span>Q%A</span>
                 </div>
                 <div class="five">
                     <i class="fas fa-comment"></i>
-                    <span>1:1</span>
                 </div>
             </div>
 
