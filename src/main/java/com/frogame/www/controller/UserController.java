@@ -32,6 +32,7 @@ public class UserController {
 	// 메인화면 이동 
 	@GetMapping("/")
 	public String index() {
+		
 		return "index";
 	}
 	
