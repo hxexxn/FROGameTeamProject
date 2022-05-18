@@ -20,7 +20,7 @@ public interface NoticeService {
 	void noticeViewCount(String notice_no);
 
 	/* 게시판 총 갯수 */
-	public int getTotal();
+	public int getTotal(Criteria cri);
 	
 	/* 게시판 목록(페이징 적용) */
 	public List<NoticeDTO> getListPaging(Criteria cri);
@@ -32,6 +32,8 @@ public interface NoticeService {
 	void noticeUpdate(NoticeDTO dto);
 
 	List<NoticeDTO> noticeSearch(String search);
+
+	List<NoticeDTO> admin_noticeList();
 
 	
 
