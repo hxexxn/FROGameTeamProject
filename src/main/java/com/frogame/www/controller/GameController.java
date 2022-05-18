@@ -70,7 +70,10 @@ public class GameController {
 		return "game/gameList";
 	}
 
-
+@GetMapping("/gameRead2")
+public String  gameRead2() {
+	return "game/gameRead2";
+}
 
 	
 	// 테스트 게임 상세 정보 페이지

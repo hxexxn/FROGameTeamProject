@@ -48,9 +48,9 @@
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
 		INSERT INTO gameTBL(game_title, game_price,
-		game_genre_no)
+		game_genre)
 		VALUES(#{game_title}, #{game_price},
-		#{game_genre_no})
+		#{game_genre})
 	</insert>
 
 	<!-- 게임 검색 -->
