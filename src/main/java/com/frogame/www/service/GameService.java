@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.ImgDTO;
 
 public interface GameService {
 
@@ -21,5 +22,7 @@ public interface GameService {
 	List<GameDTO> admin_gameList();
 
 	void gameDelete(String game_no);
+
+	void imgInsert(int i, byte[] img);
 
 }

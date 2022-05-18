@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.CartDTO;
 import com.frogame.www.service.CartService;
 
@@ -22,6 +23,9 @@ public class CartController {
 	
 	@Autowired
 	private CartService cartService;
+	
+	@Autowired
+	private GameMapper gameMapper;
 	
 //	 장바구니 추가 1
 	@GetMapping("/addCart")
@@ -48,7 +52,7 @@ public class CartController {
 		List<CartDTO> cList = cartService.cartList(cart_user_id);
 		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i < cList.size(); i++) {
-			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(cList.get(i).getGameDto().getFile()));
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(cList.get(i).getCart_game_no()).getFile()));
 		}
 		model.addAttribute("cList", cList);
 		model.addAttribute("img",imgList);

@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.ImgDTO;
 
 @Mapper
 public interface GameMapper {
@@ -26,5 +27,10 @@ public interface GameMapper {
 
 	void gameDelete(String game_no);
 
+	void imgInsert(@Param("game_no") int i, @Param("file") byte[] img);
+
+	ImgDTO getImage1(int game_no);
+
+	List<ImgDTO> getImages(String game_no);
 
 }

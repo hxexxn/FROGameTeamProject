@@ -14,8 +14,6 @@ public class GameDTO {
 	private Timestamp game_regdate;
 	private int game_sellcount;
 	private boolean game_adultcheck;
-	
-	private byte[] file;
 
 
 }

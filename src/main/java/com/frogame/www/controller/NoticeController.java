@@ -1,7 +1,5 @@
 package com.frogame.www.controller;
 
-import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.frogame.www.model.Criteria;
-import com.frogame.www.model.GameDTO;
 import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.service.NoticeService;

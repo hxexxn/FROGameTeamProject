@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
+import com.frogame.www.model.ImgDTO;
 
 @Service
 public class GameServiceImpl implements GameService{
@@ -51,6 +52,10 @@ public class GameServiceImpl implements GameService{
 	}
 
 
+	@Override
+	public void imgInsert(int i, byte[] img) {
+		gameMapper.imgInsert(i, img);		
+	}
 	// 게임 목록 출력
 	@Override
 	public List<GameDTO> admin_gameList() {

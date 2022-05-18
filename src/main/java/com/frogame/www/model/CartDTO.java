@@ -12,5 +12,6 @@ public class CartDTO {
 	// 조인 
 	private GameDTO gameDto;
 	private UserDTO userDto;
+	private ImgDTO imgDto;
 	
 }
