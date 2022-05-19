@@ -39,6 +39,9 @@ a {
 	justify-content: space-around;
 }
 
+.height-auto{
+	height: 1100px;
+}
 .center-flex{
 	display: flex;
 	justify-content: center;

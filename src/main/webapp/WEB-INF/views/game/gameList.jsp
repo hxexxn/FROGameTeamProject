@@ -38,7 +38,7 @@
 			<div class="head-main"></div>
 			<div class="head-sub"></div>
 		</div>
-		<div class="flex">
+		<div class="flex height-auto">
 			<div class="board-main">
 				<div class="search_wrap padding-top center">
 					<div class="search_area">
