@@ -83,10 +83,10 @@ public class GameController {
 		return "hotGame/discountGame";
 	}
 
-	@GetMapping("/gameRead")
-	public String gameRead() {
-		return "game/gameRead";
-	}
+//	@GetMapping("/gameRead")
+//	public String gameRead() {
+//		return "game/gameRead";
+//	}
 
 	
 	// 테스트 게임 상세 정보 페이지

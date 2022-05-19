@@ -22,6 +22,7 @@
 		<p>게임명 : ${dto.game_title}</p>
 		<p>게임 가격 : ₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${dto.game_price}"/></p>
 		<p>게임 등록일 : ${dto.game_release}</p>
+		
 		<button type="button" id="cartBtn2">ajax 장바구니</button><br>
 		<a href="/addCart?cart_game_no=${dto.game_no}&cart_user_id=${sess}" id="cartBtn">장바구니</a><br>
 		<!-- <a href="/cartList?game_no=${dto.game_no}" id="cartListBtn">장바구니 목록</a> -->
@@ -29,3 +30,5 @@
 		
 
 	</form>
+	
+	<script type="text/javascript" src="${path}/resources/js/cart.js"></script>
