@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="${path}/resources/css/cartList.css">
 
-<link rel="stylesheet" href="${path}/resources/css/cart.css">
+<link rel="stylesheet" href="${path}/resources/css/content_frame.css">
 
 </head>
 

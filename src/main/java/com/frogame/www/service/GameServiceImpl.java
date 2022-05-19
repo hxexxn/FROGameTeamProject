@@ -22,29 +22,27 @@ public class GameServiceImpl implements GameService{
 		gameMapper.newInsert(dto);
 	}
 	
-	// 寃뚯떆�뙋 紐⑸줉 (�럹�씠吏� �쟻�슜) 
 	@Override
 	public List<GameDTO> getListPaging(Criteria cri) {
 		return gameMapper.getListPaging(cri);
 	}
 
-	// 寃뚯떆臾� 珥� 媛��닔 
 	@Override
 	public int getTotal(Criteria cri) {
 		return gameMapper.getTotal(cri);
 	}
 	
-	// 寃뚯엫 �긽�꽭 �젙蹂� 
 	@Override
 	public GameDTO gameRead(String game_no) {
 		return gameMapper.gameRead(game_no);
 	}
 
-	@Override
-	public void saveImage(Map<String, Object> hmap) {
-		gameMapper.saveImage(hmap);
-
-	}
+	
+	 @Override public void saveImage(Map<String, Object> hmap) {
+	 gameMapper.saveImage(hmap);
+	  
+	 }
+	 
 
 	@Override
 	public void gameDelete(String game_no) {
@@ -60,6 +58,16 @@ public class GameServiceImpl implements GameService{
 	@Override
 	public List<GameDTO> admin_gameList() {
 		return gameMapper.admin_gameList();
+	}
+
+	@Override
+	public List<GameDTO> hotGame() {
+		return gameMapper.hotGame();
+	}
+
+	@Override
+	public List<GameDTO> newGame() {
+		return gameMapper.newGame();
 	}
 
 

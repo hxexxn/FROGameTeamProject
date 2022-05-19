@@ -9,10 +9,26 @@
 		<id column="game_no" property="game_no" />
 		<result column="game_title" property="game_title" />
 		<result column="game_price" property="game_price" />
-		<result column="game_genre_no" property="game_genre_no" />
+		<result column="game_genre" property="game_genre" />
 		<result column="game_regdate" property="game_regdate" />
 		<result column="game_sellcount" property="game_sellcount" />
 		<result column="game_adultcheck" property="game_adultcheck" />
+		<result column="game_min_os" property="game_min_os" />
+		<result column="game_min_cpu" property="game_min_cpu" />
+		<result column="game_min_ram" property="game_min_ram" />
+		<result column="game_min_vga" property="game_min_vga" />
+		<result column="game_min_dirX" property="game_min_dirX" />
+		<result column="game_min_ssd" property="game_min_ssd" />
+		<result column="game_std_os" property="game_std_os" />
+		<result column="game_std_cpu" property="game_std_cpu" />
+		<result column="game_std_ram" property="game_std_ram" />
+		<result column="game_std_vga" property="game_std_vga" />
+		<result column="game_std_dirX" property="game_std_dirX" />
+		<result column="game_std_ssd" property="game_std_ssd" />
+		<result column="game_info" property="game_info" />
+		<result column="game_platform" property="game_platform" />
+		<result column="game_production" property="game_production" />
+		<result column="game_release" property="game_release" />
 	</resultMap>
 
 	<!-- 유저 테이블 -->

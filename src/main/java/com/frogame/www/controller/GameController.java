@@ -50,7 +50,7 @@ public class GameController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/";
+		return "redirect:/gameList";
 	}
 
 	// 게임 목록 
@@ -68,6 +68,32 @@ public class GameController {
 		model.addAttribute("img", imgList);
 
 		return "game/gameList";
+	}
+	
+	@GetMapping("/hotGame")
+	public String hotGame (Model model) {
+		List<GameDTO> list = gameService.hotGame();
+		List<String> imgList = new ArrayList<String>();
+		for (int i = 0; i <list.size(); i++) { 
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
+			}
+		model.addAttribute("list", list);
+		model.addAttribute("img", imgList);
+
+		return "game/hot_game";
+	}
+	
+	@GetMapping("/newGame")
+	public String newGame (Model model) {
+		List<GameDTO> list = gameService.newGame();
+		List<String> imgList = new ArrayList<String>();
+		for (int i = 0; i <list.size(); i++) { 
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
+			}
+		model.addAttribute("list", list);
+		model.addAttribute("img", imgList);
+
+		return "game/new_game";
 	}
 
 	@GetMapping("/gameRead")
@@ -98,10 +124,6 @@ public class GameController {
 		return "redirect:/admin";
 	}
 	
-	@GetMapping("/discountGame")
-	public String discountGame() {
-		return "hotGame/discountGame";
-	}
 	
 	@GetMapping("/gameInfo")
 	public String gameInfo() {

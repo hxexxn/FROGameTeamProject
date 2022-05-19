@@ -38,7 +38,7 @@ public class AdminController {
 	
 	
 	// 관리자 페이지 이동 
-	@GetMapping("/admin")
+	@GetMapping("/afdrmoignemag")
 	public String admin(Model model) {
 		
 		// 유저 목록
@@ -54,7 +54,7 @@ public class AdminController {
 		model.addAttribute("noticeList", noticeList);
 		
 		
-		return "admin/admin";
+		return "admin/afdrmoignemag";
 	}
 	
 	// 관리자 회원가입 페이지 이동 
@@ -67,7 +67,7 @@ public class AdminController {
 	@PostMapping("/adminInsert")
 	public String admininsert(AdminDTO dto) {
 		adminService.adminInsert(dto);
-		return "redirect:/admin";
+		return "redirect:/afdrmoignemag";
 	}
 	
 	

@@ -107,14 +107,11 @@
 					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_id eq 'admin'}">
-							<span><a href="/admin">관리</a></span>
+							<span><a href="/afdrmoignemag">관리</a></span>
 						</c:if>
 						<c:if test="${sessionScope.user_id ne 'admin'}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
 						</c:if>
-						
-						
-                    
                     <span><a href="/userLogout">로그아웃</a></span>
                 </div>
               </c:if>
@@ -131,15 +128,15 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">인기 게임</a>
+                    <li><a href="hotGame">인기 게임</a>
                         <ul id="subMenu">
-                            <li><a href="discountGame">할인게임</a></li>
+                            <li><a href="#">할인게임</a></li>
                             <li><a href="#">게임</a></li>
                             <li><a href="#">게임</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=T">신작 게임</a>
+                    <li><a href="newGame">신작 게임</a>
                         <ul id="subMenu">
                             <li><a href="#">신작게임</a></li>
                             <li><a href="#">신작게임</a></li>
@@ -532,6 +529,7 @@
                     <p>© 2022. FROGAME Inc. All rights reserved.</p>
                     <p>FROGame 로고의 모든 저작권은 FROGame의 소유이며, 기타 브랜드 또는 제품 이름은 해당 소유자의
 						상표입니다.</p>
+					<p><a href="#"><i class="fa-solid fa-circle-arrow-up fa-ls"></i></a></p>
                 </div>
             </div>
         </div>

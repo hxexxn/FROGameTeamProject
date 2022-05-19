@@ -64,7 +64,7 @@
 
             <div class="contentTop">
 
-                <div class="siteUrl">
+                <div class="dashboard_main">
                     <span>Dashboard</span>
                 </div>
 

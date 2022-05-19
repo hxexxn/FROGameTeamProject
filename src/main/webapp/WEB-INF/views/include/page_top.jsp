@@ -53,14 +53,20 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
-              <c:set var="sess" value="${sessionScope.user_id}"></c:set>
+              <c:set var="sess" value="${sessionScope.user_id}"/>
                 <div class="userBox">
-                    <span> <c:out value="${sess}"/></span>
-                    <span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
+					
+						<c:if test="${sessionScope.user_id eq 'admin'}">
+							<span><a href="/afdrmoignemag">관리</a></span>
+						</c:if>
+						<c:if test="${sessionScope.user_id ne 'admin'}">
+							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+						</c:if>
                     <span><a href="/userLogout">로그아웃</a></span>
                 </div>
               </c:if>
-			</div>
+          </div>
 
 		<!-- 메인 메뉴 -->
 		<!-- 네비게이션 및 이미지 슬라이드 -->
@@ -70,15 +76,15 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="#">인기 게임</a>
+                    <li><a href="hotGame">인기 게임</a>
                         <ul id="subMenu">
-                            <li><a href="#">게임</a></li>
+                            <li><a href="#">할인 게임</a></li>
                             <li><a href="#">게임</a></li>
                             <li><a href="#">게임</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="#">신작 게임</a>
+                    <li><a href="newGame">신작 게임</a>
                         <ul id="subMenu">
                             <li><a href="#">신작게임</a></li>
                             <li><a href="#">신작게임</a></li>
