@@ -59,7 +59,7 @@
 		</trim>
 
 	</sql>
-
+	
 	<!-- 게임 등록 -->
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
@@ -89,6 +89,16 @@
 			<include refid="criteria"></include>
 		</if>
 		limit #{skip},#{amount}
+	</select>
+	
+	<select id="hotGame"
+		resultType="com.frogame.www.model.GameDTO">
+		select * from gameTBL order by game_sellcount desc
+	</select>
+	
+	<select id="newGame"
+		resultType="com.frogame.www.model.GameDTO">
+		select * from gameTBL order by game_release desc
 	</select>
 
 	<select id="getTotal" resultType="int">

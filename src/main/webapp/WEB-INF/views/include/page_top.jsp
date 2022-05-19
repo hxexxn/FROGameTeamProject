@@ -76,15 +76,15 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">인기 게임</a>
+                    <li><a href="hotGame">인기 게임</a>
                         <ul id="subMenu">
-                            <li><a href="discountGame">할인 게임</a></li>
+                            <li><a href="#">할인 게임</a></li>
                             <li><a href="#">게임</a></li>
                             <li><a href="#">게임</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=T">신작 게임</a>
+                    <li><a href="newGame">신작 게임</a>
                         <ul id="subMenu">
                             <li><a href="#">신작게임</a></li>
                             <li><a href="#">신작게임</a></li>

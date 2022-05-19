@@ -33,4 +33,8 @@ public interface GameMapper {
 
 	List<ImgDTO> getImages(String game_no);
 
+	List<GameDTO> hotGame();
+
+	List<GameDTO> newGame();
+
 }

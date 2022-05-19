@@ -1,0 +1,152 @@
+body{
+    font-family: Georgia, "Malgun Gothic" ;
+}
+
+.head_title{
+    font-size: 46px;
+    font-weight: 300;
+    margin-top: 3%;
+    height: auto;
+    border-bottom: 1px solid rgba(195,198,206,.5);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.big_wrap{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    /* border: solid 1px navy; */
+}
+
+.left_box{
+    width: 80%;
+    margin-top: 3%;
+}
+
+.right_box{
+    width: 20%;
+}
+
+
+/* 대문사진 */
+
+.head_photo{
+   
+    border: 15px solid rgba(195,198,206);
+    
+    min-height: 500px;
+    padding: 16px;
+    margin: 0;
+ 
+   
+}
+
+
+.buy{
+   
+   text-align: left;
+    width: 320px;   
+    margin-left: 16px;
+    /* border: 1px solid rgba(195,198,206); */
+}
+
+/* 정상가 판매가  */
+
+.price{
+    font-size: 18px;
+    border-bottom: 1px solid rgba(195,198,206);
+    padding: 14px;
+   
+   
+   
+}
+
+.pre_price{
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+    width: 80px;
+   
+}
+
+
+/* 출시일~게임패드 */
+
+.menu{
+    margin-top: 20px;
+}
+
+.game_info{
+   
+    border-bottom: 1px solid rgba(195,198,206);    
+    padding: 14px;    
+    margin-right: 10px;
+}
+
+.game_info_desc{
+    
+   width: 80px;
+    
+    font-size: 14px;
+    
+    font-weight: bold;
+
+  
+
+    display: inline-block;
+
+   
+}
+
+/* 장바구니 버튼 */
+
+.cart_Box{
+ 
+    height: 100px;
+    padding: 14px ;
+   justify-content: center;
+     
+}
+
+.cart_Btn{
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #07553B;
+    color: #ffffff;
+    width: 280px;
+    text-align: center;
+    height: 50px;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+/* 본문 내용 */
+
+
+.content_wrap{
+   
+    border: 1px solid rgba(195,198,206,.5);
+    margin-top: 3%;
+    padding: 14px;
+    
+}
+
+.content_box{
+    padding: 14px;
+   
+}
+
+.content_input{
+    border: 0;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    overflow: hidden;
+}
