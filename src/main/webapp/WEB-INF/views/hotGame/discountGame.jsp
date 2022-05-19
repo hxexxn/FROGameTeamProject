@@ -179,7 +179,7 @@
     <div class="wrap1">
        
             <div class="poster">
-                <div class="photo"></div>
+                <div class="photo"> <img src="${img[0]}"> </div>
                 <div class="game_content">
                     <div class="game_title">Prey</div>
                     <div class="game_price">
