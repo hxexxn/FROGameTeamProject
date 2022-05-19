@@ -133,7 +133,7 @@
 
                     <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">인기 게임</a>
                         <ul id="subMenu">
-                            <li><a href="discountGame">할인게임</a></li>
+                            <li><a href="hotGame">할인게임</a></li>
                             <li><a href="#">게임</a></li>
                             <li><a href="#">게임</a></li>
                         </ul>

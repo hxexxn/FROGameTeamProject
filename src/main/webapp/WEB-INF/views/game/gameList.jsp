@@ -73,11 +73,11 @@
 						</div>
 						<div class="game-content">
 							<a href="gameRead"><fmt:formatDate
-									value="${list[status.index].game_regdate}" pattern="yyyy-MM-dd" /></a>
+									value="${list[status.index].game_release}" pattern="yyyy-MM-dd" /></a>
 						</div>
-					<%-- 	<div class="game-content">
+						<%-- <div class="game-content">
 							<a href="gameDelete?game_no=${jjin[status.index].game_no}">삭제하기</a>
-						</div> --%>
+						</div>  --%>
 					</div>
 				</c:forEach>
 				<div class="pageInfo_wrap">
