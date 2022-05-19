@@ -103,4 +103,9 @@ public class GameController {
 		return "hotGame/discountGame";
 	}
 	
+	@GetMapping("/gameInfo")
+	public String gameInfo() {
+		return "hotGame/gameInfo";
+	}
+	
 }
