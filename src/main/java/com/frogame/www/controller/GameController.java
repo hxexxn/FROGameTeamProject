@@ -125,4 +125,9 @@ public class GameController {
 	}
 	
 	
+	@GetMapping("/gameInfo")
+	public String gameInfo() {
+		return "hotGame/gameInfo";
+	}
+	
 }
