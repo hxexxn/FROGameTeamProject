@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" href="${path}/resources/css/style1.css">
 <link rel="stylesheet" href="${path}/resources/css/gameList.css">
+<link rel="stylesheet" href="${path}/resources/css/content_frame.css">
 
 <style>
 @import
@@ -30,6 +31,8 @@
 	<c:set var="sess" value="${sessionScope.user_id}" />
 
 	<jsp:include page="../include/page_top.jsp" flush="false" />
+	
+	<div id="contentFrame">
 
 	<div class="head flex">
 		<div class="head-main"></div>
@@ -50,7 +53,7 @@
 				</div>
 				<div class="search_area">
 					<input type="text" placeholder="검색" name="keyword" id="keyword"
-						value="${pageMaker.cri.keyword }">
+						value="${pageMaker.cri.keyword }" autocomplete="off">
 					<button>Search</button>
 				</div>
 
@@ -111,6 +114,10 @@
 			</div>
 		</div>
 	</div>
+	
+	</div>
+
+<jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
 	<script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
 

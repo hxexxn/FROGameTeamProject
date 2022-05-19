@@ -1,13 +1,13 @@
 $(function(){
 
-    $('.mainBox').hide();
+    $('.mainBox').show();
     $('.oneBox').hide();
     $('.twoBox').hide();
     $('.threeBox').hide();
     $('.fourBox').hide();
     $('.fiveBox').hide();
 
-    $('.homeLogo').on('click', function(){
+    $('.dashboard_main').on('click', function(){
         $('.mainBox').show();
 
         $('.oneBox').hide();
@@ -20,6 +20,11 @@ $(function(){
     $('.one').on('click', function(){
         $('.oneBox').show();
 
+		$('.mainBox').hide();
+        $('.twoBox').hide();
+        $('.threeBox').hide();
+        $('.fourBox').hide();
+        $('.fiveBox').hide();
     })
     
     $('.two').on('click', function(){
