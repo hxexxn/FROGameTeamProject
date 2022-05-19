@@ -40,7 +40,7 @@ public class GameController {
 
 			System.out.println("dto 값 확인 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
-			System.out.println(dto.getGame_no());
+			System.out.println("게임 등록 완료.");
 			
 			for(int i=0; i<file.length; i++) {
 				byte[] img = file[i].getBytes();

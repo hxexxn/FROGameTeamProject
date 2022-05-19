@@ -10,13 +10,13 @@ h1 {
 }
 
 /* 전체 감싸는 영역 */
-#game_insert {
+#game_insert_content {
     margin: 0 auto;
     width: 40%;
     margin-bottom: 50px;
 }
 
-#game_insert > div > div {
+#game_insert_content > div > div {
     margin-bottom: 20px;
     font-size: 0.8rem;
 }
@@ -87,6 +87,9 @@ input    {
     vertical-align: -2.5px;
 }
 
+#strategy {
+	margin-top: 20px;
+}
 /* 게임정보 입력 인풋 */
 textarea {
     width: 99%;
@@ -196,9 +199,11 @@ textarea {
     background-color: #f5f5f5;
     color: black;
 }
+
 #file_upload {
     display: none;
 }
+
 .file .file-list {
     margin-left: 20px;
     margin-right: 20px;
@@ -207,6 +212,10 @@ textarea {
     overflow: auto;
     border: 1px solid lightgray;
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+   	flex-flow: row wrap;
+   	color: #4c4c4c;
 }
 
 .file .file-list .filebox div {

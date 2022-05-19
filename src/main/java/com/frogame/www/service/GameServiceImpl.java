@@ -58,8 +58,8 @@ public class GameServiceImpl implements GameService{
 	}
 	// 게임 목록 출력
 	@Override
-	public List<GameDTO> admin_gameList() {
-		return gameMapper.admin_gameList();
+	public List<GameDTO> admin_gameList(Criteria cri) {
+		return gameMapper.admin_gameList(cri);
 	}
 
 

@@ -1,6 +1,8 @@
 package com.frogame.www.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -10,11 +12,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.frogame.www.model.AdminDTO;
+import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
 import com.frogame.www.model.NoticeDTO;
+import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.model.UserDTO;
 import com.frogame.www.service.AdminService;
 import com.frogame.www.service.GameService;
@@ -38,24 +44,32 @@ public class AdminController {
 	
 	
 	// 관리자 페이지 이동 
-	@GetMapping("/afdrmoignemag")
-	public String admin(Model model) {
-		
-		// 유저 목록
-		List<UserDTO> userList = userService.userList();
-		model.addAttribute("userList", userList);
-		
-		// 게임 목록
-		List<GameDTO> gameList = gameService.admin_gameList();
-		model.addAttribute("gameList", gameList);
-		
-		// 공지 목록 
-		List<NoticeDTO> noticeList = noticeService.admin_noticeList();
-		model.addAttribute("noticeList", noticeList);
-		
-		
-		return "admin/afdrmoignemag";
-	}
+		@GetMapping("/afdrmoignemag")
+		public String admin2 (Model model, Criteria cri) {
+			
+			// 유저 목록
+			List<UserDTO> userList = userService.userList();
+			model.addAttribute("userList", userList);
+			
+			// 게임 목록
+			List<GameDTO> gameList = gameService.admin_gameList(cri);
+			int total = gameService.getTotal(cri);
+			
+			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+			
+			model.addAttribute("gameList", gameList);
+			model.addAttribute("pageMaker", pageMake);
+			
+			// 공지 목록 
+			List<NoticeDTO> noticeList = noticeService.admin_noticeList();
+			model.addAttribute("noticeList", noticeList);
+
+			
+			
+			return "admin/afdrmoignemag";
+		}
+	
+	
 	
 	// 관리자 회원가입 페이지 이동 
 	@GetMapping("/adminRegist")

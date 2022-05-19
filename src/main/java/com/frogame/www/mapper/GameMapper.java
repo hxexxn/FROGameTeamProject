@@ -23,7 +23,7 @@ public interface GameMapper {
 
 	void saveImage(Map<String, Object> hmap);
 
-	List<GameDTO> admin_gameList();
+	List<GameDTO> admin_gameList(Criteria cri);
 
 	void gameDelete(String game_no);
 

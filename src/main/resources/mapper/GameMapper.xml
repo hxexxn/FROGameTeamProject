@@ -101,7 +101,15 @@
 	</select>
 
 	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
-		Select * from gameTBL order by game_no DESC;
+		Select * from gameTBL 
+		
+		<if test="keyword != null">
+		<![CDATA[
+			where game_title like concat('%',#{keyword},'%')
+			]]>
+		</if>
+		order by game_no DESC limit #{skip},#{amount}
+		
 	</select>
 
 	<delete id="gameDelete">

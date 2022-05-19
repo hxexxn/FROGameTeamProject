@@ -81,7 +81,7 @@ body {
     transition: 0.3s;
 }
 
-.one, .two, .three, .four, .five {
+.user_list, .game_list, .game_insert, .three, .four, .five {
     width: 100%;
     /* border: 1px solid rebeccapurple; */
     height: 70px;
@@ -174,18 +174,21 @@ body {
     width: 95%;
     background-color: #ffffff;
     /* border-left: 1px solid lightgray; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main {
     width: 100%;
     height: auto;
-    overflow-y: auto;
 }
 
-.mainBox, .oneBox, .twoBox,
-.threeBox, .fourBox, .fiveBox {
+/* .mainBox, .user_list_box, .game_list_box,
+.game_insert_box, .threeBox, .fourBox, .fiveBox {
     width: 100%;
-    height: 1200px;
+} */
 
+.game_insert_box {
+	height: 712px;
+	overflow-y: scroll;
+    
 }

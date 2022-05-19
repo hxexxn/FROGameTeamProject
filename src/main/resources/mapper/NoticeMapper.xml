@@ -21,7 +21,9 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
 		resultType="com.frogame.www.model.NoticeDTO">
 		select * from noticeBoardTBL order by notice_count DESC
 	</select>
-
+	
+	
+	<!-- 페이징 및 검색 -->
 	<select id="getListPaging"
 		resultType="com.frogame.www.model.NoticeDTO">
 		select *
@@ -34,6 +36,7 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
 		order by notice_no DESC limit #{skip}, #{amount}
 	</select>
 	
+	<!--  게시판 페이징 번호  -->
 	<select id="getTotal" resultType="int">
         select count(*) from noticeBoardTBL
         	<if test="keyword != null">
