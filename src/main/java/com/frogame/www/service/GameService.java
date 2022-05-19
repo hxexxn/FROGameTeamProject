@@ -17,12 +17,17 @@ public interface GameService {
 
 	GameDTO gameRead(String game_no);
 	
+	
 	void saveImage(Map<String, Object> hmap);
-
+	 
 	List<GameDTO> admin_gameList();
 
 	void gameDelete(String game_no);
 
 	void imgInsert(int i, byte[] img);
+
+	List<GameDTO> hotGame();
+
+	List<GameDTO> newGame();
 
 }

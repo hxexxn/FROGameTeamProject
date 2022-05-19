@@ -71,8 +71,8 @@ public class GameController {
 	}
 	
 	@GetMapping("/hotGame")
-	public String hotGame (Model model, Criteria cri) {
-		List<GameDTO> list = gameService.getListPaging(cri);
+	public String hotGame (Model model) {
+		List<GameDTO> list = gameService.hotGame();
 		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
@@ -80,13 +80,26 @@ public class GameController {
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
 
-		return "hotGame/discountGame";
+		return "game/hot_game";
+	}
+	
+	@GetMapping("/newGame")
+	public String newGame (Model model) {
+		List<GameDTO> list = gameService.newGame();
+		List<String> imgList = new ArrayList<String>();
+		for (int i = 0; i <list.size(); i++) { 
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
+			}
+		model.addAttribute("list", list);
+		model.addAttribute("img", imgList);
+
+		return "game/new_game";
 	}
 
-//	@GetMapping("/gameRead")
-//	public String gameRead() {
-//		return "game/gameRead";
-//	}
+	@GetMapping("/gameRead")
+	public String gameRead() {
+		return "game/gameRead";
+	}
 
 	
 	// 테스트 게임 상세 정보 페이지
@@ -111,9 +124,5 @@ public class GameController {
 		return "redirect:/admin";
 	}
 	
-	@GetMapping("/discountGame")
-	public String discountGame() {
-		return "hotGame/discountGame";
-	}
 	
 }

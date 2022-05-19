@@ -32,7 +32,10 @@ body {
     margin-top: 3%;
 }
 
-
+.Thumbnail{
+	width: 100%;
+	height: 100%;
+}
 
 .poster{
   
@@ -45,8 +48,7 @@ body {
 .photo{
     border-radius: 4px;
     background-color: rgba(195,198,206,.5);
-    height: 80%;
-    background-size: 100% 100%;
+    height: 50%;
 }
 
 
@@ -76,7 +78,6 @@ body {
     margin-left: 10px;
 
 }
-
 
 .wrap2{
     

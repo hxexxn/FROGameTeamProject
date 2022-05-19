@@ -68,7 +68,7 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="#">인기 게임</a>
+                    <li><a href="hotGame">인기 게임</a>
                         <ul id="subMenu">
                             <li><a href="#">게임</a></li>
                             <li><a href="#">게임</a></li>
@@ -76,7 +76,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="#">신작 게임</a>
+                    <li><a href="newGame">신작 게임</a>
                         <ul id="subMenu">
                             <li><a href="#">신작게임</a></li>
                             <li><a href="#">신작게임</a></li>
