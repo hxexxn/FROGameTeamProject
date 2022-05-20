@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,12 +73,18 @@
     crossorigin="anonymous"></script>
 
 <jsp:include page="../include/page_top.jsp" flush="false"/>
+=======
+<link rel="stylesheet" href="${path}/resources/css/indexFAQ.css">
+  <jsp:include page="../include/page_top.jsp" flush="false" />
+        
+        
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 <div  class="headFQA">
     <div class="headFQA_box1">FroGame 고객센터</div>
 
     
-    <div class="search_bar">
+    	<div class="search_bar">
         
                   
     <form action="FAQSearch" autocomplete="off">
@@ -89,8 +96,9 @@
 
      
 
-    </div>
+   		 </div>
 </div>
+
 
 
 
@@ -155,6 +163,10 @@
     </div>
 
 </div>
+
+
+
+<jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 <script type="text/javascript" src="${path}/resources/js/FQA.js"></script>
 </body>

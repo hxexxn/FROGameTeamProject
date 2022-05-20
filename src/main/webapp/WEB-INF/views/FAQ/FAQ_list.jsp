@@ -4,12 +4,12 @@
     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ_list</title>
     <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
     <link rel="stylesheet" href="${path}/resources/css/FAQ01.css">
     <style>
@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+<<<<<<< HEAD
     <!-- 이미지 슬라이드 -->
     <script>
         $(document).ready(function(){
@@ -71,6 +72,11 @@
     crossorigin="anonymous"></script>
 
 <jsp:include page="../include/page_top.jsp" flush="false"/>
+=======
+     <jsp:include page="../include/page_top.jsp" flush="false"/>
+        
+
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 <div  class="headFQA">
     <div class="headFQA_box1">FroGame 고객센터</div>
@@ -111,6 +117,9 @@
 
 
 <br><br>
+
+
+<jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 </body>
 </html>

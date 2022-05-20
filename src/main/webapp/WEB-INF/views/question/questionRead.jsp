@@ -22,38 +22,9 @@
 
    <script src="https://kit.fontawesome.com/3636334fb2.js" 
     crossorigin="anonymous"></script>
+    
+  <jsp:include page="../include/page_top.jsp" flush="false" />
 
-<!-- 최상단 -->
-    <div class="topBanner">
-        <span><a href="#" class="bannerText"> 🌏 지구의 날 기념! 최대 90% 할인! 🌏 </a></span>
-    </div>
-
-<!-- 타이틀 및 유저박스 -->
-    <div id="wrapper">
-        <div id="titleLogo">
-            <span class="iTag"><i class="fa-solid fa-frog fa-bounce fa-lg"></i></span>
-        </div>
-        <div class="mainTitle">
-            <a href="/" class="froGame">FROGame</a>
-        </div>
-        <div class="userBox">
-            <span><i class="fa-solid fa-user-check"></i></span>
-            <span><i class="fa-solid fa-user-plus"></i></span>
-            <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-        </div>
-    </div>
-
-    <!-- 메인 메뉴 -->
-    <div id="mainMenu">
-        <div class="menuBox">
-            <div class="gameDropDownMenu">
-            <div><span>게임</span></div>
-            <div><span>같이 해용</span></div>
-            <div><span>공지사항</span></div>
-            <div><span>고객센터</span></div>
-        </div>
-    </div>
-</div>
 
 
 <div class="content">
@@ -120,26 +91,10 @@
 	</c:if>
  	
  	</div>
+ 	
+ 	
 	 
-	 <div class="footer_head"></div>
-	 
-	  <div id="footer">
-            <div class="copyRight">
-                <div class="frogGameCopyRight">
-                    <i class="fa-solid fa-frog fa-bounce fa-lg"></i>
-                    <p>© 2022. FROGAME Inc. All rights reserved.</p>
-                    <p>FROGame 로고의 모든 저작권은 FROGame의 소유이며, 기타 브랜드 또는 제품 이름은 해당 소유자의
-						상표입니다.</p>
-                </div>
-            </div>
-        </div>
-		
-	
-       
-   
-	
-	
-
+	<jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 
 <script type="text/javascript" src="${path}/resources/js/questionRead.js"></script>

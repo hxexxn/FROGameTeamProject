@@ -21,7 +21,12 @@
 <body>
 <script src="https://kit.fontawesome.com/3636334fb2.js" crossorigin="anonymous"></script>
 
+<<<<<<< HEAD
 <jsp:include page="../include/page_top.jsp" flush="false"/>
+=======
+  <jsp:include page="../include/page_top.jsp" flush="false" />
+
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 <div class="noticeList">
     <div class="notice_head">문의게시판</div>
@@ -84,6 +89,7 @@
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
 	</form>
 
+<jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 
 
