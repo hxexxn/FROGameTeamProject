@@ -9,6 +9,7 @@
 <title>문의 게시판 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/noticeList.css">
 <link rel="stylesheet" href="${path}/resources/css/boardList.css">
+<link rel="stylesheet" href="${path}/resources/css/content_frame.css">
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -24,11 +25,10 @@
 
   <jsp:include page="../include/page_top.jsp" flush="false" />
 
-
+<div id="contentFrame">
 
 <div class="noticeList">
     <div class="notice_head">문의게시판</div>
-            
     <div class="noticeBox1">
     <table class="notice_table">
       <thead>
@@ -55,7 +55,7 @@
       </tbody>
     </table>
      <input type="hidden" name="question_writer" id="question_writer" value="${sessionScope.user_id}"> 
-    <div class="Btn"> <a href="/questionInsert" class="noticeInsertBtn" id="questionInsertBtn">글쓰기</a> </div>
+    <div class="Btn"> <a href="/questionInsert?user_id=${sessionScope.user_id}" class="noticeInsertBtn" id="questionInsertBtn">글쓰기</a> </div>
     
 </div>
 </div>
@@ -85,8 +85,10 @@
 	<form id="moveForm" method="get">
 		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
+		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
 	</form>
 
+</div>
 <jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 

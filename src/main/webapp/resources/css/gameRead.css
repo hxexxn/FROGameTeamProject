@@ -41,14 +41,16 @@ body{
 
 .head_photo{
    
-    border: 15px solid rgba(195,198,206);
+   /*  border: 15px solid rgba(195,198,206); */
     
     height: 550px;   
-   
- 
-   
+   	width: 100%;
 }
-
+.head_photo img{
+	width: 100%;
+	height: 100%;
+	
+}
 
 .buy{
    
@@ -166,8 +168,3 @@ body{
     overflow: hidden;
 }
 
-.photo{
-	width: 100%;
-	height: 100%;
-	
-}

@@ -33,4 +33,9 @@
 	<delete id="userDelete">
 		DELETE FROM userTBL WHERE user_no= #{user_no}
 	</delete>
+	
+	<!-- 유저 닉네임 -->
+	<select id="getUserNick" resultType="com.frogame.www.model.UserDTO">
+		Select user_nick from userTBL where user_id = #{user_id}
+	</select>
 </mapper>

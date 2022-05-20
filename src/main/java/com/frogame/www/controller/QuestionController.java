@@ -13,7 +13,9 @@ import com.frogame.www.model.Criteria;
 import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.model.QuestionDTO;
+import com.frogame.www.model.UserDTO;
 import com.frogame.www.service.QuestionService;
+import com.frogame.www.service.UserService;
 
 @Controller
 public class QuestionController {
@@ -21,12 +23,16 @@ public class QuestionController {
 	@Autowired
 	private QuestionService questionService;
 	
-
+	@Autowired
+	private UserService userService;
 	
 	// 문의 게시판
 	
 	@GetMapping("/questionInsert")
-	public String questionInsert() {
+	public String questionInsert(@RequestParam("user_id") String user_id, Model model) {
+		UserDTO dto = userService.getUserNick(user_id);
+		System.out.println(dto.getUser_nick());
+		model.addAttribute("user_nick", dto.getUser_nick());
 		return "question/questionInsert";
 	}
 

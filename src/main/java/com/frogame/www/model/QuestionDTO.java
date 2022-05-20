@@ -17,7 +17,7 @@ public class QuestionDTO {
 	private String question_writer ;	
 	private int question_count ;		
 	
-
+	private UserDTO UserDto;
 	
 	
 }

@@ -75,7 +75,7 @@
         <input type="hidden" name="question_board_no" id="question_board_no" value="${dto.question_no}">
         <input type="hidden" name="question_comment_writer" id="question_comment_writer" value="${admin_sess}" readonly="readonly">
          <textarea name="question_comment_content" id="question_comment_content" cols="30" rows="10" class="commentBox" maxlength = "3000"
-         placeholder="댓글을 입력해주세요."></textarea>	 
+         placeholder="댓글을 입력해주세요." style="white-space:pre-wrap; wrap:hard;"></textarea>	 
 	 </div>
 
      <div class="replyBtn">

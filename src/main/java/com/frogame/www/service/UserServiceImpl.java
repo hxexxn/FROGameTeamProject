@@ -71,5 +71,11 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public UserDTO getUserNick(String user_id) {
+		return userMapper.getUserNick(user_id);
+	}
+
+	
 
 }

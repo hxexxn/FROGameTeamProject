@@ -26,4 +26,6 @@ public interface UserMapper {
 
 	void userDelete(String user_no);
 
+	UserDTO getUserNick(String user_id);
+
 }

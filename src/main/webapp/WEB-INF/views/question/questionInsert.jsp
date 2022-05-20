@@ -36,7 +36,7 @@
                     
                 <div class="contentInsertBox01">
                     <input type="text" name="question_title" id="question_title" placeholder="제목을 입력해주세요." class="title_input" maxlength="200">  
-                    <input type="hidden" name="question_writer" id="question_writer" value="${sessionScope.user_id}"> 
+                    <input type="hidden" name="question_writer" id="question_writer" value="${user_nick}"> 
                 </div>
 
                 <div class="contentInsertBox02">

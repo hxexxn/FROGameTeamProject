@@ -18,5 +18,7 @@ public interface UserService {
 
 	void userDelete(String user_no);
 
+	UserDTO getUserNick(String user_id);
+
 
 }

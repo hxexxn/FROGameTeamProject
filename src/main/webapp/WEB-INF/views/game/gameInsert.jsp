@@ -63,7 +63,6 @@
 
                 </div>
 
-
                 
                 <div class="genre">
                     <div class="game_genre">

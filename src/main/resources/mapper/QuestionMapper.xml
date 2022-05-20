@@ -3,6 +3,30 @@
                   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">                  
 <mapper namespace="com.frogame.www.mapper.QuestionMapper">
 
+	<!-- 유저 테이블 -->
+	<resultMap type="com.frogame.www.model.UserDTO" id="UserDTO">
+		<id column="user_no" property="user_no" />
+		<result column="user_id" property="user_id" />
+		<result column="user_pw" property="user_pw" />
+		<result column="user_nick" property="user_nick" />
+		<result column="user_email" property="user_email" />
+		<result column="user_regdate" property="user_regdate" />
+		<result column="user_adultcheck" property="user_adultcheck" />
+		<result column="user_level" property="user_level" />
+	</resultMap>
+	
+		<!-- 카트 테이블 -->
+	<resultMap type="com.frogame.www.model.QuestionDTO" id="QuestionDTO">
+		<id column="question_no" property="question_no" />
+		<result column="question_title" property="question_title" />
+		<result column="question_content" property="question_content" />
+		<result column="question_regdate" property="question_regdate" />
+		<result column="question_writer" property="question_writer" />
+		<result column="question_count" property="question_count" />
+		<collection property="userDto" resultMap="UserDTO"></collection>
+	</resultMap>
+	
+
 <insert id="questionInsert">
 INSERT INTO questionBoardTBL(question_title, question_content, question_writer) 
 VALUES(#{question_title}, #{question_content},  #{question_writer})

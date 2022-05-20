@@ -4,33 +4,41 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
    <link rel="stylesheet" href="${path}/resources/css/gameRead.css">
   
-  <jsp:include page="../include/page_top.jsp" flush="false" />
-  
-  
- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+    <!-- 이미지 슬라이드 -->
+    <script>
+        $(document).ready(function(){
+            $('.sildeGameImg').bxSlider({
+            auto: true,
+            speed: 500,
+            captions: true,
+            });
+        });
+    </script>
+  <jsp:include page="../include/page_top(no_jquery).jsp" flush="false" />
 
 <form action="addCart2" method="post" id="addCartFrom">
 
-
-	<%-- <c:forEach var="img" items="${imgList}">
-		<img src="${img.image}">
-		</c:forEach> --%>
 		
 	<div class="head_title">${dto.game_title}</div>
 	
 	<div class="big_wrap">    
 
     <div class="left_box">
-            <div class="head_photo">
-                <img class="photo" src="${imgList[0].image}"> 
+            <div class="head_photo sildeGameImg">
+              <div> <img src="${imgList[0].image}">	</div>
+              <div> <img src="${imgList[1].image}"> </div>
+              <div> <img src="${imgList[2].image}"> </div>
             </div>
             <div class="content_wrap">
 
                 <!-- 게임정보입력란 -->
                 <div class="content_box">
                     <h1>게임정보</h1>
-                    <div>${dto.game_info}</div>
+                    <div style="white-space:pre-wrap; wrap:hard;">${dto.game_info}</div>
                 </div>
 
 <!-- 사양 넣는곳 -->
@@ -65,6 +73,7 @@
     </div>
 
     <div class="right_box">
+    <br>
             <div class="buy">
                 <div class="price">
                     <div class="menu"> 
@@ -94,7 +103,6 @@
                 </div>
                 
 <c:set var="sess" value="${sessionScope.user_id}"></c:set>
-<c:out value="${sess}" />
 
 <input type="hidden" value="${sess}" name="cart_user_id"	id="cart_user_id"> 
 <input type="hidden" value="${dto.game_no}" id="cart_game_no" name="cart_game_no">
@@ -103,48 +111,19 @@
 
 
                 <div class="cart_Box">
-                  <div class="cart_Btn"><a
+                  <a
 		href="/addCart?cart_game_no=${dto.game_no}&cart_user_id=${sess}"
-		id="cartBtn" style="color: white">CART</a></div>
+		id="cartBtn" style="color: white"><div class="cart_Btn">CART</div></a>
                 </div>
                 
                   <div class="cart_Box">
                     
-                    <div class="cartlist_Btn"><a href="/cartList?cart_user_id=${sess}" id="cartListBtn" style="color: white">CART LIST</a></div>
+                    <a href="/cartList?cart_user_id=${sess}" id="cartListBtn" style="color: white"><div class="cartlist_Btn">CART LIST</div></a>
                 </div>
 
             </div>  
     </div>
 </div>	
-
-	<%-- <c:set var="sess" value="${sessionScope.user_id}"></c:set>
-	<c:out value="${sess}" />
-
-	<input type="hidden" value="${sess}" name="cart_user_id"
-		id="cart_user_id"> <input type="hidden" value="${dto.game_no}"
-		id="cart_game_no" name="cart_game_no">
- 
-	
-
-	
-	<br> <a
-		href="/addCart?cart_game_no=${dto.game_no}&cart_user_id=${sess}"
-		id="cartBtn">장바구니</a><br>
-	<!-- <a href="/cartList?game_no=${dto.game_no}" id="cartListBtn">장바구니 목록</a> -->
-	
-	<div>
-			<label>주문번호</label>
-		<input type="text" id="order_no" /> 
-			<label>게임 이름</label>
-		<input type="text" id="game_title" /> 
-			<label>주문자 아이디</label>
-		<input type="text" id="buyer_name" /> 
-			<label>가격</label>
-		<input type="text" id="amount" /> 
-		<input type="button" id="request"
-			onclick="requestPay()" value="제출" />
-
-	</div> --%>
 
 </form>
 
