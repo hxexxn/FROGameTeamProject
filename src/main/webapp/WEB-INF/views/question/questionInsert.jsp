@@ -70,8 +70,7 @@
                 </div>
 
                 <div class="contentInsertBox02">
-                <textarea rows="30" cols="100" name="question_content" id="question_content" class="content_input"> </textarea>
-                    
+                <textarea rows="30" cols="100" name="question_content" id="question_content" class="content_input" wrap="hard" style="white-space:pre-wrap;"></textarea>
                 </div>                              
                            
                 <div class="contentSubmitBtnBox">

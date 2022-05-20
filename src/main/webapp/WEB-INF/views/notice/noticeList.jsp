@@ -46,7 +46,7 @@
      -->
 
 			<div class="search_area searchBar">
-				<input class="basic-input" type="text" placeholder="검색" name="keyword" id="keyword"
+				<input class="mainSearch" type="text" name="keyword" id="keyword"
 					value="${pageMaker.cri.keyword }" autocomplete="off">
 				<button class="icon">
 					<i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
