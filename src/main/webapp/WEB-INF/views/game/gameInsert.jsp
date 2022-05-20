@@ -126,7 +126,7 @@
                     </div>
 
                     <div class="textarea_box">
-                        <textarea name="game_info" id="game_info" cols="50" rows="20" wrap="hard"></textarea>
+                        <textarea name="game_info" id="game_info" cols="50" rows="20" wrap="hard" style="white-space:pre-wrap;"></textarea>
                     </div>
                 </div> 
 

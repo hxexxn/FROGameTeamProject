@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>문의 게시판 목록</title>
-<link rel="stylesheet" href="${path}/resources/css/noticeList.css">
-<link rel="stylesheet" href="${path}/resources/css/boardList.css">
+<link rel="stylesheet" href="${path}/resources/css/questionList.css">
+
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap');
     </style>
@@ -17,14 +17,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+
 </head>
 <body>
 <script src="https://kit.fontawesome.com/3636334fb2.js" crossorigin="anonymous"></script>
 
-
   <jsp:include page="../include/page_top.jsp" flush="false" />
 
-
+<div id="contentFrame">
 
 <div class="noticeList">
     <div class="notice_head">문의게시판</div>
@@ -86,6 +86,9 @@
 		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
 	</form>
+	
+	
+</div>
 
 <jsp:include page="../include/page_bottom.jsp" flush="false" />
 

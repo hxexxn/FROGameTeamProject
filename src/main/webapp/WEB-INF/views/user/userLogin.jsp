@@ -53,7 +53,7 @@
 					</table>
 
 					<div class="loignBtnBox">
-						<input type="submit" value="로그인" id="loginBtn">
+						<input type="submit" value="로그인" id="loginBtn" class ="over">
 					</div>
 				</div>
 			</form>

@@ -127,11 +127,22 @@ body {
     align-items: center;
 }
 
-.searchBar {
+.search_area {
     margin-right: 65px;
 }
 
-#mainSearch {
+
+.icon {
+	cursor: pointer;
+	border: none;
+	 background-color : white ;
+	width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#keyword {
     width: 250px;
     height: 30px;
     border-radius: 5px;

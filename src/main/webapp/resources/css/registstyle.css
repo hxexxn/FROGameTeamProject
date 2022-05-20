@@ -178,6 +178,10 @@ body {
     border: none;
     border-radius: 2px;
 }
+
+.over{
+	cursor: pointer;
+}
 /* 
 .user_id > input,
 .user_pw > input,
