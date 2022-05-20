@@ -109,6 +109,8 @@
 
 </div>
 
+<jsp:include page="../include/page_bottom.jsp" flush="false" />
+
 
 </body>
 </html>

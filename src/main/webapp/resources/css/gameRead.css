@@ -43,9 +43,8 @@ body{
    
     border: 15px solid rgba(195,198,206);
     
-    min-height: 500px;
-    padding: 16px;
-    margin: 0;
+    height: 550px;   
+   
  
    
 }

@@ -72,7 +72,7 @@
                     </div>
                     <div class="menu"> 
                         <span class="pre_price">판매가</span><span style="color: #f0ad4e;"><fmt:formatNumber type="number" maxFractionDigits="3"
-			value="${dto.game_price}" /></span>
+			value="${dto.game_price}" /></span><span class="pre_price">원</span>
                     </div>
                 </div>
 
