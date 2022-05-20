@@ -18,65 +18,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-<<<<<<< HEAD
-    <!-- 이미지 슬라이드 -->
-    <script>
-        $(document).ready(function(){
-            $('.sildeGameImg').bxSlider({
-            auto: true,
-            speed: 500,
-            captions: true,
-            });
-        });
-    </script>
-    <!-- 이미지 슬라이드 CSS (오버라이딩)-->
-    <style>
-        /* 슬라이드 박스 */
-        .bx-wrapper {
-        border: 0;
-        background: #fbfbfb;
-        box-shadow: none;
-        }
-        /* 캡션 디자인 */
-        .bx-wrapper .bx-caption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: rgb(178, 178, 178);
-        background: rgba(80, 80, 80, 0.532);
-        width: 100%;
-        height: 50px;
-        text-align: center;
-        line-height: 30px;
-        }
-        .bx-wrapper .bx-caption:hover {
-            background-color: #07553b72;
-        }
-        .bx-wrapper .bx-caption span {
-        color: #fff;
-        font-family: Arial;
-        display: block;
-        font-size: .85em;
-        padding: 10px;
-        }
-    </style>
-    <!-- 폰트 어썸 5.0 -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-  />
 </head>
-    <!-- 폰트 어썸 -->
-    <script src="https://kit.fontawesome.com/3636334fb2.js" 
-    crossorigin="anonymous"></script>
+    
 
 <jsp:include page="../include/page_top.jsp" flush="false"/>
-=======
-     <jsp:include page="../include/page_top.jsp" flush="false"/>
-        
 
->>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 <div  class="headFQA">
     <div class="headFQA_box1">FroGame 고객센터</div>

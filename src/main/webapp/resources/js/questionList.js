@@ -7,7 +7,7 @@ $(".pageInfo a").on("click", function(e) {
 
 });
 
-/*
+
 $(function(){	
 	
 	$('#questionInsertBtn').click(function(){		
@@ -26,4 +26,4 @@ $(function(){
 	
 })
 
-*/
+
