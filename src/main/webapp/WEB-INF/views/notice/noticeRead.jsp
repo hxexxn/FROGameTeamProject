@@ -49,7 +49,7 @@
         </div>
 
         <div class="read_header_content">
-            <div class="read_header_content_box">
+            <div class="read_header_content_box" style="white-space:pre-wrap; wrap=hard;">
                 ${dto.notice_content}
             </div>
            
@@ -67,7 +67,7 @@
 
 <div class="Btn"> 
 	<a href="/noticeList" class="noticeListBtn">목록</a>
-	<c:if test="${sessionScope.user_id == dto.notice_writer}">		
+	<c:if test="${sessionScope.user_nick == dto.notice_writer}">		
  		<a href="/noticeDelete?notice_no=${dto.notice_no}" class="noticeDeleteBtn">삭제</a> 
  	<a href="/noticeUpdate?notice_no=${dto.notice_no}" class="noticeUpdateBtn">수정</a> 
 	</c:if>

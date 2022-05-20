@@ -36,12 +36,12 @@
             <div class="contentInsertBox">                
                     
                 <div class="contentInsertBox01">
-                <input type="hidden" name="notice_writer" id="notice_writer" value="${sessionScope.user_id}">
+                <input type="hidden" name="notice_writer" id="notice_writer" value="${sessionScope.user_nick}">
                     <input type="text" name="notice_title" id="notice_title" placeholder="제목을 입력해주세요." class="title_input"  maxlength="200">  
                 </div>
 
                 <div class="contentInsertBox02">              
-               <textarea rows="30" cols="100" name="notice_content" id="notice_content" class="content_input"> </textarea>                    
+   <textarea rows="30" cols="100" name="notice_content" id="notice_content" class="content_input" wrap="hard" style="white-space:pre-wrap;"></textarea>                    
                 </div>                              
                            
                 <div class="contentSubmitBtnBox">

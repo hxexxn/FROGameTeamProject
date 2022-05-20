@@ -158,10 +158,20 @@
                 </ul>
 
                     <!-- 검색 창 -->
-                    <div class="searchBar">
-                        <input type="search" name="mainSearch" id="mainSearch">
-                        <span class="icon"><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></span>
+                <form id="moveForm" method="get">
+                    
+                    <div class="search_area">
+                        <input type="text" name="keyword" id="keyword" value="${pageMaker.cri.keyword }" autocomplete="off">
+                        <span><button type="submit" class="icon" id="FAQsubmit" ><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button></span>
                     </div>
+                    
+                 
+						<input type="hidden" name="pageNum"
+							value="${pageMaker.cri.pageNum }"> <input type="hidden"
+							name="amount" value="${pageMaker.cri.amount }"> <input
+							type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
+						<input type="hidden" name="type" value="${pageMaker.cri.type }">
+					</form>
 
             </div>
 
@@ -535,6 +545,8 @@
         </div>
         
     </div>
+    
+    <script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
 
 </body>
 </html>

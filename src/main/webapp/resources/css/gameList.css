@@ -144,24 +144,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-.search_area {
-	display: inline-block;
-	margin-top: 30px;
-	margin-left: 260px;
-}
-
-.search_area input {
-	height: 30px;
-	width: 250px;
-}
-
-.search_area button {
-	border: none;
-	background-color: #02343F;
-	color: #F0EDCC;
-	width: 100px;
-	height: 36px;
-}
 
 select{
 	border: 1px solid lightgrey;
@@ -176,3 +158,37 @@ select{
 	justify-content: center;
 	
 } 
+
+
+/* 검색바 */
+
+
+.search_area {
+	
+	margin-top: 30px;
+	float : right ;
+	display: flex ;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.basic-input{
+	 height: 30px;
+	width: 250px;
+	border-radius: 5px;
+	 border: 1px solid lightgray;
+}
+
+
+
+.icon {
+	cursor: pointer;
+	border: none;
+	 background-color: white;
+	width: 30px;
+    height: 30px;
+    font-size: 30px;
+    padding-left: 10px;
+}
+

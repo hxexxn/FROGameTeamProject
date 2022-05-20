@@ -72,6 +72,10 @@
     crossorigin="anonymous"></script>
 
 <jsp:include page="../include/page_top.jsp" flush="false"/>
+<body>
+   
+
+  <jsp:include page="../include/page_top.jsp" flush="false" />
         
 
 <div  class="headFQA">
@@ -92,14 +96,6 @@
 
    		 </div>
 </div>
-
-
-
-
-
-
-
-
 
 <div class="layout_content">
 

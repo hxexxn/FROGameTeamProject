@@ -8,8 +8,7 @@
 <meta charset="UTF-8">
 <title>공지사항 게시판 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/noticeList.css">
-<link rel="stylesheet" href="${path}/resources/css/boardList.css">
-<link rel="stylesheet" href="${path}/resources/css/content_frame.css">
+
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap')
@@ -45,8 +44,8 @@
     </form>
      -->
 
-			<div class="search_area searchBar">
-				<input class="mainSearch" type="text" name="keyword" id="keyword"
+			<div class="search_area">
+				<input class="basic-input" type="text" name="keyword" id="keyword"
 					value="${pageMaker.cri.keyword }" autocomplete="off">
 				<button class="icon">
 					<i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
@@ -85,7 +84,7 @@
 
 				<c:if test="${sessionScope.user_id == admin }">
 					<input type="hidden" name="notice_writer" id="notice_writer"
-						value="${sessionScope.user_id}">
+						value="${sessionScope.user_nick}">
 					<a href="/noticeInsert" class="noticeInsertBtn"
 						id="contentSubmitBtnBox">글쓰기</a>
 				</c:if>
@@ -96,9 +95,9 @@
 
 	</div>
 
-
-
-	<div class="pageInfo_wrap center">
+	
+	
+<div class="pageInfo_wrap center">
 		<div class="pageInfo_area">
 			<ul id="pageInfo" class="pageInfo">
 				<!-- 이전페이지 버튼 -->
@@ -120,14 +119,20 @@
 
 		</div>
 	</div>
+
+	
 	<form id="moveForm" method="get">
 		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
 		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
 	</form>
-
-
+	
+	
 </div>
+
+	
+
+
 
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>

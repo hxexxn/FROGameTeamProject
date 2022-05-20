@@ -61,7 +61,7 @@
     </div>
 
 </div>
-	     <c:set var="admin_sess" value="${sessionScope.user_id}"/>
+	     <c:set var="admin_sess" value="${sessionScope.user_nick}"/>
      <div class="reply_head"><span class="reply_head">댓글</span>
     
    
@@ -85,7 +85,7 @@
 	 <div class="reply_head">
 	 <span class="Btn"> <a href="/questionList" class="noticeListBtn">목록</a></span>	  
 	 
-	 <c:if test="${sessionScope.user_id == dto.question_writer}">
+	 <c:if test="${sessionScope.user_nick == dto.question_writer}">
 		<span class="Btn"><a href="/questionUpdate?question_no=${dto.question_no}" class="noticeListBtn">수정</a> </span>
  		<span class="Btn"><a href="/questionDelete?question_no=${dto.question_no}" class="noticeListBtn">삭제</a> </span>
 	</c:if>

@@ -41,8 +41,9 @@
 		<div class="flex height-auto">
 			<div class="board-main">
 				<div class="search_wrap padding-top center">
+					
 					<div class="search_area">
-						<select name="type" id="test">
+					<select name="type" id="test" style="margin-right: 10px">
 							<option value="T"
 								<c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>최신순</option>
 							<option value="C"
@@ -50,12 +51,11 @@
 							<option value="W"
 								<c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>가격순</option>
 						</select>
+						<div> <input class="basic-input" type="text" name="keyword" id="keyword" placeholder="검색어를 입력하세요" value="${pageMaker.cri.keyword }" autocomplete="off"></div> 
+            			<div><button type="submit" class="icon" id="FAQsubmit" ><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>  </div>
 					</div>
-					<div class="search_area">
-						<input type="text" placeholder="검색" name="keyword" id="keyword"
-							value="${pageMaker.cri.keyword }" autocomplete="off">
-						<button>Search</button>
-					</div>
+						 
+					
 
 				</div>
 

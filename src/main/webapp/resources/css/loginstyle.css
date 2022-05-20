@@ -4,6 +4,11 @@ body {
     overflow-x: hidden;
 }
 
+
+.over{
+	cursor: pointer;
+}
+
 /* 로그인 02 */
 
 #loginFrame {

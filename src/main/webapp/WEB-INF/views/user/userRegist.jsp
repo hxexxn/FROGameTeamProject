@@ -77,7 +77,7 @@
 							<td><label for="user_id">아이디</label></td>
 							<td><input type="text" name="user_id" id="user_id"
 								placeholder="아이디를 입력해주세요."></td>
-							<td><button type="button" id="idDupBtn">중복 확인</button>
+							<td><button type="button" id="idDupBtn" class ="over">중복 확인</button>
 						</tr>
 						<tr class="userPWinput">
 							<td><label for="user_pw">비밀번호</label></td>
@@ -90,7 +90,7 @@
 						<tr class="userNickInput">
 							<td><label for="user_nick">닉네임</label></td>
 							<td><input type="text" name="user_nick" id="user_nick"></td>
-							<td><button type="button" id="nickDupBtn">중복 확인</button>
+							<td><button type="button" id="nickDupBtn" class ="over">중복 확인</button>
 						</tr>
 						<tr class="userEmailInput">
 							<td><label for="user_email">이메일</label></td>
@@ -99,7 +99,7 @@
 					</table>
 
 					<div class="joinBtnBox">
-						<input type="submit" value="가입하기" id="joinBtn">
+						<input type="submit" value="가입하기" id="joinBtn" class ="over">
 					</div>
 				</form>
 			</div>
