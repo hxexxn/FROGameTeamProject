@@ -139,7 +139,7 @@ public class GameController {
 	@GetMapping("gameDelete")
 	public String gameDelete(@RequestParam("game_no") String game_no) {
 		gameService.gameDelete(game_no);
-		return "redirect:/admin";
+		return "admin_include/admin_game_list";
 	}
 	
 	

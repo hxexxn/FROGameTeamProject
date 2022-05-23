@@ -52,7 +52,7 @@
 								<c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>가격순</option>
 						</select>
 						<div> <input class="basic-input" type="text" name="keyword" id="keyword" placeholder="검색어를 입력하세요" value="${pageMaker.cri.keyword }" autocomplete="off"></div> 
-            			<div><button type="submit" class="icon" id="FAQsubmit" ><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>  </div>
+            			<div><button type="submit" class="icon"><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>  </div>
 					</div>
 						 
 					
@@ -65,17 +65,17 @@
 						<div class="board-content flex">
 							<div class="game-content">
 								<a href="gameReadTest?game_no=${list[status.index].game_no}"><img
-									src="${img}" width="200px"></a>
+									src="${img}" width="250px"></a>
 							</div>
 							<div class="game-content title">
 								<a href="gameReadTest?game_no=${list[status.index].game_no}">${list[status.index].game_title}</a>
 							</div>
 							<div class="game-content">
-								<a href="gameRead">₩ <fmt:formatNumber type="number"
+								<a href="gameReadTest?game_no=${list[status.index].game_no}">₩ <fmt:formatNumber type="number"
 										maxFractionDigits="3" value="${list[status.index].game_price}" /></a>
 							</div>
 							<div class="game-content">
-								<a href="gameRead"><fmt:formatDate
+								<a href="gameReadTest?game_no=${list[status.index].game_no}"><fmt:formatDate
 										value="${list[status.index].game_release}"
 										pattern="yyyy-MM-dd" /></a>
 							</div>

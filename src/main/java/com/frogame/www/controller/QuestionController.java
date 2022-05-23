@@ -31,7 +31,6 @@ public class QuestionController {
 	@GetMapping("/questionInsert")
 	public String questionInsert(@RequestParam("user_id") String user_id, Model model) {
 		UserDTO dto = userService.getUserNick(user_id);
-		System.out.println(dto.getUser_nick());
 		model.addAttribute("user_nick", dto.getUser_nick());
 		return "question/questionInsert";
 	}

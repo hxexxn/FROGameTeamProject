@@ -17,9 +17,6 @@
                     
                     <div id="wrap2">
 
-				        <div class="bbs_title">
-				            <span>게임 등록</span>
-				        </div>
 				
 				        <form action="/saveImage" id="test" enctype="multipart/form-data" method="post">
 
