@@ -48,7 +48,7 @@ public class AdminController {
 		public String admin2 (Model model, Criteria cri) {
 			
 			// 유저 목록
-			List<UserDTO> userList = userService.userList();
+			List<UserDTO> userList = userService.userList(cri);
 			model.addAttribute("userList", userList);
 			
 			// 게임 목록
@@ -61,7 +61,7 @@ public class AdminController {
 			model.addAttribute("pageMaker", pageMake);
 			
 			// 공지 목록 
-			List<NoticeDTO> noticeList = noticeService.admin_noticeList();
+			List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
 			model.addAttribute("noticeList", noticeList);
 
 			

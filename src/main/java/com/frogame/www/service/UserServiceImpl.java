@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.frogame.www.mapper.UserMapper;
+import com.frogame.www.model.Criteria;
 import com.frogame.www.model.UserDTO;
 
 @Service
@@ -45,23 +46,26 @@ public class UserServiceImpl implements UserService {
 	
 	// 유저 로그인 및 비밀번호 암호화 체크 
 	@Override
-	public String userLogin(UserDTO dto) {
+	public UserDTO userLogin(UserDTO dto) {
 		String resultPW = userMapper.userRealPassword(dto.getUser_id());
 		boolean loginFilter = pwEncoder.matches(dto.getUser_pw(), resultPW);
 		System.out.println(loginFilter);
 		System.out.println("resultPW 값 : " + resultPW);
 		
 		if (loginFilter) {
-			return "LoginSuccess";
+			
+			UserDTO resultID = userMapper.userOneSelect(dto.getUser_id());
+			
+			return resultID;
 		} else {
-			return "LoginFail";
+			return null;
 		}
 	}
 	
 	// 유저 목록 출력
 	@Override
-	public List<UserDTO> userList() {
-		return userMapper.userList();
+	public List<UserDTO> userList(Criteria cri) {
+		return userMapper.userList(cri);
 	}
 	
 	// 유저 삭제 
@@ -74,6 +78,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDTO getUserNick(String user_id) {
 		return userMapper.getUserNick(user_id);
+	}
+
+	@Override
+	public int getTotal(Criteria cri) {
+		return userMapper.getTotal(cri);
 	}
 
 	

@@ -70,8 +70,8 @@ public List<NoticeDTO> noticeSearch(String search) {
 }
 
 @Override
-public List<NoticeDTO> admin_noticeList() {
-	return mapper.admin_noticeList();
+public List<NoticeDTO> admin_noticeList(Criteria cri) {
+	return mapper.admin_noticeList(cri);
 }
 
 

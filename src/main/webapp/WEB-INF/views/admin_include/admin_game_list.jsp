@@ -55,28 +55,14 @@
 				        
 				        <!-- 검색 -->
 				        <div class="side_bar">
-
+							
+							<!--  게임 등록 버튼 -->
 					        <div class="gameInsert">
 					            <div class="insertBtn"><a href="/gameInsert" id="insertBtn"> 게임 등록 </a></div>
 					        </div>
-					    
-					        <div class="search_area">
-					            <input type="text" name="keyword" id="keyword" autocomplete="off" value="${pageMaker.cri.keyword }">
-					            <button class="search_btn" type="submit">검색</button>
-					         
-							 </div>
-
-    					</div>
-				        
-				       <%-- <div class="search_area">
-							<input class="basic-input" type="text" name="keyword" id="keyword"
-								value="${pageMaker.cri.keyword}" autocomplete="off">
-							<button class="icon">
-								<i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
-							</button>
-						</div> --%>
-                    
-                    	<div class="pageInfo_wrap center">
+					        
+					        <!-- 페이징 -->
+					        <div class="pageInfo_wrap center">
 							<div class="pageInfo_area">
 								<ul id="pageInfo" class="pageInfo">
 									<!-- 이전페이지 버튼 -->
@@ -98,6 +84,23 @@
 					
 							</div>
 						</div>
+					    	
+					    	<!-- 게임 검색 창 -->
+					        <div class="search_area">
+					            <input type="text" name="keyword" id="keyword" autocomplete="off" value="${pageMaker.cri.keyword }">
+					            <button class="search_btn" type="submit">검색</button>
+							 </div>
+    					</div>
+				        
+				       <%-- <div class="search_area">
+							<input class="basic-input" type="text" name="keyword" id="keyword"
+								value="${pageMaker.cri.keyword}" autocomplete="off">
+							<button class="icon">
+								<i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
+							</button>
+						</div> --%>
+                    
+                    	
 						
 						<form id="moveForm" method="get">
 							<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">

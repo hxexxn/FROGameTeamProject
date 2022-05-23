@@ -30,7 +30,7 @@ public interface NoticeMapper {
 
 	List<NoticeDTO> noticeSearch(String search);
 
-	List<NoticeDTO> admin_noticeList();
+	List<NoticeDTO> admin_noticeList(Criteria cri);
 
 	
 

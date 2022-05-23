@@ -24,9 +24,31 @@
 		Select user_pw from userTBL where user_id = #{user_id}
 	</select>
 	
+	<!-- 회원 로그인 1 -->
+	<select id="userOneSelect" resultType="com.frogame.www.model.UserDTO">
+		Select * from userTBL where user_id = #{user_id}
+	</select>
+	
 	<!-- 유저 목록 -->
 	<select id="userList" resultType="com.frogame.www.model.UserDTO">
 		Select * from userTBL
+		
+		<!-- 검색 -->
+		<if test="keyword != null">
+		<![CDATA[
+			where user_id like concat('%',#{keyword},'%')
+			]]>
+		</if>
+		limit #{skip},#{amount}
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		select count(*) from userTBL
+		<if test="keyword != null">
+		<![CDATA[
+		where user_id like concat('%',#{keyword},'%')
+		]]>
+		</if>
 	</select>
 	
 	<!-- 유저 삭제 -->

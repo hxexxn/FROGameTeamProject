@@ -33,12 +33,14 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3636334fb2.js" crossorigin="anonymous"></script>
 
-
+---------
+${sessionScope.user_level}
+---------
 
 	 <c:if test="${not empty sessionScope.user_id}">
      	<c:set var="sess" value="${sessionScope.user_id}"/>
      		<c:if test="${sessionScope.user_id eq 'admin'}">
-     	
+     		
     <div id="wrap">
 
         <div id="sideBar">

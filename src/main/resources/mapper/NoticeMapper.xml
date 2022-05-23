@@ -4,6 +4,11 @@
 <mapper namespace="com.frogame.www.mapper.NoticeMapper">
 
 
+<!-- <insert id="noticeInsert">
+INSERT INTO noticeBoardTBL(notice_title, notice_content, notice_writer) VALUES(#{notice_title}, #{notice_content}, #{notice_writer})
+</insert> -->
+
+<!-- 공지사항 등록 -->
 <insert id="noticeInsert">
 INSERT INTO noticeBoardTBL(notice_title, notice_content, notice_writer) VALUES(#{notice_title}, #{notice_content}, #{notice_writer})
 </insert>
@@ -54,15 +59,18 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
     UPDATE noticeBoardTBL SET notice_title = #{notice_title}, notice_content = #{notice_content} WHERE notice_no = #{notice_no}
     </update>
 
-    
-  
-	<select id="admin_noticeList"
-		resultType="com.frogame.www.model.NoticeDTO">
+	<!-- 관리자 공지사항 페이지 -->
+	<select id="admin_noticeList" resultType="com.frogame.www.model.NoticeDTO">
 		Select * from noticeBoardTBL
+		
+		<!-- 검색 -->
+		<if test="keyword != null">
+		<![CDATA[
+			where notice_content, notice_title like concat('%',#{keyword},'%')
+			]]>
+		</if>
+		order by notice_no DESC limit #{skip},#{amount}
 	</select>
     
-
-
-
 
 </mapper>

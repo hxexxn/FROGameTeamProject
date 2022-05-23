@@ -13,6 +13,10 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 </head>
 <body>
+
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <!-- 구글 웹 폰트 -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Noto+Sans+KR:wght@300&family=Roboto:wght@300&display=swap');
@@ -53,9 +57,51 @@
 				</div>
 
 			</c:forEach>
+			
+			<!-- 검색 -->
+			<div class="side_bar">
+				
+				<div class="pageInfo_wrap center">
+							<div class="pageInfo_area">
+								<ul id="pageInfo" class="pageInfo">
+									<!-- 이전페이지 버튼 -->
+									<c:if test="${pageMaker.prev}">
+										<li class="pageInfo_btn previous"><a
+											href="${pageMaker.startPage-1}">Previous</a></li>
+									</c:if>
+									<!-- 각 번호 페이지 버튼 -->
+									<c:forEach var="num" begin="${pageMaker.startPage}"
+										end="${pageMaker.endPage}">
+										<li class="pageInfo_btn"><a href="${num}">${num}</a></li>
+									</c:forEach>
+									<!-- 다음페이지 버튼 -->
+									<c:if test="${pageMaker.next}">
+										<li class="pageInfo_btn next"><a
+											href="${pageMaker.endPage + 1 }">Next</a></li>
+									</c:if>
+								</ul>
+					
+							</div>
+				</div>
+
+				<div class="search_area">
+					  <input type="text" name="keyword" id="keyword" autocomplete="off" value="${pageMaker.cri.keyword }">
+					   <button class="search_btn" type="submit">검색</button>
+					   
+				</div>
+
+						<form id="moveForm" method="get">
+							<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
+							<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
+							<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
+						</form>
+
+    		</div>
+    		
 		</div>
 	</div>
 	
+	<script type="text/javascript" src="${path}/resources/js/admin_userList.js"></script>
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 
 </body>

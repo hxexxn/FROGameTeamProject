@@ -22,15 +22,15 @@ public class NoticeController {
 
 	// 공지사항 입력
 
-	@GetMapping("/noticeInsert")
+	@GetMapping("/admin_notice_insert")
 	public String noticeInsert() {
-		return "notice/noticeInsert";
+		return "admin_include/admin_notice_insert";
 	}
 
 	@PostMapping("/noticeInsert")
 	public String noticeInsertProcess(NoticeDTO dto) {
 		noticeService.noticeInsert(dto);
-		return "redirect:/noticeList";
+		return "redirect:/admin_notice_list";
 	}
 
 	// 공지사항 목록
@@ -46,6 +46,21 @@ public class NoticeController {
 		model.addAttribute("pageMaker", pageMake);
 
 		return "notice/noticeList";
+	}
+	
+	// 공지사항 목록 (관리자)
+	@GetMapping("admin_notice_list")
+	public String admin_notice_list(Model model, Criteria cri) {
+		
+		List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
+		int total = noticeService.getTotal(cri);
+		
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+		
+		model.addAttribute("noticeList", noticeList);
+		model.addAttribute("pageMaker", pageMake);
+		
+		return "admin_include/admin_notice_list";
 	}
 
 	// 공지사항 읽기
@@ -69,7 +84,7 @@ public class NoticeController {
 	@GetMapping("/noticeDelete")
 	public String noticeDelete(@RequestParam("notice_no") String notice_no) {
 		noticeService.noticeDelete(notice_no);
-		return "redirect:/noticeList";
+		return "redirect:/admin_notice_list";
 	}
 
 	// 게시글 수정

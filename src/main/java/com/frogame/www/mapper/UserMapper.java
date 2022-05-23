@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.frogame.www.model.Criteria;
 import com.frogame.www.model.UserDTO;
 
 @Mapper
@@ -22,10 +23,17 @@ public interface UserMapper {
 	String userRealPassword(String user_id);
 	
 	// 유저 목록 출력
-	List<UserDTO> userList();
-
+	List<UserDTO> userList(Criteria cri);
+	
+	// 유저 삭제
 	void userDelete(String user_no);
 
+	// 유저 닉네임 가져오기
 	UserDTO getUserNick(String user_id);
 
+	int getTotal(Criteria cri);
+
+	// 유저 정보 1개 불러오기
+	UserDTO userOneSelect(String user_id);
+	
 }

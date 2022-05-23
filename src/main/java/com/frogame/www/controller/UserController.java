@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.frogame.www.model.Criteria;
+import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.model.UserDTO;
 import com.frogame.www.service.UserService;
 
@@ -76,12 +78,22 @@ public class UserController {
 	// 유저 로그인 및 비밀번호 암호화 매칭 
 	@PostMapping("/userLogin")
 	public String userLogin (UserDTO dto, HttpServletRequest request, RedirectAttributes rttr) {
-		String resultDTO = userService.userLogin(dto);
+		UserDTO resultDTO = userService.userLogin(dto);
 		System.out.println("resultDTO 값 : " + resultDTO);
 
-		if (resultDTO.equals("LoginSuccess")) {
+		if (resultDTO != null) {
+			
+			
+			System.out.println("아이디 : " + resultDTO.getUser_id());
+			System.out.println("레벨 : " + resultDTO.isUser_level());
+			System.out.println("닉네임 : " + resultDTO.getUser_nick());
+			
 			HttpSession session = request.getSession();
-			session.setAttribute("user_id", dto.getUser_id());
+			session.setAttribute("user_id", resultDTO.getUser_id());
+			session.setAttribute("user_level", resultDTO.isUser_level());
+			session.setAttribute("user_nick", resultDTO.getUser_nick());
+			
+			System.out.println(resultDTO.isUser_level());
 			
 			System.out.println("로그인 성공 / 세션 등록 완료.");
 			return "redirect:/";
@@ -101,13 +113,29 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	// 유저 목록 출력
+//	// 유저 목록 출력 (관리자용 - 메인)
+//	@GetMapping("/admin_user_list")
+//	public String userList (Model model) {
+//		List<UserDTO> userList = userService.userList();
+//		
+//		model.addAttribute("userList", userList);
+//		
+//		return "admin_include/admin_user_list";
+//	}
+	
+	// 유저 목록 출력 (관리자용 - 게시판)
 	@GetMapping("/admin_user_list")
-	public String userList (Model model) {
-		List<UserDTO> userList = userService.userList();
-		model.addAttribute("userList", userList);
-		return "admin_include/admin_user_list";
-	}
+	public String agmin_userList (Model model, Criteria cri) {
+			List<UserDTO> userList = userService.userList(cri);
+			int total = userService.getTotal(cri);
+			
+			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+			
+			model.addAttribute("userList", userList);
+			model.addAttribute("pageMaker", pageMake);
+			
+			return "admin_include/admin_user_list";
+		}
 	
 	// 유저 삭제 
 	@GetMapping("/userDelete")

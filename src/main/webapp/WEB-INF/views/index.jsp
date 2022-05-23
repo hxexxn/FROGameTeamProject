@@ -65,10 +65,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
   />
 </head>
+<body>
     <!-- 폰트 어썸 -->
     <script src="https://kit.fontawesome.com/3636334fb2.js" 
     crossorigin="anonymous"></script>
-
+    
     <!-- 전체 감싸주는 태그 -->
     <div id="wrap">
 
@@ -102,14 +103,14 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
-              <c:set var="sess" value="${sessionScope.user_id}"/>
+              <c:set var="sess" value="${sessionScope.user_nick}"/>
                 <div class="userBox">
 					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
 					
-						<c:if test="${sessionScope.user_id eq 'admin'}">
+						<c:if test="${sessionScope.user_level eq true}">
 							<span><a href="/testadmin">관리</a></span>
 						</c:if>
-						<c:if test="${sessionScope.user_id ne 'admin'}">
+						<c:if test="${sessionScope.user_level ne true}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
 						</c:if>
                     <span><a href="/userLogout">로그아웃</a></span>

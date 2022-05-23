@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/3636334fb2.js" 
     crossorigin="anonymous"></script>
 
-	<c:set var="sess" value="${sessionScope.user_id}"/>
+	<c:set var="sess" value="${sessionScope.user_nick}"/>
 
 	<div id="administer">
 	            <div>Hello, ${sess}!</div>
@@ -55,7 +55,7 @@
 	
 	            <div class="noticelist">
 	                <div>
-	                    <a href="#">Notice</a>
+	                    <a href="admin_notice_list">Notice</a>
 	                </div>
 	            </div>
 	
