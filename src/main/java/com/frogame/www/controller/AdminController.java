@@ -44,7 +44,7 @@ public class AdminController {
 	
 	
 	// 관리자 페이지 이동 
-		@GetMapping("/afdrmoignemag")
+		@GetMapping("/testadmin")
 		public String admin2 (Model model, Criteria cri) {
 			
 			// 유저 목록
@@ -66,10 +66,9 @@ public class AdminController {
 
 			
 			
-			return "admin/afdrmoignemag";
+			return "admin/testadmin";
 		}
-	
-	
+
 	
 	// 관리자 회원가입 페이지 이동 
 	@GetMapping("/adminRegist")

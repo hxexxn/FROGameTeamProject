@@ -5,14 +5,6 @@ body {
     margin: 0 auto;
 }
 
-#game_list {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    border-collapse: separate;
-    border-spacing: 10px;
-}
-
 .bbs_title {
     margin: 0 auto;
     width: 80%;
@@ -31,15 +23,17 @@ body {
 }
 
 #wrap2 {
-    width: 100%;
+    width: 80%;
+    height: 600px;
     margin: 0 auto;
     /* border: 1px solid rebeccapurple; */
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px
 }
 
 .list_title,
 .list {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -57,7 +51,7 @@ body {
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
-    background-color: #07553B;
+    background-color: black;
     color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

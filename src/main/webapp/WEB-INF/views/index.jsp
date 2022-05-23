@@ -107,7 +107,7 @@
 					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_id eq 'admin'}">
-							<span><a href="/afdrmoignemag">관리</a></span>
+							<span><a href="/testadmin">관리</a></span>
 						</c:if>
 						<c:if test="${sessionScope.user_id ne 'admin'}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
@@ -143,6 +143,7 @@
                             <li><a href="#">신작게임</a></li>
                         </ul>
                     </li>
+                    
                     <li><a href="gameList">게임</a>
                         <ul id="subMenu">
                             <li><a href="#">신작게임</a></li>

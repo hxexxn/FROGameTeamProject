@@ -82,7 +82,7 @@ public class UserController {
 		if (resultDTO.equals("LoginSuccess")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user_id", dto.getUser_id());
-			session.setAttribute("user_level", dto.getUser_level());
+			
 			System.out.println("로그인 성공 / 세션 등록 완료.");
 			return "redirect:/";
 		} else {
@@ -102,12 +102,11 @@ public class UserController {
 	}
 	
 	// 유저 목록 출력
-	@GetMapping("/userList")
+	@GetMapping("/admin_user_list")
 	public String userList (Model model) {
-		System.out.println("타니?");
 		List<UserDTO> userList = userService.userList();
 		model.addAttribute("userList", userList);
-		return "include/admin_userList";
+		return "admin_include/admin_user_list";
 	}
 	
 	// 유저 삭제 

@@ -6,13 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>noticeBoard</title>
+<script type="text/javascript" src="${path}/resources/js/gameInsert.js"></script>
 </head>
 <link href="${path}/resources/css/admin_game_insert.css" rel="stylesheet" />
 <body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+		
 	<jsp:include page="../include/page_top.jsp" flush="false" />
 	
 	
-    <h1>게임 등록</h1>
     <form action="/saveImage" id="test" enctype="multipart/form-data" method="post">
 
         <div id="game_insert">
@@ -215,32 +219,8 @@
 
     </form>
     
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!-- <div class="insert">
-	<form action="/saveImage" id="test" enctype="multipart/form-data" method="post">
-		<div>
-			게임 타이틀 : <input type="text" name="game_title" id="game_title">
-			<br> 
-			게임 이미지 : <input type="file" onchange="addFile(this);" name="file" multiple/> 
-			<div class="file-list"></div>
-			<br> 게임 가격
-			: <input type="text" name="game_price" id="game_price"> <br>
-			게임 장르 : <input type="text" name="game_genre" id="game_genre">
-			<br> <input id="imgFormBtn" type="submit" value="작성">
-		</div>
-	</form>
-	</div> -->
 	<jsp:include page="../include/page_bottom.jsp" flush="false" />
-	<script type="text/javascript" src="${path}/resources/js/gameInsert.js"></script>
+	
+	
 </body>
 </html>

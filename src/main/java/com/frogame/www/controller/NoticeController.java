@@ -36,9 +36,12 @@ public class NoticeController {
 	// 공지사항 목록
 	@GetMapping("/noticeList")
 	public String result(Model model, Criteria cri) {
+		
 		List<NoticeDTO> jjin = noticeService.getListPaging(cri);
 		int total = noticeService.getTotal(cri);
+		
 		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+		
 		model.addAttribute("list", jjin);
 		model.addAttribute("pageMaker", pageMake);
 

@@ -30,7 +30,7 @@ public class GameController {
 	// 게임 등록 페이지 이동
 	@GetMapping("/gameInsert")
 	public String formFile() {
-		return "game/gameInsert";
+		return "admin_include/admin_game_insert";
 	}
 	
 	// 게임 정보 등록 (이미지)
@@ -53,21 +53,38 @@ public class GameController {
 		return "redirect:/gameList";
 	}
 
-	// 게임 목록 
+	// 게임 목록 (유저용)
 	@GetMapping("/gameList")
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
 		int total = gameService.getTotal(cri);
+		
 		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
 			}
+		
 		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
 		model.addAttribute("pageMaker", pageMake);
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
 
 		return "game/gameList";
+	}
+	
+	// 게임 목록 (관리자용)
+	@GetMapping("/admin_game_list")
+	public String result2 (Model model, Criteria cri) {
+		
+		List<GameDTO> gameList = gameService.admin_gameList(cri);
+		int total = gameService.getTotal(cri);
+		
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+		
+		model.addAttribute("gameList", gameList);
+		model.addAttribute("pageMaker", pageMake);
+		
+		return "admin_include/admin_game_list";
 	}
 	
 	@GetMapping("/hotGame")
@@ -109,6 +126,7 @@ public class GameController {
 		
 		return "game/gameReadTest";
 	}
+	
 	// 게임 정보 (ajax로 가져오기용)
 	@PostMapping("/gameRead")
 	public String gameRead(@RequestParam("game_no") String game_no, Model model) {

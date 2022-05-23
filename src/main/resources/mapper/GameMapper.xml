@@ -109,10 +109,12 @@
 		]]>
 		</if>
 	</select>
-
+	
+	<!-- 검색 -->
 	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
 		Select * from gameTBL 
 		
+		<!-- 검색 조건 -->
 		<if test="keyword != null">
 		<![CDATA[
 			where game_title like concat('%',#{keyword},'%')

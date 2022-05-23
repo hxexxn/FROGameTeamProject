@@ -46,7 +46,7 @@
 
 			<div class="search_area">
 				<input class="basic-input" type="text" name="keyword" id="keyword"
-					value="${pageMaker.cri.keyword }" autocomplete="off">
+					value="${pageMaker.cri.keyword}" autocomplete="off">
 				<button class="icon">
 					<i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
 				</button>
