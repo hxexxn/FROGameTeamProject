@@ -52,12 +52,10 @@
             </div>
         </div>
 	</form>
-	 </div>
 	 
 	
 <jsp:include page="../include/page_bottom.jsp" flush="false" />
 
 
-<script type="text/javascript" src="${path}/resources/js/noticeList.js"></script>
 </body>
 </html>
