@@ -129,28 +129,30 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="hotGame">인기 게임</a>
-                        <ul id="subMenu">
-                            <li><a href="#">할인게임</a></li>
-                            <li><a href="#">게임</a></li>
-                            <li><a href="#">게임</a></li>
-                        </ul>
+                    <li>
+                    	<a href="game_hot_list">인기 게임</a>
                     </li>
 
-                    <li><a href="newGame">신작 게임</a>
-                        <ul id="subMenu">
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                        </ul>
+                    <li>
+                    	<a href="newGame">신작 게임</a>
                     </li>
                     
                     <li><a href="gameList">게임</a>
                         <ul id="subMenu">
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                        </ul></li>
+                        
+                            <li><a href="#">FPS</a></li>
+                            <li><a href="#">RPG</a></li>
+                            <li><a href="#">공포</a></li>
+                            <li><a href="#">로그라이크</a></li>
+                            <li><a href="#">시뮬레이션</a></li>
+                            <li><a href="#">어드벤쳐</a></li>
+                            <li><a href="#">전략</a></li>
+                            <li><a href="#">액션</a></li>
+                            <li><a href="#">기타</a></li>
+                            
+                        </ul>
+                     </li>
+                        
                     <li><a href="noticeList">공지사항</a>
                         <ul id="subMenu">
                             <li><a href="noticeList">공지사항</a></li>
@@ -523,7 +525,7 @@
             <div id="footBar">
                 <div class="findGame">
                     <p>취향에 맞는 게임들을 더 찾으신다면</p>
-                    <p>지금 바로 로그인하세요.</p>
+                    <p>지금 바로 <a href="/userLogin" class="login_bottom">로그인</a> 하세요.</p>
                 </div>
             </div>
 

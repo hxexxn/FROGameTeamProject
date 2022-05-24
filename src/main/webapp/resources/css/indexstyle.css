@@ -433,6 +433,10 @@ a:hover {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.login_bottom {
+	font-weight: bold;
+}
+
 /* 푸터 */
 
 #footer {

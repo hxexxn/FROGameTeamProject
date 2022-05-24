@@ -87,7 +87,7 @@ public class GameController {
 		return "admin_include/admin_game_list";
 	}
 	
-	@GetMapping("/hotGame")
+	@GetMapping("/game_hot_list")
 	public String hotGame (Model model) {
 		List<GameDTO> list = gameService.hotGame();
 		List<String> imgList = new ArrayList<String>();
@@ -97,7 +97,7 @@ public class GameController {
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
 
-		return "game/hot_game";
+		return "game/game_hot_list";
 	}
 	
 	@GetMapping("/newGame")

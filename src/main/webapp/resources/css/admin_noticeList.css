@@ -67,7 +67,7 @@ body {
     width: 10%;
 }
 
-.notice_title {
+.notice_head {
     width: 40%;
 }
 
@@ -84,6 +84,15 @@ body {
     width: 20%;
 }
 
+.notice_delete a {
+	text-decoration: none;
+	color: black;
+	transition: 0.2s;
+}
+
+.notice_delete a:hover {
+	color: red;
+}
 .list {
     height: 50px;
     text-align: center;

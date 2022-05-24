@@ -94,6 +94,16 @@ body {
     width: 10%;
 }
 
+.game_delete a {
+	text-decoration: none;
+	color: black;
+	transition: 0.2s;
+}
+
+.game_delete a:hover {
+	color: red;
+}
+
 .list {
     height: 50px;
     text-align: center;
