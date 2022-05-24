@@ -100,7 +100,7 @@ public class GameController {
 		return "game/game_hot_list";
 	}
 	
-	@GetMapping("/newGame")
+	@GetMapping("/game_new_list")
 	public String newGame (Model model) {
 		List<GameDTO> list = gameService.newGame();
 		List<String> imgList = new ArrayList<String>();
@@ -110,7 +110,7 @@ public class GameController {
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
 
-		return "game/new_game";
+		return "game/game_new_list";
 	}
 
 	@GetMapping("/gameRead")
