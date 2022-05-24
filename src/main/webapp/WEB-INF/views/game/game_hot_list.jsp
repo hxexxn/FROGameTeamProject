@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +39,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
-	                            <span>${list[status.index].game_price}</span>
+	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
 	                        </div>
 	                    </div>
 	                </div>
@@ -59,7 +60,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
-	                            <span>${list[status.index].game_price}</span>
+	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
 	                        </div>
 	                    </div>
 	                </div>
@@ -80,7 +81,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
-	                            <span>${list[status.index].game_price}</span>
+	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
 	                        </div>
 	                    </div>
 	                </div>

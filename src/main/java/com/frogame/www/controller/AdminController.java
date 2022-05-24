@@ -54,18 +54,17 @@ public class AdminController {
 			// 게임 목록
 			List<GameDTO> gameList = gameService.admin_gameList(cri);
 			int total = gameService.getTotal(cri);
-			
-			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
-			
 			model.addAttribute("gameList", gameList);
-			model.addAttribute("pageMaker", pageMake);
 			
 			// 공지 목록 
 			List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
 			model.addAttribute("noticeList", noticeList);
+			
+			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+			
+			
+			model.addAttribute("pageMaker", pageMake);
 
-			
-			
 			return "admin/testadmin";
 		}
 

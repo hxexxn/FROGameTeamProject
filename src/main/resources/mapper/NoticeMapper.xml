@@ -66,7 +66,7 @@ select * from noticeBoardTBL where notice_no = #{notice_no}
 		<!-- 검색 -->
 		<if test="keyword != null">
 		<![CDATA[
-			where notice_content, notice_title like concat('%',#{keyword},'%')
+			where notice_title like concat('%',#{keyword},'%')
 			]]>
 		</if>
 		order by notice_no DESC limit #{skip},#{amount}
