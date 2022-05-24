@@ -52,7 +52,7 @@
 					</div>
 					<div class="user_adult">${userList.user_adultcheck}</div>
 					<div class="user_delete">
-						<a href="/userDelete?user_no=${userList.user_no}">Delete</a>
+						<a href="/userDelete?user_no=${userList.user_no}">삭제</a>
 					</div>
 				</div>
 

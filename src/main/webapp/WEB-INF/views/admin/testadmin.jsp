@@ -31,7 +31,7 @@
 
             <div class="admin_dash">
             	<a href="/testadmin">
-            		<div class="fisrt">Dashboard</div>
+            		<div class="fisrt">Frogame Dashboard</div>
             	</a>
                 
                 
@@ -144,8 +144,34 @@
 
             <div class="second_section">
 
+               <!-- 공지사항 목록 -->
                 <div class="notice_section">
-                
+                    <div class="notice_title">
+                        <div>
+                            <a href="#">Notice</a>
+                        </div>
+                    </div>
+
+                    <div class="notice_subject">
+                        <div class="n_subject">제목</div>
+                        <div class="n_regdate">작성일</div>
+                    </div>
+                    
+					<c:forEach var="noticeList" items="${noticeList}" varStatus="status" end="6">
+					
+                    <div class="notice_content">
+                        <div class="n_subject">${noticeList.notice_title}</div>
+                        <div class="n_regdate"><fmt:formatDate pattern="yyyy-MM-dd"
+							value="${noticeList.notice_regdate}" /></div>
+                    </div>
+                    
+                    </c:forEach>
+
+                    <div class="moreBtn">
+                        <div>
+                            <a href="admin_notice_list">more</a>
+                        </div>
+                    </div>
                 </div>
     
                 <div class="qna_section">

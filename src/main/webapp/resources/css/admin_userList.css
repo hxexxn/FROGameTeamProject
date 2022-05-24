@@ -81,6 +81,16 @@ body {
     width: 10%;
 }
 
+.user_delete a {
+	text-decoration: none;
+	color: black;
+	transition: 0.2s;
+}
+
+.user_delete a:hover {
+	color: red;
+}
+
 .list {
     height: 50px;
     text-align: center;

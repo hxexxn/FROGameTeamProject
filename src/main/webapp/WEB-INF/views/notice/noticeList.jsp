@@ -80,17 +80,6 @@
 				</tbody>
 			</table>
 
-			<div class="Btn">
-
-				<c:if test="${sessionScope.user_id == admin }">
-					<input type="hidden" name="notice_writer" id="notice_writer"
-						value="${sessionScope.user_nick}">
-					<a href="/noticeInsert" class="noticeInsertBtn"
-						id="contentSubmitBtnBox">글쓰기</a>
-				</c:if>
-
-			</div>
-
 		</div>
 
 	</div>
