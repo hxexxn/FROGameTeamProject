@@ -43,21 +43,29 @@
 
 	<div class="big_wrap">
 
-		<div class="head_title">찾아보기 - 할인중</div>
+		<div class="head_title">찾아보기 - 인기순</div>
 		<div class="wrap1">
 
-			<c:forEach var="img" items="${img}" varStatus="status" begin="0" end="3">
+			<c:forEach var="img" items="${img}" varStatus="status" begin="0"
+				end="3">
 				<div class="poster">
 					<div class="photo">
+					<a href="gameReadTest?game_no=${list[status.index].game_no}">
 						<img class="Thumbnail" src="${img}">
+						</a>
 					</div>
 					<div class="game_content">
+					<a href="gameReadTest?game_no=${list[status.index].game_no}">
 						<div class="game_title">${list[status.index].game_title}</div>
+						</a>
 						<div class="game_price">
-							<span class="discount">-100%</span> <span class="price">₩
-								<fmt:formatNumber type="number" maxFractionDigits="3"
+							<span class="discount">-50%</span> 
+							<a href="gameReadTest?game_no=${list[status.index].game_no}">
+							<span class="price">₩ <fmt:formatNumber
+									type="number" maxFractionDigits="3"
 									value="${list[status.index].game_price}" />
 							</span>
+							</a>
 						</div>
 
 					</div>
@@ -68,18 +76,27 @@
 
 		<div class="wrap2">
 
-			<c:forEach var="img" items="${img}" varStatus="status" begin="4" end="7">
+			<c:forEach var="img" items="${img}" varStatus="status" begin="4"
+				end="7">
 				<div class="poster">
+
 					<div class="photo">
-						<img class="Thumbnail" src="${img}">
+						<a href="gameReadTest?game_no=${list[status.index].game_no}">
+							<img class="Thumbnail" src="${img}">
+						</a>
 					</div>
+
 					<div class="game_content">
-						<div class="game_title">${list[status.index].game_title}</div>
+						<a href="gameReadTest?game_no=${list[status.index].game_no}">
+							<div class="game_title">${list[status.index].game_title}</div>
+						</a>
 						<div class="game_price">
-							<span class="discount">-100%</span> <span class="price">₩
-								<fmt:formatNumber type="number" maxFractionDigits="3"
-									value="${list[status.index].game_price}" />
+							<span class="discount">-100%</span> <a
+								href="gameReadTest?game_no=${list[status.index].game_no}"> <span
+								class="price">₩ <fmt:formatNumber type="number"
+										maxFractionDigits="3" value="${list[status.index].game_price}" />
 							</span>
+							</a>
 						</div>
 
 					</div>

@@ -148,4 +148,9 @@ public class GameController {
 		return "game/gameInfo";
 	}
 	
+	@GetMapping("/gameSell")
+	public String gameSell() {
+		return "game/gameInfo";
+	}
+	
 }

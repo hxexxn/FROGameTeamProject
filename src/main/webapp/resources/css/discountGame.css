@@ -17,7 +17,7 @@ body {
 
 .head_title{
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 3%;
     height: auto;
     border-bottom: 1px solid rgba(195,198,206,.5);
@@ -26,7 +26,7 @@ body {
 
 .wrap1{
    
-    height: 500px;
+    height: 400px;
     display: flex; 
     justify-content: space-around;
     margin-top: 3%;
@@ -61,6 +61,10 @@ body {
     margin-left: 10px;
 }
 
+.game_title{
+   	height: 70px;
+}
+
 .game_price{
     margin-top: 10px;
 }
@@ -81,7 +85,7 @@ body {
 
 .wrap2{
     
-    height: 500px;
+    height: 400px;
     display: flex; 
     justify-content: space-around;
     margin-top: 3%;
