@@ -44,12 +44,12 @@
 					
 					<div class="search_area">
 					<select name="type" id="test" style="margin-right: 10px">
-							<option value="T"
-								<c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>최신순</option>
-							<option value="C"
-								<c:out value="${pageMaker.cri.type eq 'C'?'selected':'' }"/>>인기순</option>
-							<option value="W"
-								<c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>가격순</option>
+							<option value="R"
+								<c:out value="${pageMaker.cri.type eq 'R'?'selected':'' }"/>>최신순</option>
+							<option value="S"
+								<c:out value="${pageMaker.cri.type eq 'S'?'selected':'' }"/>>인기순</option>
+							<option value="P"
+								<c:out value="${pageMaker.cri.type eq 'P'?'selected':'' }"/>>가격순</option>
 						</select>
 						<div> <input class="basic-input" type="text" name="keyword" id="keyword" placeholder="검색어를 입력하세요" value="${pageMaker.cri.keyword }" autocomplete="off"></div> 
             			<div><button type="submit" class="icon"><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>  </div>

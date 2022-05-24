@@ -27,20 +27,20 @@ public class GameController {
 	@Autowired
 	private GameMapper gameMapper;
 	
-	// 게임 등록 페이지 이동
+	// 寃뚯엫 �벑濡� �럹�씠吏� �씠�룞
 	@GetMapping("/gameInsert")
 	public String formFile() {
 		return "admin_include/admin_game_insert";
 	}
 	
-	// 게임 정보 등록 (이미지)
+	// 寃뚯엫 �젙蹂� �벑濡� (�씠誘몄�)
 	@PostMapping("/saveImage")
 	public String saveImage(@RequestParam("file") MultipartFile[] file, GameDTO dto) {
 		try {
 
-			System.out.println("dto 값 확인 :" + dto.getGame_platform());
+			System.out.println("dto 媛� �솗�씤 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
-			System.out.println("게임 등록 완료.");
+			System.out.println("寃뚯엫 �벑濡� �셿猷�.");
 			
 			for(int i=0; i<file.length; i++) {
 				byte[] img = file[i].getBytes();
@@ -53,7 +53,7 @@ public class GameController {
 		return "redirect:/gameList";
 	}
 
-	// 게임 목록 (유저용)
+	// 寃뚯엫 紐⑸줉 (�쑀���슜)
 	@GetMapping("/gameList")
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
@@ -72,7 +72,7 @@ public class GameController {
 		return "game/gameList";
 	}
 	
-	// 게임 목록 (관리자용)
+	// 寃뚯엫 紐⑸줉 (愿�由ъ옄�슜)
 	@GetMapping("/admin_game_list")
 	public String result2 (Model model, Criteria cri) {
 		
@@ -118,7 +118,7 @@ public class GameController {
 		return "game/gameRead";
 	}
 	
-	// 테스트 게임 상세 정보 페이지
+	// �뀒�뒪�듃 寃뚯엫 �긽�꽭 �젙蹂� �럹�씠吏�
 	@GetMapping("/gameReadTest")
 	public String gameReadTest(@RequestParam("game_no") String game_no, Model model) {
 		model.addAttribute("game_no", game_no);
@@ -126,7 +126,7 @@ public class GameController {
 		return "game/gameReadTest";
 	}
 	
-	// 게임 정보 (ajax로 가져오기용)
+	// 寃뚯엫 �젙蹂� (ajax濡� 媛��졇�삤湲곗슜)
 	@PostMapping("/gameRead")
 	public String gameRead(@RequestParam("game_no") String game_no, Model model) {
 		GameDTO dto = gameService.gameRead(game_no);
@@ -146,22 +146,5 @@ public class GameController {
 		return "game/gameInfo";
 	}
 	
-	@GetMapping("/genreList") 
-	public String genreList(Model model, Criteria cri) {
-		List<GameDTO> list = gameService.genreList(cri);
-		int total = gameService.getTotal(cri);
-		
-		List<String> imgList = new ArrayList<String>();
-		for (int i = 0; i <list.size(); i++) { 
-			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
-			}
-		
-		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
-		model.addAttribute("pageMaker", pageMake);
-		model.addAttribute("list", list);
-		model.addAttribute("img", imgList);
 
-		return "game/gameList";
-	}
-	
 }
