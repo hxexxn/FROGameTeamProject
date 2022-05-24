@@ -81,7 +81,7 @@
                     </li>
 
                     <li>
-                    	<a href="newGame">신작 게임</a>
+                    	<a href="game_new_list">신작 게임</a>
                     </li>
                     
                     <li><a href="gameList">게임</a>

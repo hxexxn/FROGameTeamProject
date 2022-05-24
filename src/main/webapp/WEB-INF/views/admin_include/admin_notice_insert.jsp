@@ -21,7 +21,7 @@
         <div id="notice_insert_content">
 
                 <div class="title">
-                    <div class="notice_subject">
+                    <div class="notice_head_subject">
                         <span>제목</span>
                     </div>
                     <div class="subject_input">

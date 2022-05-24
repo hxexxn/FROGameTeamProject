@@ -22,8 +22,8 @@ h1 {
 }
 
 /* 가격 및 출시일 박스 */
-
-.notice_subject, .notice_information {
+.notice_head_subject,
+.notice_information {
     text-align: center;
     background-color: #f5f5f5;
     border-radius: 5px;
