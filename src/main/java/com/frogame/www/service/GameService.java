@@ -17,12 +17,9 @@ public interface GameService {
 
 	GameDTO gameRead(String game_no);
 	
-	
-	void saveImage(Map<String, Object> hmap);
-
+	/* void saveImage(Map<String, Object> hmap); */
 
 	List<GameDTO> admin_gameList(Criteria cri);
-
 
 	void gameDelete(String game_no);
 
@@ -31,5 +28,7 @@ public interface GameService {
 	List<GameDTO> hotGame();
 
 	List<GameDTO> newGame();
+
+	List<GameDTO> genreList(Criteria cri);
 
 }

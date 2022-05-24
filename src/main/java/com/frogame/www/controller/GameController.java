@@ -117,7 +117,6 @@ public class GameController {
 	public String gameRead() {
 		return "game/gameRead";
 	}
-
 	
 	// 테스트 게임 상세 정보 페이지
 	@GetMapping("/gameReadTest")
@@ -142,10 +141,27 @@ public class GameController {
 		return "redirect:/admin_game_list";
 	}
 	
-	
-	@GetMapping("/gameInfo")
-	public String gameInfo() {
+	@GetMapping("/gameSell")
+	public String gameSell() {
 		return "game/gameInfo";
+	}
+	
+	@GetMapping("/genreList") 
+	public String genreList(Model model, Criteria cri) {
+		List<GameDTO> list = gameService.genreList(cri);
+		int total = gameService.getTotal(cri);
+		
+		List<String> imgList = new ArrayList<String>();
+		for (int i = 0; i <list.size(); i++) { 
+			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
+			}
+		
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+		model.addAttribute("pageMaker", pageMake);
+		model.addAttribute("list", list);
+		model.addAttribute("img", imgList);
+
+		return "game/gameList";
 	}
 	
 }

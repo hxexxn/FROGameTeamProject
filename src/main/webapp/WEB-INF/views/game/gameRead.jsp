@@ -32,6 +32,8 @@
               <div> <img src="${imgList[0].image}">	</div>
               <div> <img src="${imgList[1].image}"> </div>
               <div> <img src="${imgList[2].image}"> </div>
+              <div> <img src="${imgList[3].image}"> </div>
+              <div> <img src="${imgList[4].image}"> </div>
             </div>
             <div class="content_wrap">
 
@@ -44,22 +46,22 @@
 <!-- 사양 넣는곳 -->
                 <div class="content_box">
                     <h1>최소</h1>  
-                    <div>운영체제:${dto.game_min_os}</div>
-                    <div>프로세서:${dto.game_min_cpu}</div>
-                    <div>메모리:${dto.game_min_ram}</div>
-                    <div>그래픽:${dto.game_min_vga}</div>
-                    <div>DirectX:${dto.game_min_dirX}</div>
-                    <div>저장공간:${dto.game_min_ssd}</div>
+                    <div>운영체제: ${dto.game_min_os}</div>
+                    <div>프로세서: ${dto.game_min_cpu}</div>
+                    <div>메모리: ${dto.game_min_ram}</div>
+                    <div>그래픽: ${dto.game_min_vga}</div>
+                    <div>DirectX: ${dto.game_min_dirX}</div>
+                    <div>저장공간: ${dto.game_min_ssd}</div>
                     <br>
 
 
                     <h1>권장</h1>
-                    <div>운영체제:${dto.game_std_os}</div>
-                    <div>프로세서:${dto.game_std_cpu}</div>
-                    <div>메모리:${dto.game_std_ram}</div>
-                    <div>그래픽:${dto.game_std_vga}</div>
-                    <div>DirectX:${dto.game_std_dirX}</div>
-                    <div>저장공간:${dto.game_std_ssd}</div> 
+                    <div>운영체제: ${dto.game_std_os}</div>
+                    <div>프로세서: ${dto.game_std_cpu}</div>
+                    <div>메모리: ${dto.game_std_ram}</div>
+                    <div>그래픽: ${dto.game_std_vga}</div>
+                    <div>DirectX: ${dto.game_std_dirX}</div>
+                    <div>저장공간: ${dto.game_std_ssd}</div> 
                     <br><br><br>
                     
                     ※ 시스템 요구 사항은 출시 버전을 기준으로 하며, 컨텐츠 추가와 업데이트로 인한 변경 사항이 있을 수 있습니다.
@@ -107,18 +109,14 @@
 <input type="hidden" value="${sess}" name="cart_user_id"	id="cart_user_id"> 
 <input type="hidden" value="${dto.game_no}" id="cart_game_no" name="cart_game_no">
 		
-<button type="button" id="cartBtn2">ajax 장바구니</button>
 
+				<div class="cart_Box">
+                  <a href="#" class="cart_Btn" type="button" id="cartBtn2" style="color: white">CART</a>
+              </div>
 
-                <div class="cart_Box">
-                  <a
-		href="/addCart?cart_game_no=${dto.game_no}&cart_user_id=${sess}"
-		id="cartBtn" style="color: white"><div class="cart_Btn">CART</div></a>
-                </div>
-                
                   <div class="cart_Box">
                     
-                    <a href="/cartList?cart_user_id=${sess}" id="cartListBtn" style="color: white"><div class="cartlist_Btn">CART LIST</div></a>
+                    <a href="/cartList?cart_user_id=${sess}" id="cartListBtn" style="color: white" class="cartlist_Btn">CART LIST</a>
                 </div>
 
             </div>  

@@ -32,7 +32,7 @@ crossorigin="anonymous"></script>
 
  
 
- 
+
 
 <c:set var="sess" value="${sessionScope.user_id}"/>
 
@@ -74,8 +74,10 @@ crossorigin="anonymous"></script>
           <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
 
           <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
-
-          <p> * 카트 번호 : ${cList[status.index].cart_no} </p>
+          <input type="hidden" value="${cList[status.index].gameDto.game_title}" id="game_title" name="game_title">
+          <input type="hidden" value="${cList[status.index].gameDto.game_price}" id="game_price" name="game_price">
+          <input type="hidden" value="${cList[status.index].userDto.user_email}" id="user_email" name="user_email">
+          <input type="hidden" value="${cList[status.index].userDto.user_nick}" id="user_nick" name="user_nick">
 
       </div>
 
@@ -117,7 +119,9 @@ crossorigin="anonymous"></script>
 
 <div class="totalPrice">
 
-<p>합계 : <c:out value="${totalPrice}"/>원</p>
+<p>합계 : <c:out value="${totalPrice}"/>원</p> 
+
+<button onclick="requestPay()"> 결제하기 </button>
 
 </div> 
 
@@ -136,10 +140,29 @@ crossorigin="anonymous"></script>
  
 
  
-
  
 
- 
+<script type="text/javascript">
+
+	var list1 = new Array();
+	
+	<c:forEach var="cList" items="${cList}" >
+	
+		list1.push("${cList.cart_no}");
+		list1.push("${cList.gameDto.game_title}");
+	
+	</c:forEach>
+	
+	for (var i = 0; i < list1.length; i++) {
+	
+	    console.log('for문 콘솔 : '+list1[i]);
+	
+	}
+	
+
+
+
+</script> 
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>
 

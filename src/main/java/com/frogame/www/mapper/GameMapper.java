@@ -37,4 +37,6 @@ public interface GameMapper {
 
 	List<GameDTO> newGame();
 
+	List<GameDTO> genreList(Criteria cri);
+
 }

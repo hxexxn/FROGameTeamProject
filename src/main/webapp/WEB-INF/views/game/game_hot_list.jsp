@@ -40,6 +40,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
+
 	                        
 	                        	<c:if test="${list[status.index].game_price != 0}">
 	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
@@ -48,7 +49,7 @@
 	                            <c:if test="${list[status.index].game_price == 0}">
 	                            	<span>Free To Play</span>
 	                            </c:if>
-	                            
+
 	                        </div>
 	                    </div>
 	                </div>
@@ -70,6 +71,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
+
 	                           <c:if test="${list[status.index].game_price != 0}">
 	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
 	                            </c:if>
@@ -77,6 +79,7 @@
 	                            <c:if test="${list[status.index].game_price == 0}">
 	                            	<span>Free To Play</span>
 	                            </c:if>
+
 	                        </div>
 	                        
 	                    </div>
@@ -99,6 +102,7 @@
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
+
 	                        
 	                           <c:if test="${list[status.index].game_price != 0}">
 	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
@@ -107,7 +111,8 @@
 	                            <c:if test="${list[status.index].game_price == 0}">
 	                            	<span>Free To Play</span>
 	                            </c:if>
-	                            
+	                           
+
 	                        </div>
 	                    </div>
 	                </div>

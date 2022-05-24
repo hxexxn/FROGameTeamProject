@@ -1,8 +1,6 @@
 package com.frogame.www.controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -12,8 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.frogame.www.model.AdminDTO;
@@ -54,7 +50,7 @@ public class AdminController {
 			// 게임 목록
 			List<GameDTO> gameList = gameService.admin_gameList(cri);
 			int total = gameService.getTotal(cri);
-			
+
 			// 공지 목록 
 			List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
 			model.addAttribute("noticeList", noticeList);
@@ -63,10 +59,7 @@ public class AdminController {
 			
 			model.addAttribute("gameList", gameList);
 			model.addAttribute("pageMaker", pageMake);
-			
-			
-			
-			
+
 			return "admin/testadmin";
 		}
 
