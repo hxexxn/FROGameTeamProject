@@ -4,7 +4,7 @@
 
 <mapper namespace="com.frogame.www.mapper.GameMapper">
 
-		<!-- 이미지 테이블 -->
+	<!-- 이미지 테이블 -->
 	<resultMap type="com.frogame.www.model.ImgDTO" id="ImgDTO">
 		<id column="game_no" property="game_no" />
 		<result column="file" property="file" />
@@ -60,6 +60,55 @@
 
 	</sql>
 	
+	<!-- 게임 장르별 태그 -->
+	<sql id="genre">
+		<trim prefix="where game_genre =" suffix="order by desc" prefixOverrides="OR">
+			<foreach collection="typeArr" item="tag">
+				<trim prefix="OR">
+					<choose>
+						<when test="tag == 'A'.toString()">
+							'FPS'
+						</when>
+						<when test="tag == 'B'.toString()">
+							'RPG'
+						</when>
+						<when test="tag == 'C'.toString()">
+							'공포'
+						</when>
+						<when test="tag == 'D'.toString()">
+							'로그라이크'
+						</when>
+						<when test="tag == 'E'.toString()">
+							'시뮬레이션'
+						</when>
+						<when test="tag == 'F'.toString()">
+							'어드벤쳐'
+						</when>
+						<when test="tag == 'G'.toString()">
+							'전략'
+						</when>
+						<when test="tag == 'H'.toString()">
+							'액션'
+						</when>
+						<when test="tag == 'I'.toString()">
+							'기타'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+
+	</sql>
+	
+	<!-- 태그 검색 -->
+	<select id="genreList"
+		resultType="com.frogame.www.model.GameDTO">
+		select * from gameTBL
+			<include refid="genre"></include>
+		limit #{skip},#{amount}
+	</select>
+	
+	
 	<!-- 게임 등록 -->
 	<insert id="newInsert" useGeneratedKeys="true"
 		keyProperty="game_no">
@@ -78,7 +127,7 @@
 	</select>
 
 
-	<!-- 페이징 -->
+	<!-- 검색 페이징 통합 -->
 	<select id="getListPaging"
 		resultType="com.frogame.www.model.GameDTO">
 		select * from gameTBL

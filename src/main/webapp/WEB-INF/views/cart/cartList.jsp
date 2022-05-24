@@ -32,7 +32,7 @@ crossorigin="anonymous"></script>
 
  
 
- 
+
 
 <c:set var="sess" value="${sessionScope.user_id}"/>
 
@@ -140,17 +140,25 @@ crossorigin="anonymous"></script>
  
 
  
-
  
 
 <script type="text/javascript">
 
-var test = <c:out value="${cList[0].cart_no}"/>;
-
-
-console.log(test);
-
-
+	var list1 = new Array();
+	
+	<c:forEach var="cList" items="${cList}" >
+	
+		list1.push("${cList.cart_no}");
+		list1.push("${cList.gameDto.game_title}");
+	
+	</c:forEach>
+	
+	for (var i = 0; i < list1.length; i++) {
+	
+	    console.log('for문 콘솔 : '+list1[i]);
+	
+	}
+	
 
 
 

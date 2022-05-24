@@ -140,7 +140,7 @@
                     <li><a href="gameList">게임</a>
                         <ul id="subMenu">
                         
-                            <li><a href="#">FPS</a></li>
+                            <li><a href="genreList?tag=A">FPS</a></li>
                             <li><a href="#">RPG</a></li>
                             <li><a href="#">공포</a></li>
                             <li><a href="#">로그라이크</a></li>

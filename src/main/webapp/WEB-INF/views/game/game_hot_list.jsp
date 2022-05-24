@@ -28,7 +28,7 @@
             <div class="bestGameSection_01">
 
                 <!-- 박스 하나 -->
-                <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="5">
+                <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="4">
 	                <div class="bestGame-contentBox">
 	                    <div class="bestGame-ImgBox">
 	                        <img src="${img}">
@@ -49,7 +49,7 @@
             <div class="bestGameSection_02">
 
                 <!-- 박스 하나 -->
-                <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="5">
+                <c:forEach var="img" items="${img}" varStatus="status" begin="5" end="9">
 	                <div class="bestGame-contentBox">
 	                    <div class="bestGame-ImgBox">
 	                        <img src="${img}">
@@ -70,7 +70,7 @@
             <div class="bestGameSection_02">
 
                 <!-- 박스 하나 -->
-                <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="5">
+                <c:forEach var="img" items="${img}" varStatus="status" begin="10" end="14">
 	                <div class="bestGame-contentBox">
 	                    <div class="bestGame-ImgBox">
 	                        <img src="${img}">

@@ -38,11 +38,12 @@ public class GameServiceImpl implements GameService{
 	}
 
 	
-	 @Override public void saveImage(Map<String, Object> hmap) {
-	 gameMapper.saveImage(hmap);
-	  
-	 }
-	 
+	/*
+	 * @Override public void saveImage(Map<String, Object> hmap) {
+	 * gameMapper.saveImage(hmap);
+	 * 
+	 * }
+	 */
 
 	@Override
 	public void gameDelete(String game_no) {
@@ -69,6 +70,11 @@ public class GameServiceImpl implements GameService{
 	@Override
 	public List<GameDTO> newGame() {
 		return gameMapper.newGame();
+	}
+
+	@Override
+	public List<GameDTO> genreList(Criteria cri) {
+		return gameMapper.genreList(cri);
 	}
 
 
