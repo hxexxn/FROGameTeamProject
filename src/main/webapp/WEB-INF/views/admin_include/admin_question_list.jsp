@@ -38,7 +38,7 @@
 						
 						        <div class="list">
 						            <div class="notice_no">${questionList.question_no}</div>
-						            <div class="notice_head">${questionList.question_title}</div>
+						            <div class="notice_head"><a href="/questionRead?question_no=${questionList.question_no}">${questionList.question_title}</a></div>
 						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${questionList.question_regdate}"/></div>
 						          	<div class="notice_writer">${questionList.question_writer}</div>
 						            <div class="notice_delete"><a href="/questionDelete?question_no=${questionList.question_no}">삭제</a></div>

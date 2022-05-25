@@ -8,6 +8,20 @@ a{
 	text-decoration : none;
 }
 
+
+#contentFrame{
+	 padding-top: 50px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid lightgray;
+    border-bottom: none;
+    padding-bottom: 50px;
+}
+
+
 /* 최상단 배너 */
 
 .topBanner {
