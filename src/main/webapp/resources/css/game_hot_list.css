@@ -51,8 +51,12 @@ body {
 .bestGame-titleBox {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.bestGame-titleBox span {
+	font-family: 'Gothic A1', sans-serif;
     font-size: 15px;
+    font-weight: 500;
 }
 
 .bestGame-infoBox {
@@ -63,6 +67,8 @@ body {
     display: flex;
     justify-content: space-evenly;
     font-size: 15px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300;
 }
 
 .bestGame-ImgBox > img {
