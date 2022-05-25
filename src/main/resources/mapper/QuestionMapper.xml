@@ -39,15 +39,27 @@ select * from questionBoardTBL order by question_no DESC
 <select id="questionRead" resultType="com.frogame.www.model.QuestionDTO">
 select * from questionBoardTBL where question_no = #{question_no}
 </select>
-
-	<select id="getListPaging"
-		resultType="com.frogame.www.model.QuestionDTO">
-		select *	from questionBoardTBL order by question_no DESC	limit #{skip},#{amount}
+<!-- 페이징 및 검색 -->
+	<select id="getListPaging" resultType="com.frogame.www.model.QuestionDTO">
+			select * from questionBoardTBL 
+		<if test="keyword != null">
+		<![CDATA[
+			where question_title like concat('%',#{keyword},'%')
+			]]>
+			</if>
+		order by question_no DESC limit #{skip}, #{amount}
 	</select>
 	
+	<!--  게시판 페이징 번호  -->
 	<select id="getTotal" resultType="int">
         select count(*) from questionBoardTBL
-    </select>
+        	<if test="keyword != null">
+        	<![CDATA[
+			where question_title like concat('%',#{keyword},'%')
+			]]>
+			</if>
+    </select>	
+	
     
     <update id="questionViewCount">
 		UPDATE questionBoardTBL set question_count =	question_count+1 WHERE question_no = #{question_no};
@@ -64,7 +76,19 @@ select * from questionBoardTBL where question_no = #{question_no}
 	 <update id="questionUpdate">
     UPDATE questionBoardTBL SET question_title = #{question_title}, question_content = #{question_content} WHERE question_no = #{question_no}
     </update>
-
+    
+    <!-- 관리자 공지사항 페이지 -->
+	<select id="admin_questionList" resultType="com.frogame.www.model.QuestionDTO">
+		Select * from questionBoardTBL
+		
+		<!-- 검색 -->
+		<if test="keyword != null">
+		<![CDATA[
+			where question_title like concat('%',#{keyword},'%')
+			]]>
+		</if>
+		order by question_no DESC limit #{skip},#{amount}
+	</select>
 
 
 </mapper>

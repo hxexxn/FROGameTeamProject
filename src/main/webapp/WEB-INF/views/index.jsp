@@ -109,7 +109,7 @@
 					<span> <a href="/userMyPage"> <c:out value="${nick}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_level eq true}">
-							<span><a href="/testadmin">관리</a></span>
+							<span><a href="/testadmin">대시보드</a></span>
 						</c:if>
 						<c:if test="${sessionScope.user_level ne true}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>

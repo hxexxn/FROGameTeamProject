@@ -32,8 +32,8 @@ public class QuestionServiceImpl implements QuestionService{
 	}
 
 	@Override
-	public int getTotal() {
-		 return mapper.getTotal();
+	public int getTotal(Criteria cri) {
+		 return mapper.getTotal(cri);
 	}
 
 	@Override
@@ -64,7 +64,12 @@ public class QuestionServiceImpl implements QuestionService{
 		mapper.questionUpdate(dto);
 		
 	}
-	
+
+	@Override
+	public List<QuestionDTO> admin_questionList(Criteria cri) {
+		return mapper.admin_questionList(cri);
+	}
+
 	
 	
 	

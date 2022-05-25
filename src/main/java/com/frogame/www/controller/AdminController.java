@@ -17,10 +17,12 @@ import com.frogame.www.model.Criteria;
 import com.frogame.www.model.GameDTO;
 import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.PageMakerDTO;
+import com.frogame.www.model.QuestionDTO;
 import com.frogame.www.model.UserDTO;
 import com.frogame.www.service.AdminService;
 import com.frogame.www.service.GameService;
 import com.frogame.www.service.NoticeService;
+import com.frogame.www.service.QuestionService;
 import com.frogame.www.service.UserService;
 
 @Controller
@@ -37,6 +39,9 @@ public class AdminController {
 	
 	@Autowired
 	private NoticeService noticeService;
+	
+	@Autowired
+	private QuestionService questionService;
 	
 	
 	// 관리자 페이지 이동 
@@ -59,6 +64,10 @@ public class AdminController {
 			
 			model.addAttribute("gameList", gameList);
 			model.addAttribute("pageMaker", pageMake);
+			
+			// Q&A 목록
+			List<QuestionDTO> questionList = questionService.admin_questionList(cri);
+			model.addAttribute("questionList", questionList);
 
 			return "admin/testadmin";
 		}
