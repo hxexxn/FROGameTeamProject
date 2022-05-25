@@ -25,7 +25,7 @@
 	
 	            <div class="admin_dash">
 	            	<a href="/testadmin">
-	            		<div class="first">Dashboard</div>
+	            		<div class="first">Frogame Dashboard</div>
 	            	</a>
 	                
 	            </div>
