@@ -49,9 +49,7 @@
         </div>
 
         <div class="read_header_content">
-            <div class="read_header_content_box" style="white-space:pre-wrap; wrap=hard;">
-                ${dto.notice_content}
-            </div>
+            <div class="read_header_content_box" style="white-space:pre-wrap; wrap=hard;">${dto.notice_content}</div>
            
         </div>
     </div>

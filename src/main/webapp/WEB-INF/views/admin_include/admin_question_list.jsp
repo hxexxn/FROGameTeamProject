@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${path}/resources/css/admin_noticeList.css">
+<link rel="stylesheet" href="${path}/resources/css/admin_q&aList.css">
 </head>
 <body>
 <!-- 제이쿼리 -->
@@ -23,7 +23,7 @@
                     <div id="wrap2">
 
 						        <div class="bbs_title">
-						            <span>공지사항</span>
+						            <span>Q&A</span>
 						        </div>
 						
 						        <div class="list_title">
@@ -34,14 +34,14 @@
 					                <div class="notice_delete"></div>
 					            </div>
 						        
-						   <c:forEach var="noticeList" items="${noticeList}">
+						   <c:forEach var="questionList" items="${questionList}">
 						
 						        <div class="list">
-						            <div class="notice_no">${noticeList.notice_no}</div>
-						            <div class="notice_head">${noticeList.notice_title}</div>
-						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${noticeList.notice_regdate}"/></div>
-						          	<div class="notice_writer">${noticeList.notice_writer}</div>
-						            <div class="notice_delete"><a href="/noticeDelete?notice_no=${noticeList.notice_no}">삭제</a></div>
+						            <div class="notice_no">${questionList.question_no}</div>
+						            <div class="notice_head">${questionList.question_title}</div>
+						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${questionList.question_regdate}"/></div>
+						          	<div class="notice_writer">${questionList.question_writer}</div>
+						            <div class="notice_delete"><a href="/questionDelete?question_no=${questionList.question_no}">삭제</a></div>
 						        </div>
 						        
 						    </c:forEach>
@@ -49,10 +49,7 @@
 						    <!-- 검색 -->
 				        <div class="side_bar">
 							
-							<!--  공지사항 등록 버튼 -->
-					        <div class="gameInsert">
-					            <div class="insertBtn"><a href="admin_notice_insert" id="insertBtn"> 공지사항 등록 </a></div>
-					        </div>
+							
 					        
 					        <!-- 페이징 -->
 					        <div class="pageInfo_wrap center">
@@ -102,7 +99,7 @@
 						</form>
 					</div>
 					
-<script type="text/javascript" src="${path}/resources/js/admin_noticeList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_questionList.js"></script>
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 
 

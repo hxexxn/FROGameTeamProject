@@ -68,7 +68,7 @@
 
             <div class="qnalist">
                 <div>
-                    <a href="#">Q&A</a>
+                    <a href="admin_question_list">Q&A</a>
                 </div>
             </div>
         </div>
