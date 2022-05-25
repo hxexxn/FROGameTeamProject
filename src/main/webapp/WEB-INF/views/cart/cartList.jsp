@@ -166,7 +166,7 @@ crossorigin="anonymous"></script>
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
-<script type="text/javascript" src="${path}/resources/js/cartList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
 
 </body>
 
