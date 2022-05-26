@@ -18,7 +18,11 @@
     <!-- 폰트 어썸 -->
     <script src="https://kit.fontawesome.com/3636334fb2.js" 
     crossorigin="anonymous"></script>
-
+	
+	 <c:if test="${not empty sessionScope.user_id}">
+     	<c:set var="sess" value="${sessionScope.user_id}"/>
+     		<c:if test="${sessionScope.user_id eq 'admin'}">
+     		
 	<c:set var="sess" value="${sessionScope.user_nick}"/>
 	
     <div id="container">
@@ -216,10 +220,24 @@
             </span>
 
         </div>
-
-
     </div>
+	</c:if>
+	
+	<!--  유저/비유저가 관리자 페이지에 점근시  -->
+	
+	<c:if test="${empty sessionScope.user_id}">
 
+		    <jsp:include page="../include/error403.jsp" flush="false"/>
+		    
+	    </c:if>
+	
+		<c:if test="${sessionScope.user_id ne 'admin'}">
+
+		    <jsp:include page="../include/error403.jsp" flush="false"/>
+		    
+	    </c:if>
+	    
+	</c:if>
 
 </body>
 </html>

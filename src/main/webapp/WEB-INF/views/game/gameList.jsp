@@ -71,13 +71,19 @@
 								<a href="gameReadTest?game_no=${list[status.index].game_no}">${list[status.index].game_title}</a>
 							</div>
 							<div class="game-content">
-								<a href="gameReadTest?game_no=${list[status.index].game_no}">₩ <fmt:formatNumber type="number"
-										maxFractionDigits="3" value="${list[status.index].game_price}" /></a>
+							
+							<c:if test="${list[status.index].game_price != 0}">
+								<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+							</c:if>
+							
+							<c:if test="${list[status.index].game_price == 0}">
+								<span>Free To Play</span>
+							</c:if>
+							
+							
 							</div>
 							<div class="game-content">
-								<a href="gameReadTest?game_no=${list[status.index].game_no}"><fmt:formatDate
-										value="${list[status.index].game_release}"
-										pattern="yyyy-MM-dd" /></a>
+								<fmt:formatDate value="${list[status.index].game_release}" pattern="yyyy-MM-dd" />
 							</div>
 							<%-- <div class="game-content">
 							<a href="gameDelete?game_no=${jjin[status.index].game_no}">삭제하기</a>

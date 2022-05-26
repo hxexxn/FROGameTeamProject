@@ -26,8 +26,16 @@
         <div class="container">
 
             <div class="best_head">
-                <p>신작 게임</p>
+                <div class="head_text">
+                	<p>신작 게임</p>
+                </div>
+                
+				<div class="head_arrow">
+					<i class="fa-solid fa-arrow-down"></i>
+				</div>          
             </div>
+            
+             <div class="head_line"></div><br>
 
             <!-- 인기 게임 -->
             <div class="bestGameSection_01">
@@ -73,16 +81,15 @@
 	                    <div class="bestGame-ImgBox">
 	                        <img src="${img}">
 	                    </div>
-	                    
-	                    <div class="game_tag">
-	                            <div class="genre">${list[status.index].game_genre}</div>
-	                            <div class="platform">${list[status.index].game_platform}</div>
-                        </div>
                         	
 	                    <div class="bestGame-infoBox">
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        </div>
 	                        <div class="bestGame-info">
 	                        
 	                        	<c:if test="${list[status.index].game_price != 0}">
