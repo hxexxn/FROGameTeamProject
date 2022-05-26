@@ -15,7 +15,7 @@
 
 		$.ajax({
 
-			url: "/gameRead",
+			url: "/game_read",
 			type: "post",
 			data: { game_no: ${game_no} },
 			success: function(data) {

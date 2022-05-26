@@ -111,16 +111,16 @@
 				                    </div>
 				
 				                    <div class="radio_box">
-				                        <input type="radio" name="game_platform" id="steam" value="steam">
+				                        <input type="radio" name="game_platform" id="steam" value="Steam">
 				                        <label for="steam">스팀</label>
 				                        
-				                        <input type="radio" name="game_platform" id="ubisoft" value="ubisoft">
+				                        <input type="radio" name="game_platform" id="ubisoft" value="Ubisoft">
 				                        <label for="ubisoft">유비 소프트</label>
 				                        
-				                        <input type="radio" name="game_platform" id="epicgames" value="epicgames">
+				                        <input type="radio" name="game_platform" id="epicgames" value="Epicgames">
 				                        <label for="epicgames">에픽 게임즈</label>
 				
-				                        <input type="radio" name="game_platform" id="etc_platform" value="etc_platform">
+				                        <input type="radio" name="game_platform" id="etc_platform" value="etc">
 				                        <label for="etc_platform">기타</label>
 				                    </div>
 				                </div>

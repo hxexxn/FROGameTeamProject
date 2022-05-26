@@ -12,6 +12,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="${path}/resources/css/game_hot_list.css">
     <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500&display=swap');
+	</style>
 </head>
 <body>
 
@@ -23,7 +26,7 @@
         <div class="container">
 
             <div class="best_head">
-                <p>인기 게임</p>
+                <p>신작 게임</p>
             </div>
 
             <!-- 인기 게임 -->
@@ -39,8 +42,22 @@
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        
+	                        <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
+                        	
 	                        <div class="bestGame-info">
-	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                        
+	                            <c:if test="${list[status.index].game_price != 0}">
+	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                            </c:if>
+	                            
+	                            <c:if test="${list[status.index].game_price == 0}">
+	                            	<span>Free To Play</span>
+	                            </c:if>
+	                            
 	                        </div>
 	                    </div>
 	                </div>
@@ -56,12 +73,26 @@
 	                    <div class="bestGame-ImgBox">
 	                        <img src="${img}">
 	                    </div>
+	                    
+	                    <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        </div>
+                        	
 	                    <div class="bestGame-infoBox">
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
 	                        <div class="bestGame-info">
-	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                        
+	                        	<c:if test="${list[status.index].game_price != 0}">
+	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                            </c:if>
+	                            
+	                            <c:if test="${list[status.index].game_price == 0}">
+	                            	<span>Free To Play</span>
+	                            </c:if>
+	                            
 	                        </div>
 	                    </div>
 	                </div>
@@ -81,8 +112,22 @@
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        
+	                         <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
+                        
 	                        <div class="bestGame-info">
-	                            <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                        
+	                            <c:if test="${list[status.index].game_price != 0}">
+	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+	                            </c:if>
+	                            
+	                            <c:if test="${list[status.index].game_price == 0}">
+	                            	<span>Free To Play</span>
+	                            </c:if>
+	                            
 	                        </div>
 	                    </div>
 	                </div>

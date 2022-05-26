@@ -15,9 +15,18 @@
         <style>
 	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500&display=swap');
 	</style>
+	 <!-- 폰트 어썸 5.0 -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
 </head>
 <body>
 
+<!-- 폰트 어썸 -->
+    <script src="https://kit.fontawesome.com/3636334fb2.js" 
+    crossorigin="anonymous"></script>
+    
 <jsp:include page="../include/page_top.jsp" flush="false" />
 
 
@@ -26,8 +35,17 @@
         <div class="container">
 
             <div class="best_head">
-                <p>인기 게임</p>
+                <div class="head_text">
+                	<p>인기 게임</p>
+                </div>
+                
+				<div class="head_arrow">
+					<i class="fa-solid fa-arrow-down"></i>
+				</div>          
             </div>
+            
+            
+            <div class="head_line"></div><br>
 
             <!-- 인기 게임 -->
             <div class="bestGameSection_01">
@@ -42,8 +60,11 @@
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
 	                        <div class="bestGame-info">
-
 	                        
 	                        	<c:if test="${list[status.index].game_price != 0}">
 	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
@@ -73,6 +94,10 @@
 	                        
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
 	                        <div class="bestGame-info">
 
 	                           <c:if test="${list[status.index].game_price != 0}">
@@ -104,9 +129,14 @@
 	                        <div class="bestGame-titleBox">
 	                            <span>${list[status.index].game_title}</span>
 	                        </div>
+	                        
+	                        <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
+                        	
 	                        <div class="bestGame-info">
 
-	                        
 	                           <c:if test="${list[status.index].game_price != 0}">
 	                            	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
 	                            </c:if>
@@ -115,7 +145,6 @@
 	                            	<span>Free To Play</span>
 	                            </c:if>
 	                           
-
 	                        </div>
 	                    </div>
 	                </div>

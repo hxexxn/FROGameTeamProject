@@ -1,5 +1,20 @@
 $(function(){
 	
+	// 게임 정보 및 사양 탭 버튼
+	
+	$('.menu2').hide();
+
+    $('.tab_menu1').click(function(){
+        $('.menu').show("fast");
+
+        $('.menu2').hide();
+    })
+
+    $('.tab_menu2').click(function(){
+        $('.menu2').show("fast");
+
+        $('.menu').hide();
+    })
 	
 
 		// 장바구니 추가 
