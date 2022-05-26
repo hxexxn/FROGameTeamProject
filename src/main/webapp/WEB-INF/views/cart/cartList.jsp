@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
-    pageEncoding="UTF-8"%>
-
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 
@@ -23,110 +22,98 @@
 <body>
 
 
-<!-- 제이쿼리 -->
+	<!-- 제이쿼리 -->
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
 
-integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-
-crossorigin="anonymous"></script>
-
-<!-- iamport.payment.js -->
-<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
-
-
-
-<c:set var="sess" value="${sessionScope.user_id}"/>
-<c:set var="nick" value="${sessionScope.user_nick}"/>
-
-<jsp:include page="../include/page_top.jsp" flush="false"/>
-
- 
-
-<div id="contentFrame">
-
- 
-
-<div id="wrap">
- 
-
-<c:set var="totalPrice" value="${0}"/>
+	<!-- iamport.payment.js -->
+	<script type="text/javascript"
+		src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 
 
 
-<c:forEach var="img" items="${img}" varStatus="status">
+	<c:set var="sess" value="${sessionScope.user_id}" />
+	<c:set var="nick" value="${sessionScope.user_nick}" />
 
-
-<form action="cartDelete" method="post">
- 
-
- 
-<div id="cartGameList">
-
-       
-
-      <div class="gameTitle"> 
-
-      <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
-      
-
-      		<img src="${img}" width="300px">
-
-          <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
-          <div id="bbb">
-          <input type="text" value="${cList[status.index].gameDto.game_title}">
-         </div>
-
-
-      </div>
-
- 
-
-      <div class="gamePrice"> 
-
-          <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
-
-      </div>
-
- 
-
-      <div class="delBtn">
-
-      <!-- <button type="button" id="cartDelBtn"> ajax 삭제</button> -->
-
-     
-
-      <button type="submit">ajax delete</button>
-
-      <!-- <a href="#" id="cartDelBtn">a태그 테스트</a> -->
-
-      </div>
-
-        </div>
-
- 
+	<jsp:include page="../include/page_top.jsp" flush="false" />
 
 
 
- 
+	<div id="contentFrame">
 
-<c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
-</form>
-</c:forEach>
 
- 
+		<div class="wrap">
 
-<div class="totalPrice">
 
-<p>합계 : <c:out value="${totalPrice}"/>원</p> 
+			<c:set var="totalPrice" value="${0}" />
+				<div>
+						<h1>장바구니</h1>
+					</div>
+			<c:forEach var="img" items="${img}" varStatus="status">
+
+				<form action="cartDelete" method="post">
+				
+
+					<div class="cartListBox">
+						<input type="hidden" value="${sess}" id="cart_user_id"
+							name="cart_user_id">
+
+						<div class="gameImg">
+							<img src="${img}" width="250px" height = "150px" >
+							
+						</div>
+						<div class="gameTitle">
+							<div class="block">${cList[status.index].gameDto.game_title}</div>
+						</div>
+						<div class="gamePrice">
+							<div>${cList[status.index].gameDto.game_price}</div>
+
+						</div>
+
+						<div class="cartDelete">
+							<div>
+								<button type="submit" class="deleteButton">삭제</button>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<c:set var="totalPrice"
+						value="${totalPrice + cList[status.index].gameDto.game_price}" />
+				</form>
+			</c:forEach>
+
+
+			<div class="cartListBottom">
+				<div class="totalPrice">
+					<span class="totalPrice1">총 주문 금액</span> <span><c:out
+							value="${totalPrice}" /></span> <span class="totalPrice1">원</span>
+				</div>
+
+				<input type="hidden" value="${totalPrice}" name="totalPrice"
+					id="totalPrice"> <input type="hidden" value="${nick}"
+					name="nick" id="nick">
+
+				<div class="orderBtn">
+					<button onclick="requestPay()" class="button">결제하기</button>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
 
 <input type="hidden" value="${cList[0].gameDto.game_title}" name="game_title" id="game_title">
 <input type="hidden" value="${img.size()}" name="size" id="size">
 <input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
 <input type="hidden" value="${nick}" name="nick" id="nick">
-<button onclick="requestPay()"> 결제하기 </button>
 
-</div> 
 
 <div>
 
@@ -146,6 +133,9 @@ crossorigin="anonymous"></script>
  
 
 <!--  <script type="text/javascript">
+=======
+	<script type="text/javascript">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 	var list1 = new Array();
 	
@@ -160,11 +150,14 @@ crossorigin="anonymous"></script>
 	}
 
 
+<<<<<<< HEAD
 </script>  -->
 
-<jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
-<script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
+
+	<jsp:include page="../include/page_bottom.jsp" flush="false" />
+
+	<script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
 
 
 
