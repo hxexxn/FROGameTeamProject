@@ -46,15 +46,15 @@
 					<choose>
 						<when test="type == 'R'.toString()">
 							<![CDATA[
-							 game_title like concat('%',#{keyword},'%')
+							game_title like concat('%',#{keyword},'%')
 							]]>
 							order by game_release desc
 						</when>
 						<when test="type == 'S'.toString()">
 							<![CDATA[
-							 game_title like concat('%',#{keyword},'%')
+							game_title like concat('%',#{keyword},'%')
 							]]>
-							order by game_sellcount desc
+							order by game_sellcount
 						</when>
 						<when test="type == 'P'.toString()">
 							<![CDATA[

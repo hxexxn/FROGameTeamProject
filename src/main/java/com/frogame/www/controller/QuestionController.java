@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.frogame.www.model.Criteria;
-import com.frogame.www.model.NoticeDTO;
 import com.frogame.www.model.PageMakerDTO;
 import com.frogame.www.model.QuestionDTO;
 import com.frogame.www.model.UserDTO;
@@ -26,7 +25,7 @@ public class QuestionController {
 	@Autowired
 	private UserService userService;
 	
-	// 문의 게시판
+	// 문의 게시판 입력
 	
 	@GetMapping("/questionInsert")
 	public String questionInsert(@RequestParam("user_id") String user_id, Model model) {
@@ -41,15 +40,40 @@ public class QuestionController {
 		return "redirect:/questionList";
 	}
 	
+	// 문의 게시판 목록
+	
 	@GetMapping("/questionList")
 	public String questionList(Model model, Criteria cri) {
-		int total = questionService.getTotal();
-		model.addAttribute("list", questionService.getListPaging(cri));
+		
+		List<QuestionDTO> jjin = questionService.getListPaging(cri);		
+		int total = questionService.getTotal(cri);
+		
 		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
-	       model.addAttribute("pageMaker", pageMake); 
+		
+		model.addAttribute("list", jjin);
+		model.addAttribute("pageMaker", pageMake); 
+		
 		return "question/questionList";	
 		
 	}
+	
+	// 문의게시판 목록 (관리자)
+		@GetMapping("admin_question_list")
+		public String admin_question_list(Model model, Criteria cri) {
+			
+			List<QuestionDTO> questionList = questionService.admin_questionList(cri);
+			int total = questionService.getTotal(cri);
+			
+			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+			
+			model.addAttribute("questionList", questionList);
+			model.addAttribute("pageMaker", pageMake);
+			
+			return "admin_include/admin_question_list";
+		}
+		
+	
+	// 문의 게시판 읽기
 	
 	@GetMapping("/questionRead")
 	public String questionRead(@RequestParam("question_no") String question_no, Model model){
@@ -59,6 +83,7 @@ public class QuestionController {
 		return "question/questionRead" ; 		
 	}
 	
+	// 조회수
 	@GetMapping("/questionByCount")
 	public String noticeByCount(Model model, Criteria cri) {
 		List<QuestionDTO> list = questionService.questionByCount();
@@ -66,11 +91,15 @@ public class QuestionController {
 		return "question/questionList";
 	}
 	
+	//삭제
+	
 	@GetMapping("/questionDelete")
 	public String questionDelete(@RequestParam("question_no")String question_no) {
 		questionService.questionDelete(question_no);
 		return "redirect:/questionList";
 	}
+	
+	//수정
 	
 	@GetMapping("/questionUpdate")
 	public String questionUpdate(@RequestParam("question_no")String question_no, Model model) {

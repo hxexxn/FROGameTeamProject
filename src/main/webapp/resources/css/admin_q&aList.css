@@ -10,6 +10,13 @@ body {
     margin: 0 auto;
 }
 
+a{
+	text-decoration-line: none;
+	text-decoration : none;
+	color: black ; 
+	
+}
+
 .bbs_title {
     margin: 0 auto;
     width: 80%;
