@@ -4,16 +4,16 @@ IMP.init("imp19597628"); // 예: imp00000000
 
 var totalPrice = $("#totalPrice").val();
 var nick = $("#nick").val();
-
+var size = $("#size").val()-1;
+var game_title = $("#game_title").val();
 
 function requestPay() {
-	alert(nick);
 	// IMP.request_pay(param, callback) 결제창 호출
 	IMP.request_pay({ // param
 		pg: "kakaopay",
 		pay_method: "trans",
-		merchant_uid: "ss-014",
-		name: "1",
+		merchant_uid: "ss-015",
+		name: game_title + " 외 " + size + "종",
 		amount: totalPrice,
 		buyer_email: "1",
 		buyer_name: nick
@@ -21,6 +21,7 @@ function requestPay() {
 		if (rsp.success) {
 			// jQuery로 HTTP 요청
 			alert('결제성공');
+			location.href();
 		} else {
 			alert('결제실패');
 		}

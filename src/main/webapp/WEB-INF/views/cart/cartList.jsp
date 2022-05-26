@@ -120,6 +120,8 @@ crossorigin="anonymous"></script>
 
 <p>합계 : <c:out value="${totalPrice}"/>원</p> 
 
+<input type="hidden" value="${cList[0].gameDto.game_title}" name="game_title" id="game_title">
+<input type="hidden" value="${img.size()}" name="size" id="size">
 <input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
 <input type="hidden" value="${nick}" name="nick" id="nick">
 <button onclick="requestPay()"> 결제하기 </button>
@@ -143,7 +145,7 @@ crossorigin="anonymous"></script>
  
  
 
- <script type="text/javascript">
+<!--  <script type="text/javascript">
 
 	var list1 = new Array();
 	
@@ -153,18 +155,12 @@ crossorigin="anonymous"></script>
 	
 	</c:forEach>
 	
-	
-	
 	for (var test in list1){
 		console.log('for문 콘솔 : '+ list1[test]);
 	}
-	
-	
-	
 
 
-
-</script> 
+</script>  -->
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
