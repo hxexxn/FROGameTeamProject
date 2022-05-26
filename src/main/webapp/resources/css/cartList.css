@@ -16,8 +16,14 @@ body {
 	border-radius: 5px;
 	display: flex;
 	justify-content: space-between;
-	height: 180px;
+	height: 150px;
 	padding: 14px;
+	margin-top: 3% ; 
+}
+
+.cartTitle{
+	text-align: center ; 
+	letter-spacing: 2px ; 
 }
 
 .gameImg {
@@ -27,19 +33,19 @@ body {
 .gameTitle {
 	width: 500px;
 	margin-left: 3%;
-	line-height: 180px;
+	line-height: 150px;
 }
 
 .gamePrice {
 	width: 100px;
 	text-align: center;
-	line-height: 180px;
+	line-height: 150px;
 }
 
 .cartDelete {
 	width: 50px;
 	text-align: center;
-	line-height: 180px;
+	line-height: 150px;
 }
 
 .cartListBottom {
