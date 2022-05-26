@@ -138,7 +138,7 @@
                     	<a href="game_new_list">신작 게임</a>
                     </li>
                     
-                    <li><a href="gameList">게임</a>
+                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=R">게임</a>
                         <ul id="subMenu">
                         
                             <li><a href="gameList?pageNum=1&amount=4&keyword=&type=A">FPS</a></li>
@@ -171,7 +171,7 @@
 					<form action="gameList" id="moveForm" method="get">
 						<input type="hidden" name="pageNum" value="1"> 
 						<input type="hidden"name="amount" value="4"> 
-						<input type="hidden" name="type" id="type" value="T">
+						<input type="hidden" name="type" id="type" value="R">
 						<input type="hidden" name="keyword" id="keyword" value="${pageMaker.cri.keyword }">
 					</form>
             </div>

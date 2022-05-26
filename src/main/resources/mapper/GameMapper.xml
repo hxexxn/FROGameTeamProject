@@ -153,6 +153,19 @@
 		</if>
 	</select>
 	
+	<select id="tagTotal" resultType="int">
+		select count(*) from gameTBL
+		<choose>
+			<when test="keyword.equals('')">
+			<include refid="criteria"></include>
+			</when>
+		
+			<when test="keyword != null">
+			<include refid="criteria"></include>
+			</when>
+		</choose>
+	</select>
+	
 	<!-- 검색 -->
 	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
 		Select * from gameTBL 
