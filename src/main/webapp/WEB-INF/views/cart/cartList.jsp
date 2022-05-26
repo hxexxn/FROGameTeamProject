@@ -48,9 +48,9 @@
 
 
 			<c:set var="totalPrice" value="${0}" />
-				<div>
-						<h1>장바구니</h1>
-					</div>
+				<div class="cartTitle">
+						<h1>CART LIST</h1>
+				</div>
 			<c:forEach var="img" items="${img}" varStatus="status">
 
 				<form action="cartDelete" method="post">
