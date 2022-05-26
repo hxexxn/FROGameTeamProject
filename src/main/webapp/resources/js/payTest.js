@@ -1,10 +1,10 @@
 
-
 var IMP = window.IMP; // 생략 가능
 IMP.init("imp19597628"); // 예: imp00000000
 
 var totalPrice = $("#totalPrice").val();
 var nick = $("#nick").val();
+
 
 function requestPay() {
 	alert(nick);

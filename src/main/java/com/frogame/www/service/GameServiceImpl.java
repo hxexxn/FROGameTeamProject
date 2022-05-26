@@ -77,5 +77,10 @@ public class GameServiceImpl implements GameService{
 		return gameMapper.genreList(cri);
 	}
 
+	@Override
+	public int tagTotal(Criteria cri) {
+		return gameMapper.tagTotal(cri);
+	}
+
 
 }

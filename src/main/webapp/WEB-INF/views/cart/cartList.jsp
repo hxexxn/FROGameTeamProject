@@ -22,6 +22,7 @@
 
 <body>
 
+
 <!-- 제이쿼리 -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -47,19 +48,19 @@ crossorigin="anonymous"></script>
  
 
 <div id="wrap">
-
  
 
 <c:set var="totalPrice" value="${0}"/>
 
+
+
 <c:forEach var="img" items="${img}" varStatus="status">
 
+
 <form action="cartDelete" method="post">
-
  
 
  
-
 <div id="cartGameList">
 
        
@@ -72,6 +73,10 @@ crossorigin="anonymous"></script>
       		<img src="${img}" width="300px">
 
           <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
+          <div id="bbb">
+          <input type="text" value="${cList[status.index].gameDto.game_title}">
+         </div>
+
 
       </div>
 
@@ -101,12 +106,12 @@ crossorigin="anonymous"></script>
 
  
 
-</form>
+
 
  
 
 <c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
-
+</form>
 </c:forEach>
 
  
@@ -138,32 +143,36 @@ crossorigin="anonymous"></script>
  
  
 
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 
 	var list1 = new Array();
 	
 	<c:forEach var="cList" items="${cList}" >
 	
-		list1.push("${cList.cart_no}");
 		list1.push("${cList.gameDto.game_title}");
 	
 	</c:forEach>
 	
-	for (var i = 0; i < list1.length; i++) {
 	
-	    console.log('for문 콘솔 : '+list1[i]);
 	
+	for (var test in list1){
+		console.log('for문 콘솔 : '+ list1[test]);
 	}
 	
+	
+	
 
 
 
-</script>  -->
+</script> 
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
 <script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
 
+
+
 </body>
+
 
 </html>

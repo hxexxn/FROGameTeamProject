@@ -31,4 +31,6 @@ public interface GameService {
 
 	List<GameDTO> genreList(Criteria cri);
 
+	int tagTotal(Criteria cri);
+
 }
