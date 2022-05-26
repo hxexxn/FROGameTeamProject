@@ -113,9 +113,9 @@ public class GameController {
 		return "game/game_new_list";
 	}
 
-	@GetMapping("/gameRead")
+	@GetMapping("/game_read")
 	public String gameRead() {
-		return "game/gameRead";
+		return "game/game_read";
 	}
 	
 	// �뀒�뒪�듃 寃뚯엫 �긽�꽭 �젙蹂� �럹�씠吏�
@@ -127,12 +127,12 @@ public class GameController {
 	}
 	
 	// 寃뚯엫 �젙蹂� (ajax濡� 媛��졇�삤湲곗슜)
-	@PostMapping("/gameRead")
+	@PostMapping("/game_read")
 	public String gameRead(@RequestParam("game_no") String game_no, Model model) {
 		GameDTO dto = gameService.gameRead(game_no);
 		model.addAttribute("dto", dto);
 		model.addAttribute("imgList", gameMapper.getImages(game_no));
-		return "game/gameRead";
+		return "game/game_read";
 	}
 	
 	@GetMapping("gameDelete")
