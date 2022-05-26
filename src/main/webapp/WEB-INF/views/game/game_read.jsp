@@ -51,7 +51,7 @@
 
             <div class="game_side_info">
                 <div class="g_menu">
-                    <span class="span_name">가격 </span> <span class="span_result">${dto.game_price}</span>
+                    <span class="span_name">가격 </span> <span class="span_result">₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${dto.game_price}" /></span>
                 </div>
 
                 <div class="span_line"></div>

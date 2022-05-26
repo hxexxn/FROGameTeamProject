@@ -59,7 +59,7 @@
 					<span> <a href="/userMyPage"> <c:out value="${nick}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_id eq 'admin'}">
-							<span><a href="/testadmin">관리</a></span>
+							<span><a href="/testadmin">대시보드</a></span>
 						</c:if>
 						<c:if test="${sessionScope.user_id ne 'admin'}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
