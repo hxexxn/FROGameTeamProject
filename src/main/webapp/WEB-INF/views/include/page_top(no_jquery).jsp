@@ -51,10 +51,16 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
-              <c:set var="sess" value="${sessionScope.user_id}"></c:set>
+              <c:set var="sess" value="${sessionScope.user_id}"/>
                 <div class="userBox">
-                    <span> <c:out value="${sess}"/></span>
-                    <span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
+					
+						<c:if test="${sessionScope.user_id eq 'admin'}">
+							<span><a href="/testadmin">관리</a></span>
+						</c:if>
+						<c:if test="${sessionScope.user_id ne 'admin'}">
+							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
+						</c:if>
                     <span><a href="/userLogout">로그아웃</a></span>
                 </div>
               </c:if>
@@ -68,32 +74,35 @@
                 
                 <ul id="menuTitle">
 
-                    <li><a href="hotGame">인기 게임</a>
-                        <ul id="subMenu">
-                            <li><a href="#">게임</a></li>
-                            <li><a href="#">게임</a></li>
-                            <li><a href="#">게임</a></li>
-                        </ul>
+                     <li>
+                    	<a href="game_hot_list">인기 게임</a>
                     </li>
 
-                    <li><a href="newGame">신작 게임</a>
-                        <ul id="subMenu">
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                        </ul>
+                    <li>
+                    	<a href="game_new_list">신작 게임</a>
                     </li>
+                    
                     <li><a href="gameList">게임</a>
                         <ul id="subMenu">
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                            <li><a href="#">신작게임</a></li>
-                        </ul></li>
-                    <li><a href="noticeList">공지사항</a>
+                        
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=A">FPS</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=B">RPG</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">공포</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=D">로그라이크</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=E">시뮬레이션</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=F">어드벤쳐</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=G">전략</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=H">액션</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=I">기타</a></li>
+                            
+                        </ul>
+                      </li>
+                        
+                  <li><a href="noticeList">공지사항</a>
                         <ul id="subMenu">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">1 : 1 문의</a></li>
-                            <li><a href="#">문의내역</a></li>
+                            <li><a href="noticeList">공지사항</a></li>
+                            <li><a href="questionList">1 : 1 문의</a></li>
+                            <li><a href="indexFAQ">문의내역</a></li>
                         </ul></li>
                 </ul>
 

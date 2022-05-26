@@ -18,7 +18,7 @@ public interface QuestionMapper {
 	
 	void questionViewCount(String question_no);
 	
-	public int getTotal();
+	public int getTotal(Criteria cri);
 
 	public List<QuestionDTO> getListPaging(Criteria cri);
 
@@ -27,6 +27,8 @@ public interface QuestionMapper {
 	void questionDelete(String question_no);
 
 	void questionUpdate(QuestionDTO dto);
+
+	List<QuestionDTO> admin_questionList(Criteria cri);
 
 	
 

@@ -103,12 +103,13 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
-              <c:set var="sess" value="${sessionScope.user_nick}"/>
+              <c:set var="nick" value="${sessionScope.user_nick}"/>
+              <c:set var="sess" value="${sessionScope.user_id}"/>
                 <div class="userBox">
-					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
+					<span> <a href="/userMyPage"> <c:out value="${nick}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_level eq true}">
-							<span><a href="/testadmin">관리</a></span>
+							<span><a href="/testadmin">대시보드</a></span>
 						</c:if>
 						<c:if test="${sessionScope.user_level ne true}">
 							<span><a href="/cartList?cart_user_id=${sess}">장바구니</a></span>
@@ -141,14 +142,14 @@
                         <ul id="subMenu">
                         
                             <li><a href="gameList?pageNum=1&amount=4&keyword=&type=A">FPS</a></li>
-                            <li><a href="#">RPG</a></li>
-                            <li><a href="#">공포</a></li>
-                            <li><a href="#">로그라이크</a></li>
-                            <li><a href="#">시뮬레이션</a></li>
-                            <li><a href="#">어드벤쳐</a></li>
-                            <li><a href="#">전략</a></li>
-                            <li><a href="#">액션</a></li>
-                            <li><a href="#">기타</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=B">RPG</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">공포</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=D">로그라이크</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=E">시뮬레이션</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=F">어드벤쳐</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=G">전략</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=H">액션</a></li>
+                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=I">기타</a></li>
                             
                         </ul>
                      </li>

@@ -3,29 +3,24 @@
 var IMP = window.IMP; // 생략 가능
 IMP.init("imp19597628"); // 예: imp00000000
 
+var totalPrice = $("#totalPrice").val();
+var nick = $("#nick").val();
+
 function requestPay() {
-	var arr = new Array();
-	
+	alert(nick);
 	// IMP.request_pay(param, callback) 결제창 호출
 	IMP.request_pay({ // param
 		pg: "kakaopay",
 		pay_method: "trans",
-		merchant_uid: $("#cart_no").val(),
-		name: $("#game_title").val(),
-		amount: $("#game_price").val(),
-		buyer_email: $("#user_email").val(),
-		buyer_name: $("#user_nick").val()
+		merchant_uid: "ss-014",
+		name: "1",
+		amount: totalPrice,
+		buyer_email: "1",
+		buyer_name: nick
 	}, function(rsp) { // callback
 		if (rsp.success) {
 			// jQuery로 HTTP 요청
-			$.ajax({
-				url: "/gameSell", // 예: https://www.myservice.com/payments/complete
-				type: "POST",
-				data: {
-					imp_uid: rsp.imp_uid,
-					merchant_uid: rsp.merchant_uid,
-				}
-			})
+			alert('결제성공');
 		} else {
 			alert('결제실패');
 		}

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -68,7 +68,7 @@
 
             <div class="qnalist">
                 <div>
-                    <a href="#">Q&A</a>
+                    <a href="admin_question_list">Q&A</a>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
                 <div class="notice_section">
                     <div class="notice_title">
                         <div>
-                            <a href="#">Notice</a>
+                            <a href="admin_notice_list">Notice</a>
                         </div>
                     </div>
 
@@ -174,7 +174,34 @@
                     </div>
                 </div>
     
-                <div class="qna_section">
+                <div class="qna_section"> 
+                		<div class="notice_title">
+                        <div>
+                            <a href="admin_question_list">QnA</a>
+                        </div>
+                    </div>
+
+                    <div class="notice_subject">
+                        <div class="n_subject">제목</div>
+                        <div class="n_regdate">작성일</div>
+                    </div>
+                    
+					<c:forEach var="questionList" items="${questionList}" varStatus="status" end="6">
+					
+                    <div class="notice_content">
+                        <div class="n_subject">${questionList.question_title}</div>
+                        <div class="n_regdate"><fmt:formatDate pattern="yyyy-MM-dd"
+							value="${questionList.question_regdate}" /></div>
+                    </div>
+                    
+                  </c:forEach>
+                 
+
+                    <div class="moreBtn">
+                        <div>
+                            <a href="admin_question_list">more</a>
+                        </div>
+                    </div>
                     
                 </div>
 

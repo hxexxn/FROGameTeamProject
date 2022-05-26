@@ -30,13 +30,13 @@ integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
 
 crossorigin="anonymous"></script>
 
- 
+<!-- iamport.payment.js -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 
 
 
 <c:set var="sess" value="${sessionScope.user_id}"/>
-
- 
+<c:set var="nick" value="${sessionScope.user_nick}"/>
 
 <jsp:include page="../include/page_top.jsp" flush="false"/>
 
@@ -72,12 +72,6 @@ crossorigin="anonymous"></script>
       		<img src="${img}" width="300px">
 
           <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
-
-          <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
-          <input type="hidden" value="${cList[status.index].gameDto.game_title}" id="game_title" name="game_title">
-          <input type="hidden" value="${cList[status.index].gameDto.game_price}" id="game_price" name="game_price">
-          <input type="hidden" value="${cList[status.index].userDto.user_email}" id="user_email" name="user_email">
-          <input type="hidden" value="${cList[status.index].userDto.user_nick}" id="user_nick" name="user_nick">
 
       </div>
 
@@ -121,6 +115,8 @@ crossorigin="anonymous"></script>
 
 <p>합계 : <c:out value="${totalPrice}"/>원</p> 
 
+<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
+<input type="hidden" value="${nick}" name="nick" id="nick">
 <button onclick="requestPay()"> 결제하기 </button>
 
 </div> 
@@ -142,7 +138,7 @@ crossorigin="anonymous"></script>
  
  
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 	var list1 = new Array();
 	
@@ -162,11 +158,11 @@ crossorigin="anonymous"></script>
 
 
 
-</script> 
+</script>  -->
 
 <jsp:include page="../include/page_bottom.jsp" flush="false"/>
 
-<script type="text/javascript" src="${path}/resources/js/cartList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
 
 </body>
 

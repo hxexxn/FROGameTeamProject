@@ -12,6 +12,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="${path}/resources/css/game_hot_list.css">
     <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
+        <style>
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500&display=swap');
+	</style>
 </head>
 <body>
 
