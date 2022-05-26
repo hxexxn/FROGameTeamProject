@@ -40,18 +40,30 @@
 
 	<!-- 검색 조건문 -->
 	<sql id="criteria">
-		<trim prefix="order by" suffix="desc" prefixOverrides="OR">
+		<trim prefix="where" suffix="desc" prefixOverrides="OR">
 			<foreach collection="typeArr" item="type">
 				<trim prefix="OR">
 					<choose>
-						<when test="type == 'T'.toString()">
-							game_release
+						<when test="type == 'R'.toString()">
+							<![CDATA[
+							game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_release 
 						</when>
-						<when test="type == 'C'.toString()">
-							game_sellcount
+						<when test="type == 'S'.toString()">
+							<![CDATA[
+							game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_sellcount
 						</when>
-						<when test="type == 'W'.toString()">
-							game_price
+						<when test="type == 'P'.toString()">
+							<![CDATA[
+							game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_price
+						</when>
+						<when test="type == 'A'.toString()">
+							game_genre = 'FPS' order by game_release
 						</when>
 					</choose>
 				</trim>
@@ -132,9 +144,6 @@
 		resultType="com.frogame.www.model.GameDTO">
 		select * from gameTBL
 		<if test="keyword != null">
-		<![CDATA[
-			where game_title like concat('%',#{keyword},'%')
-			]]>
 			<include refid="criteria"></include>
 		</if>
 		limit #{skip},#{amount}
