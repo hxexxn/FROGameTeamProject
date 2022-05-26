@@ -69,7 +69,6 @@
 						</div>
 						<div class="gamePrice">
 							<div>${cList[status.index].gameDto.game_price}</div>
-
 						</div>
 
 						<div class="cartDelete">
@@ -107,8 +106,9 @@
 		</div>
 
 	</div>
-
-
+	
+<input type="hidden" value="${cList[0].userDto.user_email}" name="user_email" id="user_email">
+<input type="hidden" value="${cList[0].cart_no}" name="cart_no" id="cart_no">
 <input type="hidden" value="${cList[0].gameDto.game_title}" name="game_title" id="game_title">
 <input type="hidden" value="${img.size()}" name="size" id="size">
 <input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">

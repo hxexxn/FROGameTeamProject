@@ -94,7 +94,7 @@
 		parameterType="com.frogame.www.model.CartDTO" resultMap="CartDTO">
 		SELECT
 		ct.cart_no, ct.cart_game_no, ct.cart_user_id, gt.game_title,
-		gt.game_price, it.file
+		gt.game_price, it.file, ut.user_email
 		from cartTBL ct
 		inner join gameTBL gt
 		on ct.cart_game_no = gt.game_no
