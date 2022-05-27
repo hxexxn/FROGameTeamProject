@@ -123,6 +123,9 @@ function questionCommentDelete(question_comment_no){
         alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); 
        } 
       });
+
+
+
 	
 }
 
