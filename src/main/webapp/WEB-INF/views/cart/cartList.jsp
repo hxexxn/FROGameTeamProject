@@ -173,7 +173,7 @@
 		id="cart_no">
 	<input type="hidden" value="${cList[0].gameDto.game_title}"
 		name="game_title" id="game_title">
-	<input type="hidden" value="${img.size()}" name="size" id="size">
+	<input type="hidden" value="${cList.size()}" name="size" id="size">
 	<input type="hidden" value="${totalPrice}" name="totalPrice"
 		id="totalPrice">
 	<input type="hidden" value="${nick}" name="nick" id="nick">

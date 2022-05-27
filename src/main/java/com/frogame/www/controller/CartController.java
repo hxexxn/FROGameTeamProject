@@ -76,9 +76,14 @@ public class CartController {
 	}
 	
 	@PostMapping("/paySuccess")
-	public String paySuccess() {
+	@ResponseBody
+	public String paySuccess(@RequestParam("size") String size) {
+		System.out.println(size);
+		int length = Integer.parseInt(size);
+		for (int i = 0; i<length ; i++) {
+			System.out.println(i);
+		}
 		
-		return "/";
+		return "test";
 	}
-	
 }
