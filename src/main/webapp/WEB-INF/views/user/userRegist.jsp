@@ -55,10 +55,8 @@
 						<td>회원 탈퇴 후 5일까지</td>
 					</tr>
 				</table>
-				<span><input type="checkbox" name="user_info_check"
-					id="user_info_check"></span> <span><label
-					for="user_info_check" class="user_info_check">개인정보 수집 및 이용에
-						동의합니다.</label></span>
+				<span><input type="checkbox" name="user_info_check" id="user_info_check"></span> 
+				<span><label for="user_info_check" class="user_info_check">개인정보 수집 및 이용에 동의합니다.</label></span>
 			</div>
 
 		</div>
