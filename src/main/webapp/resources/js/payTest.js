@@ -23,7 +23,7 @@ function requestPay() {
 		if (rsp.success) {
 			// jQuery로 HTTP 요청
 			 alert("결제 성공");
-			jQuery.ajax({
+			$.ajax({
             url: "/paySuccess", // 예: https://www.myservice.com/payments/complete
             method: "POST",
             headers: { "Content-Type": "application/json" },

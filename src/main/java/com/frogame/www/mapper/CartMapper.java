@@ -18,6 +18,6 @@ public interface CartMapper {
 	
 	List<CartDTO> cartList(String cart_user_id);
 	
-	void cartDelete(String cart_no);
+	void cartDelete(@Param("cart_no")String cart_no);
 	
 }
