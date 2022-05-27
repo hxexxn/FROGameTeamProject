@@ -33,81 +33,6 @@
 	<c:set var="sess" value="${sessionScope.user_id}" />
 	<c:set var="nick" value="${sessionScope.user_nick}" />
 
-<jsp:include page="../include/page_top.jsp" flush="false"/>
-
- 
-
-<div id="contentFrame">
-
-	<div id="wrap">
-	 
-		<c:set var="totalPrice" value="${0}"/>
-		
-		<c:forEach var="img" items="${img}" varStatus="status">
-	
-		<form action="cartDelete" method="post">
-	 
-			<div id="cartGameList">
-		
-		      <div class="gameTitle"> 
-		
-		      <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
-		      <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
-		      
-		
-		      		<img src="${img}" width="300px">
-		
-		          <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
-		          <div id="bbb">
-		          <input type="text" value="${cList[status.index].gameDto.game_title}">
-		         </div>
-		
-		
-		      </div>
-		
-		      <div class="gamePrice"> 
-		
-		          <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
-		
-		      </div>
-		 
-		      <div class="delBtn">
-		
-		      <!-- <button type="button" id="cartDelBtn"> ajax 삭제</button> -->
-		
-		     
-		
-		      <button type="submit">ajax delete</button>
-		
-		      <!-- <a href="#" id="cartDelBtn">a태그 테스트</a> -->
-		
-		      </div>
-		
-		        </div>
-		
-		<c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
-	</form>
-	</c:forEach>
-	
-	 
-	
-	<div class="totalPrice">
-	
-	<p>합계 : <c:out value="${totalPrice}"/>원</p> 
-	
-	<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
-	<input type="hidden" value="${nick}" name="nick" id="nick">
-	<button onclick="requestPay()"> 결제하기 </button>
-	
-	</div> 
-	
-	<div>
-	
-	 
-	
-	</div>
-	
-	  </div>
 	<jsp:include page="../include/page_top.jsp" flush="false" />
 
 	<div id="contentFrame">
@@ -118,14 +43,48 @@
 			<div class="cartTitle">
 				<h1>CART LIST</h1>
 			</div>
+<<<<<<< HEAD
+			
+=======
 			<c:forEach var="img" items="${img}" varStatus="status">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 				<form action="cartDelete" method="post">
+<<<<<<< HEAD
+					<div class="wrap1">
+					
+<c:forEach var="img" items="${img}" varStatus="status">
+=======
+
+				
+					<!--  히든 -->
+
 
 					<div class="block">${cList[status.index].cart_no}</div>
-					<div class="cartListBox">
-						<input type="hidden" value="${sess}" id="cart_user_id"
-							name="cart_user_id">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
+
+						<div class="cartListBox">
+							<input type="hidden" value="${sess}" id="cart_user_id"
+								name="cart_user_id">
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+							<div class="gameImg">
+								<img src="${img}" width="250px" height="150px">
+
+							</div>
+							<div class="gameTitle">
+								<div class="block">${cList[status.index].gameDto.game_title}</div>
+							</div>
+							<div class="gamePrice">
+								<div>${cList[status.index].gameDto.game_price}</div>
+=======
+=======
+							<input type="hidden" value="${cList[status.index].cart_no}" 
+							id="cart_no" name="cart_no">
+					<!-- 히든 -->
+
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 						<div class="gameImg">
 							<img src="${img}" width="250px" height="150px">
 						</div>
@@ -135,21 +94,48 @@
 						<div class="gamePrice">
 							<div>${cList[status.index].gameDto.game_price}</div>
 						</div>
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
-						<div class="cartDelete">
-							<div>
-								<button type="submit" class="deleteButton">삭제</button>
+							</div>
+
+							<div class="cartDelete">
+								<div>
+									<button type="submit" class="deleteButton">삭제</button>
+								</div>
+
 							</div>
 						</div>
+<<<<<<< HEAD
+						</c:forEach>
+=======
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 					</div>
+<<<<<<< HEAD
+
+						<c:set var="totalPrice"
+							value="${totalPrice + cList[status.index].gameDto.game_price}" />
+=======
 					<c:set var="totalPrice"
 						value="${totalPrice + cList[status.index].gameDto.game_price}" />
 						
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 				</form>
+<<<<<<< HEAD
+		
+
+	
+=======
 				
 			</c:forEach>
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 
+<<<<<<< HEAD
+		<div class="cartListBottom">
+			<div class="totalPrice">
+				<span class="totalPrice1">총 주문 금액</span> <span><c:out
+						value="${totalPrice}" /></span> <span class="totalPrice1">원</span>
+=======
 			<div class="cartListBottom">
 				<div class="totalPrice">
 					<span class="totalPrice1">총 주문 금액</span> <span><c:out
@@ -161,11 +147,53 @@
 				<div class="orderBtn">
 					<button onclick="requestPay()" class="button">결제하기</button>
 				</div>
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 			</div>
 
+<<<<<<< HEAD
+			<input type="hidden" value="${totalPrice}" name="totalPrice"
+				id="totalPrice"> <input type="hidden" value="${nick}"
+				name="nick" id="nick">
+
+			<div class="orderBtn">
+				<button onclick="requestPay()" class="button">결제하기</button>
+			</div>
+=======
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 		</div>
 
+
+
+
+
+
+
+		<input type="hidden" value="${cList[0].gameDto.game_title}"
+			name="game_title" id="game_title"> <input type="hidden"
+			value="${img.size()}" name="size" id="size"> <input
+			type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
+		<input type="hidden" value="${nick}" name="nick" id="nick">
+
+
+
+
+
+
 	</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+	
+<input type="hidden" value="${cList[0].userDto.user_email}" name="user_email" id="user_email">
+<input type="hidden" value="${cList[0].cart_no}" name="cart_no" id="cart_no">
+<input type="hidden" value="${cList[0].gameDto.game_title}" name="game_title" id="game_title">
+<input type="hidden" value="${img.size()}" name="size" id="size">
+<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
+<input type="hidden" value="${nick}" name="nick" id="nick">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
+=======
 
 	<input type="hidden" value="${cList[0].userDto.user_email}"
 		name="user_email" id="user_email">
@@ -177,19 +205,34 @@
 	<input type="hidden" value="${totalPrice}" name="totalPrice"
 		id="totalPrice">
 	<input type="hidden" value="${nick}" name="nick" id="nick">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 
+<<<<<<< HEAD
+=======
 	<div></div>
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
+
+<<<<<<< HEAD
 
 
-</div>
 
- 
 
- 
- 
 
+
+=======
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
+
+<<<<<<< HEAD
+
+
+	<!--  <script type="text/javascript">
+=======
+	<script type="text/javascript">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
+=======
 <!--  <script type="text/javascript">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 	var list1 = new Array();
 	
