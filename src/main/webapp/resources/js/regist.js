@@ -152,7 +152,7 @@ $(function(){
 			$('#user_info_check').focus();
 			return false;
 		}
-		
+		alert("회원가입을 환영합니다!");
 		joinInsertForm.submit();
 		
 		
