@@ -6,26 +6,36 @@ var totalPrice = $("#totalPrice").val();
 var nick = $("#nick").val();
 var size = $("#size").val()-1;
 var game_title = $("#game_title").val();
+var order_no = $("#cart_no").val();
+var user_email = $("#user_email").val();
 
 function requestPay() {
 	// IMP.request_pay(param, callback) 결제창 호출
 	IMP.request_pay({ // param
 		pg: "kakaopay",
 		pay_method: "trans",
-		merchant_uid: "ss-015",
+		merchant_uid: "order-" + order_no,
 		name: game_title + " 외 " + size + "종",
 		amount: totalPrice,
-		buyer_email: "1",
+		buyer_email: user_email,
 		buyer_name: nick
 	}, function(rsp) { // callback
 		if (rsp.success) {
 			// jQuery로 HTTP 요청
-			alert('결제성공');
-			location.href();
-		} else {
-			alert('결제실패');
-		}
-	});
+			 alert("결제 성공");
+			jQuery.ajax({
+            url: "/paySuccess", // 예: https://www.myservice.com/payments/complete
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            data: {
+                imp_uid: rsp.imp_uid,
+                merchant_uid: rsp.merchant_uid
+            }
+        })
+      } else {
+        alert("결제에 실패하였습니다. 에러 내용: " +  rsp.error_msg);
+      }
+    });
 }
 
 

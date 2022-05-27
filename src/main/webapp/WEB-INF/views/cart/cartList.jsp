@@ -62,6 +62,7 @@
 							<input type="hidden" value="${sess}" id="cart_user_id"
 								name="cart_user_id">
 
+<<<<<<< HEAD
 							<div class="gameImg">
 								<img src="${img}" width="250px" height="150px">
 
@@ -71,6 +72,18 @@
 							</div>
 							<div class="gamePrice">
 								<div>${cList[status.index].gameDto.game_price}</div>
+=======
+						<div class="gameImg">
+							<img src="${img}" width="250px" height = "150px" >
+							
+						</div>
+						<div class="gameTitle">
+							<div class="block">${cList[status.index].gameDto.game_title}</div>
+						</div>
+						<div class="gamePrice">
+							<div>${cList[status.index].gameDto.game_price}</div>
+						</div>
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 							</div>
 
@@ -126,8 +139,18 @@
 
 
 	</div>
+<<<<<<< HEAD
 
 
+=======
+	
+<input type="hidden" value="${cList[0].userDto.user_email}" name="user_email" id="user_email">
+<input type="hidden" value="${cList[0].cart_no}" name="cart_no" id="cart_no">
+<input type="hidden" value="${cList[0].gameDto.game_title}" name="game_title" id="game_title">
+<input type="hidden" value="${img.size()}" name="size" id="size">
+<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
+<input type="hidden" value="${nick}" name="nick" id="nick">
+>>>>>>> branch 'master' of https://github.com/hxexxn/FROGameTeamProject.git
 
 
 
