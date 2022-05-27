@@ -83,6 +83,7 @@
 				                    </div>
 				
 				                    <div class="radio_box">
+				                    	<div class="genre_result"></div>
 				                        <input type="radio" name="game_genre" id="action" value="액션" class="checkbox1">
 				                        <label for="action">액션</label>
 				
