@@ -200,4 +200,8 @@
 		game_no = #{game_no}
 	</select>
 
+	<update id="gameSellCount">
+		UPDATE gameTBL SET game_sellcount = game_sellcount + 1 WHERE game_no = #{game_no};
+	</update>
+
 </mapper>

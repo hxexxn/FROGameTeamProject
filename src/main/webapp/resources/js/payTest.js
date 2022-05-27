@@ -1,4 +1,4 @@
-
+/*
 var IMP = window.IMP; // 생략 가능
 IMP.init("imp19597628"); // 예: imp00000000
 
@@ -11,7 +11,6 @@ var user_email = $("#user_email").val();
 
 
 function requestPay() {
-	alert(size);
 	if (size > 0) {
 		name = game_title + " 외 " + size + "종"
 	} else {
@@ -33,7 +32,6 @@ function requestPay() {
 			$.ajax({
 				url: "/paySuccess", // 예: https://www.myservice.com/payments/complete
 				method: "POST",
-				headers: { "Content-Type": "application/json" },
 				data: {
 					imp_uid: rsp.imp_uid,
 					merchant_uid: rsp.merchant_uid,
@@ -45,7 +43,7 @@ function requestPay() {
 		}
 	});
 }
-
+*/
 
 function certification() {
 	var test = false;
@@ -60,7 +58,6 @@ function certification() {
 			$.ajax({
 				url: "", // 예: https://www.myservice.com/certifications
 				method: "post",
-				headers: { "Content-Type": "application/json" },
 				data: {
 					imp_uid: rsp.imp_uid,
 					test: test

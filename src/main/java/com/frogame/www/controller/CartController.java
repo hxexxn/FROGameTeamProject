@@ -3,20 +3,23 @@ package com.frogame.www.controller;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.CartDTO;
 import com.frogame.www.service.CartService;
+
+
 
 @Controller
 public class CartController {
@@ -75,15 +78,16 @@ public class CartController {
 		return "redirect:/cartList";
 	}
 	
+	// 결제 성공시 장바구니 비우고 판매수 +1
 	@PostMapping("/paySuccess")
 	@ResponseBody
-	public String paySuccess(@RequestParam("size") String size) {
-		System.out.println(size);
-		int length = Integer.parseInt(size);
-		for (int i = 0; i<length ; i++) {
-			System.out.println(i);
+	public String paySuccess(@RequestParam(value="game_no[]") List<String> game_no, @RequestParam(value="cart_no[]") List<String> cart_no) {
+		for(String i : cart_no) {
+			cartService.cartDelete(i);
 		}
-		
-		return "test";
+		for(String i : game_no) {
+			gameMapper.gameSellCount(i);
+		}
+		return "Success";
 	}
 }
