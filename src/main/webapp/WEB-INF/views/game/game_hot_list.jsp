@@ -93,8 +93,9 @@
 	                    </div>
 	                    <div class="bestGame-infoBox">
 	                        <div class="bestGame-titleBox">
-	                        
-	                            <span>${list[status.index].game_title}</span>
+	                            <a href="gameReadTest?game_no=${list[status.index].game_no}">
+	                            	<span>${list[status.index].game_title}</span>
+	                            </a>
 	                        </div>
 	                        <div class="game_tag">
 	                            <div class="genre">${list[status.index].game_genre}</div>
@@ -129,7 +130,9 @@
 	                    </div>
 	                    <div class="bestGame-infoBox">
 	                        <div class="bestGame-titleBox">
-	                            <span>${list[status.index].game_title}</span>
+	                            <a href="gameReadTest?game_no=${list[status.index].game_no}">
+	                            	<span>${list[status.index].game_title}</span>
+	                            </a>
 	                        </div>
 	                        
 	                        <div class="game_tag">
