@@ -38,9 +38,7 @@ public class GameController {
 	public String saveImage(@RequestParam("file") MultipartFile[] file, GameDTO dto) {
 		try {
 
-			System.out.println("dto 媛� �솗�씤 :" + dto.getGame_platform());
 			gameService.newInsert(dto);
-			System.out.println("寃뚯엫 �벑濡� �셿猷�.");
 			
 			for(int i=0; i<file.length; i++) {
 				byte[] img = file[i].getBytes();
@@ -50,7 +48,7 @@ public class GameController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/gameList";
+		return "redirect:/admin_game_list";
 	}
 
 	// 寃뚯엫 紐⑸줉 (�쑀���슜)

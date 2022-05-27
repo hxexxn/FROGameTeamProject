@@ -75,4 +75,10 @@ public class CartController {
 		return "redirect:/cartList";
 	}
 	
+	@PostMapping("/paySuccess")
+	public String paySuccess() {
+		
+		return "/";
+	}
+	
 }
