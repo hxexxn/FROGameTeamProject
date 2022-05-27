@@ -12,6 +12,10 @@
 <jsp:include page="../admin_include/admin_top.jsp" flush="false"/>
   <!-- 게임 등록 출력 -->
   
+  <!-- 제이쿼리 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
   
                 <div class="game_insert_box" id="tab-3">
                     
@@ -28,6 +32,7 @@
 				                    </div>
 				                    <div class="subject_input">
 				                        <input type="text" name="game_title" id="game_title">
+				                        <div class="title_result"></div>
 				                    </div>
 				                </div>
 				
@@ -53,6 +58,7 @@
 				                        </div>
 				                        <div class="price_input">
 				                            <input type="text" name="game_price" id="game_price">
+				                            <div class="price_result"></div>
 				                        </div>
 				                    </div>
 				
@@ -63,6 +69,7 @@
 				                        </div>
 				                        <div class="input_date">
 				                            <input type="date" name="game_release" id="game_release">
+				                            <div class="release_result"></div>
 				                        </div>
 				                    </div>
 				
@@ -224,6 +231,7 @@
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 <script type="text/javascript" src="${path}/resources/js/gameInsert.js"></script>
 <script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_game_insert.js"></script>
 
 </body>
 </html>

@@ -45,94 +45,75 @@ crossorigin="anonymous"></script>
 
 <div id="contentFrame">
 
- 
-
-<div id="wrap">
- 
-
-<c:set var="totalPrice" value="${0}"/>
-
-
-
-<c:forEach var="img" items="${img}" varStatus="status">
-
-
-<form action="cartDelete" method="post">
- 
-
- 
-<div id="cartGameList">
-
-       
-
-      <div class="gameTitle"> 
-
-      <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
-      
-
-      		<img src="${img}" width="300px">
-
-          <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
-          <div id="bbb">
-          <input type="text" value="${cList[status.index].gameDto.game_title}">
-         </div>
-
-
-      </div>
-
- 
-
-      <div class="gamePrice"> 
-
-          <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
-
-      </div>
-
- 
-
-      <div class="delBtn">
-
-      <!-- <button type="button" id="cartDelBtn"> ajax 삭제</button> -->
-
-     
-
-      <button type="submit">ajax delete</button>
-
-      <!-- <a href="#" id="cartDelBtn">a태그 테스트</a> -->
-
-      </div>
-
-        </div>
-
- 
-
-
-
- 
-
-<c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
-</form>
-</c:forEach>
-
- 
-
-<div class="totalPrice">
-
-<p>합계 : <c:out value="${totalPrice}"/>원</p> 
-
-<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
-<input type="hidden" value="${nick}" name="nick" id="nick">
-<button onclick="requestPay()"> 결제하기 </button>
-
-</div> 
-
-<div>
-
- 
-
-</div>
-
-  </div>
+	<div id="wrap">
+	 
+		<c:set var="totalPrice" value="${0}"/>
+		
+		<c:forEach var="img" items="${img}" varStatus="status">
+	
+		<form action="cartDelete" method="post">
+	 
+			<div id="cartGameList">
+		
+		      <div class="gameTitle"> 
+		
+		      <input type="hidden" value="${sess}" id="cart_user_id" name="cart_user_id">
+		      <input type="hidden" value="${cList[status.index].cart_no}" id="cart_no" name="cart_no">
+		      
+		
+		      		<img src="${img}" width="300px">
+		
+		          <p> * 품명 : ${cList[status.index].gameDto.game_title}</p>
+		          <div id="bbb">
+		          <input type="text" value="${cList[status.index].gameDto.game_title}">
+		         </div>
+		
+		
+		      </div>
+		
+		      <div class="gamePrice"> 
+		
+		          <p> * 가격 : ${cList[status.index].gameDto.game_price}</p>
+		
+		      </div>
+		 
+		      <div class="delBtn">
+		
+		      <!-- <button type="button" id="cartDelBtn"> ajax 삭제</button> -->
+		
+		     
+		
+		      <button type="submit">ajax delete</button>
+		
+		      <!-- <a href="#" id="cartDelBtn">a태그 테스트</a> -->
+		
+		      </div>
+		
+		        </div>
+		
+		<c:set var="totalPrice" value="${totalPrice + cList[status.index].gameDto.game_price}"/>
+	</form>
+	</c:forEach>
+	
+	 
+	
+	<div class="totalPrice">
+	
+	<p>합계 : <c:out value="${totalPrice}"/>원</p> 
+	
+	<input type="hidden" value="${totalPrice}" name="totalPrice" id="totalPrice">
+	<input type="hidden" value="${nick}" name="nick" id="nick">
+	<button onclick="requestPay()"> 결제하기 </button>
+	
+	</div> 
+	
+	<div>
+	
+	 
+	
+	</div>
+	
+	  </div>
 
  
 
