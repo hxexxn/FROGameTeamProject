@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 전체 감싸는 영역 */
+#notice_insert_content {
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+#notice_insert_content > div > div {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+/* 가격 및 출시일 박스 */
+.notice_head_subject,
+.notice_information {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 20px 0 20px;
+}
+
+/* 인풋 창 */
+.information .textarea_box,
+.subject_input {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#notice_content {
+    outline: none;
+}
+input {
+    outline: none;
+}
+
+.subject_input > input {
+    width: 99%;
+    border: 1px solid lightgray;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+/* 게임정보 입력 인풋 */
+textarea {
+    width: 99%;
+    height: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/* 등록 버튼 */
+
+.regist {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#registBtn {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    background-color: #f5f5f5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#registBtn:hover {
+    background-color: #07553B;
+    color: white;
+}

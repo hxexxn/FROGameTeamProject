@@ -225,12 +225,6 @@
 	
 	<!--  유저/비유저가 관리자 페이지에 점근시  -->
 	
-	<c:if test="${empty sessionScope.user_id}">
-
-		    <jsp:include page="../include/error403.jsp" flush="false"/>
-		    
-	    </c:if>
-	
 		<c:if test="${sessionScope.user_id ne 'admin'}">
 
 		    <jsp:include page="../include/error403.jsp" flush="false"/>
@@ -238,6 +232,12 @@
 	    </c:if>
 	    
 	</c:if>
+	
+	<c:if test="${empty sessionScope.user_id}">
+
+		    <jsp:include page="../include/error403.jsp" flush="false"/>
+		    
+	    </c:if>
 
 </body>
 </html>
