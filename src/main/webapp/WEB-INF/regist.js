@@ -2,6 +2,7 @@ var nick_check = false;
 var id_check = false;
 
 $(function(){
+	
 	// 아이디 중복 체크
 	$('#idDupBtn').click(function(){
 		
@@ -49,7 +50,6 @@ $(function(){
 	$('#joinBtn').click(function(){
 		
 		var joinInsertForm = $('#joinInsertForm');
-		var user_info_check = $('#user_info_check').val();
 	
 		var user_id = $('#user_id').val();
 		var user_pw = $('#user_pw').val();
@@ -144,20 +144,8 @@ $(function(){
 			return false;
 		}
 		
-		// 개인정보 수집 및 이용 동의 체크
-		if (!user_info_check == false) {
-			alert('개인정보 수집 및 이용 동의에 체크해주세요');
-			$('#user_info_check').val("");
-			$('#user_info_check').focus();
-			return false;
-		}
-		alert("회원가입을 환영합니다!");
 		joinInsertForm.submit();
 		
-		
-		
 	})
-	
-	
 	
 })

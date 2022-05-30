@@ -73,13 +73,11 @@ public class GameController {
 	@GetMapping("/game_list")
 	public String result (Model model, Criteria cri) {
 		List<GameDTO> list = gameService.getListPaging(cri);
-		int total = gameService.getTotal(cri);
 		int tagtotal = gameService.tagTotal(cri);
 		List<String> imgList = new ArrayList<String>();
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
 			}
-		
 		PageMakerDTO pageMake = new PageMakerDTO(cri, tagtotal);
 		model.addAttribute("pageMaker", pageMake);
 		model.addAttribute("list", list);

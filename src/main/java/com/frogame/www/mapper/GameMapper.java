@@ -41,4 +41,7 @@ public interface GameMapper {
 
 	int tagTotal(Criteria cri);
 
+	void gameSellCount(String i);
+
+
 }

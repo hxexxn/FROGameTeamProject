@@ -287,10 +287,14 @@ a:hover {
     justify-content: space-evenly;
 }
 
+.saleGameSection{
+	margin-top: 5%;
+}
+
 .bestGame-contentBox,
 .saleGame-contentBox {
-    width: 250px;
-    height: 390px;
+    width: 300px;
+    height: 300px;
     background-color: #ffffff;
     align-items: center;
     border-radius: 5px;
@@ -361,7 +365,7 @@ a:hover {
 
 #anotherGameList {
     /* border: 1px solid rebeccapurple; */
-    width: 30%;
+    width: 45%;
     height: auto;
 }
 
@@ -453,5 +457,48 @@ a:hover {
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: 1px;
+}
+
+.margin_right{
+	margin-right: 5%;
+	margin-bottom: 15px;
+}
+
+.game_tag {
+	padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.genre {
+    height: 21px;   
+    background-color: #eeeeee;
+    color: #696969;
+    line-height: 20px;
+    border-radius: 3px;
+    padding-top: 1px;
+    font-size: 10px;
+    float: left;
+    margin-right: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+.platform {
+    height: 21px;   
+    background-color: #eeeeee;
+    color: #696969;
+    line-height: 20px;
+    border-radius: 3px;
+    padding-top: 1px;
+    font-size: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
 }
 

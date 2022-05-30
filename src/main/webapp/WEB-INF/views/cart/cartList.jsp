@@ -51,7 +51,6 @@
 					<!--  히든 -->
 
 
-					<div class="block">${cList[status.index].cart_no}</div>
 
 					<div class="cartListBox">
 						<input type="hidden" value="${sess}" id="cart_user_id"
@@ -117,26 +116,79 @@
 	<div></div>
 
 
-<!--  <script type="text/javascript">
+<script type="text/javascript">
 
 	var list1 = new Array();
+	var list2 = new Array();
 	
 	<c:forEach var="cList" items="${cList}" >
 	
-		list1.push("${cList.gameDto.game_title}");
-	
+	list1.push("${cList.cart_no}");
+	list2.push("${cList.cart_game_no}");
+		
 	</c:forEach>
 	
 	for (var test in list1){
 		console.log('for문 콘솔 : '+ list1[test]);
+		console.log('game_no : ' + list2[test]);
 	}
 
+	var list_no = {
+		"cart_no" : list1,
+		"game_no" : list2	
+	}
+	
+	console.log(list_no);
+	
+	var IMP = window.IMP; // 생략 가능
+	IMP.init("imp19597628"); // 예: imp00000000
 
-</script>  -->
+	var size = $("#size").val() - 1;
+	var game_title = $("#game_title").val();
+	var order_no = "order_ser_no--" + $("#cart_no").val();
+	
+
+	function requestPay() {
+		if (size > 0) {
+			name = game_title + " 외 " + size + "종"
+		} else {
+			name = game_title
+		}
+		// IMP.request_pay(param, callback) 결제창 호출
+		IMP.request_pay({ // param
+			pg: "kakaopay",
+			pay_method: "trans",
+			merchant_uid: order_no,
+			name: name,
+			amount: $("#totalPrice").val(),
+			buyer_email: $("#user_email").val(),
+			buyer_name: $("#nick").val()
+		}, function(rsp) { // callback
+			if (rsp.success) {
+				alert("결제 성공");
+				$.ajax({
+					url: "/paySuccess", // 예: https://www.myservice.com/payments/complete
+					method: "POST",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data: list_no,
+					success: function(data) {
+						if(data == "Success"){
+							location.href="/";
+						}
+					}
+				})
+			} else {
+				alert("결제에 실패하였습니다. 에러 내용: " + rsp.error_msg);
+			}
+		});
+	} 
+	
+
+</script>
 
 	<jsp:include page="../include/page_bottom.jsp" flush="false" />
 
-	<script type="text/javascript" src="${path}/resources/js/payTest.js"></script>
+	<%-- <script type="text/javascript" src="${path}/resources/js/payTest.js"></script> --%>
 
 </body>
 </html>
