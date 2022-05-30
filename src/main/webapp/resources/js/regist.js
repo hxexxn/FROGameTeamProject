@@ -2,7 +2,7 @@ var nick_check = false;
 var id_check = false;
 
 $(function(){
-	
+	alert(user_info_check);
 	// 아이디 중복 체크
 	$('#idDupBtn').click(function(){
 		

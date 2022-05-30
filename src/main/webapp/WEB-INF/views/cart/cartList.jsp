@@ -51,7 +51,6 @@
 					<!--  히든 -->
 
 
-					<div class="block">${cList[status.index].cart_no}</div>
 
 					<div class="cartListBox">
 						<input type="hidden" value="${sess}" id="cart_user_id"

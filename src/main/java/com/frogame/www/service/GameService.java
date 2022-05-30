@@ -33,4 +33,5 @@ public interface GameService {
 
 	int tagTotal(Criteria cri);
 
+
 }
