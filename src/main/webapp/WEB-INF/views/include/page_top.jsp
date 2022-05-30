@@ -85,18 +85,18 @@
                     	<a href="game_new_list">신작 게임</a>
                     </li>
                     
-                    <li><a href="game_list?pageNum=1&amount=4&keyword=&type=R">게임</a>
+                    <li><a href="game_list?pageNum=1&amount=6&keyword=&type=R">게임</a>
                         <ul id="subMenu">
                         
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=A">FPS</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=B">RPG</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=C">공포</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=D">로그라이크</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=E">시뮬레이션</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=F">어드벤쳐</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=G">전략</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=H">액션</a></li>
-                            <li><a href="gameList?pageNum=1&amount=4&keyword=&type=I">기타</a></li>
+                            <li><a href="game_list?pageNum=1&amount=6&keyword=&type=A">FPS</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=B">RPG</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=C">공포</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=D">로그라이크</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=E">시뮬레이션</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=F">어드벤쳐</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=G">전략</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=H">액션</a></li>
+	                     <li><a href="game_list?pageNum=1&amount=6&keyword=&type=I">기타</a></li>
                             
                         </ul>
                      </li>

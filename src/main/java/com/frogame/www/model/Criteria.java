@@ -49,7 +49,7 @@ public class Criteria {
 
     /* 기본 생성자 -> 기본 세팅 : pageNum = 1, amount = 4 */
     public Criteria() {
-        this(1,4);
+        this(1,6);
         this.skip = 0;
     }
     
