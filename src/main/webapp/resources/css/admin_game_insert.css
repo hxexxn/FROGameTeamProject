@@ -16,6 +16,10 @@ h1 {
     margin-bottom: 50px;
 }
 
+form {
+	margin-bottom: 50px;
+}
+
 #game_insert_content > div > div {
     margin-bottom: 20px;
     font-size: 0.8rem;

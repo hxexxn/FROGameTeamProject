@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항 게시판 글쓰기</title>
-<link rel="stylesheet" href="/resources/css/read.css">
+<link rel="stylesheet" href="${path}/resources/css/read.css">
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR&family=Playfair+Display:wght@500&display=swap')

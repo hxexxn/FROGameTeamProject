@@ -85,7 +85,7 @@
                     	<a href="game_new_list">신작 게임</a>
                     </li>
                     
-                    <li><a href="gameList?pageNum=1&amount=4&keyword=&type=R">게임</a>
+                    <li><a href="game_list?pageNum=1&amount=4&keyword=&type=R">게임</a>
                         <ul id="subMenu">
                         
                             <li><a href="gameList?pageNum=1&amount=4&keyword=&type=A">FPS</a></li>

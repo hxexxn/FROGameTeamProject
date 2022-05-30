@@ -1,16 +1,7 @@
-$(function() {
+$(function(){
 
 	var moveForm = $("#moveForm");
-
-	$('#gameInsertBtn').click(function() {
-
-		var gameInsertForm = $('#gameInsertForm');
-
-		gameInsertForm.submit();
-
-	})
-
-
+	
 	$(".pageInfo a").on("click", function(e) {
 
 		e.preventDefault();
@@ -31,19 +22,5 @@ $(function() {
 		moveForm.find("input[name='pageNum']").val(1);
 		moveForm.submit();
 	});
-	
-	$("#indexBtn").on("click", function(e) {
-		e.preventDefault();
-
-		let type = $("#type").val();
-		let keyword = $("input[name='keyword']").val();
-
-		moveForm.find("input[name='type']").val(type);
-		moveForm.find("input[name='keyword']").val(keyword);
-		moveForm.find("input[name='pageNum']").val(1);
-		moveForm.submit();
-	});
-	
-	
 	
 })

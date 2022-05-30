@@ -38,7 +38,7 @@
 						
 						        <div class="list">
 						            <div class="notice_no">${noticeList.notice_no}</div>
-						            <div class="notice_head">${noticeList.notice_title}</div>
+						            <div class="notice_head"><a href="/admin_notice_read?notice_no=${noticeList.notice_no}">${noticeList.notice_title}</a></div>
 						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${noticeList.notice_regdate}"/></div>
 						          	<div class="notice_writer">${noticeList.notice_writer}</div>
 						            <div class="notice_delete"><a href="/noticeDelete?notice_no=${noticeList.notice_no}">삭제</a></div>

@@ -25,7 +25,7 @@
                         <span>제목</span>
                     </div>
                     <div class="subject_input">
-                        <input type="text" name="notice_title" id="notice_title">
+                        <input type="text" name="notice_title" id="notice_title" value="${dto.notice_title}">
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="textarea_box">
-                        <textarea name="notice_content" id="notice_content" cols="50" rows="20"></textarea>
+                        <textarea name="notice_content" id="notice_content" cols="50" rows="20" >${dto.notice_content}</textarea>
                     </div>
                     
                     <div>

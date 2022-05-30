@@ -238,6 +238,8 @@ body {
 
 /* 푸터 */
 .footer {
+	bottom: 0;
+	position: fixed;
     margin-top: 50px;
     margin: 0 auto;
     width: 100%;

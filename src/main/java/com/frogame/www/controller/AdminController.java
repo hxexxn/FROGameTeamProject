@@ -46,30 +46,38 @@ public class AdminController {
 	
 	// 관리자 페이지 이동 
 		@GetMapping("/testadmin")
-		public String admin2 (Model model, Criteria cri) {
+		public String admin2 (Model model, Criteria cri, HttpSession sess) {
 			
-			// 유저 목록
-			List<UserDTO> userList = userService.userList(cri);
-			model.addAttribute("userList", userList);
+			String user_id = sess.getAttribute("user_id")+"";
 			
-			// 게임 목록
-			List<GameDTO> gameList = gameService.admin_gameList(cri);
-			int total = gameService.getTotal(cri);
+			if (user_id.equals("admin")) {
+				// 유저 목록
+				List<UserDTO> userList = userService.userList(cri);
+				model.addAttribute("userList", userList);
+				
+				// 게임 목록
+				List<GameDTO> gameList = gameService.admin_gameList(cri);
+				int total = gameService.getTotal(cri);
 
-			// 공지 목록 
-			List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
-			model.addAttribute("noticeList", noticeList);
-						
-			PageMakerDTO pageMake = new PageMakerDTO(cri, total);
-			
-			model.addAttribute("gameList", gameList);
-			model.addAttribute("pageMaker", pageMake);
-			
-			// Q&A 목록
-			List<QuestionDTO> questionList = questionService.admin_questionList(cri);
-			model.addAttribute("questionList", questionList);
+				// 공지 목록 
+				List<NoticeDTO> noticeList = noticeService.admin_noticeList(cri);
+				model.addAttribute("noticeList", noticeList);
+							
+				PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+				
+				model.addAttribute("gameList", gameList);
+				model.addAttribute("pageMaker", pageMake);
+				
+				// Q&A 목록
+				List<QuestionDTO> questionList = questionService.admin_questionList(cri);
+				model.addAttribute("questionList", questionList);
 
-			return "admin/testadmin";
+				return "admin/testadmin";
+			} else {
+				return "include/error403";
+			}
+			
+			
 		}
 
 	

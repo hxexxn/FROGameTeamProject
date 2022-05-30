@@ -42,14 +42,15 @@
 				        
 				        	<div class="list">
 					            <div class="game_number">${gameList.game_no}</div>
-					            <div class="game_title">${gameList.game_title}</div>
+					            <div class="game_title"><a href="gameReadTest?game_no=${gameList.game_no}">${gameList.game_title}</a></div>
 					            <div class="game_price">${gameList.game_price}</div>
 					            <div class="game_genre_no">${gameList.game_genre}</div>
-					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${gameList.game_regdate}"/></div>
+					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd" value="${gameList.game_release}"/></div>
 					            <div class="game_sellcount">${gameList.game_sellcount}</div>
 					            <div class="game_adult">${gameList.game_adultcheck}</div>
 					            <div class="game_delete"><a href="gameDelete?game_no=${gameList.game_no}">삭제</a></div>
 				        	</div>
+	                            
 				        
 				        </c:forEach>
 				        

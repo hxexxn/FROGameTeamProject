@@ -71,6 +71,15 @@ public class NoticeController {
 		model.addAttribute("dto", dto);
 		return "notice/noticeRead";
 	}
+	
+	// 공지사항 읽기 (관리자)
+		@GetMapping("/admin_notice_read")
+		public String admin_noticeRead(@RequestParam("notice_no") String notice_no, Model model) {
+			noticeService.noticeViewCount(notice_no);
+			NoticeDTO dto = noticeService.noticeRead(notice_no);
+			model.addAttribute("dto", dto);
+			return "admin_include/admin_notice_read";
+		}
 
 	// 조회수
 	@GetMapping("/noticeByCount")
@@ -88,11 +97,11 @@ public class NoticeController {
 	}
 
 	// 게시글 수정
-	@GetMapping("/noticeUpdate")
+	@GetMapping("/admin_notice_modify")
 	public String noticeUpdate(@RequestParam("notice_no") String notice_no, Model model) {
 		NoticeDTO dto = noticeService.noticeRead(notice_no);
 		model.addAttribute("dto", dto);
-		return "notice/noticeUpdate";
+		return "admin_include/admin_notice_modify";
 	}
 
 	@PostMapping("/noticeUpdate")
