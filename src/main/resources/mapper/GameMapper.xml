@@ -98,6 +98,10 @@
 							game_genre = '기타'
 							order by game_release desc
 						</when> 
+						<when test="type == 'J'.toString()">
+							game_price = 0
+							order by game_release desc
+						</when> 
 					</choose>
 				</trim>
 			</foreach>

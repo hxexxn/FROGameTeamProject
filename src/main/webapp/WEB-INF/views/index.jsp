@@ -107,7 +107,6 @@
 							href="/userRegist">회원가입</a></span> <span>장바구니</span>
 					</div>
 				</c:if>
-
 				<!-- 회원 로그인 -->
 				<c:if test="${not empty sessionScope.user_id}">
 					<c:set var="nick" value="${sessionScope.user_nick}" />
@@ -201,189 +200,69 @@
 
 		<!-- 메인 컨텐츠 -->
 		<div id="section">
-			<p class="bestGameTitle">인기 게임</p>
-
+			<div class="bestGameTitle">인기 게임</div>
+			<div class="recentPlusBtn margin_right"> <a href="game_hot_list"> 더 보기 </a></div>
 			<!-- 인기 게임 -->
 			<div class="bestGameSection">
 				<!-- 박스 하나 -->
-				<%-- <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="4">
+				<c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
 					<div class="bestGame-contentBox">
 						<div class="bestGame-ImgBox">
-							<img src="${img}">
+							<img src="${hotimg}">
 						</div>
 						<div class="bestGame-infoBox">
-							<div class="bestGame-titleBox">
-								<span>Watch Dogs : LEGION</span>
+							<div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
+								<span>${hotList[status.index].game_title}</span> </a>
 							</div>
+							 <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
 							<div class="bestGame-info">
 								<span>₩ 54,800</span>
 							</div>
 						</div>
 					</div>
-				</c:forEach> --%>
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
+				</c:forEach>
 				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
+				
+				<div class="saleGameSection">
+				
+				<c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="4" end="7">
+					<div class="bestGame-contentBox">
+						<div class="bestGame-ImgBox">
+							<img src="${hotimg}">
 						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- 할인 게임 -->
-			<p class="saleGameTitle">할인 게임</p>
-
-			<div class="saleGameSection">
-
-				<!-- 박스 하나 -->
-				<div class="saleGame-contentBox">
-					<div class="saleGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="saleGame-infoBox">
-						<div class="saleGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="saleGame-info">
-							<div class="salePercent">
-								<span>50%</span>
+						<div class="bestGame-infoBox">
+							<div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
+								<span>${hotList[status.index].game_title}</span> </a>
 							</div>
-							<div class="originPrice">
-								<span>₩ 50,000</span>
-							</div>
-							<div class="salePrice">
-								<span>₩ 25,000</span>
+							 <div class="game_tag">
+	                            <div class="genre">${list[status.index].game_genre}</div>
+	                            <div class="platform">${list[status.index].game_platform}</div>
+                        	</div>
+							<div class="bestGame-info">
+								<span>₩ 54,800</span>
 							</div>
 						</div>
 					</div>
+				</c:forEach>
 				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- 박스 하나 -->
-				<div class="bestGame-contentBox">
-					<div class="bestGame-ImgBox">
-						<img src="${path}/resources/img/sale1.png">
-					</div>
-					<div class="bestGame-infoBox">
-						<div class="bestGame-titleBox">
-							<span>Watch Dogs : LEGION</span>
-						</div>
-						<div class="bestGame-info">
-							<span>₩ 54,800</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 
 			<div id="anotherGameListBox">
 
 				<div id="anotherGameList">
 					<div class="recentGameTitle">신규 출시</div>
-					<div class="recentPlusBtn">더 보기</div>
+					<div class="recentPlusBtn"> <a href="game_new_list"> 더 보기 </a></div>
 
 				<c:forEach var="img" items="${img}" varStatus="status" begin="0" end="3">
 					<div class="recentGameList">
 						<div class="recent-img">
 							<img src="${img}">
 						</div>
-						<div class="recent-subject">
-							<span>${list[status.index].game_title}</span>
+						<div class="recent-subject"> <a href="gameReadTest?game_no=${list[status.index].game_no}">
+							<span>${list[status.index].game_title}</span></a>
 						</div>
 						<div class="recent-price">
 							<div class="price">₩ <fmt:formatNumber
@@ -393,111 +272,10 @@
 					</div>
 				</c:forEach>
 				</div>
-					<%-- <div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-				</div> --%>
-
-				<%-- <div id="anotherGameList">
-					<div class="releaseGameTitle">출시 예정</div>
-					<div class="recentPlusBtn">더 보기</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">₩ 52,600</div>
-						</div>
-					</div>
-				</div> --%>
 
 				<div id="anotherGameList">
 					<div class="freeGameTitle">무료 게임</div>
-					<div class="recentPlusBtn">더 보기</div>
+					<div class="recentPlusBtn"> <a href="gameList?pageNum=1&amount=4&keyword=&type=J"> 더 보기 </a></div>
 
 				<c:forEach var="img" items="${img}" varStatus="status">
 				<c:if test="${list[status.index].game_price eq 0}">
@@ -506,7 +284,8 @@
 							<img src="${img}">
 						</div>
 						<div class="recent-subject">
-							<span>${list[status.index].game_title}</span>
+						<a href="gameReadTest?game_no=${list[status.index].game_no}">
+							<span>${list[status.index].game_title}</span></a>
 						</div>
 						<div class="recent-price">
 							<div class="price">Free To Play</div>
@@ -514,45 +293,8 @@
 					</div>
 					</c:if>
 				</c:forEach>
-					<%-- <div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">Free To Play</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">Free To Play</div>
-						</div>
-					</div>
-
-					<div class="recentGameList">
-						<div class="recent-img">
-							<img src="${path}/resources/img/sale2.png" alt="" srcset="">
-						</div>
-						<div class="recent-subject">
-							<span>타이틀 A</span>
-						</div>
-						<div class="recent-price">
-							<div class="price">Free To Play</div>
-						</div>
-					</div> --%>
 				</div>
-
 			</div>
-
 
 
 			<div id="footBar">

@@ -145,7 +145,7 @@
 
 	var size = $("#size").val() - 1;
 	var game_title = $("#game_title").val();
-	var order_no = "order-" + $("#cart_no").val();
+	var order_no = "order_ser_no--" + $("#cart_no").val();
 	
 
 	function requestPay() {

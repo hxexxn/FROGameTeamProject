@@ -50,8 +50,15 @@ public class UserController {
 		for (int i = 0; i <list.size(); i++) { 
 			imgList.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(list.get(i).getGame_no()).getFile())); 
 			}
+		List<GameDTO> hotList = gameService.hotGame();
+		List<String> hotimg = new ArrayList<String>();
+		for (int i = 0; i <hotList.size(); i++) { 
+			hotimg.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(hotList.get(i).getGame_no()).getFile())); 
+			}
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
+		model.addAttribute("hotList", hotList);
+		model.addAttribute("hotimg", hotimg);
 		return "index";
 	}
 	
