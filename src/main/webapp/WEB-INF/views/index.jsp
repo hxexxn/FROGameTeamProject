@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>FROGame</title>
 <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
 
 <!--  구글 웹 폰트 -->
@@ -174,7 +174,7 @@
                      <i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
                   </button></span>
             </div>
-            <form action="gameList" id="moveForm" method="get">
+            <form action="game_list" id="moveForm" method="get">
                <input type="hidden" name="pageNum" value="1"> <input
                   type="hidden" name="amount" value="4"> <input
                   type="hidden" name="type" id="type" value="R"> <input
@@ -201,8 +201,12 @@
 
       <!-- 메인 컨텐츠 -->
       <div id="section">
-         <div class="bestGameTitle">인기 게임</div>
-         <div class="recentPlusBtn margin_right"> <a href="game_hot_list"> 더 보기 </a></div>
+      
+      	<div class="title_box">
+      		<div class="bestGameTitle">인기 게임</div>
+         	<div class="recentPlusBtn margin_right"> <a href="game_hot_list"> 더 보기 </a></div>
+      	</div>
+      	
          <!-- 인기 게임 -->
          <div class="bestGameSection">
             <!-- 박스 하나 -->
@@ -293,7 +297,7 @@
                <div class="freeGameTitle">무료 게임</div>
                <div class="recentPlusBtn"> <a href="game_list?pageNum=1&amount=6&keyword=&type=J"> 더 보기 </a></div>
 
-            <c:forEach var="img" items="${img}" varStatus="status" begin="10" end="30">
+            <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="30">
             <c:if test="${list[status.index].game_price eq 0}">
                <div class="recentGameList">
                   <div class="recent-img">

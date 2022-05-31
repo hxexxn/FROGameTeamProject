@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Game List</title>
+<title>Dashboard - 게임 목록</title>
     <link rel="stylesheet" href="${path}/resources/css/admin_gameList.css">
 </head>
 <body>

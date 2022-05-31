@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Game Insert</title>
+<title>Dashboard - 게임 등록</title>
     <link rel="stylesheet" href="${path}/resources/css/admin_game_insert.css">
     
     	<!-- include libraries(jQuery, bootstrap) -->

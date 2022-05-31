@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>게임 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/page_top.css">
 <style>
 @import

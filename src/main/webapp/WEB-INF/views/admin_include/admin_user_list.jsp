@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>User List</title>
+<title>Dashboard - 유저 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/admin_userList.css">
 <!-- 폰트 어썸 5.0 -->
 <link rel="stylesheet"

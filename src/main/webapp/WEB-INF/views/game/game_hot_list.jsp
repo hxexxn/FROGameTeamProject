@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>인기 게임</title>
     <link rel="stylesheet" href="${path}/resources/css/game_hot_list.css">
     <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
         <!-- 구글 웹 폰트 (노토 산스)-->

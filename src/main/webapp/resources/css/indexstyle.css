@@ -181,8 +181,9 @@ body {
     text-align: center;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 14px;
     color: black;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #menuTitle > li:hover #subMenu {
@@ -270,8 +271,14 @@ a:hover {
     margin-top: 100px;
 }
 
+.title_box {
+	display: flex;
+	justify-content: space-between;
+}
+
 .bestGameTitle,
-.saleGameTitle {
+.saleGameTitle,
+.margin_right {
     text-align: left;
     padding-top: 50px;
     padding-left: 50px;

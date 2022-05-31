@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FROGame</title>
 <link rel="stylesheet" href="${path}/resources/css/page_top.css">
 <style>
 @import

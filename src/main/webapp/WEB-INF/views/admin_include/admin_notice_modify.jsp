@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard - 공지사항 수정</title>
 <link rel="stylesheet" href="${path}/resources/css/admin_notice_modify.css">
 
 		<!-- include libraries(jQuery, bootstrap) -->

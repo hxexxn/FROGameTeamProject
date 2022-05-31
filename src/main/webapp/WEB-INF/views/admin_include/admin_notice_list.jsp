@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Dashboard - 공지사항</title>
 <link rel="stylesheet" href="${path}/resources/css/admin_noticeList.css">
 </head>
 <body>
