@@ -12,11 +12,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
+
+<!--  구글 웹 폰트 -->
 <style>
-@import
-   url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300&display=swap')
-   ;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300;400;500&display=swap');
 </style>
+
 <link rel="stylesheet"
    href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script
@@ -219,7 +220,16 @@
                                <div class="platform">${list[status.index].game_platform}</div>
                            </div>
                      <div class="bestGame-info">
-                        <span>₩ 54,800</span>
+                        <span>
+	                        
+	                        <c:if test="${list[status.index].game_price != 0}">
+		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+		                    </c:if>
+		                     <c:if test="${list[status.index].game_price == 0}">
+		                           <span>Free To Play</span>
+		                      </c:if>
+	                      
+	                     </span>
                      </div>
                   </div>
                </div>
@@ -242,7 +252,13 @@
                                <div class="platform">${list[status.index].game_platform}</div>
                            </div>
                      <div class="bestGame-info">
-                        <span>₩ 54,800</span>
+                        <span><c:if test="${list[status.index].game_price != 0}">
+		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+		                    </c:if>
+		                     <c:if test="${list[status.index].game_price == 0}">
+		                           <span>Free To Play</span>
+		                      </c:if>
+		                      </span>
                      </div>
                   </div>
                </div>

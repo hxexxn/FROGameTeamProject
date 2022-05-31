@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="${path}/resources/css/game_hot_list.css">
     <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
     
+    <!-- 구글 웹 폰트 (노토 산스)-->
     <style>
-	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500&display=swap');
-	</style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        </style>
 </head>
 <body>
 

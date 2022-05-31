@@ -319,6 +319,7 @@ a:hover {
     margin-bottom: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
+    font-weight: 500;
 }
 
 .bestGame-info,
@@ -379,6 +380,7 @@ a:hover {
     float: left;
     font-family: 'Noto Sans KR', sans-serif;
     color: black;
+    font-weight: 500;
 }
 
 .recentPlusBtn {
@@ -414,10 +416,12 @@ a:hover {
 .recent-subject,
 .recent-price {
     line-height: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .price {
     margin-right: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #footBar {

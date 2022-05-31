@@ -54,7 +54,7 @@
 							<![CDATA[
 							game_title like concat('%',#{keyword},'%')
 							]]>
-							order by game_sellcount
+							order by game_sellcount desc
 						</when>
 						<when test="type == 'P'.toString()">
 							<![CDATA[
