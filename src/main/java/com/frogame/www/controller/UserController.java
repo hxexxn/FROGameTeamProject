@@ -116,6 +116,7 @@ public class UserController {
 			session.setAttribute("user_id", resultDTO.getUser_id());
 			session.setAttribute("user_level", resultDTO.isUser_level());
 			session.setAttribute("user_nick", resultDTO.getUser_nick());
+			session.setAttribute("user_email", resultDTO.getUser_email());
 			
 			System.out.println(resultDTO.isUser_level());
 			

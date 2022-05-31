@@ -174,7 +174,7 @@
                      <i class="fa-solid fa-magnifying-glass" style="color: lightgray"></i>
                   </button></span>
             </div>
-            <form action="gameList" id="moveForm" method="get">
+            <form action="game_list" id="moveForm" method="get">
                <input type="hidden" name="pageNum" value="1"> <input
                   type="hidden" name="amount" value="4"> <input
                   type="hidden" name="type" id="type" value="R"> <input

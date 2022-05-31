@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +28,9 @@
 	<jsp:include page="../include/page_top.jsp" flush="false"/>
 
 		<!-- 회원 정보 수정 페이지 -->
-
+ 	<c:set var="user_nick" value="${sessionScope.user_nick}"/>
+  	<c:set var="user_email" value="${sessionScope.user_email}"/>
+  	
 		<div id="modifyFrame">
 
 			<div class="modifyTitle">회원정보 수정</div>
@@ -51,12 +54,12 @@
 						</tr>
 						<tr class="userNickInput">
 							<td><label for="user_nick">닉네임</label></td>
-							<td><input type="text" name="new_user_nick" id="new_user_nick"></td>
+							<td><input type="text" name="new_user_nick" id="new_user_nick" value="${user_nick}"></td>
 							<td><button type="button" id="nickDupBtn">중복 확인</button>
 						</tr>
 						<tr class="userEmailInput">
 							<td><label for="user_email">이메일</label></td>
-							<td><input type="text" name="new_user_email" id="new_user_email"></td>
+							<td><input type="text" name="new_user_email" id="new_user_email" value="${user_email}"></td>
 						</tr>
 					</table>
 
