@@ -38,6 +38,7 @@
                     <h1>게임정보</h1>
                     <div style="white-space:pre-wrap; wrap:hard;">${dto.game_info}</div>
                 </div>
+                
 
 <!-- 사양 넣는곳 -->
                 <div class="content_box">

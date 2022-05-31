@@ -51,9 +51,10 @@
               
               <!-- 회원 로그인 -->
               <c:if test="${not empty sessionScope.user_id}">
+              <c:set var="nick" value="${sessionScope.user_nick}"/>
               <c:set var="sess" value="${sessionScope.user_id}"/>
                 <div class="userBox">
-					<span> <a href="/userMyPage"> <c:out value="${sess}"/> </a></span>
+					<span> <a href="/userMyPage"> <c:out value="${nick}"/> </a></span>
 					
 						<c:if test="${sessionScope.user_id eq 'admin'}">
 							<span><a href="/testadmin">대시보드</a></span>

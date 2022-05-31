@@ -291,9 +291,9 @@
 
             <div id="anotherGameList">
                <div class="freeGameTitle">무료 게임</div>
-               <div class="recentPlusBtn"> <a href="gameList?pageNum=1&amount=4&keyword=&type=J"> 더 보기 </a></div>
+               <div class="recentPlusBtn"> <a href="game_list?pageNum=1&amount=6&keyword=&type=J"> 더 보기 </a></div>
 
-            <c:forEach var="img" items="${img}" varStatus="status">
+            <c:forEach var="img" items="${img}" varStatus="status" begin="10" end="30">
             <c:if test="${list[status.index].game_price eq 0}">
                <div class="recentGameList">
                   <div class="recent-img">

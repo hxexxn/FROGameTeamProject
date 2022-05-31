@@ -108,10 +108,7 @@
                     <div class="game_detail">
                         <span>상세 게임 정보</span>
                     </div>
-
-                    <div class="game_content" style="white-space:pre-wrap; wrap:hard;">
-                        ${dto.game_info}
-                    </div>
+                    <div class="game_content" style="white-space:pre-wrap; wrap:hard;">${dto.game_info}</div>
                 </div>
 
                 <div class="menu2">
