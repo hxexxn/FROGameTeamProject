@@ -13,12 +13,12 @@ h1 {
 #notice_insert_content {
     margin: 0 auto;
     width: 40%;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 #notice_insert_content > div > div {
     margin-bottom: 20px;
-    font-size: 0.8rem;
+    font-size: 13px;
 }
 
 /* 가격 및 출시일 박스 */
@@ -41,6 +41,7 @@ h1 {
 #notice_content {
     outline: none;
 }
+
 input {
     outline: none;
 }
@@ -61,6 +62,7 @@ textarea {
     border-radius: 5px;
     padding-left: 5px;
     padding-top: 5px;
+   	font-size: 15px;
 }
 
 /* 등록 버튼 */

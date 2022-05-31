@@ -43,7 +43,7 @@
 				        	<div class="list">
 					            <div class="game_number">${gameList.game_no}</div>
 					            <div class="game_title"><a href="gameReadTest?game_no=${gameList.game_no}">${gameList.game_title}</a></div>
-					            <div class="game_price">${gameList.game_price}</div>
+					            <div class="game_price">₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${gameList.game_price}" /></div>
 					            <div class="game_genre_no">${gameList.game_genre}</div>
 					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd" value="${gameList.game_release}"/></div>
 					            <div class="game_sellcount">${gameList.game_sellcount}</div>

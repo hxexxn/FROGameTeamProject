@@ -6,6 +6,16 @@
 <meta charset="UTF-8">
 <title>Game Insert</title>
     <link rel="stylesheet" href="${path}/resources/css/admin_game_insert.css">
+    
+    	<!-- include libraries(jQuery, bootstrap) -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<!-- include summernote css/js -->
+		<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    
 </head>
 <body>
 
@@ -13,9 +23,9 @@
   <!-- 게임 등록 출력 -->
   
   <!-- 제이쿼리 -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"
+<!--   <script src="https://code.jquery.com/jquery-3.6.0.js"
 		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> -->
   
                 <div class="game_insert_box" id="tab-3">
                     
@@ -228,11 +238,59 @@
 
                     </div>
                 </div>
+                
+                
+	<!--  섬머 노트 JS -->
+	<script>
+	$(document).ready(function() {
+
+	var toolbar = [
+		    // 글꼴 설정
+		    ['fontname', ['fontname']],
+		    // 글자 크기 설정
+		    ['fontsize', ['fontsize']],
+		    // 굵기, 기울임꼴, 밑줄,취소 선, 서식지우기
+		    ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
+		    // 글자색
+		    ['color', ['forecolor','color']],
+		    // 표만들기
+		    ['table', ['table']],
+		    // 글머리 기호, 번호매기기, 문단정렬
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    // 줄간격
+		    ['height', ['height']],
+		    // 그림첨부, 링크만들기, 동영상첨부
+		    ['insert',['picture','link','video']],
+		    // 코드보기, 확대해서보기, 도움말
+		    ['view', ['codeview','fullscreen', 'help']]
+		  ];
+
+	var setting = {
+            height : 300,
+            minHeight : null,
+            maxHeight : null,
+            focus : true,
+            lang : 'ko-KR',
+            toolbar : toolbar,
+            callbacks : { //여기 부분이 이미지를 첨부하는 부분
+            onImageUpload : function(files, editor,
+            welEditable) {
+            for (var i = files.length - 1; i >= 0; i--) {
+            uploadSummernoteImageFile(files[i],
+            this);
+            		}
+            	}
+            }
+         };
+
+        $('#game_info').summernote(setting);
+        });
+</script>
 
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
-<script type="text/javascript" src="${path}/resources/js/gameInsert.js"></script>
+<%-- <script type="text/javascript" src="${path}/resources/js/gameInsert.js"></script>
 <script type="text/javascript" src="${path}/resources/js/gamepage.js"></script>
-<script type="text/javascript" src="${path}/resources/js/admin_game_insert.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_game_insert.js"></script> --%>
 
 </body>
 </html>

@@ -13,12 +13,12 @@ h1 {
 #notice_insert_content {
     margin: 0 auto;
     width: 40%;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
 }
 
 #notice_insert_content > div > div {
     margin-bottom: 20px;
-    font-size: 0.8rem;
+    font-size: 12px;
 }
 
 /* 가격 및 출시일 박스 */
