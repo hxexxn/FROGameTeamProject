@@ -104,8 +104,8 @@
                     <ul id="pageInfo" class="pageInfo">
                         <!-- 이전페이지 버튼 -->
                         <c:if test="${pageMaker.prev}">
-                            <li class="pageInfo_btn previous"><a
-                                href="${pageMaker.startPage-1}">이전</a></li>
+                            <li class="pageInfo_btn previous">
+                            <a href="${pageMaker.startPage-1}">이전</a></li>
                         </c:if>
                         <!-- 각 번호 페이지 버튼 -->
                         <c:forEach var="num" begin="${pageMaker.startPage}"

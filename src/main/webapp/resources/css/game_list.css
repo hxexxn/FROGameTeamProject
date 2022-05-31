@@ -50,10 +50,10 @@ select {
     font-size: 0.8rem;
 }
 
-i {
+/* i {
     font-size: 12px;
     color: white;
-}
+} */
 
 /* .menu_option > div {
     margin-right: 50px;
@@ -102,11 +102,11 @@ i {
 .g_sub {
     padding-bottom: 10px;
     font-weight: 500;
-    
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .g_sub > span {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .g_genre_plat {
@@ -133,6 +133,7 @@ i {
     text-align: right;
     padding-right: 50px;
     font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
     /* margin-left: 200px; */
     /* border: 1px solid coral; */
 }
@@ -158,7 +159,8 @@ i {
 	display: flex;
 	justify-content: center;
 	list-style: none;
-	font-size: 11px;
+	font-size: 12px;
+	color: black;
 }
 
 li {
@@ -168,4 +170,8 @@ li {
 li a {
 	color: black;
 	text-decoration: none;
+}
+
+button i {
+	color: white;
 }

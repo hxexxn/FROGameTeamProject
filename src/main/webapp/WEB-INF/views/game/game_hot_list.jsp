@@ -12,9 +12,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="${path}/resources/css/game_hot_list.css">
     <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
-        <style>
-	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500&display=swap');
-	</style>
+        <!-- 구글 웹 폰트 (노토 산스)-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        </style>
 	 <!-- 폰트 어썸 5.0 -->
     <link
     rel="stylesheet"
