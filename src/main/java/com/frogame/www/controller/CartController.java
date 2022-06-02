@@ -3,21 +3,19 @@ package com.frogame.www.controller;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
-import java.util.Map;
 
-import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.frogame.www.mapper.GameMapper;
 import com.frogame.www.model.CartDTO;
 import com.frogame.www.service.CartService;
+import com.frogame.www.service.OrderService;
 
 
 
@@ -29,6 +27,9 @@ public class CartController {
 	
 	@Autowired
 	private GameMapper gameMapper;
+	
+	@Autowired
+	private OrderService orderService;
 	
 //	 장바구니 추가 1
 	@GetMapping("/addCart")
@@ -81,13 +82,16 @@ public class CartController {
 	// 결제 성공시 장바구니 비우고 판매수 +1
 	@PostMapping("/paySuccess")
 	@ResponseBody
-	public String paySuccess(@RequestParam(value="game_no[]") List<String> game_no, @RequestParam(value="cart_no[]") List<String> cart_no) {
+	public String paySuccess(@RequestParam(value="game_no[]") List<String> game_no, @RequestParam(value="cart_no[]") List<String> cart_no,
+			@RequestParam(value="order_id") String order_id, @RequestParam(value="user_id") String user_id, @RequestParam(value="total_price") int total_price,
+			@RequestParam(value="name") String name) {
 		for(String i : cart_no) {
 			cartService.cartDelete(i);
 		}
 		for(String i : game_no) {
 			gameMapper.gameSellCount(i);
 		}
+		orderService.orderInsert(order_id, user_id, name, total_price);
 		return "Success";
 	}
 }

@@ -33,5 +33,7 @@ public interface GameService {
 
 	int tagTotal(Criteria cri);
 
+	List<GameDTO> freeGame();
+
 
 }

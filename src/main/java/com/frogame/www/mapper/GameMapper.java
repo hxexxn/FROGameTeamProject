@@ -43,5 +43,7 @@ public interface GameMapper {
 
 	void gameSellCount(String i);
 
+	List<GameDTO> freeGame();
+
 
 }

@@ -210,30 +210,29 @@
          <!-- 인기 게임 -->
          <div class="bestGameSection">
             <!-- 박스 하나 -->
-            <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
+             <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
                <div class="bestGame-contentBox">
+               <a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                   <div class="bestGame-ImgBox">
                      <img src="${hotimg}">
                   </div>
+                  </a>
                   <div class="bestGame-infoBox">
                      <div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                         <span>${hotList[status.index].game_title}</span> </a>
                      </div>
                       <div class="game_tag">
-                               <div class="genre">${list[status.index].game_genre}</div>
-                               <div class="platform">${list[status.index].game_platform}</div>
+                               <div class="genre">${hotList[status.index].game_genre}</div>
+                               <div class="platform">${hotList[status.index].game_platform}</div>
                            </div>
                      <div class="bestGame-info">
-                        <span>
-	                        
-	                        <c:if test="${list[status.index].game_price != 0}">
-		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+                        <span><c:if test="${hotList[status.index].game_price != 0}">
+		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${hotList[status.index].game_price}" /></span>
 		                    </c:if>
-		                     <c:if test="${list[status.index].game_price == 0}">
+		                     <c:if test="${hotList[status.index].game_price == 0}">
 		                           <span>Free To Play</span>
 		                      </c:if>
-	                      
-	                     </span>
+		                      </span>
                      </div>
                   </div>
                </div>
@@ -244,22 +243,24 @@
             
             <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="4" end="7">
                <div class="bestGame-contentBox">
+               <a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                   <div class="bestGame-ImgBox">
                      <img src="${hotimg}">
                   </div>
+                  </a>
                   <div class="bestGame-infoBox">
                      <div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                         <span>${hotList[status.index].game_title}</span> </a>
                      </div>
                       <div class="game_tag">
-                               <div class="genre">${list[status.index].game_genre}</div>
-                               <div class="platform">${list[status.index].game_platform}</div>
+                               <div class="genre">${hotList[status.index].game_genre}</div>
+                               <div class="platform">${hotList[status.index].game_platform}</div>
                            </div>
                      <div class="bestGame-info">
-                        <span><c:if test="${list[status.index].game_price != 0}">
-		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${list[status.index].game_price}" /></span>
+                        <span><c:if test="${hotList[status.index].game_price != 0}">
+		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${hotList[status.index].game_price}" /></span>
 		                    </c:if>
-		                     <c:if test="${list[status.index].game_price == 0}">
+		                     <c:if test="${hotList[status.index].game_price == 0}">
 		                           <span>Free To Play</span>
 		                      </c:if>
 		                      </span>
@@ -297,21 +298,19 @@
                <div class="freeGameTitle">무료 게임</div>
                <div class="recentPlusBtn"> <a href="game_list?pageNum=1&amount=6&keyword=&type=J"> 더 보기 </a></div>
 
-            <c:forEach var="img" items="${img}" varStatus="status" begin="0" end="30">
-            <c:if test="${list[status.index].game_price eq 0}">
+            <c:forEach var="freeimg" items="${freeimg}" varStatus="status" begin="0" end="3">
                <div class="recentGameList">
                   <div class="recent-img">
-                     <img src="${img}">
+                     <img src="${freeimg}">
                   </div>
                   <div class="recent-subject">
-                  <a href="gameReadTest?game_no=${list[status.index].game_no}">
-                     <span>${list[status.index].game_title}</span></a>
+                  <a href="gameReadTest?game_no=${freeList[status.index].game_no}">
+                     <span>${freeList[status.index].game_title}</span></a>
                   </div>
                   <div class="recent-price">
                      <div class="price">Free To Play</div>
                   </div>
                </div>
-               </c:if>
             </c:forEach>
             </div>
          </div>
