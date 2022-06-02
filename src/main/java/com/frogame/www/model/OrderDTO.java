@@ -1,9 +1,15 @@
 package com.frogame.www.model;
 
+import java.sql.Timestamp;
+
+import lombok.Data;
+
+@Data
 public class OrderDTO {
 
-	private int gaem_no;
-	
-	private String game_title;
-	private int game_price;
+	private String order_id;
+	private String order_title ;
+	private String user_id;
+	private int total_price;
+	private Timestamp order_Date;
 }

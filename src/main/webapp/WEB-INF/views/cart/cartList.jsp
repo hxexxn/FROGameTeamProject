@@ -120,6 +120,7 @@
 
 	var list1 = new Array();
 	var list2 = new Array();
+	var user_id = $("#cart_user_id").val();
 	
 	<c:forEach var="cList" items="${cList}" >
 	
@@ -133,11 +134,6 @@
 		console.log('game_no : ' + list2[test]);
 	}
 
-	var list_no = {
-		"cart_no" : list1,
-		"game_no" : list2	
-	}
-	
 	console.log(list_no);
 	
 	var IMP = window.IMP; // 생략 가능
@@ -145,22 +141,33 @@
 
 	var size = $("#size").val() - 1;
 	var game_title = $("#game_title").val();
-	var order_no = "order_ser_no--" + $("#cart_no").val();
+	var order_id = "order_id-" + $("#cart_no").val();
+	var total_price = $("#totalPrice").val();
+	var name;
 	
-
-	function requestPay() {
-		if (size > 0) {
-			name = game_title + " 외 " + size + "종"
-		} else {
-			name = game_title
+	if (size > 0) {
+		name = game_title + " 외 " + size + "종"
+	} else {
+		name = game_title
+	}
+	var list_no = {
+			"cart_no" : list1,
+			"game_no" : list2,
+			"order_id" : order_id,
+			"user_id" : user_id,
+			"total_price" : total_price,
+			"name" : name
 		}
+	
+	function requestPay() {
+		
 		// IMP.request_pay(param, callback) 결제창 호출
 		IMP.request_pay({ // param
 			pg: "kakaopay",
 			pay_method: "trans",
-			merchant_uid: order_no,
+			merchant_uid: order_id,
 			name: name,
-			amount: $("#totalPrice").val(),
+			amount: total_price,
 			buyer_email: $("#user_email").val(),
 			buyer_name: $("#nick").val()
 		}, function(rsp) { // callback
@@ -181,6 +188,7 @@
 				alert("결제에 실패하였습니다. 에러 내용: " + rsp.error_msg);
 			}
 		});
+	
 	} 
 	
 

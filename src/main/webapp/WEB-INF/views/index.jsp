@@ -210,11 +210,13 @@
          <!-- 인기 게임 -->
          <div class="bestGameSection">
             <!-- 박스 하나 -->
-            <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
+             <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
                <div class="bestGame-contentBox">
+               <a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                   <div class="bestGame-ImgBox">
                      <img src="${hotimg}">
                   </div>
+                  </a>
                   <div class="bestGame-infoBox">
                      <div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                         <span>${hotList[status.index].game_title}</span> </a>
@@ -224,16 +226,13 @@
                                <div class="platform">${hotList[status.index].game_platform}</div>
                            </div>
                      <div class="bestGame-info">
-                        <span>
-	                        
-	                        <c:if test="${hotList[status.index].game_price != 0}">
+                        <span><c:if test="${hotList[status.index].game_price != 0}">
 		                          <span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${hotList[status.index].game_price}" /></span>
 		                    </c:if>
 		                     <c:if test="${hotList[status.index].game_price == 0}">
 		                           <span>Free To Play</span>
 		                      </c:if>
-	                      
-	                     </span>
+		                      </span>
                      </div>
                   </div>
                </div>
@@ -244,9 +243,11 @@
             
             <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="4" end="7">
                <div class="bestGame-contentBox">
+               <a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                   <div class="bestGame-ImgBox">
                      <img src="${hotimg}">
                   </div>
+                  </a>
                   <div class="bestGame-infoBox">
                      <div class="bestGame-titleBox"><a href="gameReadTest?game_no=${hotList[status.index].game_no}">
                         <span>${hotList[status.index].game_title}</span> </a>
