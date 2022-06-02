@@ -205,7 +205,12 @@
 	</select>
 
 	<update id="gameSellCount">
-		UPDATE gameTBL SET game_sellcount = game_sellcount + 1 WHERE game_no = #{game_no};
+		UPDATE gameTBL SET game_sellcount = game_sellcount + 1 WHERE game_no = #{game_no}
 	</update>
+
+	<select id="freeGame"
+		resultType="com.frogame.www.model.GameDTO">
+		select * from gameTBL where game_price = 0
+	</select>
 
 </mapper>

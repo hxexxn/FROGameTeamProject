@@ -82,6 +82,11 @@ public class GameServiceImpl implements GameService{
 		return gameMapper.tagTotal(cri);
 	}
 
+	@Override
+	public List<GameDTO> freeGame() {
+		return gameMapper.freeGame();
+	}
+
 
 
 }

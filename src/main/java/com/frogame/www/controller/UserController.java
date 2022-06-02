@@ -55,10 +55,17 @@ public class UserController {
 		for (int i = 0; i <hotList.size(); i++) { 
 			hotimg.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(hotList.get(i).getGame_no()).getFile())); 
 			}
+		List<GameDTO> freeList = gameService.freeGame();
+		List<String> freeimg = new ArrayList<String>();
+		for (int i = 0; i <freeList.size(); i++) { 
+			freeimg.add("data:image/;base64," + Base64.getEncoder().encodeToString(gameMapper.getImage1(freeList.get(i).getGame_no()).getFile())); 
+			}
 		model.addAttribute("list", list);
 		model.addAttribute("img", imgList);
 		model.addAttribute("hotList", hotList);
 		model.addAttribute("hotimg", hotimg);
+		model.addAttribute("freeList", freeList);
+		model.addAttribute("freeimg", freeimg);
 		return "index";
 	}
 	
