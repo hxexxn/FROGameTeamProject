@@ -8,7 +8,7 @@ $(function() {
 
 		e.preventDefault();
 		moveForm.find("input[name='pageNum']").val($(this).attr("href"));
-		moveForm.attr("action", "admin_notice_list");
+		moveForm.attr("action", "admin_question_list");
 		moveForm.submit();
 
 	});

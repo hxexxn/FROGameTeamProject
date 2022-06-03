@@ -9,6 +9,10 @@
 		INSERT INTO orderTBL (order_id, user_id, order_title, total_price)
 		VALUES(#{order_id}, #{user_id}, #{name}, #{total_price})
 	</insert>
+	
+	<select id="orderList" resultType="com.frogame.www.model.OrderDTO">
+		select * from orderTBL
+	</select>
 
 
 </mapper>
