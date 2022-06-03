@@ -32,16 +32,19 @@
 					                <div class="notice_delete">구매일</div>
 					            </div>
 						        
-						   <c:forEach var="orderList" items="${orderList}">
+						   <c:forEach var="pageList" items="${pageList}">
 						
 						        <div class="list">
-						            <div class="notice_no">${orderList.order_id}</div>
-						            	<div class="notice_writer">${orderList.user_id}</div>
-						            <div class="notice_head">${orderList.order_title}</div>
-						            <div class="notice_delete">${orderList.total_price}</div>
-						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${orderList.order_Date}"/></div>
+						            <div class="notice_no">${pageList.order_id}</div>
+						            	<div class="notice_writer">${pageList.user_id}</div>
+						            <div class="notice_head">${pageList.order_title}</div>
+						            <div class="notice_delete">${pageList.total_price}</div>
+						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${pageList.order_Date}"/></div>
 						        </div>
-						        <c:set var="totalSales"
+						       
+						    </c:forEach>
+						    <c:forEach var="orderList" items="${orderList}">
+						     <c:set var="totalSales"
 									value="${totalSales + orderList.total_price}" />
 						    </c:forEach>
 						    <span class="totalPrice1">총 매출액</span> <span><c:out
@@ -98,11 +101,10 @@
 						<form id="moveForm" method="get">
 							<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 							<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
-							<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
 						</form>
 					</div>
 					
-<script type="text/javascript" src="${path}/resources/js/admin_noticeList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_orderList.js"></script>
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 
 

@@ -64,6 +64,12 @@
 	                    <a href="admin_question_list">Q&A</a>
 	                </div>
 	            </div>
+	            
+	            <div class="qnalist">
+                	<div>
+                    <a href="admin_order_list">Payment</a>
+                	</div>
+            	</div>
 	        </div>
 
 

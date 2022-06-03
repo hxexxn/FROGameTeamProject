@@ -14,4 +14,11 @@
 		select * from orderTBL
 	</select>
 
+	<select id="pageList" resultType="com.frogame.www.model.OrderDTO">
+		select * from orderTBL limit #{skip},#{amount}
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		select count(*) from orderTBL
+	</select>
 </mapper>

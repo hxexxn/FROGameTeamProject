@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.frogame.www.mapper.OrderMapper;
+import com.frogame.www.model.Criteria;
 import com.frogame.www.model.OrderDTO;
 
 @Service
@@ -22,6 +23,16 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public List<OrderDTO> orderList() {
 		return orderMapper.orderList();
+	}
+
+	@Override
+	public List<OrderDTO> pageList(Criteria cri) {
+		return orderMapper.pageList(cri);
+	}
+
+	@Override
+	public int getTotal(Criteria cri) {
+		return orderMapper.getTotal(cri);
 	}
 	
 	

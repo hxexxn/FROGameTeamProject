@@ -160,5 +160,10 @@ public class GameController {
 		return "game/gameInfo";
 	}
 	
+	@GetMapping("gameUpdate")
+	public String gameUpdate(@RequestParam("game_no") String game_no) {
+		return "admin_include/admin_game_update";
+	}
+	
 
 }
