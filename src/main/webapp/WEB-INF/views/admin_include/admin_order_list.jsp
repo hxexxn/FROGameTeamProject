@@ -25,25 +25,27 @@
 						        </div>
 						
 						        <div class="list_title">
-					                <div class="notice_no">번호</div>
-					                <div class="notice_head">제목</div>
-					                <div class="notice_regdate">작성일</div>
-					                <div class="notice_writer">작성자</div>
-					                <div class="notice_delete"></div>
+					                <div class="notice_no">주문번호</div>
+					                <div class="notice_regdate">구매자</div>
+					                <div class="notice_head">상품명</div>
+					                <div class="notice_writer">구매가격</div>
+					                <div class="notice_delete">구매일</div>
 					            </div>
 						        
-						   <c:forEach var="noticeList" items="${noticeList}">
+						   <c:forEach var="orderList" items="${orderList}">
 						
 						        <div class="list">
-						            <div class="notice_no">${noticeList.notice_no}</div>
-						            <div class="notice_head"><a href="/admin_notice_read?notice_no=${noticeList.notice_no}">${noticeList.notice_title}</a></div>
-						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${noticeList.notice_regdate}"/></div>
-						          	<div class="notice_writer">${noticeList.notice_writer}</div>
-						            <div class="notice_delete"><a href="/noticeDelete?notice_no=${noticeList.notice_no}">삭제</a></div>
+						            <div class="notice_no">${orderList.order_id}</div>
+						            	<div class="notice_writer">${orderList.user_id}</div>
+						            <div class="notice_head">${orderList.order_title}</div>
+						            <div class="notice_delete">${orderList.total_price}</div>
+						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${orderList.order_Date}"/></div>
 						        </div>
-						        
+						        <c:set var="totalSales"
+									value="${totalSales + orderList.total_price}" />
 						    </c:forEach>
-						    
+						    <span class="totalPrice1">총 매출액</span> <span><c:out
+							value="${totalSales}"/></span> <span class="totalPrice1">원</span>
 						    <!-- 검색 -->
 				        <div class="side_bar">
 							

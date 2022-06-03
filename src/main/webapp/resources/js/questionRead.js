@@ -49,8 +49,8 @@ $('#questionCommentRegistBtn').click(function(){
 },
          success: function(data){ //data 값이 controller 에 있는 return "success" ; 로 나옴 
             if(data == 'success'){
-			alert('댓글 등록 완료');
 			questionCommentShow();
+			$('#question_comment_content').val('');
 }
          },
          error:function(request,status,error){ 
