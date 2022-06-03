@@ -14,7 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 
-<jsp:include page="../admin_include/admin_top.jsp" flush="false"/>
+<jsp:include page="../include/page_top.jsp" flush="false"/>
 
 <c:set var="sess" value="${sessionScope.user_nick}"/>
 
@@ -32,20 +32,20 @@
 					                <div class="order_regdate">구매일</div>
 					            </div>
 						        
-						   <c:forEach var="pageList" items="${pageList}">
+						   <c:forEach var="userOrder" items="${userOrder}">
 						
 						        <div class="list">
-						            <div class="order_no">${pageList.order_id}</div>
-						            	<div class="order_user">${pageList.user_id}</div>
-						            <div class="order_title">${pageList.order_title}</div>
+						            <div class="order_no">${userOrder.order_id}</div>
+						            	<div class="order_user">${userOrder.user_id}</div>
+						            <div class="order_title">${userOrder.order_title}</div>
 						            <div class="order_price">₩ 
-						            	<fmt:formatNumber type="number" maxFractionDigits="3" value="${pageList.total_price}"/>
+						            	<fmt:formatNumber type="number" maxFractionDigits="3" value="${userOrder.total_price}"/>
 						            </div>
-						            <div class="order_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${pageList.order_Date}"/></div>
+						            <div class="order_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${userOrder.order_Date}"/></div>
 						        </div>
 						       
 						    </c:forEach>
-						    <c:forEach var="orderList" items="${orderList}">
+						   <%--  <c:forEach var="orderList" items="${orderList}">
 						     <c:set var="totalSales"
 									value="${totalSales + orderList.total_price}" />
 						    </c:forEach>
@@ -64,11 +64,11 @@
 							    </div>
 								
 						    </div>
-						    
+						     --%>
 						    <!-- 검색 -->
-				        <div class="side_bar">
+				         <div class="side_bar">
 						
-					        
+					        <%--
 					        <!-- 페이징 -->
 					        <div class="pageInfo_wrap center">
 							<div class="pageInfo_area">
@@ -91,7 +91,7 @@
 								</ul>
 					
 							</div>
-						</div>
+						</div>--%>
 
     					</div>
 						
@@ -99,9 +99,9 @@
 							<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 							<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
 						</form>
-					</div>
+					</div> 
 					
-<script type="text/javascript" src="${path}/resources/js/user_orderList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_orderList.js"></script>
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 
 

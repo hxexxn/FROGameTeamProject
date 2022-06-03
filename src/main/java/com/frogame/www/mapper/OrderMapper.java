@@ -19,5 +19,7 @@ public interface OrderMapper {
 
 	int getTotal(Criteria cri);
 
+	List<OrderDTO> userOrder(String user_id);
+
 	
 }

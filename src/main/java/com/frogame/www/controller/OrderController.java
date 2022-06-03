@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.frogame.www.model.Criteria;
 import com.frogame.www.model.OrderDTO;
@@ -28,6 +29,16 @@ public class OrderController {
 		model.addAttribute("pageList", pageList);
 		model.addAttribute("pageMaker", pageMake);
 		return "admin_include/admin_order_list";
+	}
+	
+	@GetMapping("user_order_list")
+	public String userOrder(Model model, Criteria cri, @RequestParam("user_id")String user_id) {
+		List<OrderDTO> userOrder = orderService.userOrder(user_id); 
+		int total = orderService.getTotal(cri);
+		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
+		model.addAttribute("userOrder", userOrder);
+		model.addAttribute("pageMaker", pageMake);
+		return "user/user_order_list";
 	}
 
 }

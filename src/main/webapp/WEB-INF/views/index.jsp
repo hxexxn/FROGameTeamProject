@@ -113,7 +113,7 @@
                <c:set var="nick" value="${sessionScope.user_nick}" />
                <c:set var="sess" value="${sessionScope.user_id}" />
                <div class="userBox">
-                  <span> <a href="/userMyPage"> <c:out value="${nick}" />
+                  <span> <a href="user_order_list?user_id=${sessionScope.user_id}"> <c:out value="${nick}" />
                   </a></span>
 
                   <c:if test="${sessionScope.user_level eq true}">

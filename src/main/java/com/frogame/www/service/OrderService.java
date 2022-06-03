@@ -15,4 +15,6 @@ public interface OrderService {
 
 	int getTotal(Criteria cri);
 
+	List<OrderDTO> userOrder(String user_id);
+
 }

@@ -34,6 +34,11 @@ public class OrderServiceImpl implements OrderService{
 	public int getTotal(Criteria cri) {
 		return orderMapper.getTotal(cri);
 	}
+
+	@Override
+	public List<OrderDTO> userOrder(String user_id) {
+		return orderMapper.userOrder(user_id);
+	}
 	
 	
 }

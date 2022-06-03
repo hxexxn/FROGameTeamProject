@@ -21,5 +21,10 @@
 	<select id="getTotal" resultType="int">
 		select count(*) from orderTBL
 	</select>
+	
+	<select id="userOrder" resultType="com.frogame.www.model.OrderDTO">
+		select * from orderTBL where user_id = #{user_id}
+	</select>
+
 
 </mapper>
