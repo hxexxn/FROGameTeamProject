@@ -21,4 +21,5 @@
 	<select id="getTotal" resultType="int">
 		select count(*) from orderTBL
 	</select>
+
 </mapper>

@@ -66,11 +66,13 @@
 	            </div>
 	            
 	            <div class="qnalist">
-                	<div>
+
+                <div>
                     <a href="admin_order_list">Payment</a>
-                	</div>
-            	</div>
-	        </div>
+                </div>
+            </div>
+             </div>
+            
 
 
 </body>

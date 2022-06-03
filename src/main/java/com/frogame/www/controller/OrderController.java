@@ -17,7 +17,7 @@ public class OrderController {
 
 	@Autowired
 	private OrderService orderService;
-	
+
 	@GetMapping("admin_order_list")
 	public String orderList(Model model, Criteria cri) {
 		List<OrderDTO> orderList = orderService.orderList(); 
