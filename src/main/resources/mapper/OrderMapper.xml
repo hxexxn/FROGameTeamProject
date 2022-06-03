@@ -10,4 +10,5 @@
 		VALUES(#{order_id}, #{user_id}, #{name}, #{total_price})
 	</insert>
 
+
 </mapper>
