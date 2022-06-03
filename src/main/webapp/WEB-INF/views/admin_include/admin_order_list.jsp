@@ -35,13 +35,13 @@
 						   <c:forEach var="pageList" items="${pageList}">
 						
 						        <div class="list">
-						            <div class="notice_no">${pageList.order_id}</div>
-						            	<div class="notice_writer">${pageList.user_id}</div>
-						            <div class="notice_head">${pageList.order_title}</div>
-						            <div class="notice_delete">₩ 
+						            <div class="order_no">${pageList.order_id}</div>
+						            	<div class="order_user">${pageList.user_id}</div>
+						            <div class="order_title">${pageList.order_title}</div>
+						            <div class="order_price">₩ 
 						            	<fmt:formatNumber type="number" maxFractionDigits="3" value="${pageList.total_price}"/>
 						            </div>
-						            <div class="notice_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${pageList.order_Date}"/></div>
+						            <div class="order_regdate"><fmt:formatDate pattern="yy-MM-dd HH:mm" value="${pageList.order_Date}"/></div>
 						        </div>
 						       
 						    </c:forEach>
