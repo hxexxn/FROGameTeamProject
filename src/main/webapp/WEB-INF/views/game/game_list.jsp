@@ -54,6 +54,51 @@
                 <button type="submit" class="s_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
+        
+        <!--  카테고리 영역 -->
+    
+		    <div class="wrap">
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=A'" class="button_01">FPS</button>
+		            
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=B'" class="button_01">RPG</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=C'" class="button_01">공포</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=D'" class="button_02">로그라이크</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=E'" class="button_02">시뮬레이션</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=F'" class="button_02">어드벤쳐</button>
+		        </div>
+		
+		        <div class="category"> 
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=G'" class="button_01">전략</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=H'" class="button_01">액션</button>
+		        </div>
+		
+		        <div class="category">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=I'" class="button_01">기타</button>
+		        </div>
+		
+		    </div>
+    
+    <!--  카테고리 영역 -->
 
         <div class="list_content">
             

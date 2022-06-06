@@ -66,12 +66,7 @@
 				</div>
 
 			</div>
-
-
-
-			<!-- 대충 이런 광고 사진이 들어가는 형식 -->
-			<div class="side_banner"></div>
-
+			
 		</div>
 		<c:set var="admin_sess" value="${sessionScope.user_nick}"/>
 		<div class="reply_head">
@@ -88,18 +83,21 @@
 				value="${dto.question_no}"> <input type="hidden"
 				name="question_comment_writer" id="question_comment_writer"
 				value="${admin_sess}" readonly="readonly">
-		
+				
+		<c:if test="${sessionScope.user_nick == dto.question_writer || sessionScope.user_level eq true}">
 			<textarea name="question_comment_content"
 				id="question_comment_content" cols="30" rows="10" class="commentBox"
 				maxlength="3000" placeholder="댓글을 입력해주세요."
 				style="white-space: pre-wrap; wrap: hard;"></textarea>
 		</div>
-	<c:if test="${sessionScope.user_nick == dto.question_writer || sessionScope.user_nick == '관리자'}">
+	
 		<div class="replyBtn">
 			<input type="button" name="" id="questionCommentRegistBtn"
 				value="등록하기" class="replyRegistBtn">
 		</div>
-</c:if>
+		
+		</c:if>
+		
 		<div class="reply_head">
 			<span class="Btn"> 
 			<a href="/questionList" class="noticeListBtn">목록</a></span>
