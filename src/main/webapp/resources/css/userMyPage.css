@@ -17,7 +17,7 @@ body {
 }
 
 .modifyTitle {
-    width: 30%;
+    width: 60%;
     margin: 0 auto;
     padding: 15px 0px;
     border: 1px solid lightgray;
@@ -27,12 +27,16 @@ body {
     letter-spacing: 1px;
     color: #000000;
     margin-top: 17px;
+   	display: flex;
+   	justify-content: space-evenly;
+   	
 }
 
-.modifyForm {
+.modifyForm, 
+.order_view {
     padding-top: 15px;
     margin: 0 auto;
-    width: 30%;
+    width: 60%;
     height: auto;
     display: flex;
     justify-content: center;

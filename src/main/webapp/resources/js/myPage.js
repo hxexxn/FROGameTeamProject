@@ -1,6 +1,21 @@
 var nick_check = false;
 
 $(function() {
+	
+	$('.order_view').hide();
+
+    $('.user_modify').click(function() {
+        $('.modifyForm').show();
+
+        $('.order_view').hide();
+    })
+
+    $('.order_list').click(function() {
+        $('.order_view').show();
+
+        $('.modifyForm').hide();
+    })
+	
 
 	// 닉네임 중복 체크 
 	$('#nickDupBtn').click(function(){

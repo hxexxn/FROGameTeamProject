@@ -19,6 +19,7 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
+
 	@GetMapping("admin_order_list")
 	public String orderList(Model model, Criteria cri) {
 		List<OrderDTO> orderList = orderService.orderList(); 
@@ -33,11 +34,14 @@ public class OrderController {
 	
 	@GetMapping("user_order_list")
 	public String userOrder(Model model, Criteria cri, @RequestParam("user_id")String user_id) {
+		
+		// 유저 구매 목록 출력 
 		List<OrderDTO> userOrder = orderService.userOrder(user_id); 
 		int total = orderService.getTotal(cri);
 		PageMakerDTO pageMake = new PageMakerDTO(cri, total);
 		model.addAttribute("userOrder", userOrder);
 		model.addAttribute("pageMaker", pageMake);
+		
 		return "user/user_order_list";
 	}
 
