@@ -25,7 +25,7 @@
     
     <c:set var="sess" value="${sessionScope.user_nick}"/>
     
-    <form action="/noticeInsert" id="test" enctype="multipart/form-data" method="post">
+    <form action="/noticeUpate" id="test" enctype="multipart/form-data" method="post">
 
         <div id="notice_insert_content">
 
@@ -49,6 +49,7 @@
                     
                     <div>
                     	<input type="hidden" name="notice_writer" id="notice_wirter" value="${sess}">
+                    	<input type="hidden" name="notice_no" id="notice_no" value="${dto.notice_no}">
                     </div>
                 </div> 
 

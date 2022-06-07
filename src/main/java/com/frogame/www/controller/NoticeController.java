@@ -96,7 +96,7 @@ public class NoticeController {
 		return "redirect:/admin_notice_list";
 	}
 
-	// 게시글 수정
+	// 게시글 수정으로 들어가는 페이지
 	@GetMapping("/admin_notice_modify")
 	public String noticeUpdate(@RequestParam("notice_no") String notice_no, Model model) {
 		NoticeDTO dto = noticeService.noticeRead(notice_no);
@@ -104,12 +104,11 @@ public class NoticeController {
 		return "admin_include/admin_notice_modify";
 	}
 
-	@PostMapping("/noticeUpdate")
+	@PostMapping("/noticeUpate")
 	public String noticeUpdateProcess(NoticeDTO dto) {
-
 		noticeService.noticeUpdate(dto);
 
-		return "redirect:/noticeRead?notice_no=" + dto.getNotice_no();
+		return "redirect:/admin_notice_read?notice_no=" + dto.getNotice_no();
 	}
 
 	/*
