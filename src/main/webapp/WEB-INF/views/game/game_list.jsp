@@ -46,7 +46,6 @@
 							<option value="P"
 								<c:out value="${pageMaker.cri.type eq 'P'?'selected':'' }"/>>가격순</option>
 						</select>
-                </select>
             </div>
 
             <div class="search_area">
@@ -54,46 +53,88 @@
                 <button type="submit" class="s_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
-        
         <!--  카테고리 영역 -->
-    
 		    <div class="wrap">
 		
 		        <div class="category">
+		        	<c:if test="${pageMaker.cri.type ne 'A'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=A'" class="button_01">FPS</button>
-		            
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'A'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=A'" id="clicked">FPS</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		      		<c:if test="${pageMaker.cri.type ne 'B'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=B'" class="button_01">RPG</button>
+		            </c:if>
+		             <c:if test="${pageMaker.cri.type eq 'B'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=B'" id="clicked">RPG</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		        	<c:if test="${pageMaker.cri.type ne 'C'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=C'" class="button_01">공포</button>
+		            </c:if>
+		             <c:if test="${pageMaker.cri.type eq 'C'}">
+		             <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=C'" id="clicked">공포</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		        	<c:if test="${pageMaker.cri.type ne 'D'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=D'" class="button_02">로그라이크</button>
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'D'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=D'" id="clicked">로그라이크</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		       	 <c:if test="${pageMaker.cri.type ne 'E'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=E'" class="button_02">시뮬레이션</button>
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'E'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=E'" id="clicked">시뮬레이션</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		        	<c:if test="${pageMaker.cri.type ne 'F'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=F'" class="button_02">어드벤쳐</button>
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'F'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=F'" id="clicked">어드벤쳐</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category"> 
+		        	<c:if test="${pageMaker.cri.type ne 'G'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=G'" class="button_01">전략</button>
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'G'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=G'" id="clicked">전략</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		        	<c:if test="${pageMaker.cri.type ne 'H'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=H'" class="button_01">액션</button>
+		            </c:if>
+		            <c:if test="${pageMaker.cri.type eq 'H'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=H'" id="clicked">액션</button>
+		            </c:if>
 		        </div>
 		
 		        <div class="category">
+		       	 <c:if test="${pageMaker.cri.type ne 'I'}">
 		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=I'" class="button_01">기타</button>
+		             </c:if>
+		             <c:if test="${pageMaker.cri.type eq 'I'}">
+		            <button type="button" onclick="location.href='game_list?pageNum=1&amount=6&keyword=&type=I'" id="clicked">기타</button>
+		             </c:if>
 		        </div>
 		
 		    </div>
@@ -180,5 +221,6 @@
     
     <jsp:include page="../include/page_bottom.jsp" flush="false" />
     <script type="text/javascript" src="${path}/resources/js/game_list.js"></script>
+   
 </body>
 </html>

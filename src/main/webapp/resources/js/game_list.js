@@ -22,5 +22,5 @@ $(function(){
 		moveForm.find("input[name='pageNum']").val(1);
 		moveForm.submit();
 	});
-	
+
 })
