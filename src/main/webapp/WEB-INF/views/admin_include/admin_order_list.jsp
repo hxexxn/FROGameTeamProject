@@ -101,7 +101,7 @@
 						</form>
 					</div>
 					
-<script type="text/javascript" src="${path}/resources/js/user_orderList.js"></script>
+<script type="text/javascript" src="${path}/resources/js/admin_orderList.js"></script>
 <jsp:include page="../admin_include/admin_bottom.jsp" flush="false"/>
 
 
