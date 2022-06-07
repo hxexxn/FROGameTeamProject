@@ -109,6 +109,36 @@
 
 	</sql>
 	
+	<!-- 정렬 조건문 -->
+	<sql id="admin_list">
+		<trim prefix="where" prefixOverrides="OR">
+			<foreach collection="typeArr" item="type">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'R'.toString()">
+							<![CDATA[
+							game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_release desc
+						</when>
+						<when test="type == 'S'.toString()">
+							<![CDATA[
+							game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_sellcount desc
+						</when>
+						<when test="type == 'P'.toString()">
+							<![CDATA[
+							 game_title like concat('%',#{keyword},'%')
+							]]>
+							order by game_price asc
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
 	
 	<!-- 게임 등록 -->
 	<insert id="newInsert" useGeneratedKeys="true"
@@ -173,14 +203,11 @@
 	<!-- 검색 -->
 	<select id="admin_gameList" resultType="com.frogame.www.model.GameDTO">
 		Select * from gameTBL 
-		
 		<!-- 검색 조건 -->
 		<if test="keyword != null">
-		<![CDATA[
-			where game_title like concat('%',#{keyword},'%')
-			]]>
+			<include refid="admin_list"></include>
 		</if>
-		order by game_no DESC limit #{skip},#{amount}
+		limit #{skip},#{amount}
 		
 	</select>
 

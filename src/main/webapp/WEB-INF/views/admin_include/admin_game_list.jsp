@@ -30,10 +30,10 @@
 				        <div class="list_title">
 				            <div class="game_number">번호</div>
 				            <div class="game_title">제목</div>
-				            <div class="game_price">가격</div>
+				            <div class="game_price"><a href="admin_game_list?pageNum=1&amount=6&keyword=&type=P">가격</a></div>
 				            <div class="game_genre_no">장르</div>
-				            <div class="game_regdate">등록일</div>
-				            <div class="game_sellcount">판매량</div>
+				            <div class="game_regdate"> <a href="admin_game_list?pageNum=1&amount=6&keyword=&type=R"> 등록일 </a></div>
+				            <div class="game_sellcount"> <a href="admin_game_list?pageNum=1&amount=6&keyword=&type=S"> 판매량 </a></div>
 				            <div class="game_adult">연령</div>
 				            <div class="game_delete"></div>
 				        </div>
@@ -107,6 +107,7 @@
 							<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 							<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
 							<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">
+							<input type="hidden" name="type" value="${pageMaker.cri.type }">
 						</form>
     					
                 </div> 
