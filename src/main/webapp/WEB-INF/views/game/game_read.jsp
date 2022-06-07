@@ -118,27 +118,27 @@
                             <div class="os_title">최소 사양</div>
 
                             <div class="os_type">
-                                <span class="os_name">운영체제</span> <span class="os_content">${dto.game_min_os}</span>
+                                <div class="os_name">운영체제</div> <div class="os_content">${dto.game_min_os}</div>
                             </div>
                             
                             <div class="os_type">
-                                <span class="os_name">프로세서</span> <span class="os_content">${dto.game_min_cpu}</span>
+                                <div class="os_name">프로세서</div> <div class="os_content">${dto.game_min_cpu}</div><br/>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">메모리</span> <span class="os_content">${dto.game_min_ram}</span>
+                                <div class="os_name">메모리</div> <div class="os_content">${dto.game_min_ram}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">그래픽</span> <span class="os_content">${dto.game_min_vga}</span>
+                                <div class="os_name">그래픽</div> <div class="os_content">${dto.game_min_vga}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">Direct X</span> <span class="os_content">${dto.game_min_dirX}</span>
+                                <div class="os_name">Direct X</div> <div class="os_content">${dto.game_min_dirX}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">필요 저장 공간</span> <span class="os_content">${dto.game_min_ssd}</span>
+                                <div class="os_name">필요 저장 공간</div> <div class="os_content">${dto.game_min_ssd}</div>
                             </div>
                         </div>
 
@@ -146,27 +146,27 @@
                             <div class="os_title">권장 사양</div>
 
                             <div class="os_type">
-                                <span class="os_name">운영체제</span> <span class="os_content">${dto.game_std_os}</span>
+                                <div class="os_name">운영체제</div> <div class="os_content">${dto.game_std_os}</div>
                             </div>
                             
                             <div class="os_type">
-                                <span class="os_name">프로세서</span> <span class="os_content">${dto.game_std_cpu}</span>
+                                <div class="os_name">프로세서</div> <div class="os_content">${dto.game_std_cpu}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">메모리</span> <span class="os_content">${dto.game_std_ram}</span>
+                                <div class="os_name">메모리</div> <div class="os_content">${dto.game_std_ram}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">그래픽</span> <span class="os_content">${dto.game_std_vga}</span>
+                                <div class="os_name">그래픽</div> <div class="os_content">${dto.game_std_vga}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">Direct X</span> <span class="os_content">${dto.game_std_dirX}</span>
+                                <div class="os_name">Direct X</div> <div class="os_content">${dto.game_std_dirX}</div>
                             </div>
 
                             <div class="os_type">
-                                <span class="os_name">필요 저장 공간</span> <span class="os_content">${dto.game_std_ssd}</span>
+                                <div class="os_name">필요 저장 공간</div> <div class="os_content">${dto.game_std_ssd}</div>
                             </div>
                         </div>
                     </div>
