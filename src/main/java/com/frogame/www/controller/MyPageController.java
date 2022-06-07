@@ -45,12 +45,16 @@ public class MyPageController {
 	
 	
 
-	// 유저 회원가입 - 닉네임 중복체크
+	// 유저 회원가입 - 닉네임 중복체크 (true: 사용가능, false: 중복으로 사용불가)
 	@PostMapping("/myPageNickCheck")
 	@ResponseBody
-	public int userNickCheck(@RequestParam("new_user_nick") String new_user_nick) {
-		int nickCnt = myPageService.myPageNickCheck(new_user_nick);
-		return nickCnt;
+	public boolean userNickCheck(@RequestParam("new_user_nick") String new_user_nick, HttpSession session) {
+		
+		int nickCnt = myPageService.myPageNickCheck(new_user_nick);// 1이면 중복, 0이면 중복아님
+		if( nickCnt == 0 ) { System.out.println("########## 1");return true;  }
+		if( session.getAttribute("user_nick").equals(new_user_nick) ) {  System.out.println("########## 2");return true; }// 기존 내 닉네임이랑 같으면 중복 아님
+		System.out.println("########## 3");
+		return false;
 	}
 
 	@PostMapping("/userUpdate")

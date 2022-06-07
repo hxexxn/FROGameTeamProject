@@ -27,7 +27,7 @@ $(function() {
 			type : 'post',
 			data : {new_user_nick:new_user_nick},
 			success :function(nickCnt) {
-				if (nickCnt != 1) {
+				if (nickCnt) {
 					alert ('사용 가능한 닉네임입니다.');
 					nick_check = true;
 				} else {

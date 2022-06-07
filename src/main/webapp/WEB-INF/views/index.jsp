@@ -315,7 +315,7 @@
             </div>
          </div>
 
-
+	<c:if test="${empty sessionScope.user_id}">
          <div id="footBar">
             <div class="findGame">
                <p>취향에 맞는 게임들을 더 찾으신다면</p>
@@ -324,6 +324,7 @@
                </p>
             </div>
          </div>
+      </c:if>   
 
       </div>
 

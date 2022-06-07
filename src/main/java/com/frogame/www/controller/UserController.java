@@ -86,9 +86,7 @@ public class UserController {
 	@PostMapping ("/userIdCheck")
 	@ResponseBody
 	public int userIdCheck(@RequestParam("user_id")String user_id) {
-		System.out.println("11111111111");
 		int cnt = userService.userIdCheck(user_id);
-		System.out.println("222222222222");
 		return cnt;
 	}
 	

@@ -93,9 +93,7 @@
 				<input type="hidden" value="${totalPrice}" name="totalPrice"
 					id="totalPrice"> <input type="hidden" value="${nick}"
 					name="nick" id="nick">
-				<div class="orderBtn">
-					<button onclick="requestPay()" class="button">결제하기</button>
-				</div>
+				<button class="orderBtn" onclick="requestPay()" style="display: block">결제하기</button>
 			</div>
 
 		</div>
