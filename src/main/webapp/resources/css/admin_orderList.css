@@ -17,7 +17,20 @@ body {
     margin: 0 auto;
     /* border: 1px solid rebeccapurple; */
     margin-top: 20px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+}
+
+.bbs_title {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid rgb(255, 20, 20); */
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .list_title,
@@ -40,7 +53,8 @@ body {
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
-    color: black;
+    background-color: black;
+    color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }

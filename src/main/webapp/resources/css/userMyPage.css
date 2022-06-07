@@ -19,7 +19,7 @@ body {
 .modifyTitle {
     width: 60%;
     margin: 0 auto;
-    padding: 15px 0px;
+    padding: 10px 0px;
     border: 1px solid lightgray;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 13px;
@@ -29,7 +29,7 @@ body {
     margin-top: 17px;
    	display: flex;
    	justify-content: space-evenly;
-   	
+   	align-items: center;
 }
 
 .modifyForm, 
@@ -49,11 +49,21 @@ body {
     align-items: center;
 }
 
+.user_modify, .order_list {
+	cursor: pointer;
+}
+
+
 .modifyTableForm {
     width: 500px;
     border-spacing: 10px;
 }
 
+.line {
+	width: 1px;
+	height: 25px;
+	border-right: 1px solid lightgray;
+}
 
 #user_id, #user_pw, #user_rePw, 
 #user_nick, #user_email {

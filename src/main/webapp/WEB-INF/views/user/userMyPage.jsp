@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="${path}/resources/css/userMyPage.css">
-<link rel="stylesheet" href="${path}/resources/css/admin_orderList.css">
+<link rel="stylesheet" href="${path}/resources/css/user_orderList.css">
 <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
 <style>
 @import
@@ -43,6 +43,8 @@
 				<div class="user_modify">
 					회원정보 수정
 				</div>
+				
+				<div class="line"></div>
 				
 				<div class="order_list">
 					구매 내역
