@@ -78,8 +78,8 @@
 					    	
 					    	<!-- 게임 검색 창 -->
 					        <div class="search_area">
-					            <input type="text" name="keyword" id="keyword" autocomplete="off" value="${pageMaker.cri.keyword }">
-					            <button class="search_btn" type="submit">검색</button>
+					            <input type="text" name="keyword" id="keyword" autocomplete="off" value="${pageMaker.cri.keyword }" onkeyup="if(window.event.keyCode==13){search_submit()}"/>
+					            <button class="search_btn" type="submit" >검색</button>
 							 </div>
     					</div>
 				        
