@@ -10,7 +10,10 @@
         <link rel="stylesheet" href="${path}/resources/css/error403.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400&family=Rubik+Moonrocks&display=swap');
-        </style>
+    </style>
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+	</style>
 </head>
 <body>
 
