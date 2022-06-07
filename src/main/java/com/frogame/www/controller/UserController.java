@@ -173,7 +173,7 @@ public class UserController {
 		System.out.println("user_no 값 : " + user_no);
 		userService.userDelete(user_no);
 		System.out.println("유저 삭제 완료.");
-		return "redirect:/admin";
+		return "redirect:/admin_user_list";
 	}
 	
 	

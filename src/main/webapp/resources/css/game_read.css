@@ -209,7 +209,7 @@ body {
 
 .os_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 30px;
     border-bottom: 1px solid #efefef;
@@ -240,13 +240,14 @@ body {
 
 .os_name {
     display: inline-block;
-    width: 20%;
+    width: 15%;
     font-weight: bold;
+    font-size: 14px;
     /* border: 1px solid black; */
 }
 
 .os_content {
-    width: 80%;
+    width: 85%;
     font-size: 14px;
 }
 
