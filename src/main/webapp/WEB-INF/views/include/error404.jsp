@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +24,8 @@
     
         <div id="frame">
             <div class="icon"><i class="fa-solid fa-bell fa-shake"></i></div>
-            <div class="error">403</div>
-            <div class="msg">Oops! This is Restricted Page X_X</div>
+            <div class="error">404</div>
+            <div class="msg">Oops! Page Not Found X_X</div>
             <div class="home">
                 <a href="/">back to home</a>
             </div>
