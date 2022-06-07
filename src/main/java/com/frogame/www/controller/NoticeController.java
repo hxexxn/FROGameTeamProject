@@ -109,7 +109,7 @@ public class NoticeController {
 
 		noticeService.noticeUpdate(dto);
 
-		return "redirect:/noticeRead?notice_no=" + dto.getNotice_no();
+		return "redirect:/admin_notice_read?notice_no=" + dto.getNotice_no();
 	}
 
 	/*

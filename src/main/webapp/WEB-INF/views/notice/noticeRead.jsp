@@ -112,7 +112,7 @@
 			<c:if test="${sessionScope.user_nick == dto.notice_writer}">
 				<a href="/noticeDelete?notice_no=${dto.notice_no}"
 					class="noticeDeleteBtn">삭제</a>
-				<a href="/noticeUpdate?notice_no=${dto.notice_no}"
+				<a href="/admin_notice_modify?notice_no=${dto.notice_no}"
 					class="noticeUpdateBtn">수정</a>
 			</c:if>
 
