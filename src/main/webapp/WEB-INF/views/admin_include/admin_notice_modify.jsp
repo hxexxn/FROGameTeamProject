@@ -27,6 +27,8 @@
     
     <form action="/noticeUpate" id="test" enctype="multipart/form-data" method="post">
 
+
+
         <div id="notice_insert_content">
 
                 <div class="title">
