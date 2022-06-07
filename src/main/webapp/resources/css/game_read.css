@@ -6,7 +6,7 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     height: auto;
     background-color: white;
     /* border: 1px solid red; */
@@ -41,7 +41,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* border: 1px solid black; */
 }
 
@@ -208,18 +208,19 @@ body {
 }
 
 .os_container {
+	width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     border-bottom: 1px solid #efefef;
 }
 
 .os {
-    width: 40%;
+    width: 50%;
     /* border: 1px solid yellow; */
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .os_title {
@@ -240,13 +241,14 @@ body {
 
 .os_name {
     display: inline-block;
-    width: 20%;
+    width: 15%;
     font-weight: bold;
+    font-size: 14px;
     /* border: 1px solid black; */
 }
 
 .os_content {
-    width: 80%;
+    width: 85%;
     font-size: 14px;
 }
 
