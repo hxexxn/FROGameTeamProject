@@ -128,17 +128,28 @@
                     </div>
 
                     <div class="user_subject">
-                        <div class="id">게임명</div>
-                        <div class="nickname">가격</div>
-                        <div class="regdate">판매량</div>
+                        <div class="title">게임명</div>
+                        <div class="price">가격</div>
+                        <div class="sell_count">판매량</div>
                     </div>
 				
 				<c:forEach var="gameList" items="${gameList}" varStatus="status" end="6">
 				
                     <div class="user_content">
-                        <div class="id">${gameList.game_title}</div>
-                        <div class="nickname">${gameList.game_price}</div>
-                        <div class="regdate">${gameList.game_sellcount}</div>
+                        <div class="title">${gameList.game_title}</div>
+                        <div class="price">
+                        
+	                        <c:if test="${gameList.game_price != 0}">
+		                    	<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${gameList.game_price}" /></span>
+		                    </c:if>
+		                            
+			                <c:if test="${gameList.game_price == 0}">
+			                    <span>Free To Play</span>
+			                </c:if>
+                        
+                     	</div>
+                     	
+                        <div class="sell_count">${gameList.game_sellcount}</div>
                     </div>
                     
 				 </c:forEach>

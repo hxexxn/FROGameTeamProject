@@ -196,6 +196,18 @@ body {
     width: 30%;
 }
 
+.title {
+	width: 50%;
+}
+
+.price {
+	width: 25%;
+}
+
+.sell_count {
+	width: 25%;
+}
+
 
 .user_content,
 .notice_content {

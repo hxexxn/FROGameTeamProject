@@ -101,6 +101,7 @@ body {
 .notice_delete a:hover {
 	color: red;
 }
+
 .list {
     height: 50px;
     text-align: center;

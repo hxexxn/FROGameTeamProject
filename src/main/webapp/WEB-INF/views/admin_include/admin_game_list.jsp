@@ -8,6 +8,10 @@
 <meta charset="UTF-8">
 <title>Dashboard - 게임 목록</title>
     <link rel="stylesheet" href="${path}/resources/css/admin_gameList.css">
+    <!--  구글 웹 폰트 -->
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+	</style>
 </head>
 <body>
 
@@ -24,16 +28,24 @@
                     <div id="wrap2">
 
 				        <div class="bbs_title">
-				            <span>현재 판매 중인 게임 목록</span>
+				            <div>
+					            <span>현재 판매 중인 게임 목록</span>
+					        </div>
+					        
+					        <div class="btn_box">
+					            <button type="button" onClick="location.href='admin_game_list?pageNum=1&amount=6&keyword=&type=P'" class="btn">가격 순</button>
+					            <button type="button" onClick="location.href='admin_game_list?pageNum=1&amount=6&keyword=&type=R'" class="btn">출시일 순</button>
+					            <button type="button" onClick="location.href='admin_game_list?pageNum=1&amount=6&keyword=&type=S'" class="btn">판매량 순</button>
+					        </div>
 				        </div>
 				
 				        <div class="list_title">
 				            <div class="game_number">번호</div>
 				            <div class="game_title">제목</div>
-				            <div class="game_price"><a href="admin_game_list?pageNum=1&amount=6&keyword=&type=P">가격</a></div>
+				            <div class="game_price">가격</div>
 				            <div class="game_genre_no">장르</div>
-				            <div class="game_regdate"> <a href="admin_game_list?pageNum=1&amount=6&keyword=&type=R"> 등록일 </a></div>
-				            <div class="game_sellcount"> <a href="admin_game_list?pageNum=1&amount=6&keyword=&type=S"> 판매량 </a></div>
+				            <div class="game_regdate">출시일</div>
+				            <div class="game_sellcount">판매량</div>
 				            <div class="game_adult">연령</div>
 				            <div class="game_delete"></div>
 				        </div>
@@ -43,12 +55,25 @@
 				        	<div class="list">
 					            <div class="game_number">${gameList.game_no}</div>
 					            <div class="game_title"><a href="gameReadTest?game_no=${gameList.game_no}">${gameList.game_title}</a></div>
-					            <div class="game_price">₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${gameList.game_price}" /></div>
+					            <div class="game_price">
+					            
+					            	<c:if test="${gameList.game_price != 0}">
+	                            		<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${gameList.game_price}" /></span>
+	                            	</c:if>
+	                            
+		                            <c:if test="${gameList.game_price == 0}">
+		                            	<span>Free To Play</span>
+		                            </c:if>
+	                            
+					           </div>
+					           
+					            <%-- <div class="game_price">₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${gameList.game_price}" /></div> --%>
 					            <div class="game_genre_no">${gameList.game_genre}</div>
 					            <div class="game_regdate"><fmt:formatDate pattern="yy-MM-dd" value="${gameList.game_release}"/></div>
 					            <div class="game_sellcount">${gameList.game_sellcount}</div>
 					            <div class="game_adult">${gameList.game_adultcheck}</div>
 					            <div class="game_delete"><a href="gameDelete?game_no=${gameList.game_no}">삭제</a></div>
+				        	
 				        	</div>
 	                            
 				        
