@@ -233,7 +233,7 @@
 	
 		<c:if test="${sessionScope.user_id ne 'admin'}">
 
-		    <jsp:include page="../error_page/error403.jsp" flush="false"/>
+		    <jsp:include page="../include/error403.jsp" flush="false"/>
 		    
 	    </c:if>
 	    
@@ -241,7 +241,7 @@
 	
 	<c:if test="${empty sessionScope.user_id}">
 
-		    <jsp:include page="../error_page/error403.jsp" flush="false"/>
+		    <jsp:include page="../include/error403.jsp" flush="false"/>
 		    
 	    </c:if>
 

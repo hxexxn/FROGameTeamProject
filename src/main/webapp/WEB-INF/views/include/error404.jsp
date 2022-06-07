@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oops! Error 403 X_X</title>
-        <link rel="stylesheet" href="${path}/resources/css/error403.css">
+        <link rel="stylesheet" href="${path}/resources/css/error.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400&family=Rubik+Moonrocks&display=swap');
     </style>
     <style>
-		@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Anton&family=Monoton&family=Rubik+Moonrocks&display=swap');
 	</style>
 </head>
 <body>
