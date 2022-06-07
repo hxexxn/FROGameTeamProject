@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@
 							<div class="block">${cList[status.index].gameDto.game_title}</div>
 						</div>
 						<div class="gamePrice">
-							<div>${cList[status.index].gameDto.game_price}</div>
+							<div>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${cList[status.index].gameDto.game_price}" /></div>
 						</div>
 
 						<div class="cartDelete">
@@ -86,8 +86,9 @@
 
 			<div class="cartListBottom">
 				<div class="totalPrice">
-					<span class="totalPrice1">총 주문 금액</span> <span><c:out
-							value="${totalPrice}" /></span> <span class="totalPrice1">원</span>
+					<span class="totalPrice1">총 주문 금액</span> 
+					<span>₩ <fmt:formatNumber type="number" maxFractionDigits="3" value="${totalPrice}" /></span> 
+					<span class="totalPrice1">원</span>
 				</div>
 				<input type="hidden" value="${totalPrice}" name="totalPrice"
 					id="totalPrice"> <input type="hidden" value="${nick}"
