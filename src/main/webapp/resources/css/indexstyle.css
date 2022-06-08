@@ -98,6 +98,8 @@ body {
     opacity: 1;
 }
 
+
+
 .userBox {
     width: 15%;
     display: flex;
@@ -242,7 +244,7 @@ a:hover {
 .sildeGameImg {
     background-color: white;
     width: 99%;
-    height: 700px;
+    height: auto;
     overflow: hidden;
 }
 
