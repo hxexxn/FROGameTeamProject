@@ -189,7 +189,7 @@
          <div class="sildeGameImg">
          <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
             <div>
-               <img src="${hotimg}" title="${hotList[status.index].game_title}" class="full"/>
+               <img src="${hotimg}" title="${hotList[status.index].game_title}"/>
             </div>
         <%--     <div>
                <img src="${path}/resources/img/pronight.jpg" title="프롭나이트" />
