@@ -29,7 +29,7 @@ $(function(){
 			data: {cart_game_no : cart_game_no, cart_user_id : cart_user_id},
 			success : function(result) {
 				if(result == 'success'){
-					alert('성공');
+					alert('장바구니 담기 성공');
 				}else{
 					alert('실패');
 				}

@@ -186,15 +186,17 @@
       <!-- 메인 이미지 슬라이드 -->
       <div id="mainGame">
          <div class="sildeGameImg">
+         <c:forEach var="hotimg" items="${hotimg}" varStatus="status" begin="0" end="3">
             <div>
-               <img src="${path}/resources/img/watchdogs.png" title="와치독스" />
+               <img src="${hotimg}" title="${hotList[status.index].game_title}" class="full"/>
             </div>
-            <div>
+        <%--     <div>
                <img src="${path}/resources/img/pronight.jpg" title="프롭나이트" />
             </div>
             <div>
                <img src="${path}/resources/img/gta5.png" title="GTA5">
-            </div>
+            </div> --%>
+            </c:forEach>
          </div>
       </div>
 

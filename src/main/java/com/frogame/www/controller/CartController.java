@@ -43,9 +43,7 @@ public class CartController {
 	@PostMapping("/addCart2")
 	@ResponseBody
 	public String addCart2(@RequestParam("cart_game_no")String cart_game_no, @RequestParam("cart_user_id")String cart_user_id) {
-		System.out.println("game_no >>>> " + cart_game_no);
 		cartService.addCart2(cart_game_no, cart_user_id);
-		System.out.println("장바구니 추가 완료.");
 		return "success";
 	}
 	
