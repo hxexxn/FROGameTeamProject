@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FROGame 관리자 페이지</title>
-    <link rel="stylesheet" href="${path}/resources/css/admin_main.css">
+    <link rel="stylesheet" href="${path}/resources/css/admin_top.css">
         <!-- 폰트 어썸 5.0 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 </head>

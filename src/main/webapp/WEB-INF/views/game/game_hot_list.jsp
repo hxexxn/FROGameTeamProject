@@ -38,11 +38,7 @@
             <div class="best_head">
                 <div class="head_text">
                 	<p>인기 게임</p>
-                </div>
-                
-				<div class="head_arrow">
-					<i class="fa-solid fa-arrow-down"></i>
-				</div>          
+                </div>        
             </div>
             
             

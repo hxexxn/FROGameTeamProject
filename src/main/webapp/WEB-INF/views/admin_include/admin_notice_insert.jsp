@@ -35,7 +35,7 @@
 
         <div id="notice_insert_content">
 
-                <div class="title">
+                <div class="n-title">
                     <div class="notice_head_subject">
                         <span>제목</span>
                     </div>

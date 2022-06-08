@@ -36,7 +36,7 @@
 
 				        <div id="game_insert_content">
 				
-				                <div class="title">
+				                <div class="g-title">
 				                    <div class="game_subject">
 				                        <span>제목</span>
 				                    </div>
@@ -62,7 +62,7 @@
 				                <div class="price_date">
 				
 				                    <!-- 가격 입력 -->
-				                    <div class="price">
+				                    <div class="g-price">
 				                        <div class="gp_title">
 				                            <span>가격</span>
 				                        </div>
