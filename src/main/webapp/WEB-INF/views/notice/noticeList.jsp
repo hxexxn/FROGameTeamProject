@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>공지사항 게시판 목록</title>
 <link rel="stylesheet" href="${path}/resources/css/noticeList.css">
+    <link rel="stylesheet" href="${path}/resources/css/content_frame.css">
 
 <style>
 @import
@@ -15,6 +16,10 @@
 	;
 </style>
 
+<!-- 구글 웹 폰트 (노토 산스)-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        </style>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script
@@ -34,15 +39,9 @@
 
 	<div class="noticeList">
 		<div class="notice_head">
-			<div>공지사항</div>
-
-			<!--   <form action="noticeSearch" autocomplete="off">
-    	<span class="searchBar">  
-   			<input class="basic-input" type="text" name="keyword" id="keyword"> 
-   			<button type="submit" class="icon"><i class="fa-solid fa-magnifying-glass" style="color:lightgray"></i></button>   
-    	</span>
-    </form>
-     -->
+			<div class="notice_name">
+				공지사항
+			</div>
 
 			<div class="search_area">
 				<input class="basic-input" type="text" name="keyword" id="keyword"
@@ -52,6 +51,8 @@
 				</button>
 			</div>
 		</div>
+		
+		<div class="head_line"></div>
 
 		<div class="noticeBox1">
 			<table class="notice_table">
