@@ -12,14 +12,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FROGame</title>
 <link rel="stylesheet" href="${path}/resources/css/indexstyle.css">
+<link rel="stylesheet" href="${path}/resources/css/bx_slider.css">
 
 <!--  구글 웹 폰트 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@300;400;500&display=swap');
 </style>
 
-<link rel="stylesheet"
-   href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
@@ -36,7 +35,7 @@
    });
 </script>
 <!-- 이미지 슬라이드 CSS (오버라이딩)-->
-<style>
+<!-- <style>
 /* 슬라이드 박스 */
 .bx-wrapper {
    border: 0;
@@ -51,9 +50,9 @@
    background: rgb(178, 178, 178);
    background: rgba(80, 80, 80, 0.532);
    width: 100%;
-   height: 50px;
+   height: 70px;
    text-align: center;
-   line-height: 30px;
+   line-height: 70px;
 }
 
 .bx-wrapper .bx-caption:hover {
@@ -67,7 +66,7 @@
    font-size: .85em;
    padding: 10px;
 }
-</style>
+</style> -->
 <!-- 폰트 어썸 5.0 -->
 <link rel="stylesheet"
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
