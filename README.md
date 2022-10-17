@@ -72,3 +72,15 @@
 Eclipse, Visual Studio Code, Github, Maven, DBeaver
 
 
+<br/>
+
+### :runner: 팀원  
+
+* 황은범(rmlrml13) - 팀장  
+
+* 김혜은(hxexxn) 
+
+* 천혜영(cheone0 HYE_YOUNG CHUN)  
+
+
+
